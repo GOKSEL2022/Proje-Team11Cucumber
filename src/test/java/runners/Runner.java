@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:src/test/resources/reports/g1g2g3g4.html"},
         features = "src/test/resources/features",
         glue = "src/test/java/tests/UI_Tests",
-        tags = "@amazon_search ",
+        tags = "@managementonschools ",
         dryRun = false
 
 )
