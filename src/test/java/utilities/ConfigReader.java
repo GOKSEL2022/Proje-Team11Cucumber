@@ -1,30 +1,31 @@
 package utilities;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    public static Properties properties;
-    // METHODU DEVREYE SOKABİLMEK İÇİN FİLEINPUTSTREAM İLE DOSYA YOLUNU BELİRTMEM GEREKİYOR
-// METHODDAN ÖNCE ÇALIŞMASI İÇİN STATIC BLOK İÇERİSİNDE FİLEINPUTSTREAM'I OLUSTURMAM GEREKİYOR
-    static { // herşeyden önce çalışması için
-        String dosyaYolu = "configuration.properties";
+    //    This class will ONLY be used for getting the data from
+//    configuration.properties file
+    private static Properties properties;
+    static {
+//        path of the config file
+        String path = "configuration.properties";
         try {
-            FileInputStream fis = new FileInputStream(dosyaYolu);
-            //dosya yolunu tanimladigimiz dosyayi okudu
-            properties = new Properties(); // objeyi oluşturup değer atarız
-            properties.load(fis);//fis'in okudugu bilgileri properties'e yukledi
-        } catch (IOException e) {
+//            Opening the file
+            FileInputStream file = new FileInputStream(path);
+//            loading the file
+            properties= new Properties();
+            properties.load(file);
+//            closing the file
+            file.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    //    This method accepts the key and returns the value
     public static String getProperty(String key){
-        /*
-            test method'undan yolladigimiz string key degerini alip
-        Properties class'indan getProperty() method'unu kullanarak
-        bu key'e ait value'u bize getirdi
-         */
         return properties.getProperty(key);
     }
+
 }
