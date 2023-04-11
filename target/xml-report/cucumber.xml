@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="48.433" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="US1001 amazon arama" name="TC01 amazon nutella arama" time="15.837">
+<system-out><![CDATA[
+When kullanici amazon sayfasina gider.......................................passed
+And nutella icin arama yapar................................................passed
+Then sonucun nutella icerdigini test eder...................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1001 amazon arama" name="TC02 amazon java arama" time="17.597">
+<system-out><![CDATA[
+When kullanici amazon sayfasina gider.......................................passed
+And java icin arama yapar...................................................passed
+Then sonucun java icerdigini test eder......................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1001 amazon arama" name="TC03 amazon ipad arama" time="14.344">
+<system-out><![CDATA[
+When kullanici amazon sayfasina gider.......................................passed
+And ipad icin arama yapar...................................................passed
+Then sonucun ipad icerdigini test eder......................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

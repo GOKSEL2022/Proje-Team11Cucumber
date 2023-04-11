@@ -1,17 +1,24 @@
 package runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:src/test/resources/reports/g1g2g3g4.html"},
-        features = "src/test/resources/features",
-        glue = "src/test/java/tests/UI_Tests",
-        tags = "@managementonschools ",
+        plugin = {
+                "pretty",//raporlarin daha ikunakli olmasi icin
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        },
+        monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
+        features = "./src/test/resources/features",//features folder path
+        glue = {"stepdefinitions","hooks"},   //stepdefinitions path
+        tags = "@amazon_search",
         dryRun = false
-
 )
 public class Runner {
-
 }
