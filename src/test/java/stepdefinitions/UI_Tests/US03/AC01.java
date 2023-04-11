@@ -11,7 +11,7 @@ import utilities.Driver;
 
 public class AC01 {
     ContactPage contactPage = new ContactPage();
-//    Faker faker=new Faker();
+    //Faker faker=new Faker();
 
 
     @Given("Kullanıcı ana sayfaya gider.")

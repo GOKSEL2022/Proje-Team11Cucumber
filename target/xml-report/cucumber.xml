@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.288" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="AC01 Herhangi bir karakter içeren ve boş bırakılamayan &quot;Name&quot; girmelidir." name="TC01 Name kutusuna harf girilmesi" time="4.038">
+<testsuite name="Cucumber" time="6.054" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="AC01 Herhangi bir karakter içeren ve boş bırakılamayan &quot;Name&quot; girmelidir." name="TC01 Name kutusuna harf girilmesi" time="5.744">
 <system-out><![CDATA[
 Given Kullanıcı ana sayfaya gider...........................................passed
 When Kullanıcı Contact butonuna tıklar......................................passed
+Then Kullanıcı Name kutusuna tıklar.........................................passed
+And Kullanıcı Name kutusuna "N" girer.......................................passed
+And Kullanıcı mail kutusuna "mail" girer....................................passed
+And Kullanıcı subject  kutusuna "subject" girer.............................passed
+And Kullanıcı message kutusuna "message" girer..............................passed
+And Kullanıcı send message butonuna tıklar..................................passed
+And Kullanıcı bir saniye bekler.............................................passed
+And Kullanıcı mesajın iletildiğine dair pop-up mesajını görüntüler..........passed
 ]]></system-out>
 </testcase>
 </testsuite>
