@@ -1,11 +1,13 @@
 package pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.awt.*;
+import java.util.List;
+
 
 public class StudentInfoPage {
     public StudentInfoPage(){
@@ -17,14 +19,14 @@ public class StudentInfoPage {
     public WebElement chooseLesson_dropDown_studentInfo;
     @FindBy(xpath = "(//option[@value='5'])[1]")
     public WebElement chooseLesson_text_studentInfo;
-    @FindBy(xpath = "//select[@id='studentId']")
+    @FindBy(id = "studentId")
     public WebElement chooseStudent_dropDown_studentInfo;
     @FindBy(xpath = "//select[@id='educationTermId']")
     public WebElement educationTerm_dropDown_studentInfo;
     @FindBy(xpath = "//input[@id='absentee']")
     public WebElement absentee_box_studentInfo;
     @FindBy(xpath = "//*[.='Required']")
-    public List requiredAbsente_text_studentInfo;
+    public List<WebElement> requiredAbsente_text_studentInfo;
     @FindBy(xpath = "//*[@id='midtermExam']")
     public WebElement midtermExam_box_studentInfo;
     @FindBy(xpath = "(//*[.='Required'])[2]")
@@ -35,7 +37,7 @@ public class StudentInfoPage {
     public WebElement requiredFinal_text_studentInfo;
     @FindBy(xpath = "//*[@id='infoNote']")
     public WebElement infoNote_box_studentInfo;
-    @FindBy(xpath = "(//*[.='Required'])[4]")
+    @FindBy(xpath = "//*[.='Required']")
     public WebElement requiredinfoNote_text_studentInfo;
     @FindBy(xpath = "//button[.='Submit']")
     public WebElement submit_button_studentInfo;

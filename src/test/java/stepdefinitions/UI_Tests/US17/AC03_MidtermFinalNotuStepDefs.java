@@ -12,12 +12,12 @@ public class AC03_MidtermFinalNotuStepDefs {
     public void kullaniciMidtermExamANotGirerVeGorur() {
 
         studentInfoPage.midtermExam_box_studentInfo.sendKeys(Faker.instance().number().numberBetween(0, 100)+"");
-        Assert.assertFalse(studentInfoPage.requiredMidterm_text_studentInfo.isDisplayed());
+        Assert.assertEquals(2,studentInfoPage.requiredAbsente_text_studentInfo.size());
     }
 
     @And("kullanici final exam a not girer ve gorur")
     public void kullaniciFinalExamANotGirerVeGorur() {
         studentInfoPage.finalExam_box_studentInfo.sendKeys(Faker.instance().number().numberBetween(0, 100) + "");
-        Assert.assertFalse(studentInfoPage.requiredFinal_text_studentInfo.isDisplayed());
+        Assert.assertEquals(1,studentInfoPage.requiredAbsente_text_studentInfo.size());
     }
 }
