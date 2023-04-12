@@ -10,6 +10,6 @@ public class AC04_InfoNotuStepDefs {
     @And("kullanici info note a bilgi notu girer ve gorur")
     public void kullaniciInfoNoteABilgiNotuGirerVeGorur() {
         studentInfoPage.infoNote_box_studentInfo.sendKeys(Faker.instance().lorem().paragraph());
-        Assert.assertFalse( studentInfoPage.requiredinfoNote_text_studentInfo.isDisplayed());
+        Assert.assertFalse( studentInfoPage.requiredinfoNote_text_studentInfo.isEnabled());
     }
 }

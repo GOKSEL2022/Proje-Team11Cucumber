@@ -16,8 +16,7 @@ public class AC02_TC01_DevamsizlikStepDefs {
     @And("kullanici absentee ye devamsizlik girer ve gorur")
     public void kullaniciAbsenteeYeDevamsizlikGirer() {
         studentInfoPage.absentee_box_studentInfo.sendKeys(devamsizlik+"");
-
-        //  Assert.assertFalse(studentInfoPage.requiredAbsente_text_studentInfo.isDisplayed());
+      Assert.assertEquals(3,studentInfoPage.requiredAbsente_text_studentInfo.size());
 
 
     }

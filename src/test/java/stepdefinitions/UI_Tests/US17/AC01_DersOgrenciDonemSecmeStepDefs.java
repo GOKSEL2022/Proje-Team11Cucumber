@@ -67,7 +67,7 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
     @And("kullanici menu butonuna tiklar")
     public void kullaniciMenuButonunaTiklar() {
 
-        ReusableMethods.clickWithTimeOut( adminManagementPage.menu_button_adminmanagement,3);
+        ReusableMethods.clickWithTimeOut( adminManagementPage.menu_button_adminmanagement,2);
           }
 
     @And("kullanici teacher management butona tiklar")
@@ -84,9 +84,7 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
 
     @And("kullanici add teacher alanina bilgileri girer ve submit butona tiklar")
     public void kullaniciAddTeacherAlaninaBilgileriGirerVeSubmitButonaTiklar() {
-//        Select select = new Select(teacherPage.chooseLessons_dropBox_teacher);
-//        select.selectByIndex(5);
-     // ReusableMethods.selectRandomTextFromDropdown(select);
+
         teacherPage.chooseLessons_dropBox_teacher.click();
         teacherPage.chooseLessons_dropBox_teacher.sendKeys(Keys.PAGE_DOWN,Keys.ENTER);
         ReusableMethods.waitFor(1);
@@ -110,7 +108,7 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
 
     @Then("kullanici teacher saved successfully pup up yazisini gorur")
     public void kullaniciTeacherSavedSuccessfullyPupUpYazisiniGorur() {
-        System.out.println("teacherPage.teacherSaved_alert_teacher.getText() = " + teacherPage.teacherSaved_alert_teacher.getText());
+
         try {
             Assert.assertTrue( teacherPage.teacherSaved_alert_teacher.isDisplayed());
         } catch (NoSuchElementException e) {
