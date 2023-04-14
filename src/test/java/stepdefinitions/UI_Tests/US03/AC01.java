@@ -61,4 +61,5 @@ public class AC01 {
     @And("Kullanıcı mesajın iletildiğine dair pop-up mesajını görüntüler.")
     public void kullanıcıMesajınIletildiğineDairPopUpMesajınıGörüntüler() {
     }
+
 }
