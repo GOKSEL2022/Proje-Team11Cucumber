@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 12, 2023 08:23:05 PM</span></a>
+<a href="#"><span class="badge badge-primary">Apr 16, 2023 11:18:38 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 12, 2023 08:23:05 PM</h3>
+<h3>Apr 16, 2023 11:18:38 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 12, 2023 08:24:25 PM</h3>
+<h3>Apr 16, 2023 11:19:27 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='96%'><b>25</b> steps passed</small></div>
+<div><small data-tooltip='44%'><b>8</b> steps passed</small></div>
 <div>
-<small data-tooltip='3%'><b>1</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='5%'><b>1</b> steps failed,
+<b>9</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"info_notu":76.898
+"ogrenci_bilgileri":44.951
 };
 </script>
 <div class="row">
@@ -177,7 +177,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@info_notu</td>
+<td>@ogrencibilgileri</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -218,10 +218,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 25,
+passGrandChild: 8,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 9,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -243,7 +243,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@info_notu</a>
+<a class="dropdown-item" href="#">@ogrencibilgileri</a>
 </ul>
 </li>
 </ul>
@@ -254,9 +254,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">info_notu</p>
+            <p class="name">ogrenci_bilgileri</p>
             <p class="text-sm">
-              <span>8:23:08 PM</span> / <span>00:01:16:898</span>
+              <span>11:18:42 PM</span> / <span>00:00:44:951</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -264,10 +264,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">info_notu</h5>
-<span class='badge badge-success'>04.12.2023 8:23:08 PM</span>
-<span class='badge badge-danger'>04.12.2023 8:24:25 PM</span>
-<span class='badge badge-default'>00:01:16:898</span>
+<h5 class="test-status text-fail">ogrenci_bilgileri</h5>
+<span class='badge badge-success'>04.16.2023 11:18:42 PM</span>
+<span class='badge badge-danger'>04.16.2023 11:19:27 PM</span>
+<span class='badge badge-default'>00:00:44:951</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -279,7 +279,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Öğrenci hakkında Info notu girebilmelidir.</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>teacher ogrenci bilgilerini gorebilmeli</div>
           <div class="status-avatar float-right mr-4">
             <i class="fa fa-paperclip"></i>
           </div>
@@ -297,58 +297,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciAdminOlarakUsernameGirer()">
-                <span>And kullanici admin olarak username girer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciAdminOlarakPasswordGirer()">
-                <span>And kullanici admin olarak password girer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciLoginSayfasindaLoginButonaTiklar()">
-                <span>And kullanici login sayfasinda login butona tiklar</span>
-      <div>
-      </div>
-              </div>
               <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciMenuButonunaTiklar()">
                 <span>And kullanici menu butonuna tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciTeacherManagementButonaTiklar()">
-                <span>And kullanici teacher management butona tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.teacherSayfasindaAddTeacherYazisiGorulur()">
-                <span>And teacher sayfasinda add teacher yazisi gorulur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciAddTeacherAlaninaBilgileriGirerVeSubmitButonaTiklar()">
-                <span>And kullanici add teacher alanina bilgileri girer ve submit butona tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciTeacherSavedSuccessfullyPupUpYazisiniGorur()">
-                <span>Then kullanici teacher saved successfully pup up yazisini gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciMenuButonunaTiklar()">
-                <span>And kullanici menu butonuna tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciLogoutButonunaTiklarVe()">
-                <span>And kullanici logout butonuna tiklar ve</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciYesButonaTiklayarakCikisYapar()">
-                <span>And kullanici yes butona tiklayarak cikis yapar</span>
       <div>
       </div>
               </div>
@@ -372,80 +322,66 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseLessonDanBirDersSecer()">
+              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseLessonDanBirDersSecer()">
                 <span>And kullanici choose lesson dan bir ders secer</span>
       <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullanininSectigiDersiGorur()">
-                <span>And kullaninin sectigi dersi gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseStudentDenBirOgrenciSecer()">
-                <span>And kullanici choose student den bir ogrenci secer ve gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseEducationTermDenDonemSecer()">
-                <span>And kullanici choose education term den donem secer ve gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC02_TC01_DevamsizlikStepDefs.kullaniciAbsenteeYeDevamsizlikGirer()">
-                <span>Then kullanici absentee ye devamsizlik girer ve gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC03_MidtermFinalNotuStepDefs.kullaniciMidtermExamANotGirerVeGorur()">
-                <span>And kullanici midterm exam a not girer ve gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US17.AC03_MidtermFinalNotuStepDefs.kullaniciFinalExamANotGirerVeGorur()">
-                <span>And kullanici final exam a not girer ve gorur</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US17.AC04_InfoNotuStepDefs.kullaniciInfoNoteABilgiNotuGirerVeGorur()">
-                <span>And kullanici info note a bilgi notu girer ve gorur</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[.='Required']"}
-  (Session info: chrome=112.0.5615.50)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48c03382a2ad1108c4796caba1462593, findElement {using=xpath, value=//*[.='Required']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.50, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\ferhat\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62037}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62037/devtoo..., se:cdpVersion: 112.0.5615.50, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48c03382a2ad1108c4796caba1462593
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy26.isEnabled(Unknown Source)
-	at stepdefinitions.UI_Tests.US17.AC04_InfoNotuStepDefs.kullaniciInfoNoteABilgiNotuGirerVeGorur(AC04_InfoNotuStepDefs.java:13)
-	at ✽.kullanici info note a bilgi notu girer ve gorur(file:///C:/Users/ferhat/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US06/US17_Features/ac04_tc01.feature:29)
+        <textarea disabled class="code-block">java.lang.IllegalArgumentException: bound must be positive
+	at java.base/java.util.Random.nextInt(Random.java:388)
+	at utilities.ReusableMethods.selectRandomTextFromDropdown(ReusableMethods.java:190)
+	at stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseLessonDanBirDersSecer(AC01_DersOgrenciDonemSecmeStepDefs.java:164)
+	at ✽.kullanici choose lesson dan bir ders secer(file:///C:/Users/ferhat/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US18_Features/ac01_tc01.feature:11)
 </textarea>
       
       </div>
               </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullanininSectigiDersiGorur()">
+                <span>And kullaninin sectigi dersi gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseStudentDenBirOgrenciSecer()">
+                <span>And kullanici choose student den bir ogrenci secer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC01_DersOgrenciDonemSecmeStepDefs.kullaniciChooseEducationTermDenDonemSecer()">
+                <span>And kullanici choose education term den donem secer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC02_TC01_DevamsizlikStepDefs.kullaniciAbsenteeYeDevamsizlikGirer()">
+                <span>Then kullanici absentee ye devamsizlik girer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC03_MidtermFinalNotuStepDefs.kullaniciMidtermExamANotGirerVeGorur()">
+                <span>And kullanici midterm exam a not girer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC03_MidtermFinalNotuStepDefs.kullaniciFinalExamANotGirerVeGorur()">
+                <span>And kullanici final exam a not girer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US17.AC04_InfoNotuStepDefs.kullaniciInfoNoteABilgiNotuGirerVeGorur()">
+                <span>And kullanici info note a bilgi notu girer ve gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US18.AC01_TeacherSavedStepDefs.kullaniciSubmitButonATiklar()">
+                <span>And kullanici submit buton a tiklar</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US18.AC01_TeacherSavedStepDefs.kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorur()">
+                <span>Then kullanici student Info saved succesfully popup yazisini gorur</span>
+      <div>Step skipped
+      </div>
+              </div>
               <div class="step pass-bg" title="AFTER">
                 <span>hooks.Hooks.tearDownScenarios(io.cucumber.java.Scenario)</span>
-      <div>failed_scenarioÖğrenci hakkında Info notu girebilmelidir.
+      <div>failed_scenarioteacher ogrenci bilgilerini gorebilmeli
           <div class="row mb-3"><div class="col-md-3">
 <img data-featherlight='../embedded1.png' src="../embedded1.png">
     
@@ -482,12 +418,12 @@ Session ID: 48c03382a2ad1108c4796caba1462593
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@info_notu</p>
+<p class="name">@ogrencibilgileri</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@info_notu</h4>
+<h4>@ogrencibilgileri</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -501,11 +437,11 @@ Session ID: 48c03382a2ad1108c4796caba1462593
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:23:08 PM</td>
+<td>23:18:42 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Öğrenci hakkında Info notu girebilmelidir.</a>
+<a href="#" class="linked" test-id='1' id='2'>teacher ogrenci bilgilerini gorebilmeli</a>
 <div class="">
-<span class="badge badge-default">info_notu.Öğrenci hakkında Info notu girebilmelidir.</span>
+<span class="badge badge-default">ogrenci_bilgileri.teacher ogrenci bilgilerini gorebilmeli</span>
 </div>
 </td>
 </tr>
@@ -534,12 +470,12 @@ Session ID: 48c03382a2ad1108c4796caba1462593
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="name">java.lang.IllegalArgumentException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
+<h4>java.lang.IllegalArgumentException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -553,11 +489,11 @@ Session ID: 48c03382a2ad1108c4796caba1462593
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:24:13 PM</td>
+<td>23:19:26 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='28'>And kullanici info note a bilgi notu girer ve gorur</a>
+<a href="#" class="linked" test-id='1' id='11'>And kullanici choose lesson dan bir ders secer</a>
 <div class="">
-<span class="badge badge-default">info_notu.Öğrenci hakkında Info notu girebilmelidir..And kullanici info note a bilgi notu girer ve gorur</span>
+<span class="badge badge-default">ogrenci_bilgileri.teacher ogrenci bilgilerini gorebilmeli.And kullanici choose lesson dan bir ders secer</span>
 </div>
 </td>
 </tr>

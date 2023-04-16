@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.ConfigReader;
@@ -84,9 +85,14 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
 
     @And("kullanici add teacher alanina bilgileri girer ve submit butona tiklar")
     public void kullaniciAddTeacherAlaninaBilgileriGirerVeSubmitButonaTiklar() {
+        Actions actions=new Actions(Driver.getDriver());
+       teacherPage.chooseLessons_dropBox_teacher.click();
+                 actions.
+                  keyDown(Keys.ARROW_DOWN).
+                 sendKeys(teacherPage.chooseLessons_dropBox_teacher,
+                  Keys.ENTER).
+                  perform();
 
-        teacherPage.chooseLessons_dropBox_teacher.click();
-        teacherPage.chooseLessons_dropBox_teacher.sendKeys(Keys.PAGE_DOWN,Keys.ENTER);
         ReusableMethods.waitFor(1);
 
         teacherPage.name_box_teacher.sendKeys(Faker.instance().name().firstName());
@@ -135,13 +141,13 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
 
     @And("kullanici teacher olarak username girer")
     public void kullaniciTeacherOlarakUsernameGirer() {
-        loginPage.username_Box_Login.sendKeys(usernameTeacher);
+        loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("teacherUsername"));
         ReusableMethods.waitFor(1);
     }
 
     @And("kullanici teacher olarak password girer")
     public void kullaniciTeacherOlarakPasswordGirer() {
-        loginPage.password_Box_Login.sendKeys(passwordTeacher);
+        loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("teacherPassword"));
         ReusableMethods.waitFor(1);
     }
 

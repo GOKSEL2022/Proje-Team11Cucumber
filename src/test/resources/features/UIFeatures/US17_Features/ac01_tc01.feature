@@ -1,7 +1,7 @@
 @ders_oğrenci_ve_dönem_sec
 Feature: Ders_Öğrenci_ve_dönem_seç
 
-  Scenario: Ders, Öğrenci ve dönem seçmelidir
+  Scenario: Ders, Ögrenci ve dönem seçmelidir
     Given kullanici url e gider
     When kullanici ana sayfada login butonuna tiklar
     And  kullanici admin olarak username girer

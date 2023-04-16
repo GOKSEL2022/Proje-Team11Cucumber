@@ -1,8 +1,8 @@
-@info_notu
-Feature:info_notu
+@edit_not
+Feature:edit_not
 
-  Scenario:Öğrenci hakkında Info notu girebilmelidir.
-    Given kullanici url e gider
+  Scenario:Öğrenci Not bilgisini güncelleyebilmeli
+
     When kullanici ana sayfada login butonuna tiklar
     And kullanici menu butonuna tiklar
     And kullanici teacher olarak username girer
@@ -17,3 +17,11 @@ Feature:info_notu
     And kullanici midterm exam a not girer ve gorur
     And kullanici final exam a not girer ve gorur
     And kullanici info note a bilgi notu girer ve gorur
+    And kullanici submit buton a tiklar
+    Then kullanici student Info saved succesfully popup yazisini gorur
+    And kullanici edit buton a tiklar
+    And kullanici edit yapacagi dersi secer
+    And kullanici edit yapacagi donemi secer
+    And kullanici ogrencinin guncel notunu "100" girer
+    And kullanici edit student Info sayfasinda submit butona tiklar
+    Then kullanici Student Info updadet Successfully popup yazisini gorur

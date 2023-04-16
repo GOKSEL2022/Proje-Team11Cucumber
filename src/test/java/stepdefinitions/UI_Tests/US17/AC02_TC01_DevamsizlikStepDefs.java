@@ -2,9 +2,12 @@ package stepdefinitions.UI_Tests.US17;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import pages.StudentInfoPage;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 ;import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +19,16 @@ public class AC02_TC01_DevamsizlikStepDefs {
     @And("kullanici absentee ye devamsizlik girer ve gorur")
     public void kullaniciAbsenteeYeDevamsizlikGirer() {
         studentInfoPage.absentee_box_studentInfo.sendKeys(devamsizlik+"");
-      Assert.assertEquals(3,studentInfoPage.requiredAbsente_text_studentInfo.size());
+        Assert.assertEquals(3,studentInfoPage.requiredAbsente_text_studentInfo.size());
+
 
 
     }
 
 
+    @Then("kullanici student Info saved succesfully popup yazisini gorur\\(basarisiz olur)")
+    public void kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorurBasarisizOlur() {
+        ReusableMethods.verifyElementNotDisplayed(studentInfoPage.studentSaved_alert_studentInfo);
+
+    }
 }
