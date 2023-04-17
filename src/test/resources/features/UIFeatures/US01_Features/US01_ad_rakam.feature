@@ -12,7 +12,7 @@ Feature:US01
     And   Kullanici Register menusunun altinda doldurulacak alanlari goruntuler
     And   Kullanici bir sn bekler
     And   Kullanici zorunlu alanlarin altinda Required yazisini  goruntuler
-    And   Kullanici Name "<Name>" girer
+    And   Kullanici Name "<Name>" i girer
     And   Kullanici bir sn bekler
     And   Kullanici Name textboxinin altindaki Required yazisinin kalktigini  goruntuler
     And   Kullanici Surname "<Surname>"  girer
@@ -37,14 +37,11 @@ Feature:US01
     And   Kullanici User Name textboxinin altindaki required yazisinin kalktigini  goruntuler
     And   Kullanici Password "<Password>" girer ve Register_Register butonunu tiklar
     And   Kullanici bir sn bekler
-    Then  Kullanici Register isleminin basarili oldugunu gösteren popupı görüntüler
+    Then  Kullanici Register islemi gerceklestiremez
     Examples:
       | Name    | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name    | Password |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 903-58-1258 | Goksel Celik | 12345678 |
-      | Admin   | 12345   | Ordu        | 452-481-2166 | 01.01.2000   | 950-78-0258 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452481002166 | 01.01.2000   | 363-78-1008 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 06.04.2023   | 463-78-1228 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 76307884278 | Goksel Celik | abcdefgh |
+      | 123456  | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 123-08-1258 | Goksel Celik | 12345678 |
+
 
 
 

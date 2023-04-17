@@ -6,6 +6,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import pages.HomePage;
+import pages.LoginPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -186,6 +188,16 @@ public class ReusableMethods {
         int optionIndex = 1 + random.nextInt(weblist.size() - 1);
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
+    }
+
+
+    public static void login(String username, String password){
+        HomePage homePage = new HomePage();
+        LoginPage loginPage = new LoginPage();
+        homePage.login_Button_Home.click();
+        loginPage.username_Box_Login.sendKeys(username);
+        loginPage.password_Box_Login.sendKeys(password);
+        loginPage.login_Button_Login.click();
     }
 
 
