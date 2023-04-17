@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class ContactPage {
 
+
     public ContactPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -33,9 +34,18 @@ public class ContactPage {
     @FindBy(xpath = "//div[contains(text(),'Contact Message Created Successfully')]")
     public WebElement successfully_alert;
 
+    @FindBy(css = "div[role='alert'] div:nth-child(2)")
+    public WebElement successfully_alert_css;
+
     @FindBy(xpath = "//div[contains(text(),'Please enter valid email')]")
     public WebElement mail_alert;
 
     @FindBy(xpath = "//div[contains(text(),'boyut ')]")
     public WebElement size_alert;
+
+
+
+
+
+
 }
