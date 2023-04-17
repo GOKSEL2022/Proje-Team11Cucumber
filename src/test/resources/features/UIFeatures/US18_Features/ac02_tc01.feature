@@ -17,9 +17,7 @@ Feature:edit_not
     And kullanici info note a bilgi notu girer ve gorur
     And kullanici submit buton a tiklar
     Then kullanici student Info saved succesfully popup yazisini gorur
-    And kullanici submit buton a tiklar
-    Then kullanici student Info saved succesfully popup yazisini gorur
-    And kullanici edit buton a tiklar
+        And kullanici edit buton a tiklar
     And kullanici edit yapacagi dersi secer
     And kullanici edit yapacagi donemi secer
     And kullanici ogrencinin guncel final notunu "99" girer

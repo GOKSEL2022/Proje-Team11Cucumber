@@ -19,25 +19,14 @@ import utilities.ReusableMethods;
 public class AC01_DersOgrenciDonemSecmeStepDefs {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
-    AdminManagementPage adminManagementPage = new AdminManagementPage();
-    TeacherPage teacherPage = new TeacherPage();
+
     LogoutPage logoutPage = new LogoutPage();
     StudentInfoPage studentInfoPage = new StudentInfoPage();
-    int ssnNo1 = Faker.instance().number().numberBetween(100,999);
-    int ssnNo2= Faker.instance().number().numberBetween(10,99);
-    int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
-    int phoneNo1= Faker.instance().number().numberBetween(100,999);
-    int phoneNo2= Faker.instance().number().numberBetween(100,999);
-    int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
-    int gun= Faker.instance().number().numberBetween(1,29);
-    int ay= Faker.instance().number().numberBetween(1,12);
-    int yil= Faker.instance().number().numberBetween(1950,2000);
 
     @Given("kullanici url e gider")
     public void kullaniciUrlEGider() {
         Driver.getDriver().get(ConfigReader.getProperty("managementonschools"));
     }
-
 
     @When("kullanici ana sayfada login butonuna tiklar")
     public void kullaniciAnaSayfadaLoginButonunaTiklar() {
@@ -78,7 +67,7 @@ public class AC01_DersOgrenciDonemSecmeStepDefs {
 
     @And("kullaninin sectigi dersi gorur")
     public void kullanininSectigiDersiGorur() {
-        ReusableMethods.waitForVisibility(studentInfoPage.chooseLesson_text_studentInfo,10);
+        ReusableMethods.waitForVisibility(studentInfoPage.chooseLesson_text_studentInfo,5);
       Assert.assertTrue(studentInfoPage.chooseLesson_text_studentInfo.isDisplayed());
         ReusableMethods.waitFor(1);
 

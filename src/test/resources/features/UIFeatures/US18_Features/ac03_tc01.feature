@@ -18,7 +18,5 @@ Feature:not_silme
     And kullanici info note a bilgi notu girer ve gorur
     And kullanici submit buton a tiklar
     Then kullanici student Info saved succesfully popup yazisini gorur
-    And kullanici submit buton a tiklar
-    Then kullanici student Info saved succesfully popup yazisini gorur
- And kullanici delete buton a tiklar
+     And kullanici delete buton a tiklar
   And kullanici ogrencinin not bilgisinin silindigini gorur(popup cikar)

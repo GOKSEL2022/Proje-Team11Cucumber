@@ -43,7 +43,7 @@ public class StudentInfoPage {
     public WebElement requiredinfoNote_text_studentInfo;
     @FindBy(xpath = "//button[.='Submit']")
     public WebElement submit_button_studentInfo;
-    @FindBy(xpath = "(//div[@id='4'])[1]")
+    @FindBy(xpath = "(//*[@class='Toastify__toast-container Toastify__toast-container--top-center'])[1]")
     public WebElement studentSaved_alert_studentInfo;
     @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")  //button[@class='text-dark btn btn-outline-info']
     public WebElement edit_button_studentInfo;
@@ -59,6 +59,9 @@ public class StudentInfoPage {
     public WebElement deleteButton_studentInfo;
 @FindBy(xpath = "(//*[text()='Student Info deleted Successfully'])[1]")
     public WebElement delete_alert_text_studentInfo;
+
+@FindBy(xpath = "(//*[@id='18'])[1]")
+    public WebElement edit_alert_text_studentInfo;
 
 
 }
