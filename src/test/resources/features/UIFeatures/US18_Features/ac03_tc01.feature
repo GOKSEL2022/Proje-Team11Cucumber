@@ -1,7 +1,6 @@
-@final_notu
-Feature:Midterm_ve_Final_Exam
-
-  Scenario: Midterm ve Final Exam notu girebilmelidir.
+@not_silme
+Feature:not_silme
+  Scenario:Öğrenci Not bilgisini silebilmeli
 
     Given kullanici url e gider
     When kullanici ana sayfada login butonuna tiklar
@@ -16,3 +15,8 @@ Feature:Midterm_ve_Final_Exam
     Then kullanici absentee ye devamsizlik girer ve gorur
     And kullanici midterm exam a not girer ve gorur
     And kullanici final exam a not girer ve gorur
+    And kullanici info note a bilgi notu girer ve gorur
+    And kullanici submit buton a tiklar
+    Then kullanici student Info saved succesfully popup yazisini gorur
+     And kullanici delete buton a tiklar
+  And kullanici ogrencinin not bilgisinin silindigini gorur(popup cikar)
