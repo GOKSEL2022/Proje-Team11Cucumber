@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="111.162" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="not_silme" name="Öğrenci Not bilgisini silebilmeli" time="110.421">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@id='4'])[1]&quot;}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7d8b41fc35cc086d55a9b99796a91274, findElement {using=xpath, value=(//div[@id='4'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\ferhat\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51753/devtoo..., se:cdpVersion: 112.0.5615.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d8b41fc35cc086d55a9b99796a91274">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@id='4'])[1]"}
+  (Session info: chrome=112.0.5615.87)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7d8b41fc35cc086d55a9b99796a91274, findElement {using=xpath, value=(//div[@id='4'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.87, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\ferhat\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51753/devtoo..., se:cdpVersion: 112.0.5615.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d8b41fc35cc086d55a9b99796a91274
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy26.isDisplayed(Unknown Source)
+	at stepdefinitions.UI_Tests.US18.AC01_TeacherSavedStepDefs.kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorur(AC01_TeacherSavedStepDefs.java:16)
+	at ✽.kullanici student Info saved succesfully popup yazisini gorur(file:///C:/Users/ferhat/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US18_Features/ac03_tc01.feature:31)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici url e gider.................................................passed
+When kullanici ana sayfada login butonuna tiklar............................passed
+And kullanici teacher olarak username girer.................................passed
+And kullanici teacher olarak password girer.................................passed
+And kullanici login sayfasinda login butona tiklar..........................passed
+And kullanici student info management yazisini gorur........................passed
+And kullanici choose lesson dan bir ders secer..............................passed
+And kullaninin sectigi dersi gorur..........................................passed
+And kullanici choose student den bir ogrenci secer ve gorur.................passed
+And kullanici choose education term den donem secer ve gorur................passed
+Then kullanici absentee ye devamsizlik girer ve gorur.......................passed
+And kullanici midterm exam a not girer ve gorur.............................passed
+And kullanici final exam a not girer ve gorur...............................passed
+And kullanici info note a bilgi notu girer ve gorur.........................passed
+And kullanici submit buton a tiklar.........................................skipped
+Then kullanici student Info saved succesfully popup yazisini gorur..........skipped
+And kullanici delete buton a tiklar.........................................skipped
+And kullanici ogrencinin not bilgisinin silindigini gorur(popup cikar)......skipped
+]]></system-out>
+</testcase>
+</testsuite>
