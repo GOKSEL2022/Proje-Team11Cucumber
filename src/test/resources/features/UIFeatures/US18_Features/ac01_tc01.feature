@@ -1,20 +1,10 @@
+@ogrencibilgileri
+Feature:ogrenci_bilgileri
+  Scenario:teacher ogrenci bilgilerini gorebilmeli
 
-Feature:
-  Scenario:
 
     Given kullanici url e gider
     When kullanici ana sayfada login butonuna tiklar
-    And  kullanici admin olarak username girer
-    And kullanici admin olarak password girer
-    And   kullanici login sayfasinda login butona tiklar
-    And kullanici menu butonuna tiklar
-    And   kullanici teacher management butona tiklar
-    And  teacher sayfasinda add teacher yazisi gorulur
-    And  kullanici add teacher alanina bilgileri girer ve submit butona tiklar
-    Then kullanici teacher saved successfully pup up yazisini gorur
-    And kullanici menu butonuna tiklar
-    And kullanici logout butonuna tiklar ve
-    And kullanici yes butona tiklayarak cikis yapar
     And kullanici teacher olarak username girer
     And kullanici teacher olarak password girer
     And kullanici login sayfasinda login butona tiklar
@@ -23,7 +13,7 @@ Feature:
     And  kullaninin sectigi dersi gorur
     And kullanici choose student den bir ogrenci secer ve gorur
     And  kullanici choose education term den donem secer ve gorur
-    Then kullanici absentee ye devamsizliga eksi deger girer "-1" ve gorur
+    Then kullanici absentee ye devamsizlik girer ve gorur
     And kullanici midterm exam a not girer ve gorur
     And kullanici final exam a not girer ve gorur
     And kullanici info note a bilgi notu girer ve gorur
