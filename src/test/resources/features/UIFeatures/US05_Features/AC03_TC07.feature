@@ -43,7 +43,7 @@ Feature:Dean ekleyebilme
     When Kullanici Submit butonuna tiklar
     And Kullanıcı bır sanıye bekler
     Then Kullanici Dean List bolumunde Dean kaydi gorulur
-#
+
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | AdminB103 | 12345678   | hasan | tarik    | " "         | 29-03-2001    | 090-505-8196  | 505-41-6328  |Team11     | 57916929 |
+      | karakartal | 987654321 | hasan | tarik    | " "         | 29-03-2001    | 090-505-8196  | 505-41-6328  |Team11     | 57916929 |

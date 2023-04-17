@@ -1,4 +1,4 @@
-@US04_AC02_TC03
+@US04_AC02_TC03 @team11
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
@@ -45,4 +45,4 @@ Feature:Dean ekleyebilme
 #
     Examples: dean_bilgileri
     | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-    | AdminB103 | 12345678   | hasan | 12345    | Van         | 29-03-2001    | 090-505-8191  | 505-41-6328  |Team11     | 57916929 |
+    | karakartal | 987654321   | hasan | 12345    | Van         | 29-03-2001    | 090-505-8191  | 505-41-6328  |Team11     | 57916929 |
