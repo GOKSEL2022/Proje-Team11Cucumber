@@ -9,6 +9,6 @@ public class AC02_TC03_DevamsizlikBuyukDegerStepDefs {
     @Then("kullanici absentee ye devamsizliga buyuk deger girer {string} ve gorur")
     public void kullaniciAbsenteeYeDevamsizligaBuyukDegerGirerVeGorur(String arg0) {
         studentInfoPage.absentee_box_studentInfo.sendKeys(arg0);
-        //Assert.assertFalse(studentInfoPage.requiredAbsente_text_studentInfo.isDisplayed());
+        Assert.assertEquals(3,studentInfoPage.requiredAbsente_text_studentInfo.size());
     }
 }
