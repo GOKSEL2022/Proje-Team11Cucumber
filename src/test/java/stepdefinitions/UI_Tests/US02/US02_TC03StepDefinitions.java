@@ -1,5 +1,4 @@
 package stepdefinitions.UI_Tests.US02;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -15,13 +14,10 @@ public class US02_TC03StepDefinitions {
     public void kullaniciSilButonlariniGörüntüler() {
        Assert.assertTrue(guestUserPage.first_Delete_Button_Guest_User.isDisplayed());
     }
-
     @And("Kullanici sil butonlarindan ilkine tiklar")
     public void kullaniciSilButonlarindanIlkineTiklar() {
         guestUserPage.first_Delete_Button_Guest_User.click();
-
     }
-
     @When("Kullanici Guest User deleted Successful alertini görüntüler")
     public void kullaniciGuestUserDeletedSuccessfulAlertiniGörüntüler() {
         Assert.assertTrue(guestUserPage.alert_Guest_User.isDisplayed());

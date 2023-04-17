@@ -1,5 +1,4 @@
 package stepdefinitions.UI_Tests.US02;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +8,6 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.US01_US02_Pages.GuestUserPage;
 import utilities.Driver;
-
 public class US02_TC02StepDefinitions {
     public static void adminLogin(){
         HomePage homePage = new HomePage();
@@ -19,7 +17,6 @@ public class US02_TC02StepDefinitions {
         loginPage.password_Box_Login.sendKeys("12345678");
         loginPage.login_Button_Login.click();
     }
-
     AdminManagementPage adminManagementPage=new AdminManagementPage();
     GuestUserPage guestUserPage=new GuestUserPage();
     HomePage homePage=new HomePage();
@@ -44,7 +41,6 @@ public class US02_TC02StepDefinitions {
         Assert.assertTrue(adminManagementPage.main_Menu_Text_Menu.isDisplayed());
 
     }
-
     @And("Kullanici Guest User secenegini tiklar")
     public void kullaniciGuestUserSeceneginiTiklar() {
         Driver.clickWithJS(adminManagementPage.guest_User_Button_Menu);
@@ -54,26 +50,20 @@ public class US02_TC02StepDefinitions {
     public void kullaniciGuestUserListBasliginiGörüntüler() {
         Assert.assertTrue(guestUserPage.guest_User_List_Text_Guest_User.isDisplayed());
     }
-
     @And("Kullanici Name Surname altbasligini görüntüler")
     public void kullaniciNameSurnameAltbasliginiGörüntüler() {
         Assert.assertTrue(guestUserPage.name_Surname_Text_Guest_User.isDisplayed());
     }
-
     @And("Kullanici Phone Number altbasligini görüntüler")
     public void kullaniciPhoneNumberAltbasliginiGörüntüler() {
         Assert.assertTrue(guestUserPage.phone_Number_Text_Guest_User.isDisplayed());
     }
-
     @When("Kullanici Ssn altbasligini görüntüler")
     public void kullaniciSsnAltbasliginiGörüntüler() {
         Assert.assertTrue(guestUserPage.ssn_Text_Guest_User.isDisplayed());
     }
-
     @Then("Kullanici User Name altbasligini görüntüler")
     public void kullaniciUserNameAltbasliginiGörüntüler() {
         Assert.assertTrue(guestUserPage.user_Name_Text_Guest_User.isDisplayed());
-
     }
-
 }
