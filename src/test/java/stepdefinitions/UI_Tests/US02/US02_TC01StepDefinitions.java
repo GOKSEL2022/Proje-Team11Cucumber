@@ -1,17 +1,13 @@
 package stepdefinitions.UI_Tests.US02;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.Driver;
-
 public class US02_TC01StepDefinitions {
      HomePage homePage = new HomePage();
      LoginPage loginPage = new LoginPage();
-
-
 
     @And("Kullanici Login butonunun sayfada yer aldigini goruntuler")
     public void kullaniciLoginButonununSayfadaYerAldiginiGoruntuler() {
