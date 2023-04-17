@@ -8,6 +8,9 @@ import org.openqa.selenium.Keys;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
+import pages.US04_US05_Pages.Admin_ManagementPage;
+import pages.US04_US05_Pages.DeanManagementPage;
+import pages.US04_US05_Pages.EditDeanPage;
 
 public class US04_AC05_TC01DateOfBirthBos {
     HomePage homePage = new HomePage();
