@@ -9,6 +9,9 @@ import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
+import pages.US04_US05_Pages.Admin_ManagementPage;
+import pages.US04_US05_Pages.DeanManagementPage;
+import pages.US04_US05_Pages.EditDeanPage;
 import utilities.Driver;
 
 public class US04_AC01_TC01_DeanEkleme {
@@ -29,7 +32,7 @@ public class US04_AC01_TC01_DeanEkleme {
 
     Faker faker = new Faker();
 
-    @Given("Kullanici {string} gider")
+    @Given("Kullanici {string} sayfasina gider")
     public void kullaniciGider(String arg0) {
         Driver.getDriver().get(arg0);
     }
@@ -39,7 +42,7 @@ public class US04_AC01_TC01_DeanEkleme {
         Thread.sleep(1000);
     }
 
-    @When("Kullanici Login butonuna tiklar")
+    @When("Kullanici Login butonuna tiklar.")
     public void kullaniciLoginButonunaTiklar() {
         homePage.login_Button_Home.click();
     }
@@ -54,8 +57,10 @@ public class US04_AC01_TC01_DeanEkleme {
         loginPage.password_Box_Login.sendKeys(arg0);
     }
 
-    @And("Kullanici Login sayfasinda Login butona tiklar")
+
+    @And("Kullanici Login sayfasinda Login butona tiklar.")
     public void kullaniciLoginSayfasindaLoginButonaTiklar() {
+
         loginPage.login_Button_Login.click();
     }
 

@@ -10,7 +10,7 @@ Feature:Dean guncelleme
     And Kullanıcı bır sanıye bekler
     And Kullanici Admin olarak Password "<Password>" girer
     And Kullanıcı bır sanıye bekler
-    And Kullanici Login sayfasinda Login butona tiklar
+    And Kullanici Login sayfasinda Login butona tiklar.
     And Kullanıcı bır sanıye bekler
     And Kullanici Menu butonuna tiklar
     And Kullanıcı bır sanıye bekler
@@ -22,6 +22,7 @@ Feature:Dean guncelleme
     And Kullanici Edit Dean bolumunun acildigini gorur
     And Kullanici Name alanini siler.
     And Kullanıcı bır sanıye bekler
+    And Genderalanindan female checkboxina tiklar.
     And Kullanici password "<password>" alanina gecerli sifre girer
     And Kullanıcı bır sanıye bekler
     And Kullanici Edit Dean alanindaki Submit butonuna tiklar
@@ -30,4 +31,4 @@ Feature:Dean guncelleme
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | AdminB103 | 12345678   |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |
+      | karakartal| 987654321  |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |

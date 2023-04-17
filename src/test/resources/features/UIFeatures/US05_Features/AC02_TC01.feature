@@ -10,7 +10,7 @@ Feature:Dean ekleyebilme
     And Kullanıcı bır sanıye bekler
     And Kullanici Admin olarak Password "<Password>" girer
     And Kullanıcı bır sanıye bekler
-    And Kullanici Login sayfasinda Login butona tiklar
+    And Kullanici Login sayfasinda Login butona tiklar.
     And Kullanıcı bır sanıye bekler
     And Kullanici Menu butonuna tiklar
     And Kullanıcı bır sanıye bekler
@@ -23,5 +23,5 @@ Feature:Dean ekleyebilme
 
 #
     Examples: dean_bilgileri
-      | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | AdminB103 | 12345678   | hasan |          | Van         | 29-03-2001    | 090-505-8189  | 505-91-6328  |Team11     | 57916929 |
+      | Username   | Password     | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
+      | karakartal | 987654321   | hasan |          | Van         | 29-03-2001    | 090-505-8189  | 505-91-6328  |Team11     | 57916929 |

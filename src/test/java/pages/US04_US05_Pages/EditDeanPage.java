@@ -17,7 +17,7 @@ public class EditDeanPage {
     @FindBy(xpath = "(//*[.='Edit Dean'])[2]")
     public WebElement text_Edit_Dean;
 
-    @FindBy(xpath = "//*[@value='Sahra']")
+    @FindBy(xpath = "(//input[@placeholder='Name'])")
     public WebElement name_Edit_Dean;
 
     @FindBy(xpath = "//*[@id='surname']")
@@ -29,7 +29,7 @@ public class EditDeanPage {
     @FindBy(xpath = "//input[@id='phoneNumber']")
     public WebElement phoneNumber_Edit_Dean;
 
-    @FindBy(xpath = "//input[@value='FEMALE']")
+    @FindBy(xpath = "(//*[@class='form-check-input'])[3]")
     public WebElement female_Checkbox_Edit_Dean;
 
     @FindBy(xpath = "//input[@value='MALE']")
@@ -44,10 +44,10 @@ public class EditDeanPage {
     @FindBy(xpath = "//*[@id='username']")
     public WebElement username_Edit_Dean;
 
-    @FindBy(xpath = "//*[@id='password']")
+    @FindBy(xpath = "(//*[@id='password'])[2]")
     public WebElement password_Edit_Dean;
 
-    @FindBy(xpath = "//*[@class='fw-semibold btn btn-primary btn-lg']")
+    @FindBy(xpath = "(//*[.='Submit'])[6]")
     public WebElement submit_Button_Edit_Dean;
 
     @FindBy(xpath = "/html/body/div[3]/div[1]/button")
@@ -90,6 +90,17 @@ public class EditDeanPage {
 
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[16]")
     public WebElement Required_edit_Dean_Password;
+
+    @FindBy(xpath = "//div[@id='3']")
+    public WebElement dean_Saved_message_name_Edit_Dean;
+
+    @FindBy(xpath = "//div[@id='4']")
+    public WebElement dean_Saved_message_Surname_Edit_Dean;
+
+    @FindBy(xpath = " ")
+    public WebElement delete_Buton;
+
+
 
 
 
