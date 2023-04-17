@@ -1,9 +1,9 @@
 @not_silme
 Feature:not_silme
-
   Scenario:Öğrenci Not bilgisini silebilmeli
+
+    Given kullanici url e gider
     When kullanici ana sayfada login butonuna tiklar
-    And kullanici menu butonuna tiklar
     And kullanici teacher olarak username girer
     And kullanici teacher olarak password girer
     And kullanici login sayfasinda login butona tiklar
@@ -18,5 +18,5 @@ Feature:not_silme
     And kullanici info note a bilgi notu girer ve gorur
     And kullanici submit buton a tiklar
     Then kullanici student Info saved succesfully popup yazisini gorur
-    And kullanici delete buton a tiklar
-    And kullanici ogrencinin not bilgisinin silindigini gorur(popup cikar)
+     And kullanici delete buton a tiklar
+  And kullanici ogrencinin not bilgisinin silindigini gorur(popup cikar)

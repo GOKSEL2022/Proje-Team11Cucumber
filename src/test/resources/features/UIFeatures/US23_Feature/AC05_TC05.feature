@@ -1,0 +1,28 @@
+@US23_TC05 @team11
+Feature: Admin Vice Dean hesabi olusturabilmelidir
+
+  Background:Managementon_Schools_sayfasina_git
+    Given Kullanici "https://www.managementonschools.com/" url'ine gider
+    Given Kullanici Home sayfasindaki Login buttonuna tiklar
+    Given Kullanici Admin olarak User Name'i girer
+    Given Kullanici Admin olarak Password'u girer
+    Given Kullanici Login buttonuna tiklar
+    Given Kullanici "Vice Dean Management" sayfasinda oldugunu dogrular
+
+  Scenario Outline:US23_TC05_Password_alaninin_testi
+    When Kullanici Name alanina valid bir "<Name>" girer
+    And Kullanici Surname alanina valid bir "<Surname>" girer
+    And Kullanici Birth Place alanina valid bir "<Birth Place>" girer
+    And Kullanici Gender alanini bos birakir
+    And Kullanici Date Of Birth alanina valid bir "<Date Of Birth>" girer
+    And Kullanici Phone alanina valid bir "<Phone>" girer
+    And Kullanici Ssn alanina valid bir "<Ssn>" girer
+    And Kullanici User Name alanina valid bir "<User Name>" girer
+    And Kullanici Password alanina valid bir "<Password>" girer
+    And Kullanici Submit butonuna tiklayamaz
+
+
+
+    Examples: Admin_Vice_Dean_Bilgileri
+      | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
+      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     |          |

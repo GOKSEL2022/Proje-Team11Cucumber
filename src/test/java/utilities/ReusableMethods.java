@@ -6,7 +6,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
-import org.testng.Assert;
+import pages.HomePage;
+import pages.LoginPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,9 +18,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
-
-import static org.testng.AssertJUnit.assertFalse;
-import static org.testng.AssertJUnit.assertTrue;
 
 public class ReusableMethods {
     /*HOW DO YOU GET SCREENSHOT?
@@ -42,7 +40,6 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
-
     //========Switching Window=====//
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
@@ -191,33 +188,49 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
-
-    /**
-     * Verifies whether the element matching the provided WebElement is NOT displayed on page
-     * fails if the element matching the WebElement is not found or not displayed
-     * @paramWebElement
-     */
-    public static void verifyElementNotDisplayed(WebElement element) {
-        try {
-            assertFalse("Element should not be visible: " + element, element.isDisplayed());
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
-        }
+    public static void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
     }
 
-    /**
-     * Verifies whether the element is displayed on page
-     * fails if the element is not found or not displayed
-     *
-     * @param element
-     */
-    public static void verifyElementDisplayed(WebElement element) {
-        try {
-            assertTrue("Element not visible: " + element, element.isDisplayed());
-        } catch (NoSuchElementException e) {
-            Assert.fail("Element not found: " + element);
-        }
+    public static void login(String username, String password){
+        HomePage homePage = new HomePage();
+        LoginPage loginPage = new LoginPage();
+        homePage.login_Button_Home.click();
+        loginPage.username_Box_Login.sendKeys(username);
+        loginPage.password_Box_Login.sendKeys(password);
+        loginPage.login_Button_Login.click();
     }
+
+    public static void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    public static String getScreenshotElement(String name, WebElement elementName) throws IOException {
+        // naming the screenshot with the current date to avoid duplication
+        String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        // TakesScreenshot is an interface of selenium that takes the screenshot
+        File source = elementName.getScreenshotAs(OutputType.FILE);
+        // full path to the screenshot location
+        String target = System.getProperty("user.dir") + "/target/Screenshots/" + name + date + ".png";
+        File finalDestination = new File(target);
+        // save the screenshot to the path given
+        FileUtils.copyFile(source, finalDestination);
+        return target;
+    }
+
 
 
 }

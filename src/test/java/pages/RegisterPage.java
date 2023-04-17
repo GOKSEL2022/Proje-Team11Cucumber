@@ -43,4 +43,33 @@ public class RegisterPage {
     @FindBy(xpath = "//button[@class='fw-semibold btn btn-primary']")
     public WebElement register_Button_Register;
 
+    @FindBy(xpath = "//div[text()='Guest User registered.']")
+    public WebElement alert_Register;
+
+    @FindBy(xpath = "//div[@class='mb-4 fw-semibold shadow-sm bg-body-tertiary card-title h5']")
+    public WebElement register_Text_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement required_Text_Name_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement required_Text_Surname_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    public WebElement required_Text_BirthPlace_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[4]")
+    public WebElement required_Text_Phone_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[5]")
+    public WebElement required_Text_DateOfBirth_Register;
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[6]")
+    public WebElement required_Text_Ssn_Register;
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[7]")
+    public WebElement required_Text_UserName_Register;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[8]")
+    public WebElement required_Text_Password_Register;
+
+
 }

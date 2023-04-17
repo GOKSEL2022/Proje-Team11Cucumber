@@ -4,7 +4,6 @@ Feature:info_notu
   Scenario:Öğrenci hakkında Info notu girebilmelidir.
     Given kullanici url e gider
     When kullanici ana sayfada login butonuna tiklar
-    And kullanici menu butonuna tiklar
     And kullanici teacher olarak username girer
     And kullanici teacher olarak password girer
     And kullanici login sayfasinda login butona tiklar

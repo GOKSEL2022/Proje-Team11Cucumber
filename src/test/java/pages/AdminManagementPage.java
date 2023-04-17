@@ -17,5 +17,15 @@ public class AdminManagementPage {
     @FindBy(xpath = "//*[.='Logout']")
     public WebElement logout_button_adminmanagement;
 
+    @FindBy(xpath = "//button[@class='fw-semibold text-white bg-primary navbar-toggler collapsed']")
+    public WebElement menu_Button_Menu;
 
+    @FindBy(xpath = "(//div[@id='offcanvasNavbarLabel-expand-lg'])[2]")
+    public WebElement main_Menu_Text_Menu;
+
+    @FindBy(xpath = "(//a[@class='nav-link'])[16]")
+    public WebElement guest_User_Button_Menu;
+
+    @FindBy(xpath = "//*[@class='fw-bold p-3 card-header']")
+    public WebElement guest_User_List_Text_Guest_User;
 }

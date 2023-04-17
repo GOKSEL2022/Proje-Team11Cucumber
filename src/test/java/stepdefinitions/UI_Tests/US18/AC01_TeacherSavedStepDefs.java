@@ -3,7 +3,9 @@ package stepdefinitions.UI_Tests.US18;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
 import pages.StudentInfoPage;
+import utilities.ReusableMethods;
 
 public class AC01_TeacherSavedStepDefs {
     StudentInfoPage studentInfoPage =new StudentInfoPage();
@@ -13,6 +15,12 @@ public class AC01_TeacherSavedStepDefs {
     }
     @Then("kullanici student Info saved succesfully popup yazisini gorur")
     public void kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorur() {
-        Assert.assertTrue(studentInfoPage.studentSaved_alert_studentInfo.isDisplayed());
+        try {
+            Assert.assertTrue( studentInfoPage.studentSaved_alert_studentInfo.isDisplayed());
+        } catch (NoSuchElementException e) {
+            Assert.fail("Element not found: " + studentInfoPage.studentSaved_alert_studentInfo);
+        }
+        ReusableMethods.waitFor(1);
+
     }
 }
