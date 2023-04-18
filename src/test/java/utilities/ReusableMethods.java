@@ -6,6 +6,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import pages.HomePage;
+import pages.LoginPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +40,6 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
-
     //========Switching Window=====//
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
@@ -187,6 +188,49 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
+    public static void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public static void login(String username, String password){
+        HomePage homePage = new HomePage();
+        LoginPage loginPage = new LoginPage();
+        homePage.login_Button_Home.click();
+        loginPage.username_Box_Login.sendKeys(username);
+        loginPage.password_Box_Login.sendKeys(password);
+        loginPage.login_Button_Login.click();
+    }
+
+    public static void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    public static String getScreenshotElement(String name, WebElement elementName) throws IOException {
+        // naming the screenshot with the current date to avoid duplication
+        String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        // TakesScreenshot is an interface of selenium that takes the screenshot
+        File source = elementName.getScreenshotAs(OutputType.FILE);
+        // full path to the screenshot location
+        String target = System.getProperty("user.dir") + "/target/Screenshots/" + name + date + ".png";
+        File finalDestination = new File(target);
+        // save the screenshot to the path given
+        FileUtils.copyFile(source, finalDestination);
+        return target;
+    }
+
 
 
     public static void cleanByJs(WebElement editEmailTextbox) {
