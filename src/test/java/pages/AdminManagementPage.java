@@ -16,4 +16,7 @@ public class AdminManagementPage {
     public WebElement teachermanagement_button_adminmanagement;
     @FindBy(xpath = "//*[.='Logout']")
     public WebElement logout_button_adminmanagement;
+
+    @FindBy(xpath = "(//a[normalize-space()='Lesson Management']")
+    public WebElement lessonManagament;
 }
