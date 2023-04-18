@@ -12,6 +12,10 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US05_AC03_TC04NameAlaninaSpaceGir {
 
@@ -31,10 +35,12 @@ public class US05_AC03_TC04NameAlaninaSpaceGir {
     Faker faker = new Faker();
 
     @And("Kullanici Name alanina space girer.")
-    public void kullaniciNameAlaninaSpaceGirer() throws InterruptedException {
+    public void kullaniciNameAlaninaSpaceGirer() throws InterruptedException, IOException {
         editDeanPage.name_Edit_Dean.sendKeys(Keys.DELETE,Keys.SPACE);
         Thread.sleep(1000);
         Assert.assertFalse(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 
 }
