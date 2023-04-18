@@ -18,22 +18,7 @@ public class LoginPage {
 
 
     @FindBy(xpath = "//button[@class='fw-semibold btn btn-primary']")
-    public WebElement login_Button_Login;}
-
-    @FindBy(xpath = "//button[@fw-semibold btn btn-primary']")
     public WebElement login_Button_Login;
-}
-
-
-
-
-
-}
-
-
-
-
-
 
 
     @FindBy(xpath = "//div[@class='mb-4 fw-semibold shadow-sm bg-body-tertiary card-title h5']")
