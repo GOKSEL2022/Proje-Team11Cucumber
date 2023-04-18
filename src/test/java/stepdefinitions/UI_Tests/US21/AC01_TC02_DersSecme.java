@@ -4,8 +4,8 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US19_US20_US21_Pages.ChooseLessonManagement;
-import pages.US19_US20_US21_Pages.MainMenuPage;
+import pages.ChooseLessonManagement;
+import pages.MainMenuPage;
 
 public class AC01_TC02_DersSecme {
     HomePage homePage =new HomePage();

@@ -1,4 +1,4 @@
-@US05_AC03_TC03
+@US05_AC03_TC03 @team11
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_guncelleme

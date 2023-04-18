@@ -1,7 +1,7 @@
 package stepdefinitions.UI_Tests.US23;
 
 import io.cucumber.java.en.When;
-import pages.US23_Pages.AdminViceDeanPage;
+import pages.AdminViceDeanPage;
 
 public class AC05_TC05 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();

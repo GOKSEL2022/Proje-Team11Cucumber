@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US19_US20_US21_Pages.MainMenuPage;
+import pages.MainMenuPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 

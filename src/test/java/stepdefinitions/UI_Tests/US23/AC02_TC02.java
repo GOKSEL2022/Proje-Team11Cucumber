@@ -1,7 +1,7 @@
 package stepdefinitions.UI_Tests.US23;
 
 import io.cucumber.java.en.When;
-import pages.US23_Pages.AdminViceDeanPage;
+import pages.AdminViceDeanPage;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertFalse;

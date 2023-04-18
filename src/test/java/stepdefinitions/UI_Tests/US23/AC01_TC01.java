@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US23_Pages.AdminViceDeanPage;
+import pages.AdminViceDeanPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
