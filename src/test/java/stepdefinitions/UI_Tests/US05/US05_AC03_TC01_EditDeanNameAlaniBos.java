@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
@@ -16,6 +17,9 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC01_EditDeanNameAlaniBos {
+
+    public static void withActionsEditTextBox(WebElement element, String text) {
+    }
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -50,16 +54,22 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
     }
 
         @And("Kullanici Name alanini siler.")
-        public void kullaniciNameAlaniniSiler () throws InterruptedException {
-           // Driver.waitAndSendText(editDeanPage.name_Edit_Dean,"name");
-          // while(!editDeanPage.name_Edit_Dean.getAttribute("value").equals("")){
-          //     editDeanPage.name_Edit_Dean.sendKeys(Keys.BACK_SPACE);
-          // }
+        public void kullaniciNameAlaniniSiler (){
 
-        editDeanPage.name_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
-      //  editDeanPage.name_Edit_Dean.sendKeys("123");
-        Thread.sleep(1000);
-        }
+                Actions actions = new Actions(Driver.getDriver());  //TEXTBOXSILME
+                actions.click(editDeanPage.name_Edit_Dean);
+                actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+                actions.sendKeys(Keys.BACK_SPACE).perform();
+                editDeanPage.name_Edit_Dean.sendKeys("sevilay");
+            }
+    // Driver.waitAndSendText(editDeanPage.name_Edit_Dean,"name");
+    // while(!editDeanPage.name_Edit_Dean.getAttribute("value").equals("")){
+    //     editDeanPage.name_Edit_Dean.sendKeys(Keys.BACK_SPACE);
+    // }
+    //     editDeanPage.name_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+    //  editDeanPage.name_Edit_Dean.sendKeys("123");
+
+
 
         @Then("Kullanici Edit Dean alaninda name textboxinin altinda Required uyari mesajini gorur kaydi gorulur")
         public void kullaniciEditDeanAlanindaNameTextboxininAltindaRequiredUyariMesajiniGorurKaydiGorulur () {
