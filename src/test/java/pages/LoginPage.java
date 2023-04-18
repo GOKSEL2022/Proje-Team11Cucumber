@@ -31,6 +31,20 @@ public class LoginPage {
 }
 
 
+
+
+
+
+
+    @FindBy(xpath = "//div[@class='mb-4 fw-semibold shadow-sm bg-body-tertiary card-title h5']")
+    public WebElement login_Text_Login;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement required_Text_Username_Login;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement required_Text_Password_Login;
+
 }
 
 
