@@ -9,8 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
+import pages.US04_US05_Pages.Admin_ManagementPage;
+import pages.US04_US05_Pages.DeanManagementPage;
+import pages.US04_US05_Pages.EditDeanPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
 
 public class US05_AC03_TC01_EditDeanNameAlaniBos {
     Actions actions = new Actions(Driver.getDriver());
@@ -34,7 +38,7 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
     public void kullaniciDeanListAlanindakiEditButonunaTiklar() throws InterruptedException {
 
         //editDeanPage.edit_Button_Team_Hasan.click();
-        ReusableMethods.clickWithJS(editDeanPage.edit_Button_Team_Hasan);
+        ReusableMethods.clickByJS(editDeanPage.edit_Button_Team_Hasan);
         Thread.sleep(1000);
         Assert.assertTrue(editDeanPage.edit_Button_Team_Hasan.isDisplayed());
         Thread.sleep(1000);
@@ -65,6 +69,6 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
 
     @When("Kullanici Edit Dean alanindaki Submit butonuna tiklar")
     public void kullaniciEditDeanAlanindakiSubmitButonunaTiklar() {
-        ReusableMethods.clickWithJS(editDeanPage.submit_Button_Edit_Dean);
+        ReusableMethods.clickByJS(editDeanPage.submit_Button_Edit_Dean);
     }
 }

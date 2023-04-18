@@ -6,6 +6,9 @@ import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
+import pages.US04_US05_Pages.Admin_ManagementPage;
+import pages.US04_US05_Pages.DeanManagementPage;
+import pages.US04_US05_Pages.EditDeanPage;
 
 public class US04_AC01_TC02_NameAlaniBos {
     HomePage homePage = new HomePage();
