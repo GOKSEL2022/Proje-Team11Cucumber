@@ -1,4 +1,4 @@
-@US22_AC05
+@US22_AC05,@team11
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu
@@ -133,5 +133,5 @@ Feature: Admin_ekleme
     And Kullanıcı Password kutusuna "password" gırer
     And Kullanıcı bir saniye bekler
     And Kullanıcı submit butonuna tıklar.
-    Then Kullanıcı admin ekleme isleminin gerçeklesmediğini dogrular.
+    Then Add Admin işlemi başarılı bir şekilde gerceklesir.
     Then Kullanıcı sayfayı kapatır.

@@ -2,7 +2,9 @@ package stepdefinitions.UI_Tests.US15;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.HomePage;
+
 import pages.LoginPage;
 import pages.RegisterPage;
 import pages.Vice_DeanPage;

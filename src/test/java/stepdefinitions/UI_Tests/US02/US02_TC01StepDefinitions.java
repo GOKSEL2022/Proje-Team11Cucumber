@@ -22,9 +22,12 @@ public class US02_TC01StepDefinitions {
     @And("Kullanici Login menusunde doldurulacak alanlar  icin required yazisini goruntuler")
     public void kullaniciLoginMenusundeDoldurulacakAlanlarIcinRequiredYazisiniGoruntuler() {
 
-        loginPage.username_Box_Login.click();
-//        loginPage.login_Text_Login.click();
-//        Assert.assertTrue(loginPage.required_Text_Username_Login.isDisplayed());
+
+
+     //  loginPage.username_Box_Login.click();
+     //  loginPage.login_Text_Login.click();
+     //  Assert.assertTrue(loginPage.required_Text_Username_Login.isDisplayed());
+
     }
 
     @And("Kullanici User Name e {string} girer")

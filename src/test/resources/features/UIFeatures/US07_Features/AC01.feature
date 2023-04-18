@@ -1,4 +1,4 @@
-@US07_AC01
+@US07_AC01,@team11
 Feature: Dean, mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve  subject bilgilerini görüntüleyebilmelidir
 
   Background: Kullanıcı contact_getAll sayfasına erişir

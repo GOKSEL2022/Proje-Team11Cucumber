@@ -17,6 +17,10 @@ public class AdminManagementPage {
     @FindBy(xpath = "//*[.='Logout']")
     public WebElement logout_button_adminmanagement;
 
+
+    @FindBy(xpath = "(//a[normalize-space()='Lesson Management']")
+    public WebElement lessonManagament;
+
     @FindBy(xpath = "//button[@class='fw-semibold text-white bg-primary navbar-toggler collapsed']")
     public WebElement menu_Button_Menu;
 
@@ -28,4 +32,5 @@ public class AdminManagementPage {
 
     @FindBy(xpath = "//*[@class='fw-bold p-3 card-header']")
     public WebElement guest_User_List_Text_Guest_User;
+
 }

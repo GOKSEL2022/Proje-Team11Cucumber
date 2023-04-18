@@ -1,4 +1,4 @@
-@US04_AC04_TC01
+@US04_AC04_TC01 @team11
 Feature:Dean ekleyebilme
   Scenario Outline : TC01_Gender_checkbox_secilmediginde_dean_olusmaz
     Given Kullanici "https://www.managementonschools.com/" gider.
@@ -9,7 +9,7 @@ Feature:Dean ekleyebilme
     And Kullanıcı bır sanıye bekler
     And Kullanici Admin olarak Password "<Password>" girer
     And Kullanıcı bır sanıye bekler
-    And Kullanici Login sayfasinda Login butona tiklar
+    And Kullanici Login sayfasinda Login butona tiklar.
     And Kullanıcı bır sanıye bekler
     And Kullanici Menu butonuna tiklar
     And Kullanıcı bır sanıye bekler
@@ -45,4 +45,4 @@ Feature:Dean ekleyebilme
 
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth |Phone         | Ssn          | User Name | password |
-      | AdminB103 | 12345678   | *-+/% | tarik    | Van         | 29-03-2001    |090-505-7310  | 505-51-6328  |Team11     | 57916929 |
+      | karakartal | 987654321 | *-+/% | tarik    | Van         | 29-03-2001    |090-505-7310  | 505-51-6328  |Team11     | 57916929 |

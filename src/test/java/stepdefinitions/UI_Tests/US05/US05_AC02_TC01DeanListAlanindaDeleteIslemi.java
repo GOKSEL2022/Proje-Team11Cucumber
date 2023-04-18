@@ -7,6 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
+import pages.Admin_ManagementPage;
+import pages.DeanManagementPage;
+import pages.EditDeanPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import pages.US04_US05_Pages.Admin_ManagementPage;
@@ -40,7 +43,7 @@ public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
     public void kullaniciDeleteButonununOlmadiginiDogrular() throws IOException {
 
         //Assert.assertFalse("Delete",false);
-        Assert.assertTrue(editDeanPage.surname_Edit_Dean.isDisplayed());
+        Assert.assertTrue(editDeanPage.delete_Buton.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");
 

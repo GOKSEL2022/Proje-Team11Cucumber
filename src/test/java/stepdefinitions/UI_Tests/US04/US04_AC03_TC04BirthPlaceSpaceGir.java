@@ -8,9 +8,13 @@ import org.openqa.selenium.Keys;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
+import pages.Admin_ManagementPage;
+import pages.DeanManagementPage;
+import pages.EditDeanPage;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US04_AC03_TC04BirthPlaceSpaceGir {
     HomePage homePage = new HomePage();
@@ -32,14 +36,11 @@ public class US04_AC03_TC04BirthPlaceSpaceGir {
     public void kullaniciBirthPlaceAlaninaSpaceGirer() {
         deanManagementPage.birthPlace_Add_Dean.sendKeys(Keys.SPACE, Keys.TAB);
     }
-
-
-
-
-
     @Then("Kullanici Dean Save mesajin alir")
-    public void kullaniciDeanSaveMesajinAlir() {
+    public void kullaniciDeanSaveMesajinAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 
 

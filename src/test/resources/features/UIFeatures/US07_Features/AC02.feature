@@ -1,4 +1,4 @@
-@US07_AC02
+@US07_AC02,@team11
 Feature: Dean mesajları silebilmelidir.
 
   Background: Kullanıcı contact_getAll sayfasına erişir

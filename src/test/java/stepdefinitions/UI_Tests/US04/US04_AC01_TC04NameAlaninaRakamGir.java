@@ -7,9 +7,13 @@ import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
+import pages.Admin_ManagementPage;
+import pages.DeanManagementPage;
+import pages.EditDeanPage;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US04_AC01_TC04NameAlaninaRakamGir {
     HomePage homePage = new HomePage();
@@ -38,7 +42,9 @@ public class US04_AC01_TC04NameAlaninaRakamGir {
     }
 
     @Then("Kullanici Dean Save kayit olundu mesajini gorur")
-    public void kullaniciDeanSaveKayitOlunduMesajiniGorur() {
+    public void kullaniciDeanSaveKayitOlunduMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 }
