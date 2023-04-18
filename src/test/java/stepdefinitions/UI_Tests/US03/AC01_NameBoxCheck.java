@@ -74,4 +74,8 @@ public class AC01_NameBoxCheck {
     public void kullanıcıMesajınIletilemediğiniDoğrular() {
         Assert.assertTrue(!contactPage.successfully_alert_css.isDisplayed());
     }
+
+
+
+
 }
