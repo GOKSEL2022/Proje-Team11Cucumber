@@ -17,7 +17,7 @@ public class AC01_TC01_ToplantilarinDateStartTimeStopTimeDescriptionGorulmeli {
 
     @When("kullanici edit butonununa tiklar")
     public void kullanici_edit_butonununa_tiklar() {
-      ReusableMethods.clickByJS(mainMenuPage.edit_button);
+      //ReusableMethods.clickByJS(mainMenuPage.edit_button);
      // mainMenuPage.edit_button.click();
     }
     @Then("kullanici olusturmus oldugu Date, Start Time ve Descriptionu dogrular")
