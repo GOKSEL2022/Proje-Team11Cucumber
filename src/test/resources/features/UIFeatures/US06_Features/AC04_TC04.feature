@@ -1,20 +1,22 @@
-@US06_TC04 @team11
+@US06_TC04 @team11 @smoke
 Feature: Dean Vice Dean hesabi olusturabilmelidir
 
   Background:Managementon_Schools_sayfasina_git
-    Given Kullanici "https://www.managementonschools.com/" url'ine gider
-    Given Kullanici Home sayfasindaki Login buttonuna tiklar
-    Given Kullanici Dean olarak User Name'i girer
-    Given Kullanici Dean olarak Password'u girer
-    Given Kullanici Login buttonuna tiklar
-    Given Kullanici "Vice Dean Management" sayfasinda oldugunu dogrular
+    Given Nilufer "https://www.managementonschools.com/" url'ine gider
+    Given Nilufer Home sayfasindaki Login buttonuna tiklar
+    Given Nilufer Dean olarak User Name'i girer
+    Given Nilufer Dean olarak Password'u girer
+    Given Nilufer Login buttonuna tiklar
+    Given Nilufer "Vice Dean Management" sayfasinda oldugunu dogrular
 
   Scenario Outline:US06_TC04_Birth_Place_alaninin_testi
-    When Kullanici Birth Place alanina "<Birth Place>" girmeyerek bos birakir
-    And Kullanici Gender alanina tiklar
-    And Kullanici Birth Place alani altinda Required mesajini gorur
-    And Kullanici Birth Place alanina valid bir "<Birth Place>" girer
-    And Kullanici Birth Place alani altinda hata mesaji goruntulenmemelidir
+    When Nilufer Kullanici Birth Place alanina "<Birth Place>" girmeyerek bos birakir
+    And Nilufer Kullanici Gender alanina tiklar
+    And Nilufer Kullanici Birth Place alani altinda Required mesajini gorur
+    And Nilufer Kullanici Birth Place alanina valid bir "<Birth Place>" girer
+    And Nilufer Kullanici Birth Place alani altinda hata mesaji goruntulenmemelidir
+    Then Nilufer Menu buttonuna tiklar
+    Then Nilufer Logout yapar
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Birth Place |
