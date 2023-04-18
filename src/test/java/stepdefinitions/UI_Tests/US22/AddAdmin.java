@@ -1,33 +1,24 @@
 package stepdefinitions.UI_Tests.US22;
 
 import com.github.javafaker.Faker;
-import hooks.Hooks;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.poi.xddf.usermodel.XDDFLineJoinMiterProperties;
-import org.codehaus.groovy.runtime.memoize.EvictableCache;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import pages.AddAdminPage;
 import pages.HomePage;
-import pages.LoginPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.swing.*;
-
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 
 import static org.junit.Assert.assertTrue;
 
-public class AddAdmin{
+public class AddAdmin {
 
     HomePage homePage= new HomePage();
     AddAdminPage addAdminPage = new AddAdminPage();
@@ -185,9 +176,9 @@ public class AddAdmin{
 
     @And("Kullanıcı admin ekleme isleminin gerçeklesmediğini dogrular.")
     public void kullanıcıAdminEklemeIslemininGerceklesmediginiDogrular() {
-        ReusableMethods.waitForVisibility(addAdminPage.saved_alert, 4);
-        ReusableMethods.hover(addAdminPage.saved_alert);
-        Assert.assertTrue(!addAdminPage.saved_alert.isDisplayed());
+        ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
+        ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
+        Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
     }
 
 
@@ -235,7 +226,10 @@ public class AddAdmin{
 
     @And("Kullanıcı Date Of Birth kutusuna bir gün sonrasını \\(ileri tarih) girer.")
     public void kullanıcıDateOfBirthKutusunaBirGünSonrasınıIleriTarihGirer() {
-        addAdminPage.birthDay_admin.sendKeys("12.12.2024");
+        LocalDate birGunSonrasi = LocalDate.now().plusDays(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String tarih = birGunSonrasi.format(formatter);
+        addAdminPage.birthDay_admin.sendKeys(formatter.format(birGunSonrasi));
     }
 
     @Then("Kullanıcı {string} mesajını gorur.")
@@ -247,27 +241,20 @@ public class AddAdmin{
 
     @And("Kullanıcı Date Of Birth kutusuna icinde bulundugu gunun tarihini girer.")
     public void kullanıcıDateOfBirthKutusunaIcindeBulunduguGununTarihiniGirer() {
-//         LocalDate BGN = LocalDate.now();
-//         String bgn = String.valueOf(BGN);
-//        addAdminPage.birthDay_admin.sendKeys(bgn);
-
-        addAdminPage.birthDay_admin.sendKeys("17.04.2023");
-
-        // addAdminPage.birthDay_admin.sendKeys(LocalDate.now());
-
+        LocalDate bugununTarihi = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String tarih = bugununTarihi.format(formatter);
+        addAdminPage.birthDay_admin.sendKeys(formatter.format(bugununTarihi));
     }
-
 
 
 
     @And("Kullanıcı Date Of Birth kutusuna birgün öncesinin tarihini\\(geçmiş tarih) girer.")
     public void kullanıcıDateOfBirthKutusunaBirgünÖncesininTarihiniGeçmişTarihGirer() {
-//        Calendar cal= Calendar.getInstance();
-//        cal.add(Calendar.DATE,-1);
-//        Date yesterday= cal.getTime();
-//        addAdminPage.birthDay_admin.sendKeys("yesterday");
-
-        addAdminPage.birthDay_admin.sendKeys("16.04.2023");
+        LocalDate yesterday = LocalDate.now().minusDays(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String tarih = yesterday.format(formatter);
+        addAdminPage.birthDay_admin.sendKeys(formatter.format(yesterday));
     }
 
     @And("Kullanıcı Date Of Birth kutusuna gecerli bir tarih girer.")
@@ -303,7 +290,6 @@ public class AddAdmin{
         ReusableMethods.waitForVisibility(addAdminPage.saved_alert, 4);
         ReusableMethods.hover(addAdminPage.saved_alert);
         Assert.assertEquals("Admin Saved", addAdminPage.saved_alert.getText());
-        // Assert.assertTrue(addAdminPage.saved_alert.isDisplayed());
     }
 
     @And("Kullanıcı SSN kutusuna daha önceden kayıtlı {string} gırer")
@@ -373,7 +359,7 @@ public class AddAdmin{
 
     @Then("Kullanıcı please enter valid phone number uyarısı aldıgını dogrular.")
     public void kullanıcıPleaseEnterValidPhoneNumberUyarısıAldıgınıDogrular() {
-        ReusableMethods.waitForVisibility(addAdminPage.eror_validphonenumber_alert, 4);
+        ReusableMethods.waitForVisibility(addAdminPage.eror_validphonenumber_alert, 6);
         ReusableMethods.hover(addAdminPage.eror_validphonenumber_alert);
         Assert.assertTrue(addAdminPage.eror_validphonenumber_alert.isDisplayed());
     }
@@ -422,5 +408,12 @@ public class AddAdmin{
         ReusableMethods.waitForVisibility(addAdminPage.username_already_register_alert, 6);
         ReusableMethods.hover(addAdminPage.username_already_register_alert);
         Assert.assertTrue(addAdminPage.username_already_register_alert.isDisplayed());
+    }
+
+    @Then("Kullanıcı geçmiş tarih olmalı uyarı yazısını gorur")
+    public void kullanıcıGeçmişTarihOlmalıUyarıYazısınıGorur() {
+        ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 6);
+        ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
+        Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
     }
 }

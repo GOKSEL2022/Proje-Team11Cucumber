@@ -10,6 +10,10 @@ import pages.RegisterPage;
 import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US04_AC01_TC03_NameSembolGir {
     HomePage homePage = new HomePage();
@@ -38,7 +42,9 @@ public class US04_AC01_TC03_NameSembolGir {
     }
 
     @Then("Kullanici Dean Save uyari mesaj alir")
-    public void kullaniciDeanSaveUyariMesajAlir() {
+    public void kullaniciDeanSaveUyariMesajAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 }

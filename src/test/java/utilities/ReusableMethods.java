@@ -202,11 +202,6 @@ public class ReusableMethods {
         loginPage.login_Button_Login.click();
     }
 
-    public static void clickByJS(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].click();", element);
-    }
-
 
 
 
@@ -233,4 +228,6 @@ public class ReusableMethods {
 
 
 
+    public static void cleanByJs(WebElement editEmailTextbox) {
+    }
 }

@@ -10,6 +10,11 @@ import pages.RegisterPage;
 import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
+
 public class US04_AC03_TC03BirthPlaceRakamGir {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -31,7 +36,9 @@ public class US04_AC03_TC03BirthPlaceRakamGir {
     }
 
     @Then("Kullanici Dean Save kayit mesaji alinir")
-    public void kullaniciDeanSaveKayitMesajiAlinir() {
+    public void kullaniciDeanSaveKayitMesajiAlinir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 }

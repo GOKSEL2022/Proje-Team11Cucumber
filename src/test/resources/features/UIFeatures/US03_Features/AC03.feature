@@ -1,4 +1,4 @@
-@US03_AC03
+@US03_AC03,@team11
 Feature: AC03 Kullanıcı yazacağı mesaj hakkında bir Subject girmelidir.
   Background: ana sayfaya git
     Given Kullanıcı ana sayfaya gider.

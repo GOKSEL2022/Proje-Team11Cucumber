@@ -5,7 +5,17 @@ import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import pages.*;
 
+
+
+import pages.Admin_ManagementPage;
+import pages.DeanManagementPage;
+import pages.EditDeanPage;
+
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US05_AC03_TC07_SurnameRakamGir {
     Actions actions = new Actions(Driver.getDriver());
@@ -17,12 +27,14 @@ public class US05_AC03_TC07_SurnameRakamGir {
     EditDeanPage editDeanPage = new EditDeanPage();
 
     @And("Kullanici Surname alanina rakam girer")
-    public void kullaniciSurnameAlaninaRakamGirer() throws InterruptedException {
+    public void kullaniciSurnameAlaninaRakamGirer() throws InterruptedException, IOException {
         editDeanPage.surname_Edit_Dean.clear();
         Thread.sleep(1000);
         editDeanPage.surname_Edit_Dean.sendKeys("12345");
         Thread.sleep(1000);
         Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
         Thread.sleep(1000);
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
     }
 }
