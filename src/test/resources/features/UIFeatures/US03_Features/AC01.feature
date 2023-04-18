@@ -1,4 +1,4 @@
-@US03_AC01
+@US03_AC01,@team11
 Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.
 
   Background: ana sayfaya git

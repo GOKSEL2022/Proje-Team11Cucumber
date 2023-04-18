@@ -19,7 +19,11 @@ public class LoginPage {
     @FindBy(xpath = "//button[@fw-semibold btn btn-primary']")
     public WebElement login_Button_Login;
 
+
 }
+
+}
+
 
 
 
