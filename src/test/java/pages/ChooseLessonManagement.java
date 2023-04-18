@@ -1,4 +1,4 @@
-package pages.US19_US20_US21_Pages;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

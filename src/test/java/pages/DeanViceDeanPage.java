@@ -1,14 +1,17 @@
-package pages.US23_Pages;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class AdminViceDeanPage {
-    public AdminViceDeanPage() {
+import java.util.List;
+
+public class DeanViceDeanPage {
+    public DeanViceDeanPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath = "//h3[.='Vice Dean Management']")
     public WebElement Admin_Vice_Dean_Text;
@@ -48,29 +51,32 @@ public class AdminViceDeanPage {
 
     @FindBy(xpath = "//*[.='Vice dean Saved']")
     public WebElement Admin_Vice_Dean_Vice_dean_Saved;
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+
+
+    @FindBy(xpath = "(//*[.='Required'])[1]")
     public WebElement Admin_Vice_Dean_Name_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    @FindBy(xpath = "(//*[.='Required'])[2]")
     public WebElement Admin_Vice_Dean_Surname_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[3]")
+    @FindBy(xpath = "(//*[.='Required'])[3]")
     public WebElement Admin_Vice_Dean_BirthPlace_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[4]")
-    public WebElement Admin_Vice_Dean_Date_Of_Birth_Error_Message;
+    @FindBy(xpath = "(//*[.='Required'])[4]")
+    public WebElement Admin_Vice_Dean_BirthDay_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[5]")
+    @FindBy(xpath = "(//*[.='Required'])[5]")
     public WebElement Admin_Vice_Dean_PhoneNumber_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[6]")
+    @FindBy(xpath = "(//*[.='Required'])[6]")
     public WebElement Admin_Vice_Dean_Ssn_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[7]")
+    @FindBy(xpath = "(//*[.='Required'])[7]")
     public WebElement Admin_Vice_Dean_Username_Error_Message;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[8]")
+    @FindBy(xpath = "(//*[.='Required'])[8]")
     public WebElement Admin_Vice_Dean_Password_Error_Message;
 
-
+    @FindBy(xpath = "//*[.='Required']")
+    public List<WebElement> requiredAbsente_text_studentInfo;
 }
