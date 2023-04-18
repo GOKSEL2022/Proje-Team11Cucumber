@@ -8,9 +8,9 @@ import org.openqa.selenium.Keys;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
+import pages.Admin_ManagementPage;
+import pages.DeanManagementPage;
+import pages.EditDeanPage;
 
 public class US04_AC03_TC04BirthPlaceSpaceGir {
     HomePage homePage = new HomePage();

@@ -1,7 +1,7 @@
 package stepdefinitions.UI_Tests.US06;
 
 import io.cucumber.java.en.When;
-import pages.US06_Pages.DeanViceDeanPage;
+import pages.DeanViceDeanPage;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
