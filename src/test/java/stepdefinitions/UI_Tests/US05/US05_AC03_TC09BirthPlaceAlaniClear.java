@@ -3,19 +3,11 @@ package stepdefinitions.UI_Tests.US05;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-
-import pages.*;
-
-
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.Admin_ManagementPage;
-import pages.DeanManagementPage;
-import pages.EditDeanPage;
-
 import utilities.Driver;
-
+import pages.*;
 public class US05_AC03_TC09BirthPlaceAlaniClear {
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();

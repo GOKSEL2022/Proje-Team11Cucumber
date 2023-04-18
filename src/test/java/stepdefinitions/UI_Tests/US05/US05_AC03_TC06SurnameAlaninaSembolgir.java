@@ -1,30 +1,12 @@
 package stepdefinitions.UI_Tests.US05;
-
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-
-
-
-
-
-import pages.*;
-
-
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.Admin_ManagementPage;
-import pages.DeanManagementPage;
-import pages.EditDeanPage;
-
-
+import pages. * ;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
-import java.io.IOException;
-import java.time.LocalDateTime;
 
 public class US05_AC03_TC06SurnameAlaninaSembolgir {
     Actions actions = new Actions(Driver.getDriver());
@@ -36,11 +18,9 @@ public class US05_AC03_TC06SurnameAlaninaSembolgir {
     EditDeanPage editDeanPage = new EditDeanPage();
 
     @And("Kullanici Surname alanina sembol girer")
-    public void kullaniciSurnameAlaninaSembolGirer() throws IOException {
+    public void kullaniciSurnameAlaninaSembolGirer() {
         editDeanPage.surname_Edit_Dean.clear();
         editDeanPage.surname_Edit_Dean.sendKeys("*****");
         Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
-        LocalDateTime currentTime =  LocalDateTime.now();
-        ReusableMethods.getScreenshot("FAIL");
     }
 }
