@@ -228,4 +228,6 @@ public class ReusableMethods {
 
 
 
+    public static void cleanByJs(WebElement editEmailTextbox) {
+    }
 }

@@ -1,4 +1,4 @@
-@US07_AC00
+@US07_AC00,@team11
 Feature: Dean olarak login olma
 
   Scenario: TC01 Kullanıcının dean olarak giriş yapabilmesi durumu
