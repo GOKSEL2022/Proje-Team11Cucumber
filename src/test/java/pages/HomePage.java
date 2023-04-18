@@ -16,6 +16,7 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='/register']")
     public WebElement register_Button_Home;
 
+
     @FindBy(xpath = "(//*[@class='fw-semibold text-white bg-primary navbar-toggler collapsed']")
     public WebElement menuButton;
 
@@ -38,6 +39,10 @@ public class HomePage {
 
     @FindBy(xpath = "//th[normalize-space()='Subject']")
     public WebElement contactSubject;
+
+
+    @FindBy(xpath = "//*[text()='Home']") public WebElement Home_isDisplayed;
+
 
 
 }
