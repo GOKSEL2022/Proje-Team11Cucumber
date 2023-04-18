@@ -11,6 +11,10 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class US05_AC03_TC03NameAlaniRakamgir {
 
@@ -29,10 +33,12 @@ public class US05_AC03_TC03NameAlaniRakamgir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
     @And("Kullanici Name {string} alanina rakam girer.")
-    public void kullaniciNameAlaninaRakamGirer(String arg0) throws InterruptedException {
+    public void kullaniciNameAlaninaRakamGirer(String arg0) throws InterruptedException, IOException {
         editDeanPage.name_Edit_Dean.sendKeys(arg0);
         Thread.sleep(1000);
         Assert.assertFalse(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
 
     }
 
