@@ -1,4 +1,4 @@
-@US05_AC03_TC05
+@US05_AC03_TC05 @team11
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
@@ -21,7 +21,6 @@ Feature:Dean ekleyebilme
     And Kullanıcı bır sanıye bekler
     And Kullanici Dean List alanindaki Edit butonuna tiklar
     And Kullanici Edit Dean bolumunun acildigini gorur
-    And Kullanici Name "<Name>" alanina veri girer
     And Kullanıcı bır sanıye bekler
     And Kullanici Surname alanina veri girmez
     And Kullanıcı bır sanıye bekler

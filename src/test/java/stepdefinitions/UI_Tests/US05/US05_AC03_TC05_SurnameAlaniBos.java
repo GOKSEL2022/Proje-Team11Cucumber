@@ -46,6 +46,7 @@ public class US05_AC03_TC05_SurnameAlaniBos {
 
     @And("Kullanici Gender alaninda checkbox`a tiklar")
     public void kullaniciGenderAlanindaGerekliCheckboxATiklar() {
+
         editDeanPage.female_Checkbox_Edit_Dean.click();
     }
 

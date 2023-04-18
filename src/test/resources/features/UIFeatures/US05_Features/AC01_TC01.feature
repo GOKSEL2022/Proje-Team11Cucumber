@@ -1,4 +1,4 @@
-@US05_AC01_TC01
+@US05_AC01_TC01 @team11
 Feature:Deanlari gorebilme ve silebilme
 
   Scenario Outline: TC01_Dean_List_Bilgilerini_Gorur

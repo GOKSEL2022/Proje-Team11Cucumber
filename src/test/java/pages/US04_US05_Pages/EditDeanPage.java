@@ -11,7 +11,7 @@ public class EditDeanPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//*[@class='text-dark btn btn-outline-info'])[1]")
+    @FindBy(xpath = "(//*[@type='button'])[6]")
     public WebElement edit_Button_Team_Hasan;
 
     @FindBy(xpath = "(//*[.='Edit Dean'])[2]")
@@ -96,6 +96,22 @@ public class EditDeanPage {
 
     @FindBy(xpath = "//div[@id='4']")
     public WebElement dean_Saved_message_Surname_Edit_Dean;
+
+    @FindBy(xpath = " (//*[@id='2'])[2]")
+    public WebElement dean_Saved_message_Birth_Place_Edit_Dean;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-center']")
+    public WebElement json_parse_error_message_Edit_Dean;
+
+    @FindBy(xpath = "//div[@id='7']")
+    public WebElement dean_Saved_message_female_Edit_Dean;
+
+    @FindBy(xpath = "//div[@id='8']")
+    public WebElement dean_Saved_message_male_Edit_Dean;
+
+    @FindBy(xpath = "(//*[.='Full authentication is required to access this resource'])[3]")
+    public WebElement Full_authentication_is_RequiredToAccessThisResource_message_Edit_Dean;
+
 
     @FindBy(xpath = " ")
     public WebElement delete_Buton;

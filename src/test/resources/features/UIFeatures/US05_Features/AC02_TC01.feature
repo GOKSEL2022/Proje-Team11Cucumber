@@ -1,4 +1,4 @@
-@US05_AC02_TC01
+@US05_AC02_TC01 @team11
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
