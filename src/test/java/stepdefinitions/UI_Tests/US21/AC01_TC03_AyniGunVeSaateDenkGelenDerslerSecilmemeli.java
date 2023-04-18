@@ -5,8 +5,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US19_US20_US21_Pages.ChooseLessonManagement;
-import pages.US19_US20_US21_Pages.MainMenuPage;
+import pages.ChooseLessonManagement;
+import pages.MainMenuPage;
 import utilities.ReusableMethods;
 
 public class AC01_TC03_AyniGunVeSaateDenkGelenDerslerSecilmemeli {
