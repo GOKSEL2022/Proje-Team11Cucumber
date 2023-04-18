@@ -6,11 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
 import utilities.Driver;
-
+import pages.*;
 public class US05_AC03_TC09BirthPlaceAlaniClear {
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
