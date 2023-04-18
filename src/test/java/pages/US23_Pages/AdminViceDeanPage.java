@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AdminViceDeanPage {
-    AdminViceDeanPage() {
+    public AdminViceDeanPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -29,7 +29,7 @@ public class AdminViceDeanPage {
     public WebElement Admin_Vice_Dean_Male_Radio_Button;
 
     @FindBy(xpath = "//input[@id='birthDay']")
-    public WebElement Admin_Vice_Dean_BirthDay;
+    public WebElement Admin_Vice_Dean_Date_Of_Birth;
 
     @FindBy(xpath = "//input[@id='phoneNumber']")
     public WebElement Admin_Vice_Dean_PhoneNumber;
@@ -46,7 +46,8 @@ public class AdminViceDeanPage {
     @FindBy(xpath = "//button[.='Submit']")
     public WebElement Admin_Vice_Dean_Submit_Button;
 
-
+    @FindBy(xpath = "//*[.='Vice dean Saved']")
+    public WebElement Admin_Vice_Dean_Vice_dean_Saved;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement Admin_Vice_Dean_Name_Error_Message;
 
@@ -57,7 +58,7 @@ public class AdminViceDeanPage {
     public WebElement Admin_Vice_Dean_BirthPlace_Error_Message;
 
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[4]")
-    public WebElement Admin_Vice_Dean_BirthDay_Error_Message;
+    public WebElement Admin_Vice_Dean_Date_Of_Birth_Error_Message;
 
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[5]")
     public WebElement Admin_Vice_Dean_PhoneNumber_Error_Message;
