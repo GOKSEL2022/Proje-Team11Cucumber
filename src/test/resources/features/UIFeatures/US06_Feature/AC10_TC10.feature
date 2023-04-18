@@ -18,7 +18,7 @@ Feature: Dean Vice Dean hesabi olusturabilmelidir
     And Kullanici Phone alanina valid bir "<Phone>" girer
     And Kullanici Ssn alanina valid bir "<Ssn>" girer
     And Kullanici User Name alanina valid bir "<User Name>" girer
-    And Kullanici Password alanini bos birakir
+    And Kullanici Password alanina "<Password>" girmeyerek bos birakir
     And Kullanici Submit butonuna tiklayamaz
     And Kullanici Password alani altinda Required mesajini gorur
     And Kullanici Name alanina valid bir "<Name>" girer
