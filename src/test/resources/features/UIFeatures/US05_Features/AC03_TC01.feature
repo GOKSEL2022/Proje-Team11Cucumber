@@ -1,4 +1,4 @@
-@US05_AC03_TC01
+@US05_AC03_TC01 @team11
 Feature:Dean guncelleme
 
   Scenario Outline: TC01_Dean_guncelleme

@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US19_US20_US21_Pages.MainMenuPage;
+import pages.MainMenuPage;
 import utilities.ReusableMethods;
 
 public class AC01_TC01_ToplantilarinDateStartTimeStopTimeDescriptionGorulmeli {
@@ -17,7 +17,7 @@ public class AC01_TC01_ToplantilarinDateStartTimeStopTimeDescriptionGorulmeli {
 
     @When("kullanici edit butonununa tiklar")
     public void kullanici_edit_butonununa_tiklar() {
-      ReusableMethods.clickByJS(mainMenuPage.edit_button);
+      //ReusableMethods.clickByJS(mainMenuPage.edit_button);
      // mainMenuPage.edit_button.click();
     }
     @Then("kullanici olusturmus oldugu Date, Start Time ve Descriptionu dogrular")

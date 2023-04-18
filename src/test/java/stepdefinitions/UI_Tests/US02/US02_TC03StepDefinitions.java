@@ -4,7 +4,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.AdminManagementPage;
 import pages.HomePage;
-import pages.US01_US02_Pages.GuestUserPage;
+import pages.GuestUserPage;
 
 public class US02_TC03StepDefinitions {
     HomePage homePage=new HomePage();

@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US19_US20_US21_Pages.MainMenuPage;
+import pages.MainMenuPage;
 
 public class AC01_TC02_Geçmiştarih_girilmemmeli {
 

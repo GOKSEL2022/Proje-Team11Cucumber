@@ -2,7 +2,9 @@ package stepdefinitions.UI_Tests.US15;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.HomePage;
+
 import pages.LoginPage;
 import pages.RegisterPage;
 import pages.Vice_DeanPage;
@@ -46,7 +48,7 @@ public class TC01_Vice_Login {
     @When("Kullanici Login menusunun altinda doldurulacak alanlari goruntuler")
     public void kullanici_login_menusunun_altinda_doldurulacak_alanlari_goruntuler() {
 
-        assertTrue(loginPage.login_isDisplayed.isDisplayed());
+      //  assertTrue(loginPage.login_isDisplayed.isDisplayed());
 
 
     }

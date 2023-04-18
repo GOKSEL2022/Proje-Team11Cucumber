@@ -6,7 +6,7 @@ import org.junit.Assert;
 import pages.AdminManagementPage;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US01_US02_Pages.GuestUserPage;
+import pages.GuestUserPage;
 import utilities.Driver;
 public class US02_TC02StepDefinitions {
     public static void adminLogin(){
