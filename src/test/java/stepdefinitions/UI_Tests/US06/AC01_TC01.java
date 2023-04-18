@@ -33,7 +33,8 @@ public class AC01_TC01 {
     }
     @Given("Kullanici Login buttonuna tiklar")
     public void kullanici_login_buttonuna_tiklar() {
-       loginPage.login_Button_Login.click();
+
+        loginPage.login_Button_Login.click();
     }
     @Given("Kullanici {string} sayfasinda oldugunu dogrular")
     public void kullanici_sayfasinda_oldugunu_dogrular(String string) {
@@ -81,6 +82,7 @@ public class AC01_TC01 {
     }
     @When("Kullanici Submit butonuna tiklar")
     public void kullanici_submit_butonuna_tiklar() {
+
         deanViceDeanPage.Admin_Vice_Dean_Submit_Button.click();
     }
     @When("Kullanici Dean olarak Vice Dean olusturdugunu dogrular")
