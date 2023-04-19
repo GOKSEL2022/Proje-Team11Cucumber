@@ -19,14 +19,9 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@class='fw-semibold btn btn-primary']")
     public WebElement login_Button_Login;
-
-
-
-
-
-
-
-
+//
+//    @FindBy(xpath = "//button[@fw-semibold btn btn-primary']")
+//    public WebElement login_Button_Login;
 
 
 
@@ -44,22 +39,22 @@ public class LoginPage {
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement required_Text_Password_Login;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

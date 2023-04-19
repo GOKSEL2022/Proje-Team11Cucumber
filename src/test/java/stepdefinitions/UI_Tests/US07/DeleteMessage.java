@@ -7,20 +7,20 @@ import pages.DeanPage;
 public class DeleteMessage {
 
     DeanPage deanPage = new DeanPage();
-    @Then("Kullanıcı sayfada Contact message bölümünü dogrular.")
-    public void kullanıcıSayfadaContactMessageBölümünüDogrular() {
+    @Then("rabia sayfada Contact message bölümünü dogrular.")
+    public void rabiaSayfadaContactMessageBölümünüDogrular() {
         Assert.assertTrue(deanPage.contact_message_header.isDisplayed());
     }
 
-    @Then("Kullanıcı sayfada delete butonu olduğunu dogrular.")
-    public void kullanıcıSayfadaDeleteButonuOlduğunuDogrular() {
+    @Then("rabia sayfada delete butonu olduğunu dogrular.")
+    public void rabiaSayfadaDeleteButonuOlduğunuDogrular() {
     }
 
-    @Then("Kullanıcı mesajı siler.")
-    public void kullanıcıMesajıSiler() {
+    @Then("rabia mesajı siler.")
+    public void rabiaMesajıSiler() {
     }
 
-    @Then("Kullanıcı mesajın silindiğini doğrular.")
-    public void kullanıcıMesajınSilindiğiniDoğrular() {
+    @Then("rabia mesajın silindiğini doğrular.")
+    public void rabiaMesajınSilindiğiniDoğrular() {
     }
 }
