@@ -7,12 +7,12 @@ import pages.RegisterPage;
 
 public class US01_SsnSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Ssn {string} girer.")
-    public void kullaniciSsnGirer(String string) {
+    @And("Goksel Ssn {string} girer.")
+    public void GokselSsnGirer(String string) {
         registerPage.ssn_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE);
     }
-    @Then("Kullanici register isleminin basarili oldugunu gösteren popupı görüntüler")
-    public void kullaniciRegisterIslemininBasariliOldugunuGösterenPopupıGörüntüler() {
+    @Then("Goksel register isleminin basarili oldugunu gösteren popupi goruntuler")
+    public void GokselRegisterIslemininBasariliOldugunuGösterenpopupigoruntuler() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

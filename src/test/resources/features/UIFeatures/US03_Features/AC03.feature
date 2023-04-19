@@ -1,30 +1,30 @@
 @US03_AC03,@team11
-Feature: AC03 Kullanıcı yazacağı mesaj hakkında bir Subject girmelidir.
+Feature: AC03 rabia yazacağı mesaj hakkında bir Subject girmelidir.
   Background: ana sayfaya git
-    Given Kullanıcı ana sayfaya gider.
-    When Kullanıcı Contact butonuna tıklar.
-    And Kullanıcı Subject kutusuna tıklar.
+    Given rabia ana sayfaya gider.
+    When rabia Contact butonuna tıklar.
+    And rabia Subject kutusuna tıklar.
 
   @US03_AC03_TC01
   Scenario: TC01 Subject kutucuğunun boş bırakılması durumu
 
-  And Kullanıcı subject kutusunu boş bırakır.
-  And Kullanıcı name kutusuna "rabia" girer.
-  And Kullanıcı mail kutusuna "valid bir mail" girer
-  And Kullanıcı message kutusuna "mesajını" girer.
-  And Kullanıcı send message butonuna tıklar
-  And Kullanıcı bir saniye bekler
-    And Kullanıcı mesajın iletilemediğini doğrular.
-    And Kullanıcı sayfayı kapatır.
+  And rabia subject kutusunu boş bırakır.
+  And rabia name kutusuna "rabia" girer.
+  And rabia mail kutusuna "valid bir mail" girer
+  And rabia message kutusuna "mesajını" girer.
+  And rabia send message butonuna tıklar
+  And rabia bir saniye bekler
+    And rabia mesajın iletilemediğini doğrular.
+    And rabia sayfayı kapatır.
 
   @US03_AC03_TC02
   Scenario: TC02 Subject kutucuğuna  bir değer girilmesi durumu
 
-  And Kullanıcı subject kutusuna "subject" girer.
-  And Kullanıcı name kutusuna "rabia" girer.
-  And Kullanıcı mail kutusuna "valid bir mail" girer
-  And Kullanıcı message kutusuna "mesajını" girer.
-  And Kullanıcı send message butonuna tıklar
-  And Kullanıcı bir saniye bekler
+  And rabia subject kutusuna "subject" girer.
+  And rabia name kutusuna "rabia" girer.
+  And rabia mail kutusuna "valid bir mail" girer
+  And rabia message kutusuna "mesajını" girer.
+  And rabia send message butonuna tıklar
+  And rabia bir saniye bekler
   Then Mesaj gönderim işlemi gerçekleşir.
-    And Kullanıcı sayfayı kapatır.
+    And rabia sayfayı kapatır.

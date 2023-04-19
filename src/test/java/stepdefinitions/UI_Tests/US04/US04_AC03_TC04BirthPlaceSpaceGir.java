@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 public class US04_AC03_TC04BirthPlaceSpaceGir {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
+    
     RegisterPage registerPage = new RegisterPage();
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
@@ -32,12 +33,12 @@ public class US04_AC03_TC04BirthPlaceSpaceGir {
     Faker faker = new Faker();
 
 
-    @And("Kullanici Birth Place alanina space girer")
-    public void kullaniciBirthPlaceAlaninaSpaceGirer() {
+    @And("Alı Birth Place alanina space girer")
+    public void AlıBirthPlaceAlaninaSpaceGirer() {
         deanManagementPage.birthPlace_Add_Dean.sendKeys(Keys.SPACE, Keys.TAB);
     }
-    @Then("Kullanici Dean Save mesajin alir")
-    public void kullaniciDeanSaveMesajinAlir() throws IOException {
+    @Then("Alı Dean Save mesajin alir")
+    public void AlıDeanSaveMesajinAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

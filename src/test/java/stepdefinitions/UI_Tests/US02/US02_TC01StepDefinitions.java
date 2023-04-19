@@ -6,10 +6,12 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 public class US02_TC01StepDefinitions {
      HomePage homePage = new HomePage();
      LoginPage loginPage = new LoginPage();
+
 
     @And("Goksel Login butonunun sayfada yer aldigini goruntuler")
     public void GokselLoginButonununSayfadaYerAldiginiGoruntuler() {
@@ -26,20 +28,20 @@ public class US02_TC01StepDefinitions {
 
 
 
-     //  loginPage.username_Box_Login.click();
-     //  loginPage.login_Text_Login.click();
-     //  Assert.assertTrue(loginPage.required_Text_Username_Login.isDisplayed());
+       loginPage.username_Box_Login.click();
+       loginPage.login_Text_Login.click();
+       Assert.assertTrue(loginPage.required_Text_Username_Login.isDisplayed());
 
     }
 
     @And("Goksel User Name e {string} girer")
     public void GokselUserNameEGirer(String string) {
-        loginPage.username_Box_Login.sendKeys(string);
+        loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("admin_username"));
     }
 
     @And("Goksel Password {string} girer")
     public void GokselPasswordGirer(String string) {
-        loginPage.password_Box_Login.sendKeys(string);
+        loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("admin_password"));
     }
 
     @Then("Goksel login isleminin basarili oldugunu dogrular")
@@ -48,13 +50,7 @@ public class US02_TC01StepDefinitions {
 
     }
 
-    @Given("Goksel {string} gider")
-    public void gokselGider(String arg0) {
-        
-    }
 
-    @When("Goksel anasayfanın acildigini goruntuler")
-    public void gokselAnasayfanınAcildiginiGoruntuler() {
-    }
+
 }
 

@@ -10,6 +10,7 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC22_SsnHarfGir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -17,8 +18,8 @@ public class US05_AC03_TC22_SsnHarfGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Ssn alanina harf girer.")
-    public void kullaniciSsnAlaninaHarfGirer() {
+    @And("Alı Ssn alanina harf girer.")
+    public void AlıSsnAlaninaHarfGirer() {
         editDeanPage.ssn_Edit_Dean.sendKeys("Ssn");
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 

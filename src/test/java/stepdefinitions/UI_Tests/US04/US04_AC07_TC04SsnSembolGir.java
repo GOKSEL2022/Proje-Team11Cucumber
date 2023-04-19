@@ -12,6 +12,7 @@ import pages.DeanManagementPage;
 import pages.EditDeanPage;
 
 public class US04_AC07_TC04SsnSembolGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -23,13 +24,13 @@ public class US04_AC07_TC04SsnSembolGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Ssn {string} alanina sembol girer")
-    public void kullaniciSsnAlaninaSembolGirer(String arg0) {
+    @And("Alı Ssn {string} alanina sembol girer")
+    public void AlıSsnAlaninaSembolGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici textbox altinda uyari mesaji gorur")
-    public void kullaniciTextboxAltindaUyariMesajiGorur() {
+    @Then("Alı textbox altinda uyari mesaji gorur")
+    public void AlıTextboxAltindaUyariMesajiGorur() {
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 
     }

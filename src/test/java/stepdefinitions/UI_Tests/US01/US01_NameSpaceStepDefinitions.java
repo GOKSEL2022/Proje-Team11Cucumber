@@ -7,12 +7,12 @@ import pages.RegisterPage;
 
 public class US01_NameSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Name {string} alanina girer")
-    public void kullaniciNameAlaninaGirer(String string) {
+    @And("Goksel Name {string} alanina girer")
+    public void GokselNameAlaninaGirer(String string) {
         registerPage.name_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE);
     }
-    @Then("Kullanici Register değil")
-    public void kullaniciRegisterDeğil() {
+    @Then("Goksel Register değil")
+    public void GokselRegisterDeğil() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

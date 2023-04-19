@@ -11,6 +11,7 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC23_SsnSpace {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -18,8 +19,8 @@ public class US05_AC03_TC23_SsnSpace {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Ssn alanina space girer.")
-    public void kullaniciSsnAlaninaSpaceGirer() {
+    @And("Alı Ssn alanina space girer.")
+    public void AlıSsnAlaninaSpaceGirer() {
         editDeanPage.ssn_Edit_Dean.sendKeys(Keys.SPACE);
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
     }

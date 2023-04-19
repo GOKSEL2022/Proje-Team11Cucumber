@@ -10,19 +10,19 @@ public class LoginAsDean {
 
     AddAdminPage addAdminPage = new AddAdminPage();
     DeanPage deanPage = new DeanPage();
-    @And("Kullanıcı user name kutusuna dean username girer.")
-    public void kullanıcıUserNameKutusunaDeanUsernameGirer() {
+    @And("rabia user name kutusuna dean username girer.")
+    public void rabiaUserNameKutusunaDeanUsernameGirer() {
         addAdminPage.username_admin.sendKeys(ConfigReader.getProperty("dean_username"));
 
     }
 
-    @And("Kullanıcı password kutusuna dean sifre girer.")
-    public void kullanıcıPasswordKutusunaDeanSifreGirer() {
+    @And("rabia password kutusuna dean sifre girer.")
+    public void rabiaPasswordKutusunaDeanSifreGirer() {
         addAdminPage.password_admin.sendKeys(ConfigReader.getProperty("dean_password"));
     }
 
-    @And("Kullanıcı sayfayı kapatır.")
-    public void kullanıcıSayfayıKapatır() {
+    @And("rabia sayfayı kapatır.")
+    public void rabiaSayfayıKapatır() {
         Driver.closeDriver();
     }
 }

@@ -14,17 +14,17 @@ public class AC01_TC05_OgrenciSinavNotlariniGorebilmeli {
     MainMenuPage mainMenuPage = new MainMenuPage();
     ChooseLessonManagement chooseLessonManagement = new ChooseLessonManagement();
 
-    @When("kullanici mennu butonuna tiklar")
-    public void kullanici_mennu_butonuna_tiklar() {
+    @When("Emin mennu butonuna tiklar")
+    public void Emin_mennu_butonuna_tiklar() {
         mainMenuPage.menu_button.click();
     }
-    @When("kullanici Grades and Announcements yazisina tiklar")
-    public void kullanici_grades_and_announcements_yazisina_tiklar() {
+    @When("Emin Grades and Announcements yazisina tiklar")
+    public void Emin_grades_and_announcements_yazisina_tiklar() {
         chooseLessonManagement.grades_and_announcements.click();
     }
 
-    @Then("kullanici ders notlarini dogrular")
-    public void kullanici_ders_notlarini_dogrular() {
+    @Then("Emin ders notlarini dogrular")
+    public void Emin_ders_notlarini_dogrular() {
         Assert.assertTrue(chooseLessonManagement.kalem_exam_dogrulama.isDisplayed());
     }
 

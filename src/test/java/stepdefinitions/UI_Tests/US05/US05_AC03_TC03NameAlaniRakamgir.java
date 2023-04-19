@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC03_TC03NameAlaniRakamgir {
+    
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -32,8 +33,8 @@ public class US05_AC03_TC03NameAlaniRakamgir {
     int phoneNo2= Faker.instance().number().numberBetween(100,999);
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Kullanici Name {string} alanina rakam girer.")
-    public void kullaniciNameAlaninaRakamGirer(String arg0) throws InterruptedException, IOException {
+    @And("Alı Name {string} alanina rakam girer.")
+    public void AlıNameAlaninaRakamGirer(String arg0) throws InterruptedException, IOException {
         editDeanPage.name_Edit_Dean.sendKeys(arg0);
         Thread.sleep(1000);
         Assert.assertFalse(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());
@@ -41,9 +42,10 @@ public class US05_AC03_TC03NameAlaniRakamgir {
         ReusableMethods.getScreenshot("FAIL");
 
     }
+    
 
-    @And("Kullanici password {string} alanina gecerli sifre girer.")
-    public void kullaniciPasswordAlaninaGecerliSifreGirer(String arg0) {
+    @And("Alı password {string} alanina gecerli sifre girer.")
+    public void AlıPasswordAlaninaGecerliSifreGirer(String arg0) {
         editDeanPage.password_Edit_Dean.sendKeys(arg0);
     }
 }

@@ -18,6 +18,7 @@ import java.time.LocalDateTime;
 
 
 public class US04_AC01_TC05NameAlaniSpaceGir {
+    
 
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
@@ -34,14 +35,14 @@ public class US04_AC01_TC05NameAlaniSpaceGir {
 
         Faker faker = new Faker();
 
-    @And("Kullanici Name alanina veri girer.")
-    public void kullaniciNameAlaninaVeriGirer() {
+    @And("Alı Name alanina veri girer.")
+    public void AlıNameAlaninaVeriGirer() {
         deanManagementPage.name_Add_Dean.sendKeys(Keys.SPACE,Keys.TAB);
 
     }
 
-    @Then("Kullanici Dean Save mesajini gorur.")
-    public void kullaniciDeanSaveMesajiniGorur() throws IOException {
+    @Then("Alı Dean Save mesajini gorur.")
+    public void AlıDeanSaveMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

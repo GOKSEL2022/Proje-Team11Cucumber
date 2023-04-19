@@ -15,8 +15,8 @@ import static org.junit.Assert.assertTrue;
 public class TC_Submit {
 
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici submit butonuna tiklar")
-    public void kullaniciSubmitButonunaTiklar() throws IOException {
+    @And("Fatih submit butonuna tiklar")
+    public void FatihSubmitButonunaTiklar() throws IOException {
 
 
         ReusableMethods.clickByJS(vice_deanPage.student_submit);

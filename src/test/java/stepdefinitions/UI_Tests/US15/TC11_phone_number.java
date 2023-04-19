@@ -10,8 +10,8 @@ public class TC11_phone_number {
 
     Faker faker = new Faker();
 
-    @And("Kullanici phone alanina gecerli bir phone numarasi girer")
-    public void kullaniciPhoneAlaninaGecerliBirPhoneNumarasiGirer() {
+    @And("Fatih phone alanina gecerli bir phone numarasi girer")
+    public void FatihPhoneAlaninaGecerliBirPhoneNumarasiGirer() {
         int phoneNo1= Faker.instance().number().numberBetween(100,999);
 
         int phoneNo2= Faker.instance().number().numberBetween(100,999);
