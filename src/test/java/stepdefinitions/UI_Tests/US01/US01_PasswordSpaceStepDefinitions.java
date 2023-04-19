@@ -7,12 +7,12 @@ import pages.RegisterPage;
 
 public class US01_PasswordSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Password {string} girer ve Register_Register butonunu tiklar.")
-    public void kullaniciPasswordGirerVeRegister_RegisterButonunuTiklar(String string) {
+    @And("Goksel Password {string} girer ve Register_Register butonunu tiklar.")
+    public void GokselPasswordGirerVeRegister_RegisterButonunuTiklar(String string) {
         registerPage.password_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE);
     }
-    @Then("Kullanici Register isleminin basarili oldugunu gösteren popupı görüntüler..")
-    public void kullaniciRegisterIslemininBasariliOldugunuGösterenPopupıGörüntüler() {
+    @Then("Goksel Register isleminin basarili oldugunu gösteren popupi goruntuler..")
+    public void GokselRegisterIslemininBasariliOldugunuGösterenpopupigoruntuler() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

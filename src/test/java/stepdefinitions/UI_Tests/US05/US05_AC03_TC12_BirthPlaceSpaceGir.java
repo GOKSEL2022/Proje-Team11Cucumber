@@ -7,14 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.Admin_ManagementPage;
-import pages.DeanManagementPage;
-import pages.EditDeanPage;
+import pages.*;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
-import java.io.IOException;
-import java.time.LocalDateTime;
 
 public class US05_AC03_TC12_BirthPlaceSpaceGir {
     
@@ -26,12 +20,15 @@ public class US05_AC03_TC12_BirthPlaceSpaceGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
+
     @And("Alı Birth Place textboxinin icine space girer")
     public void AlıBirthPlaceTextboxininIcineSpaceGirer() throws IOException {
+
+    @And("Kullanıcı Birth Place textboxinin icine space girer")
+    public void kullaniciBirthPlaceTextboxininIcineSpaceGirer() {
+
         editDeanPage.birthPlace_Edit_Dean.clear();
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.SPACE);
         Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
-        LocalDateTime currentTime =  LocalDateTime.now();
-        ReusableMethods.getScreenshot("FAIL");
     }
 }

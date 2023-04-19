@@ -15,20 +15,20 @@ public class AC01_TC03_Baslangicvebitissaatlerigirilmeli {
     Faker faker = new Faker();
 
 
-    @When("kullanici Date Of Meet alanina  bir tarih {string} girer")
-    public void kullanici_date_of_meet_alanina_bir_tarih_girer(String string) {
+    @When("Emin Date Of Meet alanina  bir tarih {string} girer")
+    public void Emin_date_of_meet_alanina_bir_tarih_girer(String string) {
        mainMenuPage.date_of_meet.sendKeys(string);
     }
-    @When("kullanici Start Time alanina validd bir deger {string} girer")
-    public void kullanici_start_time_alanina_validd_bir_deger_girer(String string) {
+    @When("Emin Start Time alanina validd bir deger {string} girer")
+    public void Emin_start_time_alanina_validd_bir_deger_girer(String string) {
         mainMenuPage.start_time.sendKeys(string);
     }
-    @When("kullanici Stop Time alanina valid bir deger {string} girer")
-    public void kullanici_stop_time_alanina_valid_bir_deger_girer(String string) {
+    @When("Emin Stop Time alanina valid bir deger {string} girer")
+    public void Emin_stop_time_alanina_valid_bir_deger_girer(String string) {
        mainMenuPage.stop_time.sendKeys(string);
     }
-    @Then("kullanici Star time Stop time alanlarini dogrular")
-    public void kullanici_star_time_stop_time_alanlarini_dogrular() {
+    @Then("Emin Star time Stop time alanlarini dogrular")
+    public void Emin_star_time_stop_time_alanlarini_dogrular() {
         Assert.assertTrue(mainMenuPage.start_time_dogrulama.isDisplayed());
     }
 

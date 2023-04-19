@@ -22,15 +22,15 @@ public class TC03_choose_Teacher {
 
 
 
-    @When("Kullanici acilan sayfada choose teacher butonunu tiklar")
-    public void kullanici_acilan_sayfada_choose_teacher_butonunu_tiklar() {
+    @When("Fatih acilan sayfada choose teacher butonunu tiklar")
+    public void Fatih_acilan_sayfada_choose_teacher_butonunu_tiklar() {
 
         ReusableMethods.clickByJS(vice_deanPage.chooseTeacher);
 
     }
 
-    @When("Kullanicin acilan drapdowndan ogrencinin danisman ogretmenini secer")
-    public void kullanicin_acilan_drapdowndan_ogrencinin_danisman_ogretmenini_secer() {
+    @When("Fatihn acilan drapdowndan ogrencinin danisman ogretmenini secer")
+    public void Fatihn_acilan_drapdowndan_ogrencinin_danisman_ogretmenini_secer() {
 
         Select select = new Select(vice_deanPage.chooseTeacher);
         select.selectByVisibleText("Mehmet Emin team11");
@@ -38,8 +38,8 @@ public class TC03_choose_Teacher {
 
     }
 
-    @When("Kullanici danisman ogretmenin secildigini dogrular")
-    public void kullanici_danisman_ogretmenin_secildigini_dogrular() {
+    @When("Fatih danisman ogretmenin secildigini dogrular")
+    public void Fatih_danisman_ogretmenin_secildigini_dogrular() {
 
     }
 

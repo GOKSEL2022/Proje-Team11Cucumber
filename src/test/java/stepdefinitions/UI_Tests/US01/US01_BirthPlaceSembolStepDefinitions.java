@@ -4,14 +4,14 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.RegisterPage;
 
-public class US01_BirthPalceSembolStepDefinitions {
+public class US01_BirthPlaceSembolStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Birth Place e {string} girer")
-    public void kullaniciBirthPlaceEGirer(String string) {
+    @And("Goksel Birth Place e {string} girer")
+    public void GokselBirthPlaceEGirer(String string) {
         registerPage.birthPlace_Box_Register.sendKeys(string);
     }
-    @Then("Kullanici Register islemi yapamaz.")
-    public void kullaniciRegisterIslemiYapamaz() {
+    @Then("Goksel Register islemi yapamaz.")
+    public void GokselRegisterIslemiYapamaz() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

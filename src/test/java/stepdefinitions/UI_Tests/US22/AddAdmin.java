@@ -175,7 +175,7 @@ public class AddAdmin {
     }
 
     @And("Kullanıcı admin ekleme isleminin gerçeklesmediğini dogrular.")
-    public void kullanıcıAdminEklemeIslemininGerceklesmediginiDogrular() {
+    public void rabiaAdminEklemeIslemininGerceklesmediginiDogrular() {
         ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
         ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
         Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
