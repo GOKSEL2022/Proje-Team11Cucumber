@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC03_TC02_EditDeanNameAlaninaSembolGir {
+    
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -32,8 +33,8 @@ public class US05_AC03_TC02_EditDeanNameAlaninaSembolGir {
     int phoneNo2= Faker.instance().number().numberBetween(100,999);
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Kullanici Name {string} alanina sembol girer")
-    public void kullaniciNameAlaninaSembolGirer(String arg0) throws IOException {
+    @And("Alı Name {string} alanina sembol girer")
+    public void AlıNameAlaninaSembolGirer(String arg0) throws IOException {
         editDeanPage.name_Edit_Dean.sendKeys(arg0);
         Assert.assertTrue(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

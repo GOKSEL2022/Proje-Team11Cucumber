@@ -10,6 +10,7 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC18PhoneHarfGir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -17,8 +18,8 @@ public class US05_AC03_TC18PhoneHarfGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Phone alanini harf girer.")
-    public void kullaniciPhoneAlaniniSpaceGirer() {
+    @And("Alı Phone alanini harf girer.")
+    public void AlıPhoneAlaniniSpaceGirer() {
         editDeanPage.phoneNumber_Edit_Dean.sendKeys("phone");
         Assert.assertTrue(deanManagementPage.phoneNumber_PleaseEntervalidPhoneNumber_Character_Message_Add_Dean.isDisplayed());
 

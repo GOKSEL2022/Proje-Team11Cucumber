@@ -25,13 +25,13 @@ public class US04_AC09_TC02Password7KarakterGir {
     int ssnNo2= Faker.instance().number().numberBetween(10,99);
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Kullanici password {string} alanina yedi karakter sifre girer")
-    public void kullaniciPasswordAlaninaYediKarakterSifreGirer(String arg0) {
+    @And("Alı password {string} alanina yedi karakter sifre girer")
+    public void AlıPasswordAlaninaYediKarakterSifreGirer(String arg0) {
         deanManagementPage.password_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici altta uyari mesaji gorur.")
-    public void kullaniciAlttaUyariMesajiGorur() {
+    @Then("Alı altta uyari mesaji gorur.")
+    public void AlıAlttaUyariMesajiGorur() {
         Assert.assertTrue(deanManagementPage.password_Minimum8Character_Message_Add_Dean.isDisplayed());
 
     }

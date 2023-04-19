@@ -11,6 +11,8 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 public class US04_AC07_TC01SsnOnKarakterGir {
+    
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -24,13 +26,13 @@ public class US04_AC07_TC01SsnOnKarakterGir {
     Faker faker = new Faker();
 
 
-    @And("Kullanici Ssn {string} alanina on karakter veri girer")
-    public void kullaniciSsnAlaninaOnKarakterVeriGirer(String arg0) {
+    @And("Alı Ssn {string} alanina on karakter veri girer")
+    public void AlıSsnAlaninaOnKarakterVeriGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici uyari mesajini minimum {int} character gorur")
-    public void kullaniciUyariMesajiniMinimumCharacterGorur(int arg0) {
+    @Then("Alı uyari mesajini minimum {int} character gorur")
+    public void AlıUyariMesajiniMinimumCharacterGorur(int arg0) {
         Assert.assertTrue(deanManagementPage.ssn_Minimum11Character_Message_Add_Dean.isDisplayed());
 
     }

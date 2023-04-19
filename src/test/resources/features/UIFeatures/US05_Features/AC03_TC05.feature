@@ -3,34 +3,34 @@ Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
 
-    Given Kullanici "https://www.managementonschools.com" gider
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Login butonuna tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Admin olarak Username "<Username>" girer
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Admin olarak Password "<Password>" girer
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Login sayfasinda Login butona tiklar.
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Menu butonuna tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Main Menu listinin acildigini gorur
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Main Menu Listinden Dean Management text`ine tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Dean List alanindaki Edit butonuna tiklar
-    And Kullanici Edit Dean bolumunun acildigini gorur
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Surname alanina veri girmez
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Gender alaninda checkbox`a tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici password "<password>" alanina gecerli sifre girer.
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Edit Dean alanindaki Submit butonuna tiklar
-    And Kullanıcı bır sanıye bekler
-    Then Kullanici Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.
+    Given Alı "https://www.managementonschools.com" gider
+    And Alı bır sanıye bekler
+    And Alı Login butonuna tiklar
+    And Alı bır sanıye bekler
+    And Alı Admin olarak Username "<Username>" girer
+    And Alı bır sanıye bekler
+    And Alı Admin olarak Password "<Password>" girer
+    And Alı bır sanıye bekler
+    And Alı Login sayfasinda Login butona tiklar.
+    And Alı bır sanıye bekler
+    And Alı Menu butonuna tiklar
+    And Alı bır sanıye bekler
+    And Alı Main Menu listinin acildigini gorur
+    And Alı bır sanıye bekler
+    And Alı Main Menu Listinden Dean Management text`ine tiklar
+    And Alı bır sanıye bekler
+    And Alı Dean List alanindaki Edit butonuna tiklar
+    And Alı Edit Dean bolumunun acildigini gorur
+    And Alı bır sanıye bekler
+    And Alı Surname alanina veri girmez
+    And Alı bır sanıye bekler
+    And Alı Gender alaninda checkbox`a tiklar
+    And Alı bır sanıye bekler
+    And Alı password "<password>" alanina gecerli sifre girer.
+    And Alı bır sanıye bekler
+    And Alı Edit Dean alanindaki Submit butonuna tiklar
+    And Alı bır sanıye bekler
+    Then Alı Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.
 
 
 

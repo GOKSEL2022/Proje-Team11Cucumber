@@ -10,6 +10,7 @@ import pages.DeanManagementPage;
 import pages.EditDeanPage;
 
 public class US05_AC01_TC01_AdmibDeanListGorur {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -17,8 +18,8 @@ public class US05_AC01_TC01_AdmibDeanListGorur {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
 
-    @Then("Kullanici Dean List alaninin goruldugunu dogrular")
-    public void kullaniciDeanListAlanininGoruldugunuDogrular() {
+    @Then("Alı Dean List alaninin goruldugunu dogrular")
+    public void AlıDeanListAlanininGoruldugunuDogrular() {
         Assert.assertTrue(deanManagementPage.text_Dean_List.isDisplayed());
         System.out.println(deanManagementPage.text_Dean_List.getText());
 

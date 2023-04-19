@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -36,8 +37,8 @@ public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
 
     Actions actions = new Actions(Driver.getDriver());
 
-    @Then("Kullanıcı Delete butonunun olmadıgını dogrular")
-    public void kullaniciDeleteButonununOlmadiginiDogrular() throws IOException {
+    @Then("Alı Delete butonunun olmadıgını dogrular")
+    public void AlıDeleteButonununOlmadiginiDogrular() throws IOException {
 
         //Assert.assertFalse("Delete",false);
         Assert.assertTrue(editDeanPage.delete_Buton.isDisplayed());
