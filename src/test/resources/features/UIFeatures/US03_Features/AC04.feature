@@ -1,4 +1,4 @@
-@US03_AC04
+@US03_AC04,@team11
 Feature: AC04 Kullanıcı mesaj yazmalıdır
   Background: ana sayfaya git
     Given Kullanıcı ana sayfaya gider.

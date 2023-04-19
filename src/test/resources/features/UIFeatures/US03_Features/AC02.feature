@@ -1,4 +1,4 @@
-@US03_AC02
+@US03_AC02,@team11
 Feature: AC02 Kullanıcı e-mail adresini girmelidir. Email adresinde "@" ve "." karakterleri olmalıdır.
 
   Background: ana sayfaya git

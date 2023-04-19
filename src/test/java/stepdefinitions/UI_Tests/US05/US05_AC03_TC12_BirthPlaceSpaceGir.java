@@ -4,8 +4,10 @@ import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import pages.HomePage;
+import pages.LoginPage;
+import pages.RegisterPage;
 import pages.*;
-
 import utilities.Driver;
 
 public class US05_AC03_TC12_BirthPlaceSpaceGir {
