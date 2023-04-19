@@ -6,8 +6,8 @@ import utilities.ConfigReader;
 
 public class TC19_MotherName {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici mothername alanina bir isim girer")
-    public void kullaniciMothernameAlaninaBirIsimGirer() {
+    @And("Fatih mothername alanina bir isim girer")
+    public void FatihMothernameAlaninaBirIsimGirer() {
         vice_deanPage.student_mothername.sendKeys(ConfigReader.getProperty("student_mothername"));
     }
 }

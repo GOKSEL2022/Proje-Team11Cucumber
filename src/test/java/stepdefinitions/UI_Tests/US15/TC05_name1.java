@@ -15,14 +15,14 @@ public class TC05_name1 {
     LoginPage loginPage =new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici name alanina gecerli bir isim girer")
-    public void kullaniciNameAlaninaGecerliBirIsimGirer() {
+    @And("Fatih name alanina gecerli bir isim girer")
+    public void FatihNameAlaninaGecerliBirIsimGirer() {
         vice_deanPage.student_name.sendKeys(ConfigReader.getProperty("student_name"));
 
     }
 
-    @And("Kullanici required yazisinin kayboldugunu dogrular")
-    public void kullaniciRequiredYazisininKayboldugunuDogrular() {
+    @And("Fatih required yazisinin kayboldugunu dogrular")
+    public void FatihRequiredYazisininKayboldugunuDogrular() {
 
         assertFalse(vice_deanPage.required1.isDisplayed());
     }

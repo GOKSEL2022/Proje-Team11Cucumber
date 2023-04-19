@@ -6,8 +6,8 @@ import utilities.ConfigReader;
 
 public class TC09_gecersizemail {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici gecersiz bir mail adresi girer")
-    public void kullaniciGecersizBirMailAdresiGirer() {
+    @And("Fatih gecersiz bir mail adresi girer")
+    public void FatihGecersizBirMailAdresiGirer() {
         vice_deanPage.student_email.sendKeys(ConfigReader.getProperty("student_gecersizemail"));
 
     }

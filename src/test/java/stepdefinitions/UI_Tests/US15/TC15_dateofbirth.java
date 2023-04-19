@@ -5,8 +5,8 @@ import pages.Vice_DeanPage;
 
 public class TC15_dateofbirth {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici date of birth alanina gecerli bir tarih girer")
-    public void kullaniciDateOfBirthAlaninaGecerliBirTarihGirer() {
+    @And("Fatih date of birth alanina gecerli bir tarih girer")
+    public void FatihDateOfBirthAlaninaGecerliBirTarihGirer() {
 
         vice_deanPage.stufent_birtday.sendKeys("12011986");
     }
