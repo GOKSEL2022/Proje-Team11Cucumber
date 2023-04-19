@@ -11,20 +11,20 @@ public class AC03_SubjectBoxCheck {
     ContactPage contactPage = new ContactPage();
     Faker faker=new Faker();
 
-    @And("Kullanıcı Subject kutusuna tıklar.")
-    public void kullaniciSubjectKutusunaTiklar() {
+    @And("rabia Subject kutusuna tıklar.")
+    public void rabiaSubjectKutusunaTiklar() {
         contactPage.subject_textBox.click();
     }
 
-    @And("Kullanıcı subject kutusunu boş bırakır.")
-    public void kullaniciSubjectKutusunuBosBirakir() {
+    @And("rabia subject kutusunu boş bırakır.")
+    public void rabiaSubjectKutusunuBosBirakir() {
         contactPage.subject_textBox.sendKeys("");
     }
 
 
 
-    @And("Kullanıcı subject kutusuna {string} girer.")
-    public void kullaniciSubjectKutusunaGirer(String arg0) {
+    @And("rabia subject kutusuna {string} girer.")
+    public void rabiaSubjectKutusunaGirer(String arg0) {
         contactPage.subject_textBox.sendKeys(faker.lorem().word());
 
     }
