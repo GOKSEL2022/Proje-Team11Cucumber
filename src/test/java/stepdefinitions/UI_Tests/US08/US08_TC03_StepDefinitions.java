@@ -10,20 +10,20 @@ public class US08_TC03_StepDefinitions {
 
 
 
-  @And("Kullanici Credit Score Kutusuna tiklar")
-  public void kullaniciCreditScoreKutusunaTiklar() {
+  @And("MDogan Credit Score Kutusuna tiklar")
+  public void MDoganCreditScoreKutusunaTiklar() {
     viceDeanLessonPage.creditScore.click();
 
   }
 
-  @And("Kullanici Credit score {string} girer")
-  public void kullaniciCreditScoreGirer(String string) {
+  @And("MDogan Credit score {string} girer")
+  public void MDoganCreditScoreGirer(String string) {
 
     viceDeanLessonPage.creditScore.sendKeys(string);
   }
 
-  @Then("Kullanici Submit butonuna tiklar")
-  public void kullaniciSubmitButonunaTiklar() {
+  @Then("MDogan Submit butonuna tiklar")
+  public void MDoganSubmitButonunaTiklar() {
     viceDeanLessonPage.lessonSubmit.click();
   }
 

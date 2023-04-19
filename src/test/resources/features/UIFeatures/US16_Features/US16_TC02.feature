@@ -1,18 +1,18 @@
-@US16_TC01
+@US16_AC02,@team11
 Feature: US16_TC01
 
   Scenario: US16_TC01
-    Given Kullanici "https://www.managementonschools.com/" url ye gider
-    And Kullanici bir saniye bekler
-    And Kullanici anasayfa login butonuna tiklar
-    And Kullanici bir saniye bekler
-    And Kullanici username "john.wick" girer
-    And  Kullanici password "78947894" girer
-    And Kullanici login butonuna tiklar
-    And Kullanici bir saniye bekler
-    And Kullanici menu butonuna tiklar
-    And Kullanici bir saniye bekler
-    And Kullanici Contact Get All sekmesine tiklar
-    Then Kullanici delete butonuna tiklar
+    Given MDogan "https://www.managementonschools.com/" url ye gider
+    And MDogan bir saniye bekler
+    And MDogan anasayfa login butonuna tiklar
+    And MDogan bir saniye bekler
+    And MDogan username "john.wick" girer
+    And  MDogan password "78947894" girer
+    And MDogan login butonuna tiklar
+    And MDogan bir saniye bekler
+    And MDogan menu butonuna tiklar
+    And MDogan bir saniye bekler
+    And MDogan Contact Get All sekmesine tiklar
+    Then MDogan delete butonuna tiklar
 
 

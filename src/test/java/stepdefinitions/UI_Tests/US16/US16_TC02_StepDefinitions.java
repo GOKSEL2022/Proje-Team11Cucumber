@@ -16,9 +16,9 @@ public class US16_TC02_StepDefinitions {
 
 
 
-    @Then("Kullanici delete butonuna tiklar")
+    @Then("MDogan delete butonuna tiklar")
 
-    public void kullaniciDeleteButonunaTiklar() {
+    public void MDoganDeleteButonunaTiklar() {
 
     }
 }
