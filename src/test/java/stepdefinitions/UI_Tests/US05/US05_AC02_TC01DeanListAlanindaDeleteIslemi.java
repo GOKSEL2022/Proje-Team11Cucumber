@@ -12,9 +12,7 @@ import pages.DeanManagementPage;
 import pages.EditDeanPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
+
 
 import java.io.IOException;
 import java.time.LocalDateTime;

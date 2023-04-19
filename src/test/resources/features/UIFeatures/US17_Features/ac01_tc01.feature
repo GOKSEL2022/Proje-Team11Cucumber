@@ -1,4 +1,4 @@
-git
+
 Feature: Ders_Öğrenci_ve_dönem_seç
 
   Scenario: Ders, Ögrenci ve dönem seçmelidir
