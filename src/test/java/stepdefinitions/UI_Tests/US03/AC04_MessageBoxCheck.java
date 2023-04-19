@@ -7,8 +7,8 @@ import pages.ContactPage;
 public class AC04_MessageBoxCheck {
     ContactPage contactPage = new ContactPage();
 
-    @And("Kullanıcı message kutusunu bos birakir.")
-    public void kullaniciMessageKutusunuBosBirakir() {
+    @And("rabia message kutusunu bos birakir.")
+    public void rabiaMessageKutusunuBosBirakir() {
         contactPage.message_textBox.sendKeys("");
     }
 }
