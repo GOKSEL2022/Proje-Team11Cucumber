@@ -19,8 +19,8 @@ public class US05_AC03_TC09BirthPlaceAlaniClear {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Birth Place textboxinin icindeki veriyi siler.")
-    public void kullaniciBirthPlaceTextboxininIcindekiVeriyiSiler() throws InterruptedException {
+    @And("Alı Birth Place textboxinin icindeki veriyi siler.")
+    public void AlıBirthPlaceTextboxininIcindekiVeriyiSiler() throws InterruptedException {
         editDeanPage.birthPlace_Edit_Dean.clear();
         Thread.sleep(1000);
         Assert.assertTrue(editDeanPage.Required_edit_Dean_BirthPlace.isDisplayed());

@@ -13,6 +13,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC17_PhoneSembolGir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -20,13 +21,13 @@ public class US05_AC03_TC17_PhoneSembolGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Phone alanini sembol girer.")
-    public void kullaniciPhoneAlaniniSembolGirer() {
+    @And("Alı Phone alanini sembol girer.")
+    public void AlıPhoneAlaniniSembolGirer() {
         editDeanPage.phoneNumber_Edit_Dean.sendKeys("*****");
     }
 
-    @Then("Kullanici hata mesajini gorur.")
-    public void kullaniciDeanSavedMesajiniGorur() {
+    @Then("Alı hata mesajini gorur.")
+    public void AlıDeanSavedMesajiniGorur() {
         Assert.assertTrue(editDeanPage.Full_authentication_is_RequiredToAccessThisResource_message_Edit_Dean.isDisplayed());
     }
 }

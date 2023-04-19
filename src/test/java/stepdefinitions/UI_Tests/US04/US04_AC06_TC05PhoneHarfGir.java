@@ -11,6 +11,7 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 public class US04_AC06_TC05PhoneHarfGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -22,13 +23,13 @@ public class US04_AC06_TC05PhoneHarfGir {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Phone {string} harf veri girer")
-    public void kullaniciPhoneHarfVeriGirer(String arg0) {
+    @And("Alı Phone {string} harf veri girer")
+    public void AlıPhoneHarfVeriGirer(String arg0) {
         deanManagementPage.phoneNumber_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici uyari mesaji alir")
-    public void kullaniciUyariMesajiAlir() {
+    @Then("Alı uyari mesaji alir")
+    public void AlıUyariMesajiAlir() {
         Assert.assertTrue(deanManagementPage.phoneNumber_PleaseEntervalidPhoneNumber_Character_Message_Add_Dean.isDisplayed());
     }
 }

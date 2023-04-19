@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC03_TC10_BirthPlaceSembolGir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -22,8 +23,8 @@ public class US05_AC03_TC10_BirthPlaceSembolGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanıcı Birth Place textboxinin icine sembol girer")
-    public void kullanıcıBirthPlaceTextboxininIcineSembolGirer() throws IOException {
+    @And("Alı Birth Place textboxinin icine sembol girer")
+    public void AlıBirthPlaceTextboxininIcineSembolGirer() throws IOException {
         editDeanPage.birthPlace_Edit_Dean.clear();
         editDeanPage.birthPlace_Edit_Dean.sendKeys("*****");
         Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());

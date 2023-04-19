@@ -12,6 +12,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC13_GenderAlaniBos {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -19,8 +20,8 @@ public class US05_AC03_TC13_GenderAlaniBos {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @Then("Kullanici Json parse error uyari mesajini gorur.")
-    public void kullaniciJsonParseErrorUyariMesajiniGorur() {
+    @Then("Alı Json parse error uyari mesajini gorur.")
+    public void AlıJsonParseErrorUyariMesajiniGorur() {
         Assert.assertTrue(editDeanPage.json_parse_error_message_Edit_Dean.isDisplayed());
 
     }

@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US04_AC01_TC03_NameSembolGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -35,14 +36,14 @@ public class US04_AC01_TC03_NameSembolGir {
 
 
 
-    @And("Kullanici Name {string} alanina sembol girer.")
-    public void kullaniciNameAlaninaSembolGirer(String arg0) {
+    @And("Alı Name {string} alanina sembol girer.")
+    public void AlıNameAlaninaSembolGirer(String arg0) {
 
         deanManagementPage.name_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici Dean Save uyari mesaj alir")
-    public void kullaniciDeanSaveUyariMesajAlir() throws IOException {
+    @Then("Alı Dean Save uyari mesaj alir")
+    public void AlıDeanSaveUyariMesajAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

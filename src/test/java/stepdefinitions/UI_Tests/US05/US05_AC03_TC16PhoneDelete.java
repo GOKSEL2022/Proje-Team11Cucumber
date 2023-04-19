@@ -12,6 +12,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC16PhoneDelete {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -19,8 +20,8 @@ public class US05_AC03_TC16PhoneDelete {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Phone alanini siler")
-    public void kullaniciPhoneAlaniniSiler() {
+    @And("Alı Phone alanini siler")
+    public void AlıPhoneAlaniniSiler() {
         editDeanPage.phoneNumber_Edit_Dean.clear();
         Assert.assertTrue(editDeanPage.Required_edit_Dean_Phone.isDisplayed());
 

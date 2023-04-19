@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC03_TC08SurnameSpacegir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -25,8 +26,8 @@ public class US05_AC03_TC08SurnameSpacegir {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
 
-    @And("Kullanici Surname alanina space girer.")
-    public void kullaniciSurnameAlaninaSpaceGirer() throws InterruptedException, IOException {
+    @And("Alı Surname alanina space girer.")
+    public void AlıSurnameAlaninaSpaceGirer() throws InterruptedException, IOException {
         editDeanPage.surname_Edit_Dean.clear();
         Thread.sleep(1000);
         editDeanPage.surname_Edit_Dean.sendKeys(Keys.SPACE);

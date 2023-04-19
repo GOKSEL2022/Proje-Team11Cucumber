@@ -12,6 +12,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC20_Ssn_Bos {
+    
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -20,8 +21,8 @@ public class US05_AC03_TC20_Ssn_Bos {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Ssn alanini siler.")
-    public void kullaniciSsnAlaniniSiler() {
+    @And("Alı Ssn alanini siler.")
+    public void AlıSsnAlaniniSiler() {
         editDeanPage.ssn_Edit_Dean.clear();
         Assert.assertTrue(editDeanPage.Required_edit_Dean_Ssn.isDisplayed());
     }

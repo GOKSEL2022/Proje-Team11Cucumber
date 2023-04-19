@@ -12,6 +12,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC21_SsnSembolGir {
+    
 
 
     Actions actions = new Actions(Driver.getDriver());
@@ -21,8 +22,8 @@ public class US05_AC03_TC21_SsnSembolGir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Ssn alanina sembol girer.")
-    public void kullaniciSsnAlaninaSembolGirer() {
+    @And("Alı Ssn alanina sembol girer.")
+    public void AlıSsnAlaninaSembolGirer() {
         editDeanPage.ssn_Edit_Dean.sendKeys("*****");
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 

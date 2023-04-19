@@ -11,6 +11,7 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 public class US04_AC06_TC03_Phone13KarakterGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -22,14 +23,14 @@ public class US04_AC06_TC03_Phone13KarakterGir {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Phone {string} alanina onuc karakter veri girer")
-    public void kullaniciPhoneAlaninaOnucKarakterVeriGirer(String arg0) {
+    @And("Alı Phone {string} alanina onuc karakter veri girer")
+    public void AlıPhoneAlaninaOnucKarakterVeriGirer(String arg0) {
         deanManagementPage.phoneNumber_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Kullanici sayfada  Phone number should be exact {int} characters mesaji alir")
-    public void kullaniciSayfadaPhoneNumberShouldBeExactCharactersMesajiAlir(int arg0) {
+    @Then("Alı sayfada  Phone number should be exact {int} characters mesaji alir")
+    public void AlıSayfadaPhoneNumberShouldBeExactCharactersMesajiAlir(int arg0) {
         Assert.assertTrue(deanManagementPage.phoneNumber_Minimum12_Character_Message_Add_Dean.isDisplayed());
     }
 }

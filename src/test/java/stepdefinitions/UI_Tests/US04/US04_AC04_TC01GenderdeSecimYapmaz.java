@@ -14,6 +14,7 @@ import pages.DeanManagementPage;
 import pages.EditDeanPage;
 
 public class US04_AC04_TC01GenderdeSecimYapmaz {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -28,17 +29,17 @@ public class US04_AC04_TC01GenderdeSecimYapmaz {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
 
-    @Given("Kullanici {string} gider.")
-    public void kullaniciGider(String arg0) {
+    @Given("Alı {string} gider.")
+    public void AlıGider(String arg0) {
         Driver.getDriver().get(arg0);
     }
-    @And("Kullanici Gender alaninda gerekli checkbox`a tiklamaz.")
-    public void kullaniciGenderAlanindaGerekliCheckboxATiklamaz() {
+    @And("Alı Gender alaninda gerekli checkbox`a tiklamaz.")
+    public void AlıGenderAlanindaGerekliCheckboxATiklamaz() {
     deanManagementPage.female_Checkbox_Add_Dean.sendKeys(Keys.TAB);
     }
 
-    @Then("Kullanici Dean Kaydi yapilmadigi gorulur")
-    public void kullaniciDeanKaydiYapilmadigiGorulur() {
+    @Then("Alı Dean Kaydi yapilmadigi gorulur")
+    public void AlıDeanKaydiYapilmadigiGorulur() {
 
     }
 

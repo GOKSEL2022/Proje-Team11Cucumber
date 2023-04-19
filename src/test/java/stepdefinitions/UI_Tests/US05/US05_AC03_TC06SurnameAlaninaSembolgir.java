@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC03_TC06SurnameAlaninaSembolgir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -25,8 +26,8 @@ public class US05_AC03_TC06SurnameAlaninaSembolgir {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
 
-    @And("Kullanici Surname alanina sembol girer")
-    public void kullaniciSurnameAlaninaSembolGirer() throws IOException {
+    @And("Alı Surname alanina sembol girer")
+    public void AlıSurnameAlaninaSembolGirer() throws IOException {
         editDeanPage.surname_Edit_Dean.clear();
         editDeanPage.surname_Edit_Dean.sendKeys("*****");
         Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
