@@ -1,14 +1,14 @@
 @US07_AC00,@team11
 Feature: Dean olarak login olma
 
-  Scenario: TC01 Kullanıcının dean olarak giriş yapabilmesi durumu
+  Scenario: TC01 rabianın dean olarak giriş yapabilmesi durumu
 
-    Given Kullanıcı ana sayfaya gider.
-    When Kullanıcı Login linkine tıklar.
-    Then Kullanıcı user name kutusuna tıklar.
-    And Kullanıcı user name kutusuna dean username girer.
-    And Kullanıcı password kutusuna tıklar.
-    And Kullanıcı password kutusuna dean sifre girer.
-    And Kullanıcı login butonuna tıklar.
-    And Kullanıcı sayfayı kapatır.
+    Given rabia ana sayfaya gider.
+    When rabia Login linkine tıklar.
+    Then rabia user name kutusuna tıklar.
+    And rabia user name kutusuna dean username girer.
+    And rabia password kutusuna tıklar.
+    And rabia password kutusuna dean sifre girer.
+    And rabia login butonuna tıklar.
+    And rabia sayfayı kapatır.
 
