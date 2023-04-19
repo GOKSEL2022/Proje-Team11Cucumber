@@ -7,8 +7,8 @@ Feature:US02_TC01
  And Kullanici Login butonunun sayfada yer aldigini goruntuler
  And Kullanici Login butonuna tiklar
  And Kullanici Login menusunde doldurulacak alanlar  icin required yazisini goruntuler
- And Kullanici User Name e "AdminB103" girer
- And Kullanici Password "12345678" girer
+ And Kullanici User Name e "karakartal" girer
+ And Kullanici Password "987654321" girer
  When Kullanici Login butonuna tiklar
  Then Kullanici login isleminin basarili oldugunu dogrular
 

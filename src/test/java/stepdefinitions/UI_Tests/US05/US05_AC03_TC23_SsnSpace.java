@@ -4,12 +4,8 @@ import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.RegisterPage;
-import pages.US04_US05_Pages.Admin_ManagementPage;
-import pages.US04_US05_Pages.DeanManagementPage;
-import pages.US04_US05_Pages.EditDeanPage;
+import pages.*;
+
 import utilities.Driver;
 
 public class US05_AC03_TC23_SsnSpace {
