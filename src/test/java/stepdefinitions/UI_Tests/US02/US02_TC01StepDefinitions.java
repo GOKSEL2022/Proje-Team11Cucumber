@@ -1,6 +1,8 @@
 package stepdefinitions.UI_Tests.US02;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
@@ -8,6 +10,17 @@ import utilities.Driver;
 public class US02_TC01StepDefinitions {
      HomePage homePage = new HomePage();
      LoginPage loginPage = new LoginPage();
+
+    @Given("Kullanici {string} gider")
+    public void kullanici_gider(String string) {
+        Driver.getDriver().get(string);
+
+    }
+    @When("Kullanici anasayfanın acildigini goruntuler")
+    public void kullanici_anasayfanın_acildigini_goruntuler() {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("management"));
+
+    }
 
     @And("Kullanici Login butonunun sayfada yer aldigini goruntuler")
     public void kullaniciLoginButonununSayfadaYerAldiginiGoruntuler() {
