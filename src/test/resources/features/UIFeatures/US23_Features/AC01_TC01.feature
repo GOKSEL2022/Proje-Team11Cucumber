@@ -1,26 +1,28 @@
-@US23_TC01 @team11
+@US23_TC01 @team11 @smoke
 Feature: Admin Vice Dean hesabi olusturabilmelidir
 
   Background:Managementon_Schools_sayfasina_git
-    Given "https://www.managementonschools.com/" url'ine git
-    Given Home sayfasindaki Login buttonuna tikla
-    Given Admin olarak User Name'i gir
-    Given Admin olarak Password'u gir
-    Given Login buttonuna tikla
-    Given Vice Dean Management sayfasinda oldugunu dogrula
+    Given Nilufer "https://www.managementonschools.com/" url'ine git
+    Given Nilufer Home sayfasindaki Login buttonuna tikla
+    Given Nilufer Admin olarak User Name'i gir
+    Given Nilufer Admin olarak Password'u gir
+    Given Nilufer Login buttonuna tikla
+    Given Nilufer Vice Dean Management sayfasinda oldugunu dogrula
 
   Scenario Outline:US23_TC01_Tum_alanlarin_dogru_bir_sekilde_girilmesi
-    When Name alanina valid bir "<Name>" gir
-    And Surname alanina valid bir "<Surname>" gir
-    And Birth Place alanina valid bir "<Birth Place>" gir
-    And Gender alanina valid bir Gender sec
-    And Date Of Birth alanina valid bir "<Date Of Birth>" gir
-    And Phone alanina valid bir "<Phone>" gir
-    And Ssn alanina valid bir "<Ssn>" gir
-    And User Name alanina valid bir "<User Name>" gir
-    And Password alanina valid bir "<Password>" gir
-    And Submit butonuna tikla
-    And Admin olarak Vice Dean olusturdugunu dogrula
+    When Nilufer Name alanina valid bir "<Name>" gir
+    And Nilufer Surname alanina valid bir "<Surname>" gir
+    And Nilufer Birth Place alanina valid bir "<Birth Place>" gir
+    And Nilufer Gender alanina valid bir Gender sec
+    And Nilufer Date Of Birth alanina valid bir "<Date Of Birth>" gir
+    And Nilufer Phone alanina valid bir "<Phone>" gir
+    And Nilufer Ssn alanina valid bir "<Ssn>" gir
+    And Nilufer User Name alanina valid bir "<User Name>" gir
+    And Nilufer Password alanina valid bir "<Password>" gir
+    And Nilufer Submit butonuna tikla
+    And Nilufer Admin olarak Vice Dean olusturdugunu dogrula
+    Then Nilufer Menu buttonuna tikla
+    Then Nilufer Logout yap
 
     Examples: Admin_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
