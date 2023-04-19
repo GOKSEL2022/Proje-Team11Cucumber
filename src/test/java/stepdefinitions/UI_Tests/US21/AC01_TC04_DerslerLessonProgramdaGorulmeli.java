@@ -14,17 +14,17 @@ public class AC01_TC04_DerslerLessonProgramdaGorulmeli {
     MainMenuPage mainMenuPage = new MainMenuPage();
     ChooseLessonManagement chooseLessonManagement = new ChooseLessonManagement();
 
-    @When("kullanici Choose Lesson yazisinin altindaki  ders kutucuklarini tiklar")
-    public void kullanici_choose_lesson_yazisinin_altindaki_ders_kutucuklarini_tiklar() {
+    @When("Emin Choose Lesson yazisinin altindaki  ders kutucuklarini tiklar")
+    public void Emin_choose_lesson_yazisinin_altindaki_ders_kutucuklarini_tiklar() {
         ReusableMethods.clickByJS(chooseLessonManagement.kutucuk15);
     }
-    @When("kullanici submitte butonuna tiklar")
-    public void kullanici_submitte_butonuna_tiklar() {
+    @When("Emin submitte butonuna tiklar")
+    public void Emin_submitte_butonuna_tiklar() {
         ReusableMethods.clickByJS(chooseLessonManagement.submit_button);
     }
 
-    @Then("kullanici Program listi dogrular")
-    public void kullanici_program_listi_dogrular() {
+    @Then("Emin Program listi dogrular")
+    public void Emin_program_listi_dogrular() {
         ReusableMethods.clickByJS(chooseLessonManagement.program_list);
     }
 

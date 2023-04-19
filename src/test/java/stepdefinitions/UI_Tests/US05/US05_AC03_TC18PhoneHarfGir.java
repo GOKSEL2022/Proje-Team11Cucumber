@@ -6,9 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.Admin_ManagementPage;
-import pages.DeanManagementPage;
-import pages.EditDeanPage;
+import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC18PhoneHarfGir {

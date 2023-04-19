@@ -16,28 +16,28 @@ public class AC01_TC02_Geçmiştarih_girilmemmeli {
     MainMenuPage mainMenuPage = new MainMenuPage();
 
     Faker faker = new Faker();
-    @When("kullanici Date Of Meet alanina gecmis bir tarih {string} girer")
-    public void kullanici_date_of_meet_alanina_gecmis_bir_tarih_girer(String string) {
+    @When("Emin Date Of Meet alanina gecmis bir tarih {string} girer")
+    public void Emin_date_of_meet_alanina_gecmis_bir_tarih_girer(String string) {
        mainMenuPage.date_of_meet.sendKeys(string);
     }
-    @And("kullanici Start Time alanina valid bir deger {string} girer")
-    public void kullaniciStartTimeAlaninaValidBirDegerGirer(String arg0) {
+    @And("Emin Start Time alanina valid bir deger {string} girer")
+    public void EminStartTimeAlaninaValidBirDegerGirer(String arg0) {
         mainMenuPage.start_time.sendKeys(toString());
     }
-    @When("kullanici Stop Time alanina valid bir deger \"{int}:{int}\"girer")
-    public void kullanici_stop_time_alanina_valid_bir_deger_girer(Integer int1, Integer int2) {
+    @When("Emin Stop Time alanina valid bir deger \"{int}:{int}\"girer")
+    public void Emin_stop_time_alanina_valid_bir_deger_girer(Integer int1, Integer int2) {
        mainMenuPage.stop_time.sendKeys("13:00");
     }
-    @When("kullanici Description alanina valid bir deger {string} girer")
-    public void kullanici_description_alanina_valid_bir_deger_girer(String string) {
+    @When("Emin Description alanina valid bir deger {string} girer")
+    public void Emin_description_alanina_valid_bir_deger_girer(String string) {
        mainMenuPage.description.sendKeys(string);
     }
-    @When("kullanici submit butonuna tiklar")
-    public void kullanici_submit_butonuna_tiklar() {
+    @When("Emin submit butonuna tiklar")
+    public void Emin_submit_butonuna_tiklar() {
        mainMenuPage.add_meet_submit.click();
     }
-    @Then("kullanici hata mesaji gorur ve toplanti olusturamaz")
-    public void kullanici_hata_mesaji_gorur_ve_toplanti_olusturamaz() {
+    @Then("Emin hata mesaji gorur ve toplanti olusturamaz")
+    public void Emin_hata_mesaji_gorur_ve_toplanti_olusturamaz() {
         Assert.assertFalse(mainMenuPage.tarih_dogrulama.isDisplayed());
     }
 

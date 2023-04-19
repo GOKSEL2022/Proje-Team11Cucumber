@@ -13,43 +13,43 @@ public class AC02_MailBoxCheck {
     ContactPage contactPage = new ContactPage();
     Faker faker = new Faker();
 
-    @Then("Kullanıcı Email kutusuna tıklar.")
-    public void kullaniciEmailKutusunaTiklar() {
+    @Then("rabia Email kutusuna tıklar.")
+    public void rabiaEmailKutusunaTiklar() {
         contactPage.yourEmail_textBox.click();
     }
 
-    @And("Kullanıcı mail kutusuna invalid değer olarak {string} girer")
-    public void kullaniciMailKutusunaInvalidDegerOlarakGirer(String arg0) {
+    @And("rabia mail kutusuna invalid değer olarak {string} girer")
+    public void rabiaMailKutusunaInvalidDegerOlarakGirer(String arg0) {
         contactPage.yourEmail_textBox.sendKeys(faker.name().lastName()+"@"+faker.name().lastName());
     }
 
-    @And("Kullanıcı mesajın iletilmediğini doğrular.")
-    public void kullaniciMesajinIletilmediginiDogrular() {
+    @And("rabia mesajın iletilmediğini doğrular.")
+    public void rabiaMesajinIletilmediginiDogrular() {
         Assert.assertTrue(contactPage.mail_alert.isDisplayed());
      // Assert.assertTrue(!contactPage.successfully_alert_css.isDisplayed());
     }
 
 
 
-    @And("Kullanıcı mail kutusuna valid değer olarak {string} girer")
-    public void kullaniciMailKutusunaValidDegerOlarakGirer(String arg0) {
+    @And("rabia mail kutusuna valid değer olarak {string} girer")
+    public void rabiaMailKutusunaValidDegerOlarakGirer(String arg0) {
         contactPage.yourEmail_textBox.sendKeys(faker.internet().emailAddress());
     }
 
-    @And("Kullanıcı mail kutusuna invalid değer olarak testmailcom girer")
-    public void kullanıcıMailKutusunaInvalidDeğerOlarakTestmailcomGirer() {
+    @And("rabia mail kutusuna invalid değer olarak testmailcom girer")
+    public void rabiaMailKutusunaInvalidDeğerOlarakTestmailcomGirer() {
         contactPage.yourEmail_textBox.sendKeys("testmailcom");
     }
 
 
 
-    @And("Kullanıcı mail kutusuna invalid olarak testmail.com girer")
-    public void kullanıcıMailKutusunaInvalidOlarakTestmailComGirer() {
+    @And("rabia mail kutusuna invalid olarak testmail.com girer")
+    public void rabiaMailKutusunaInvalidOlarakTestmailComGirer() {
         contactPage.yourEmail_textBox.sendKeys("testmail.com");
     }
 
-    @And("Kullanıcı mesajın iletilmediğinii doğrular.")
-    public void kullanıcıMesajınIletilmediğiniiDoğrular() {
+    @And("rabia mesajın iletilmediğinii doğrular.")
+    public void rabiaMesajınIletilmediğiniiDoğrular() {
         Assert.assertTrue(!contactPage.successfully_alert_css.isDisplayed());
     }
 }
