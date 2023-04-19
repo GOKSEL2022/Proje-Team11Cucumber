@@ -14,12 +14,12 @@ public class AC01_TC03_ToplantilariSilebilmeli {
     MainMenuPage mainMenuPage = new MainMenuPage();
 
 
-    @When("kullanici olusturmus oldugu meet listesindeki silme butonunu tiklar")
-    public void kullanici_olusturmus_oldugu_meet_listesindeki_silme_butonunu_tiklar() {
+    @When("Emin olusturmus oldugu meet listesindeki silme butonunu tiklar")
+    public void Emin_olusturmus_oldugu_meet_listesindeki_silme_butonunu_tiklar() {
         ReusableMethods.clickByJS(mainMenuPage.sil_button);
     }
-    @Then("kullanici meet update successfulll yazisini gormelidir")
-    public void kullanici_meet_update_successfulll_yazisini_gormelidir() {
+    @Then("Emin meet update successfulll yazisini gormelidir")
+    public void Emin_meet_update_successfulll_yazisini_gormelidir() {
 
     }
 

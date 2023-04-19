@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.RegisterPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -27,112 +28,110 @@ public class US01_StepDefinitions {
     int ay = Faker.instance().number().numberBetween(1, 12);
     int yil = Faker.instance().number().numberBetween(1940, 2000);
 
-    @Given("Kullanici {string} gider")
-    public void kullaniciGider(String string) {
-        Driver.getDriver().get(string);
+    @Given("Goksel {string} gider")
+    public void GokselGider(String string) {
+        Driver.getDriver().get(ConfigReader.getProperty("managementonschools"));
     }
 
-    @Then("Kullanici anasayfanın acildigini goruntuler")
-    public void kullaniciAnasayfanınAcildiginiGoruntuler() {
+    @Then("Goksel anasayfanın acildigini goruntuler")
+    public void GokselAnasayfanınAcildiginiGoruntuler() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("managementonschools"));
     }
-    @And("Kullanici bir sn bekler")
-    public void kullaniciBirSnBekler() throws InterruptedException {
+    @And("Goksel bir sn bekler")
+    public void GokselBirSnBekler() throws InterruptedException {
         Thread.sleep(1000);
     }
-    @And("Kullanici Register butonunun sayfada yer aldigini goruntuler")
-    public void kullaniciRegisterButonununSayfadaYerAldiginiGoruntuler() {
+    @And("Goksel Register butonunun sayfada yer aldigini goruntuler")
+    public void GokselRegisterButonununSayfadaYerAldiginiGoruntuler() {
         Assert.assertTrue(homePage.register_Button_Home.isDisplayed());
     }
-    @And("Kullanici Register butonuna tiklar")
-    public void kullaniciRegisterButonunaTiklar() {
+    @And("Goksel Register butonuna tiklar")
+    public void GokselRegisterButonunaTiklar() {
         homePage.register_Button_Home.click();
     }
 
-    @And("Kullanici Register menusunun altinda doldurulacak alanlari goruntuler")
-    public void kullaniciRegisterMenusununAltindaDoldurulacakAlanlariGoruntuler() {
+    @And("Goksel Register menusunun altinda doldurulacak alanlari goruntuler")
+    public void GokselRegisterMenusununAltindaDoldurulacakAlanlariGoruntuler() {
         Assert.assertTrue(registerPage.name_Box_Register.isDisplayed());
     }
-    @And("Kullanici zorunlu alanlarin altinda Required yazisini  goruntuler")
-    public void kullaniciZorunluAlanlarinAltindaRequiredYazisiniGoruntuler() {
+    @And("Goksel zorunlu alanlarin altinda Required yazisini  goruntuler")
+    public void GokselZorunluAlanlarinAltindaRequiredYazisiniGoruntuler() {
         registerPage.name_Box_Register.click();
         registerPage.register_Text_Register.click();
         Assert.assertTrue(registerPage.required_Text_Name_Register.isDisplayed());
     }
-    @And("Kullanici Name {string} girer")
-    public void kullaniciNameGirer(String string) {
+    @And("Goksel Name {string} girer")
+    public void GokselNameGirer(String string) {
         registerPage.name_Box_Register.sendKeys(faker.name().firstName());
     }
-    @And("Kullanici Name textboxinin altindaki Required yazisinin kalktigini  goruntuler")
-    public void kullaniciNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Name textboxinin altindaki Required yazisinin kalktigini  goruntuler")
+    public void GokselNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_Name_Register.isDisplayed());
     }
-    @And("Kullanici Surname {string}  girer")
-    public void kullaniciSurnameGirer(String string) {
+    @And("Goksel Surname {string}  girer")
+    public void GokselSurnameGirer(String string) {
         registerPage.surname_Box_Register.sendKeys(faker.name().lastName());
        // registerPage.surname_Box_Register.sendKeys(string);
     }
-    @And("Kullanici Surname textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciSurnameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Surname textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselSurnameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_Surname_Register.isDisplayed());
     }
-    @And("Kullanici Birth Place {string} girer")
-    public void kullaniciBirthPlaceGirer(String string) {
+    @And("Goksel Birth Place {string} girer")
+    public void GokselBirthPlaceGirer(String string) {
         registerPage.birthPlace_Box_Register.sendKeys(faker.address().city());
         //registerPage.birthPlace_Box_Register.sendKeys(string);
     }
-    @And("Kullanici Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciBirthPlaceTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselBirthPlaceTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_BirthPlace_Register.isDisplayed());
     }
-    @And("Kullanici Phone {string} girer")
-    public void kullaniciPhoneGirer(String string) {
+    @And("Goksel Phone {string} girer")
+    public void GokselPhoneGirer(String string) {
         //registerPage.phoneNumber_Box_Register.sendKeys(string);
         registerPage.phoneNumber_Box_Register.sendKeys(phoneNo1+"-"+phoneNo2+"-"+phoneNo3);
     }
-    @And("Kullanici Phone textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciPhoneTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Phone textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselPhoneTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_Phone_Register.isDisplayed());
     }
-    @And("Kullanici Gender alanindan Male chexboxini tiklar")
-    public void kullaniciGenderAlanindanMaleChexboxiniTiklar() {
+    @And("Goksel Gender alanindan Male chexboxini tiklar")
+    public void GokselGenderAlanindanMaleChexboxiniTiklar() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Driver.clickWithJS(registerPage.male_Checkbox_Register);
     }
-    @And("Kullanici Date Of Birt {string} girer")
-    public void kullaniciDateOfBirtGirer(String string) {
+    @And("Goksel Date Of Birt {string} girer")
+    public void GokselDateOfBirtGirer(String string) {
         registerPage.dateOfBirth_Box_Register.sendKeys(gun+"."+ay+"."+yil);
     }
-    @And("Kullanici Date Of Birt textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciDateOfBirtTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Date Of Birt textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselDateOfBirtTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
        Assert.assertTrue(!registerPage.required_Text_DateOfBirth_Register.isDisplayed());
     }
-    @And("Kullanici Ssn {string} girer")
-    public void kullaniciSsnGirer(String string) {
+    @And("Goksel Ssn {string} girer")
+    public void GokselSsnGirer(String string) {
         //registerPage.ssn_Box_Register.sendKeys(string);
         registerPage.ssn_Box_Register.sendKeys(ssnNo1+"-"+ssnNo2+"-"+ssnNo3);
     }
-    @And("Kullanici Ssn textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciSsnTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel Ssn textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselSsnTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_Ssn_Register.isDisplayed());
     }
-    @And("Kullanici User Name {string} girer")
-    public void kullaniciUserNameGirer(String string) {
+    @And("Goksel User Name {string} girer")
+    public void GokselUserNameGirer(String string) {
         registerPage.username_Box_Register.sendKeys(faker.name().firstName());
         //registerPage.username_Box_Register.sendKeys(string);
     }
-    @And("Kullanici User Name textboxinin altindaki required yazisinin kalktigini  goruntuler")
-    public void kullaniciUserNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
+    @And("Goksel User Name textboxinin altindaki required yazisinin kalktigini  goruntuler")
+    public void GokselUserNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
         Assert.assertTrue(!registerPage.required_Text_UserName_Register.isDisplayed());
     }
-    @And("Kullanici Password {string} girer ve Register_Register butonunu tiklar")
-    public void kullaniciPasswordGirerVeRegister_RegisterButonunuTiklar(String password) {
+    @And("Goksel Password {string} girer ve Register_Register butonunu tiklar")
+    public void GokselPasswordGirerVeRegister_RegisterButonunuTiklar(String password) {
         registerPage.password_Box_Register.sendKeys(password,Keys.TAB,Keys.ENTER);
     }
-    @Then("Kullanici Register isleminin basarili oldugunu gösteren popupı görüntüler")
-    public void kullaniciRegisterIslemininBasariliOldugunuGösterenPopupıGörüntüler() throws InterruptedException {
-        //Thread.sleep(1000);
-        //Assert.assertTrue(Driver.getDriver().switchTo().alert().getText().contains("Guest User registered"));
+    @Then("Goksel Register isleminin basarili oldugunu gösteren popupı goruntuler")
+    public void gokselRegisterIslemininBasariliOldugunuGösterenPopupıGoruntuler() {
         ReusableMethods.waitForVisibility(registerPage.alert_Register,5);
         Assert.assertTrue(registerPage.alert_Register.isDisplayed());
     }

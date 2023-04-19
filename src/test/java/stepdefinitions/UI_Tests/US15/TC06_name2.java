@@ -9,14 +9,14 @@ import static org.junit.Assert.assertFalse;
 
 public class TC06_name2 {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici name alanina noktalama isareti girer")
-    public void kullaniciNameAlaninaNoktalamaIsaretiGirer() {
+    @And("Fatih name alanina noktalama isareti girer")
+    public void FatihNameAlaninaNoktalamaIsaretiGirer() {
         vice_deanPage.student_name.sendKeys(ConfigReader.getProperty("student_name_fake"));
 
     }
 
-    @And("Kullanici Required yazisinin kalkmadigini dogrular")
-    public void kullaniciRequiredYazisininKalkmadiginiDogrular() {
+    @And("Fatih Required yazisinin kalkmadigini dogrular")
+    public void FatihRequiredYazisininKalkmadiginiDogrular() {
         assertFalse(vice_deanPage.required1.isDisplayed());
 
     }

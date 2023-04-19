@@ -15,8 +15,8 @@ public class US08_TC02_StepDefinitions {
 
 
 
-    @Then("Kullanici Compulsory kutucugunu tiklar")
-    public void kullaniciCompulsoryKutucugunuTiklar() {
+    @Then("MDogan Compulsory kutucugunu tiklar")
+    public void MDoganCompulsoryKutucugunuTiklar() {
         viceDeanLessonPage.compulsory.click();
     }
 }

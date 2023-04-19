@@ -21,34 +21,34 @@ public class US16_TC01_StepDefinitions {
 
 
 
-    @And("Kullanici Contact Get All sekmesine tiklar")
-    public void kullaniciContactGetAllSekmesineTiklar() {
+    @And("MDogan Contact Get All sekmesine tiklar")
+    public void MDoganContactGetAllSekmesineTiklar() {
         homePage.contactGetAll.click();
     }
 
-    @And("Kullanici mesajlari goruntuler")
-    public void kullaniciMesajlariGoruntuler() {
+    @And("MDogan mesajlari goruntuler")
+    public void MDoganMesajlariGoruntuler() {
         Assert.assertTrue(homePage.contactMessage.isDisplayed());
 
     }
 
-    @And("Kullanici mesaj yazarini \\(name) goruntuler")
-    public void kullaniciMesajYazariniNameGoruntuler() {
+    @And("MDogan mesaj yazarini \\(name) goruntuler")
+    public void MDoganMesajYazariniNameGoruntuler() {
         Assert.assertTrue(homePage.contactName.isDisplayed());
     }
 
-    @And("Kullanici e maillerini goruntuler")
-    public void kullaniciEMailleriniGoruntuler() {
+    @And("MDogan e maillerini goruntuler")
+    public void MDoganEMailleriniGoruntuler() {
        Assert.assertTrue( homePage.contactEmail.isDisplayed());
     }
 
-    @And("Kullanici gonderilme tarihini \\(date) goruntuler")
-    public void kullaniciGonderilmeTarihiniDateGoruntuler() {
+    @And("MDogan gonderilme tarihini \\(date) goruntuler")
+    public void MDoganGonderilmeTarihiniDateGoruntuler() {
        Assert.assertTrue( homePage.contactDate.isDisplayed());
     }
 
-    @Then("Kullanici subject bilgilerini goruntuler")
-    public void kullaniciSubjectBilgileriniGoruntuler() {
+    @Then("MDogan subject bilgilerini goruntuler")
+    public void MDoganSubjectBilgileriniGoruntuler() {
        Assert.assertTrue( homePage.contactSubject.isDisplayed());
     }
 }

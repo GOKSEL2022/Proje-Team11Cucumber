@@ -7,12 +7,12 @@ import pages.RegisterPage;
 
 public class US01_SurnameSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Surname {string}  girer.")
-    public void kullaniciSurnameGirer(String string) {
+    @And("Goksel Surname {string}  girer.")
+    public void GokselSurnameGirer(String string) {
         registerPage.surname_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE);
     }
-    @Then("Kullanici Register işleminin basarili oldugunu gösteren popupı görüntüler")
-    public void kullaniciRegisterIşlemininBasariliOldugunuGösterenPopupıGörüntüler() {
+    @Then("Goksel Register işleminin basarili oldugunu gösteren popupi goruntuler")
+    public void GokselRegisterIşlemininBasariliOldugunuGösterenpopupigoruntuler() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

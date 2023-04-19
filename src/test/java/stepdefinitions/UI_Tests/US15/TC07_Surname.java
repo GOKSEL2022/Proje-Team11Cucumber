@@ -7,8 +7,8 @@ import utilities.ConfigReader;
 
 public class TC07_Surname {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici surname alanina gecerli bir isim girer")
-    public void kullaniciSurnameAlaninaGecerliBirIsimGirer() {
+    @And("Fatih surname alanina gecerli bir isim girer")
+    public void FatihSurnameAlaninaGecerliBirIsimGirer() {
 
         vice_deanPage.student_surname.sendKeys(ConfigReader.getProperty("student_surname"));
 

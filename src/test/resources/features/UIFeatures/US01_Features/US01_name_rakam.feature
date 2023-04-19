@@ -12,7 +12,7 @@ Feature:US01
     And   Goksel Register menusunun altinda doldurulacak alanlari goruntuler
     And   Goksel bir sn bekler
     And   Goksel zorunlu alanlarin altinda Required yazisini  goruntuler
-    And   Goksel Name e "<Name>" girer
+    And   Goksel Name "<Name>" i girer
     And   Goksel bir sn bekler
     And   Goksel Name textboxinin altindaki Required yazisinin kalktigini  goruntuler
     And   Goksel Surname "<Surname>"  girer
@@ -37,10 +37,10 @@ Feature:US01
     And   Goksel User Name textboxinin altindaki required yazisinin kalktigini  goruntuler
     And   Goksel Password "<Password>" girer ve Register_Register butonunu tiklar
     And   Goksel bir sn bekler
-    Then  Goksel Register olmaz.
+    Then  Goksel Register islemi gerceklestiremez
     Examples:
       | Name    | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name    | Password |
-      | *-+/%?! | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 913-18-1258 | Goksel Celik | 12345678 |
+      | 123456  | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 123-08-1258 | Goksel Celik | 12345678 |
 
 
 

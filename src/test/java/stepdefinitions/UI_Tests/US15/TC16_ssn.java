@@ -9,8 +9,8 @@ public class TC16_ssn {
 
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
     Faker faker = new Faker();
-    @And("Kullanici ssn alanina gecerli formatta bir numara girer")
-    public void kullaniciSsnAlaninaGecerliFormattaBirNumaraGirer() {
+    @And("Fatih ssn alanina gecerli formatta bir numara girer")
+    public void FatihSsnAlaninaGecerliFormattaBirNumaraGirer() {
 
         int ssnNo1 = Faker.instance().number().numberBetween(100,999);
         int ssnNo2= Faker.instance().number().numberBetween(10,99);

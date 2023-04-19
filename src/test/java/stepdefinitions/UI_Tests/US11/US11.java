@@ -1,6 +1,7 @@
 package stepdefinitions.UI_Tests.US11;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -45,4 +46,6 @@ public class US11 {
         assert baslama.equals(lessonProgramPage.baslamaSaati.getText());
         assert bitis.equals(lessonProgramPage.bitisSaati.getText());
     }
+
+
 }
