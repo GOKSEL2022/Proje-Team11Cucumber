@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.*;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC08SurnameSpacegir {
     
     Actions actions = new Actions(Driver.getDriver());
@@ -19,7 +21,7 @@ public class US05_AC03_TC08SurnameSpacegir {
 
 
     @And("Alı Surname alanina space girer.")
-    public void AlıSurnameAlaninaSpaceGirer() throws InterruptedException, IOException {
+    public void AlıSurnameAlaninaSpaceGirer() throws InterruptedException, IOException {}
 
     @And("Kullanici Surname alanina space girer.")
     public void kullaniciSurnameAlaninaSpaceGirer() throws InterruptedException {

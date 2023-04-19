@@ -1,5 +1,6 @@
-@US06_TC01 @team11 @smoke
+
 Feature: Dean Vice Dean hesabi olusturabilmelidir
+
 
   Background:Managementon_Schools_sayfasina_git
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
