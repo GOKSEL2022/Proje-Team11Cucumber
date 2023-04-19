@@ -11,13 +11,13 @@ public class Admin_Login {
     LoginPage loginPage = new LoginPage();
 
 
-    @When("Kullanici admin User Name bilgisini girer")
-    public void kullanici_admin_user_name_bilgisini_girer() {
+    @When("Fatih admin User Name bilgisini girer")
+    public void Fatih_admin_user_name_bilgisini_girer() {
 
         loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("admin_username"));
     }
-    @When("Kullanici  admin en az sekiz karakterli bir Password bilgisini girer")
-    public void kullanici_admin_en_az_sekiz_karakterli_bir_password_bilgisini_girer() {
+    @When("Fatih  admin en az sekiz karakterli bir Password bilgisini girer")
+    public void Fatih_admin_en_az_sekiz_karakterli_bir_password_bilgisini_girer() {
 
         loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("admin_password"));
     }

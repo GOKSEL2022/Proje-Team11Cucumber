@@ -9,14 +9,14 @@ import utilities.ReusableMethods;
 
 public class AC03_DeleteNotStepDefs {
     StudentInfoPage studentInfoPage = new StudentInfoPage();
-    @And("kullanici delete buton a tiklar")
-    public void kullaniciDeleteButonATiklar() {
+    @And("kullanici55 delete buton a tiklar")
+    public void kullanici55DeleteButonATiklar() {
         studentInfoPage.deleteButton_studentInfo.click();
 
     }
 
-    @And("kullanici ogrencinin not bilgisinin silindigini gorur\\(popup cikar)")
-    public void kullaniciOgrencininNotBilgisininSilindiginiGorurPopupCikar() {
+    @And("kullanici55 ogrencinin not bilgisinin silindigini gorur\\(popup cikar)")
+    public void kullanici55OgrencininNotBilgisininSilindiginiGorurPopupCikar() {
         try {
             Assert.assertTrue( studentInfoPage.delete_alert_text_studentInfo.isDisplayed());
         } catch (NoSuchElementException e) {

@@ -10,6 +10,7 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC07_SurnameRakamGir {
+    
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -18,8 +19,13 @@ public class US05_AC03_TC07_SurnameRakamGir {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
 
+
+    @And("Alı Surname alanina rakam girer")
+    public void AlıSurnameAlaninaRakamGirer() throws InterruptedException, IOException {
+
     @And("Kullanici Surname alanina rakam girer")
     public void kullaniciSurnameAlaninaRakamGirer() throws InterruptedException {
+
         editDeanPage.surname_Edit_Dean.clear();
         Thread.sleep(1000);
         editDeanPage.surname_Edit_Dean.sendKeys("12345");

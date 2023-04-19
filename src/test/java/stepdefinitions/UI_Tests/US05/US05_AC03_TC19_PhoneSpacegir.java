@@ -11,6 +11,7 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC19_PhoneSpacegir {
+    
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -19,8 +20,8 @@ public class US05_AC03_TC19_PhoneSpacegir {
     Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Kullanici Phone alanini space girer.")
-    public void kullaniciPhoneAlaniniSpaceGirer() {
+    @And("Alı Phone alanini space girer.")
+    public void AlıPhoneAlaniniSpaceGirer() {
         editDeanPage.phoneNumber_Edit_Dean.sendKeys(Keys.SPACE);
         Assert.assertTrue(deanManagementPage.phoneNumber_PleaseEntervalidPhoneNumber_Character_Message_Add_Dean.isDisplayed());
     }

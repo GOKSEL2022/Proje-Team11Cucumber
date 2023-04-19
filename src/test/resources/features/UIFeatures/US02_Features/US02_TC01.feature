@@ -1,4 +1,4 @@
-@team11
+@team111
 Feature:US02_TC01
   Scenario:US02_TC01
 
@@ -7,8 +7,8 @@ Feature:US02_TC01
  And Goksel Login butonunun sayfada yer aldigini goruntuler
  And Goksel Login butonuna tiklar
  And Goksel Login menusunde doldurulacak alanlar  icin required yazisini goruntuler
- And Goksel User Name e "AdminB103" girer
- And Goksel Password "12345678" girer
+ And Goksel User Name e "karakartal" girer
+ And Goksel Password "987654321" girer
  When Goksel Login butonuna tiklar
  Then Goksel login isleminin basarili oldugunu dogrular
 

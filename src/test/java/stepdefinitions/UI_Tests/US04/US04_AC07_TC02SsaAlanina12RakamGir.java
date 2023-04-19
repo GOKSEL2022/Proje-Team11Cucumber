@@ -12,6 +12,7 @@ import pages.DeanManagementPage;
 import pages.EditDeanPage;
 
 public class US04_AC07_TC02SsaAlanina12RakamGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -23,13 +24,13 @@ public class US04_AC07_TC02SsaAlanina12RakamGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Ssn {string} alanina oniki karakter veri girer")
-    public void kullaniciSsnAlaninaOnikiKarakterVeriGirer(String arg0) {
+    @And("Alı Ssn {string} alanina oniki karakter veri girer")
+    public void AlıSsnAlaninaOnikiKarakterVeriGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Kullanici textboxin altinda uyari mesjini gorur")
-    public void kullaniciTextboxinAltindaUyariMesjiniGorur() {
+    @Then("Alı textboxin altinda uyari mesjini gorur")
+    public void AlıTextboxinAltindaUyariMesjiniGorur() {
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 
     }

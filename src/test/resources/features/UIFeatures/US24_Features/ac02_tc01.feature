@@ -1,4 +1,4 @@
-@team11
+
 Feature:
   Scenario:
     Given Kuullanici "https://www.managementonschools.com/" gider

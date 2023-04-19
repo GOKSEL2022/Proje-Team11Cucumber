@@ -6,7 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US08_Pages.ViceDeanLessonPage;
+import pages.ViceDeanLessonPage;
 import utilities.Driver;
 
 public class US08_TC01_StepDefinitions {
@@ -16,50 +16,50 @@ public class US08_TC01_StepDefinitions {
     Faker faker = new Faker();
     ViceDeanLessonPage viceDeanLessonPage = new ViceDeanLessonPage();
 
-    @Given("Kullanici {string} url ye gider")
-    public void kullaniciUrlYeGider(String string) {
+    @Given("MDogan {string} url ye gider")
+    public void MDoganUrlYeGider(String string) {
         Driver.getDriver().get(string);
 
     }
-    @And("Kullanici bir saniye bekler")
-    public void kullaniciBirSaniyeBekler() throws InterruptedException {
+    @And("MDogan bir saniye bekler")
+    public void MDoganBirSaniyeBekler() throws InterruptedException {
         Thread.sleep(1000);
     }
 
-    @And("Kullanici anasayfa login butonuna tiklar")
-    public void kullaniciAnasayfaLoginButonunaTiklar() {
+    @And("MDogan anasayfa login butonuna tiklar")
+    public void MDoganAnasayfaLoginButonunaTiklar() {
         homePage.login_Button_Home.click();
 
     }
 
-    @And("Kullanici username {string} girer")
-    public void kullaniciUsernameGirer(String string) {
+    @And("MDogan username {string} girer")
+    public void MDoganUsernameGirer(String string) {
         loginPage.username_Box_Login.sendKeys(string);
     }
 
-    @And("Kullanici password {string} girer")
-    public void kullaniciPasswordGirer(String string) {
+    @And("MDogan password {string} girer")
+    public void MDoganPasswordGirer(String string) {
         loginPage.password_Box_Login.sendKeys(string);
     }
 
-    @And("Kullanici login butonuna tiklar")
-    public void kullaniciLoginButonunaTiklar() {
+    @And("MDogan login butonuna tiklar")
+    public void MDoganLoginButonunaTiklar() {
         loginPage.login_Button_Login.click();
     }
 
 
-    @And("Kullanici Lessons a tiklar")
-    public void kullaniciLessonsATiklar() {
+    @And("MDogan Lessons a tiklar")
+    public void MDoganLessonsATiklar() {
         viceDeanLessonPage.lessons.click();
     }
 
-    @And("Kullanici Lesson Name kismina tiklar")
-    public void kullaniciLessonNameKisminaTiklar() {
+    @And("MDogan Lesson Name kismina tiklar")
+    public void MDoganLessonNameKisminaTiklar() {
         viceDeanLessonPage.lessonName.click();
     }
 
-    @Then("Kullanici Lesson name {string} girer")
-    public void kullaniciLessonNameGirer(String string) {
+    @Then("MDogan Lesson name {string} girer")
+    public void MDoganLessonNameGirer(String string) {
         viceDeanLessonPage.lessonName.sendKeys(string);
     }
 

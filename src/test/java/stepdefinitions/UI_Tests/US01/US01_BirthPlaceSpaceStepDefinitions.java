@@ -7,12 +7,12 @@ import pages.RegisterPage;
 
 public class US01_BirthPlaceSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Birth Place {string} girer.")
-    public void kullaniciBirthPlaceGirer(String string) {
+    @And("Goksel Birth Place {string} girer.")
+    public void GokselBirthPlaceGirer(String string) {
         registerPage.birthPlace_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE);
     }
-    @Then("Kullanici Register olmaz")
-    public void kullaniciRegisterOlmaz() {
+    @Then("Goksel Register olmaz")
+    public void GokselRegisterOlmaz() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

@@ -2,13 +2,11 @@ package stepdefinitions.UI_Tests.US16;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US08_Pages.ViceDeanLessonPage;
-import utilities.Driver;
+import pages.ViceDeanLessonPage;
 
 public class US16_TC01_StepDefinitions {
 
@@ -21,34 +19,34 @@ public class US16_TC01_StepDefinitions {
 
 
 
-    @And("Kullanici Contact Get All sekmesine tiklar")
-    public void kullaniciContactGetAllSekmesineTiklar() {
+    @And("MDogan Contact Get All sekmesine tiklar")
+    public void MDoganContactGetAllSekmesineTiklar() {
         homePage.contactGetAll.click();
     }
 
-    @And("Kullanici mesajlari goruntuler")
-    public void kullaniciMesajlariGoruntuler() {
+    @And("MDogan mesajlari goruntuler")
+    public void MDoganMesajlariGoruntuler() {
         Assert.assertTrue(homePage.contactMessage.isDisplayed());
 
     }
 
-    @And("Kullanici mesaj yazarini \\(name) goruntuler")
-    public void kullaniciMesajYazariniNameGoruntuler() {
+    @And("MDogan mesaj yazarini \\(name) goruntuler")
+    public void MDoganMesajYazariniNameGoruntuler() {
         Assert.assertTrue(homePage.contactName.isDisplayed());
     }
 
-    @And("Kullanici e maillerini goruntuler")
-    public void kullaniciEMailleriniGoruntuler() {
+    @And("MDogan e maillerini goruntuler")
+    public void MDoganEMailleriniGoruntuler() {
        Assert.assertTrue( homePage.contactEmail.isDisplayed());
     }
 
-    @And("Kullanici gonderilme tarihini \\(date) goruntuler")
-    public void kullaniciGonderilmeTarihiniDateGoruntuler() {
+    @And("MDogan gonderilme tarihini \\(date) goruntuler")
+    public void MDoganGonderilmeTarihiniDateGoruntuler() {
        Assert.assertTrue( homePage.contactDate.isDisplayed());
     }
 
-    @Then("Kullanici subject bilgilerini goruntuler")
-    public void kullaniciSubjectBilgileriniGoruntuler() {
+    @Then("MDogan subject bilgilerini goruntuler")
+    public void MDoganSubjectBilgileriniGoruntuler() {
        Assert.assertTrue( homePage.contactSubject.isDisplayed());
     }
 }

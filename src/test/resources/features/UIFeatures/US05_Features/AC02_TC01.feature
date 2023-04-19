@@ -2,24 +2,24 @@
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
-    Given Kullanici "https://www.managementonschools.com" gider
-    And Kullanıcı bır sanıye bekler
-    When Kullanici Login butonuna tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Admin olarak Username "<Username>" girer
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Admin olarak Password "<Password>" girer
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Login sayfasinda Login butona tiklar.
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Menu butonuna tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Main Menu listinin acildigini gorur
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Main Menu Listinden Dean Management text`ine tiklar
-    And Kullanıcı bır sanıye bekler
-    And Kullanici Dean List alaninin goruldugunu dogrular
-    Then Kullanıcı Delete butonunun olmadıgını dogrular
+    Given Alı "https://www.managementonschools.com" gider
+    And Alı bır sanıye bekler
+    When Alı Login butonuna tiklar
+    And Alı bır sanıye bekler
+    And Alı Admin olarak Username "<Username>" girer
+    And Alı bır sanıye bekler
+    And Alı Admin olarak Password "<Password>" girer
+    And Alı bır sanıye bekler
+    And Alı Login sayfasinda Login butona tiklar.
+    And Alı bır sanıye bekler
+    And Alı Menu butonuna tiklar
+    And Alı bır sanıye bekler
+    And Alı Main Menu listinin acildigini gorur
+    And Alı bır sanıye bekler
+    And Alı Main Menu Listinden Dean Management text`ine tiklar
+    And Alı bır sanıye bekler
+    And Alı Dean List alaninin goruldugunu dogrular
+    Then Alı Delete butonunun olmadıgını dogrular
 
 #
     Examples: dean_bilgileri

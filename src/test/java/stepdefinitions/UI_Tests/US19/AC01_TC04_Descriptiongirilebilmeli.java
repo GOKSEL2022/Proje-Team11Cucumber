@@ -14,12 +14,12 @@ public class AC01_TC04_Descriptiongirilebilmeli {
     MainMenuPage mainMenuPage = new MainMenuPage();
     Faker faker = new Faker();
 
-    @When("kullanici Description alanina validd bir deger {string} girer")
-    public void kullanici_description_alanina_validd_bir_deger_girer(String string) {
+    @When("Emin Description alanina validd bir deger {string} girer")
+    public void Emin_description_alanina_validd_bir_deger_girer(String string) {
         mainMenuPage.description.sendKeys(string);
     }
-    @Then("kullanici Description alanini dogrular")
-    public void kullanici_description_alanini_dogrular() {
+    @Then("Emin Description alanini dogrular")
+    public void Emin_description_alanini_dogrular() {
         Assert.assertTrue(mainMenuPage.description_dogrulama.isDisplayed());
     }
 

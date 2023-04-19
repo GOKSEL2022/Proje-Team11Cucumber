@@ -1,4 +1,5 @@
 package stepdefinitions.UI_Tests.US06;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,90 +16,87 @@ public class AC01_TC01 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
     LogoutPage logoutPage = new LogoutPage();
+
     @Given("Nilufer {string} url'ine gider")
-    public void kullanici_url_ine_gider(String string) {
-        Driver.getDriver().get(string);
+    public void niluferUrlIneGider(String arg0) {
+        Driver.getDriver().get(arg0);
     }
+
     @Given("Nilufer Home sayfasindaki Login buttonuna tiklar")
-    public void kullanici_home_sayfasindaki_login_buttonuna_tiklar() {
-      homePage.login_Button_Home.click();
+    public void niluferHomeSayfasindakiLoginButtonunaTiklar() {
+        homePage.login_Button_Home.click();
     }
+
     @Given("Nilufer Dean olarak User Name'i girer")
-    public void kullanici_dean_olarak_user_name_i_girer() {
-       loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("dean_username"));
+    public void niluferDeanOlarakUserNameIGirer() {
+        Driver.getDriver().get(ConfigReader.getProperty("dean_username"));
     }
+
     @Given("Nilufer Dean olarak Password'u girer")
-    public void kullanici_dean_olarak_password_u_girer() {
-        loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("dean_password"));
-
+    public void niluferDeanOlarakPasswordUGirer() {
+        Driver.getDriver().get(ConfigReader.getProperty("dean_password"));
     }
-    @Given("Nilufer Login buttonuna tiklar")
-    public void kullanici_login_buttonuna_tiklar() {
 
+    @Given("Nilufer Login buttonuna tiklar")
+    public void niluferLoginButtonunaTiklar() {
         loginPage.login_Button_Login.click();
     }
-    @Given("Nilufer {string} sayfasinda oldugunu dogrular")
-    public void kullanici_sayfasinda_oldugunu_dogrular(String string) {
+
+    @Given("Nilufer Vice Dean Management sayfasinda oldugunu dogrular")
+    public void niluferViceDeanManagementSayfasindaOldugunuDogrular() {
         assertTrue(deanViceDeanPage.Admin_Vice_Dean_Text.isDisplayed());
     }
-    @When("Nilufer Name alanina valid bir {string} girer")
-    public void kullanici_name_alanina_valid_bir_girer(String string) {
-        deanViceDeanPage.Admin_Vice_Dean_Name.sendKeys(string);
+
+    @When("Nilufer Name alanina valid bir deger girer")
+    public void niluferNameAlaninaValidBirDegerGirer() {
+        deanViceDeanPage.Admin_Vice_Dean_Name.sendKeys((CharSequence) Faker.instance().name());
     }
-    @When("Nilufer Surname alanina valid bir {string} girer")
-    public void kullanici_surname_alanina_valid_bir_girer(String string) {
-       deanViceDeanPage.Admin_Vice_Dean_Surname.sendKeys(string);
+
+    @And("Nilufer Surname alanina valid bir deger girer")
+    public void niluferSurnameAlaninaValidBirDegerGirer() {
     }
-    @When("Nilufer Birth Place alanina valid bir {string} girer")
-    public void kullanici_birth_place_alanina_valid_bir_girer(String string) {
-        deanViceDeanPage.Admin_Vice_Dean_BirthPlace.sendKeys(string);
+
+    @And("Nilufer Birth Place alanina valid bir deger girer")
+    public void niluferBirthPlaceAlaninaValidBirDegerGirer() {
     }
 
     @And("Nilufer Gender alanina valid bir Gender secer")
-    public void kullaniciGenderAlaninaValidBirGenderSecer() {
-        deanViceDeanPage.Admin_Vice_Dean_Female_Radio_Button.click();
+    public void niluferGenderAlaninaValidBirGenderSecer() {
     }
 
-    @And("Nilufer Date Of Birth alanina valid bir {string} girer")
-    public void kullaniciDateOfBirthAlaninaValidBirGirer(String string) {
-        deanViceDeanPage.Admin_Vice_Dean_Date_Of_Birth.sendKeys(string);
+    @And("Nilufer Date Of Birth alanina valid bir deger girer")
+    public void niluferDateOfBirthAlaninaValidBirDegerGirer() {
     }
 
-
-    @When("Nilufer Phone alanina valid bir {string} girer")
-    public void kullanici_phone_alanina_valid_bir_girer(String string) {
-         deanViceDeanPage.Admin_Vice_Dean_PhoneNumber.sendKeys(string);
-    }
-    @When("Nilufer Ssn alanina valid bir {string} girer")
-    public void kullanici_ssn_alanina_valid_bir_girer(String string) {
-         deanViceDeanPage.Admin_Vice_Dean_Ssn.sendKeys(string);
-    }
-    @When("Nilufer User Name alanina valid bir {string} girer")
-    public void kullanici_user_name_alanina_valid_bir_girer(String string) {
-         deanViceDeanPage.Admin_Vice_Dean_Username.sendKeys(string);
-    }
-    @When("Nilufer Password alanina valid bir {string} girer")
-    public void kullanici_password_alanina_valid_bir_girer(String string) {
-         deanViceDeanPage.Admin_Vice_Dean_Password.sendKeys(string);
-    }
-    @When("Nilufer Submit butonuna tiklar")
-    public void kullanici_submit_butonuna_tiklar() {
-
-        deanViceDeanPage.Admin_Vice_Dean_Submit_Button.click();
-    }
-    @When("Nilufer Dean olarak Vice Dean olusturdugunu dogrular")
-    public void kullanici_dean_olarak_vice_dean_olusturdugunu_dogrular() {
-          assertTrue(deanViceDeanPage.Admin_Vice_Dean_Vice_dean_Saved.isDisplayed());
+    @And("Nilufer Phone alanina valid bir deger girer")
+    public void niluferPhoneAlaninaValidBirDegerGirer() {
     }
 
+    @And("Nilufer Ssn alanina valid bir deger girer")
+    public void niluferSsnAlaninaValidBirDegerGirer() {
+    }
+
+    @And("Nilufer User Name alanina valid bir deger girer")
+    public void niluferUserNameAlaninaValidBirDegerGirer() {
+    }
+
+    @And("Nilufer Password alanina valid bir deger girer")
+    public void niluferPasswordAlaninaValidBirDegerGirer() {
+    }
+
+    @And("Nilufer Submit butonuna tiklar")
+    public void niluferSubmitButonunaTiklar() {
+    }
+
+    @And("Nilufer Dean olarak Vice Dean olusturdugunu dogrular")
+    public void niluferDeanOlarakViceDeanOlusturdugunuDogrular() {
+    }
 
     @Then("Nilufer Menu buttonuna tiklar")
-    public void menuButtonunaTiklar() {
-        mainMenuPage.menu_button.click();
+    public void niluferMenuButtonunaTiklar() {
     }
 
     @Then("Nilufer Logout yapar")
-    public void logoutYapar() {
-        logoutPage.logout_button_logout.click();
+    public void niluferLogoutYapar() {
     }
 }

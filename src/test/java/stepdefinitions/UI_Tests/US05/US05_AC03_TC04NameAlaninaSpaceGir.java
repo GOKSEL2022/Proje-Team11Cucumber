@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 public class US05_AC03_TC04NameAlaninaSpaceGir {
 
     Actions actions = new Actions(Driver.getDriver());
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -34,8 +35,8 @@ public class US05_AC03_TC04NameAlaninaSpaceGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
 
-    @And("Kullanici Name alanina space girer.")
-    public void kullaniciNameAlaninaSpaceGirer() throws InterruptedException, IOException {
+    @And("Alı Name alanina space girer.")
+    public void AlıNameAlaninaSpaceGirer() throws InterruptedException, IOException {
         editDeanPage.name_Edit_Dean.sendKeys(Keys.DELETE,Keys.SPACE);
         Thread.sleep(1000);
         Assert.assertFalse(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());

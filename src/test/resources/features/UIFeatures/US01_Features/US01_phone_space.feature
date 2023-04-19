@@ -2,42 +2,42 @@
 Feature:US01
   Scenario Outline:US01
 
-    Given Kullanici "https://www.managementonschools.com/" gider
-    Then  Kullanici anasayfanın acildigini goruntuler
-    And   Kullanici bir sn bekler
-    And   Kullanici Register butonunun sayfada yer aldigini goruntuler
-    And   Kullanici bir sn bekler
-    And   Kullanici Register butonuna tiklar
-    And   Kullanici bir sn bekler
-    And   Kullanici Register menusunun altinda doldurulacak alanlari goruntuler
-    And   Kullanici bir sn bekler
-    And   Kullanici zorunlu alanlarin altinda Required yazisini  goruntuler
-    And   Kullanici Name "<Name>" girer
-    And   Kullanici bir sn bekler
-    And   Kullanici Name textboxinin altindaki Required yazisinin kalktigini  goruntuler
-    And   Kullanici Surname "<Surname>"  girer
-    And   Kullanici bir sn bekler
-    And   Kullanici Surname textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici Birth Place "<Birth Place>" girer
-    And   Kullanici bir sn bekler
-    And   Kullanici Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici Phone "<Phone>" girer.
-    And   Kullanici bir sn bekler
-    And   Kullanici Phone textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici Gender alanindan Male chexboxini tiklar
-    And   Kullanici bir sn bekler
-    And   Kullanici Date Of Birt "<Date Of Birt>" girer
-    And   Kullanici bir sn bekler
-    And   Kullanici Date Of Birt textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici Ssn "<Ssn>" girer
-    And   Kullanici bir sn bekler
-    And   Kullanici Ssn textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici User Name "<User Name>" girer
-    And   Kullanici bir sn bekler
-    And   Kullanici User Name textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Kullanici Password "<Password>" girer ve Register_Register butonunu tiklar
-    And   Kullanici bir sn bekler
-    Then  Kullanici Register isleminin basarili oldugunu gösteren popupı görüntüler.
+    Given Goksel "https://www.managementonschools.com/" gider
+    Then  Goksel anasayfanın acildigini goruntuler
+    And   Goksel bir sn bekler
+    And   Goksel Register butonunun sayfada yer aldigini goruntuler
+    And   Goksel bir sn bekler
+    And   Goksel Register butonuna tiklar
+    And   Goksel bir sn bekler
+    And   Goksel Register menusunun altinda doldurulacak alanlari goruntuler
+    And   Goksel bir sn bekler
+    And   Goksel zorunlu alanlarin altinda Required yazisini  goruntuler
+    And   Goksel Name "<Name>" girer
+    And   Goksel bir sn bekler
+    And   Goksel Name textboxinin altindaki Required yazisinin kalktigini  goruntuler
+    And   Goksel Surname "<Surname>"  girer
+    And   Goksel bir sn bekler
+    And   Goksel Surname textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel Birth Place "<Birth Place>" girer
+    And   Goksel bir sn bekler
+    And   Goksel Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel Phone "<Phone>" girer
+    And   Goksel bir sn bekler
+    And   Goksel Phone textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel Gender alanindan Male chexboxini tiklar
+    And   Goksel bir sn bekler
+    And   Goksel Date Of Birt "<Date Of Birt>" girer
+    And   Goksel bir sn bekler
+    And   Goksel Date Of Birt textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel Ssn "<Ssn>" girer
+    And   Goksel bir sn bekler
+    And   Goksel Ssn textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel User Name "<User Name>" girer
+    And   Goksel bir sn bekler
+    And   Goksel User Name textboxinin altindaki required yazisinin kalktigini  goruntuler
+    And   Goksel Password "<Password>" girer ve Register_Register butonunu tiklar
+    And   Goksel bir sn bekler
+    Then  Goksel Register isleminin basarili oldugunu gösteren popupı goruntuler
     Examples:
       | Name     | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name      | Password |
       | Adminnn  | Celik   | Ordu        |              | 01.01.2000   | 263-78-1908 | Goksel Celik13 | 12345678 |

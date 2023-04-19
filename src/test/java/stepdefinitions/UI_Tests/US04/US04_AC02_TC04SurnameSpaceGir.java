@@ -16,6 +16,7 @@ import utilities.ReusableMethods;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
+
 public class US04_AC02_TC04SurnameSpaceGir {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -31,14 +32,14 @@ public class US04_AC02_TC04SurnameSpaceGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Surname alanina space girer")
-    public void kullaniciSurnameAlaninaSpaceGirer() {
+    @And("Alı Surname alanina space girer")
+    public void AlıSurnameAlaninaSpaceGirer() {
         deanManagementPage.surname_Add_Dean.sendKeys(Keys.SPACE,Keys.TAB);
 
     }
 
-    @Then("Kullanici Dean Save kayit mesajini gorur")
-    public void kullaniciDeanSaveKayitMesajiniGorur() throws IOException {
+    @Then("Alı Dean Save kayit mesajini gorur")
+    public void AlıDeanSaveKayitMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

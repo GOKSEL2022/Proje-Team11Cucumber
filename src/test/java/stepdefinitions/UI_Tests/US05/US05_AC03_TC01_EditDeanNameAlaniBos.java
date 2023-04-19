@@ -17,6 +17,7 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC01_EditDeanNameAlaniBos {
+    
 
     public static void withActionsEditTextBox(WebElement element, String text) {
     }
@@ -36,8 +37,8 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
 
-    @And("Kullanici Dean List alanindaki Edit butonuna tiklar")
-    public void kullaniciDeanListAlanindakiEditButonunaTiklar() throws InterruptedException {
+    @And("Alı Dean List alanindaki Edit butonuna tiklar")
+    public void AlıDeanListAlanindakiEditButonunaTiklar() throws InterruptedException {
 
         //editDeanPage.edit_Button_Team_Hasan.click();
         Driver.clickWithJS(editDeanPage.edit_Button_Team_Hasan);
@@ -47,14 +48,14 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
 
     }
 
-    @And("Kullanici Edit Dean bolumunun acildigini gorur")
-    public void kullaniciEditDeanBolumununAcildiginiGorur() throws InterruptedException {
+    @And("Alı Edit Dean bolumunun acildigini gorur")
+    public void AlıEditDeanBolumununAcildiginiGorur() throws InterruptedException {
         Assert.assertTrue(editDeanPage.text_Edit_Dean.isDisplayed());
         Thread.sleep(1000);
     }
 
-        @And("Kullanici Name alanini siler.")
-        public void kullaniciNameAlaniniSiler (){
+        @And("Alı Name alanini siler.")
+        public void AlıNameAlaniniSiler (){
 
                 Actions actions = new Actions(Driver.getDriver());  //TEXTBOXSILME
                 actions.click(editDeanPage.name_Edit_Dean);
@@ -71,8 +72,8 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
 
 
 
-        @Then("Kullanici Edit Dean alaninda name textboxinin altinda Required uyari mesajini gorur kaydi gorulur")
-        public void kullaniciEditDeanAlanindaNameTextboxininAltindaRequiredUyariMesajiniGorurKaydiGorulur () {
+        @Then("Alı Edit Dean alaninda name textboxinin altinda Required uyari mesajini gorur kaydi gorulur")
+        public void AlıEditDeanAlanindaNameTextboxininAltindaRequiredUyariMesajiniGorurKaydiGorulur () {
             Assert.assertTrue(editDeanPage.Required_edit_Dean_Name.isDisplayed());
 
 
@@ -83,14 +84,14 @@ public class US05_AC03_TC01_EditDeanNameAlaniBos {
        Driver.clickWithJS(editDeanPage.female_Checkbox_Edit_Dean);
     }
 
-    @And("Kullanici password {string} alanina gecerli sifre girer")
-    public void kullaniciPasswordAlaninaGecerliSifreGirer(String arg0) {
+    @And("Alı password {string} alanina gecerli sifre girer")
+    public void AlıPasswordAlaninaGecerliSifreGirer(String arg0) {
         editDeanPage.password_Edit_Dean.sendKeys(arg0);
 
     }
 
-    @When("Kullanici Edit Dean alanindaki Submit butonuna tiklar")
-    public void kullaniciEditDeanAlanindakiSubmitButonunaTiklar() {
+    @When("Alı Edit Dean alanindaki Submit butonuna tiklar")
+    public void AlıEditDeanAlanindakiSubmitButonunaTiklar() {
         Driver.clickWithJS(editDeanPage.submit_Button_Edit_Dean);
     }
 

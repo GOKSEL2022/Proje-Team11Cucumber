@@ -1,17 +1,17 @@
-@US09_TC01
+@US09_AC01,@team11
 Feature: US09_TC01
 
   Scenario: US09_TC01
-    Given Kullanici "https://www.managementonschools.com/" url ye gider
-    And Kullanici bir saniye bekler
-    And Kullanici anasayfa login butonuna tiklar
-    And Kullanici bir saniye bekler
-    And Kullanici username "john.wick" girer
-    And  Kullanici password "78947894" girer
-    And Kullanici login butonuna tiklar
-    And Kullanici bir saniye bekler
-    And Kullanici menu butonuna tiklar
-    And Kullanici Lesson Managamente tiklar
-    And  Kullanici Lessons a tiklar
-    And Kullanici bir saniye bekler
-    Then Kullanici eklenen Lesson lari gorur
+    Given MDogan "https://www.managementonschools.com/" url ye gider
+    And MDogan bir saniye bekler
+    And MDogan anasayfa login butonuna tiklar
+    And MDogan bir saniye bekler
+    And MDogan username "john.wick" girer
+    And  MDogan password "78947894" girer
+    And MDogan login butonuna tiklar
+    And MDogan bir saniye bekler
+    And MDogan menu butonuna tiklar
+    And MDogan Lesson Managamente tiklar
+    And  MDogan Lessons a tiklar
+    And MDogan bir saniye bekler
+    Then MDogan eklenen Lesson lari gorur

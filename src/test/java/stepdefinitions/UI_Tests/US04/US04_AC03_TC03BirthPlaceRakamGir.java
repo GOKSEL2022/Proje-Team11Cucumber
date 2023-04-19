@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US04_AC03_TC03BirthPlaceRakamGir {
+    
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -29,14 +30,14 @@ public class US04_AC03_TC03BirthPlaceRakamGir {
     int phoneNo2= Faker.instance().number().numberBetween(100,999);
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Kullanici Bırth Place {string} alanina rakam girer")
-    public void kullaniciBırthPlaceAlaninaRakamGirer(String arg0) {
+    @And("Alı Bırth Place {string} alanina rakam girer")
+    public void AlıBırthPlaceAlaninaRakamGirer(String arg0) {
         deanManagementPage.birthPlace_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Kullanici Dean Save kayit mesaji alinir")
-    public void kullaniciDeanSaveKayitMesajiAlinir() throws IOException {
+    @Then("Alı Dean Save kayit mesaji alinir")
+    public void AlıDeanSaveKayitMesajiAlinir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

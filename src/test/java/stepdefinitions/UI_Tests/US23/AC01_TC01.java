@@ -1,5 +1,6 @@
 package stepdefinitions.UI_Tests.US23;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,100 +16,90 @@ public class AC01_TC01 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
     LogoutPage logoutPage = new LogoutPage();
-
     @Given("Nilufer {string} url'ine git")
-    public void url_ine_git(String string) {
-        Driver.getDriver().get(string);
+    public void niluferUrlIneGit(String arg0) {
+        Driver.getDriver().get(arg0);
     }
 
     @Given("Nilufer Home sayfasindaki Login buttonuna tikla")
-    public void home_sayfasindaki_login_buttonuna_tikla() {
+    public void niluferHomeSayfasindakiLoginButtonunaTikla() {
         homePage.login_Button_Home.click();
     }
 
     @Given("Nilufer Admin olarak User Name'i gir")
-    public void admin_olarak_user_name_i_gir() {
-        loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("admin_username"));
+    public void niluferAdminOlarakUserNameIGir() {
+        Driver.getDriver().get(ConfigReader.getProperty("admin_username"));
     }
 
     @Given("Nilufer Admin olarak Password'u gir")
-    public void admin_olarak_password_u_gir() {
-        loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("admin_password"));
+    public void niluferAdminOlarakPasswordUGir() {
+        Driver.getDriver().get(ConfigReader.getProperty("admin_password"));
     }
 
     @Given("Nilufer Login buttonuna tikla")
-    public void login_buttonuna_tikla() {
+    public void niluferLoginButtonunaTikla() {
         loginPage.login_Button_Login.click();
     }
 
     @Given("Nilufer Vice Dean Management sayfasinda oldugunu dogrula")
-    public void Vice_Dean_Management_sayfasinda_oldugunu_dogrula() {
+    public void niluferViceDeanManagementSayfasindaOldugunuDogrula() {
         assertTrue(adminViceDeanPage.Admin_Vice_Dean_Text.isDisplayed());
     }
 
-    @When("Nilufer Name alanina valid bir {string} gir")
-    public void name_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Name.sendKeys(string);
+    @When("Nilufer Name alanina valid bir deger gir")
+    public void niluferNameAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Surname alanina valid bir {string} gir")
-    public void surname_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Surname.sendKeys(string);
+    @And("Nilufer Surname alanina valid bir deger gir")
+    public void niluferSurnameAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Birth Place alanina valid bir {string} gir")
-    public void birth_place_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_BirthPlace.sendKeys(string);
+    @And("Nilufer Birth Place alanina valid bir deger gir")
+    public void niluferBirthPlaceAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Gender alanina valid bir Gender sec")
-    public void gender_alanina_valid_bir_gender_sec() {
-        adminViceDeanPage.Admin_Vice_Dean_Female_Radio_Button.click();
+    @And("Nilufer Gender alanina valid bir Gender sec")
+    public void niluferGenderAlaninaValidBirGenderSec() {
     }
 
-    @When("Nilufer Date Of Birth alanina valid bir {string} gir")
-    public void date_of_birth_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Date_Of_Birth.sendKeys(string);
+    @And("Nilufer Date Of Birth alanina valid bir deger gir")
+    public void niluferDateOfBirthAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Phone alanina valid bir {string} gir")
-    public void phone_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_PhoneNumber.sendKeys(string);
+    @And("Nilufer Phone alanina valid bir deger gir")
+    public void niluferPhoneAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Ssn alanina valid bir {string} gir")
-    public void ssn_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Ssn.sendKeys(string);
+    @And("Nilufer Ssn alanina valid bir deger gir")
+    public void niluferSsnAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer User Name alanina valid bir {string} gir")
-    public void user_name_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Username.sendKeys(string);
+    @And("Nilufer User Name alanina valid bir deger gir")
+    public void niluferUserNameAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Password alanina valid bir {string} gir")
-    public void password_alanina_valid_bir_gir(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Password.sendKeys(string);
+    @And("Nilufer Password alanina valid bir deger gir")
+    public void niluferPasswordAlaninaValidBirDegerGir() {
     }
 
-    @When("Nilufer Submit butonuna tikla")
-    public void submit_butonuna_tikla() {
+    @And("Nilufer Submit butonuna tikla")
+    public void niluferSubmitButonunaTikla() {
 
-        adminViceDeanPage.Admin_Vice_Dean_Submit_Button.click();
     }
 
-    @When("Nilufer Admin olarak Vice Dean olusturdugunu dogrula")
-    public void kullanici_admin_olarak_vice_dean_olusturdugunu_dogrula() {
-        assertTrue(adminViceDeanPage.Admin_Vice_Dean_Vice_dean_Saved.isDisplayed());
+    @And("Nilufer Admin olarak Vice Dean olusturdugunu dogrula")
+    public void niluferAdminOlarakViceDeanOlusturdugunuDogrula() {
+
     }
+
     @Then("Nilufer Menu buttonuna tikla")
-    public void menuButtonunaTiklar() {
-        mainMenuPage.menu_button.click();
+    public void niluferMenuButtonunaTikla() {
+
     }
 
     @Then("Nilufer Logout yap")
-    public void logoutYapar() {
-        logoutPage.logout_button_logout.click();
+    public void niluferLogoutYap() {
+
     }
 
 }

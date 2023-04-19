@@ -1,5 +1,8 @@
 package stepdefinitions.UI_Tests.US06;
 
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.DeanViceDeanPage;
 import utilities.ReusableMethods;

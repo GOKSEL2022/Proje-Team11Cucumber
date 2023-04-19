@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US04_AC02_TC03SurnameRakamGirer {
+    
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
@@ -33,15 +34,15 @@ public class US04_AC02_TC03SurnameRakamGirer {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Kullanici Surname {string} alanina rakam girer")
+    @And("Alı Surname {string} alanina rakam girer")
     public void kullaniciSurnameAlaninaRakamGirer(String arg0) {
         deanManagementPage.surname_Add_Dean.sendKeys(arg0);
 
 
     }
 
-    @Then("Kullanici Dean Save mesajini gorur")
-    public void kullaniciDeanSaveMesajiniGorur() throws IOException {
+    @Then("Alı Dean Save mesajini gorur")
+    public void AlıDeanSaveMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");
