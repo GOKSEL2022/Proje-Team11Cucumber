@@ -2,13 +2,11 @@ package stepdefinitions.UI_Tests.US16;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US08_Pages.ViceDeanLessonPage;
-import utilities.Driver;
+import pages.ViceDeanLessonPage;
 
 public class US16_TC01_StepDefinitions {
 
