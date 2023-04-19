@@ -8,15 +8,15 @@ import static org.junit.Assert.assertTrue;
 
 public class AC06_TC06 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
-    @When("Date Of Birth alanina {string} girmeyerek bos birak")
+    @When("Nilufer Date Of Birth alanina {string} girmeyerek bos birak")
     public void date_of_birth_alanina_girmeyerek_bos_birak(String string) {
         adminViceDeanPage.Admin_Vice_Dean_Date_Of_Birth.sendKeys(string);
     }
-    @When("Phone alanina tikla")
+    @When("Nilufer Phone alanina tikla")
     public void phone_alanina_tikla() {
         adminViceDeanPage.Admin_Vice_Dean_PhoneNumber.click();
     }
-    @When("Date Of Birth alani altinda Required mesajini gor")
+    @When("Nilufer Date Of Birth alani altinda Required mesajini gor")
     public void date_of_birth_alani_altinda_required_mesajini_gor() {
         assertTrue(adminViceDeanPage.Admin_Vice_Dean_BirthPlace_Error_Message.isDisplayed());
     }

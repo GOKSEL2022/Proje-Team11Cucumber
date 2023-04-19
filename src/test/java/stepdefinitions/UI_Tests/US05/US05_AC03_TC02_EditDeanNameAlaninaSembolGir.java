@@ -2,6 +2,7 @@ package stepdefinitions.UI_Tests.US05;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
@@ -10,8 +11,12 @@ import pages.Admin_ManagementPage;
 import pages.DeanManagementPage;
 import pages.EditDeanPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
-public class US05_AC03_TC02_EditDeanNameAlaninaSpaceGir {
+import java.io.IOException;
+import java.time.LocalDateTime;
+
+public class US05_AC03_TC02_EditDeanNameAlaninaSembolGir {
 
     Actions actions = new Actions(Driver.getDriver());
     HomePage homePage = new HomePage();
@@ -28,8 +33,11 @@ public class US05_AC03_TC02_EditDeanNameAlaninaSpaceGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
     @And("Kullanici Name {string} alanina sembol girer")
-    public void kullaniciNameAlaninaSembolGirer(String arg0) {
+    public void kullaniciNameAlaninaSembolGirer(String arg0) throws IOException {
         editDeanPage.name_Edit_Dean.sendKeys(arg0);
+        Assert.assertTrue(editDeanPage.dean_Saved_message_name_Edit_Dean.isDisplayed());
+        LocalDateTime currentTime =  LocalDateTime.now();
+        ReusableMethods.getScreenshot("FAIL");
 
     }
 }

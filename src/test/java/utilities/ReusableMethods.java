@@ -202,19 +202,6 @@ public class ReusableMethods {
         loginPage.login_Button_Login.click();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static String getScreenshotElement(String name, WebElement elementName) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -230,6 +217,4 @@ public class ReusableMethods {
 
 
 
-    public static void cleanByJs(WebElement editEmailTextbox) {
-    }
 }
