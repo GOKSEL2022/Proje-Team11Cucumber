@@ -7,12 +7,8 @@ import pages.RegisterPage;
 
 public class US01_UsernameSpaceStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici User Name {string} girer.")
-    public void kullaniciUserNameGirer(String string) {
+    @And("Goksel User Name {string} girer.")
+    public void GokselUserNameGirer(String string) {
         registerPage.username_Box_Register.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE);
-    }
-    @Then("Kullanici Register isleminin basarili olduğunu gösteren popupı görüntüler")
-    public void kullaniciRegisterIslemininBasariliOlduğunuGösterenPopupıGörüntüler() {
-        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

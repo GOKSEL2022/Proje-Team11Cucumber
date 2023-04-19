@@ -4,10 +4,10 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.RegisterPage;
 
-public class US01_SurnameSembolStepDefinitions {
+public class US01_SSNAralıksızStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Goksel Surname e {string}  girer")
-    public void GokselSurnameEGirer(String string) {
-        registerPage.surname_Box_Register.sendKeys(string);
+    @And("Goksel Ssn {string} girer..")
+    public void GokselSsnGirer(String string) {
+        registerPage.ssn_Box_Register.sendKeys(string);
     }
 }

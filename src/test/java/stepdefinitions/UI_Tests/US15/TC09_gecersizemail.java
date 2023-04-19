@@ -9,6 +9,5 @@ public class TC09_gecersizemail {
     @And("Fatih gecersiz bir mail adresi girer")
     public void FatihGecersizBirMailAdresiGirer() {
         vice_deanPage.student_email.sendKeys(ConfigReader.getProperty("student_gecersizemail"));
-
     }
 }

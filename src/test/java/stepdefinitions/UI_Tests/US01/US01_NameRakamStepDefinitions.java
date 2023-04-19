@@ -3,14 +3,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.RegisterPage;
-public class US01_AdAlanınaRakamStepDefinitions {
+public class US01_NameRakamStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Name {string} i girer")
-    public void kullaniciNameIGirer(String string) {
+    @And("Goksel Name {string} i girer")
+    public void GokselNameIGirer(String string) {
         registerPage.name_Box_Register.sendKeys(string);
     }
-    @Then("Kullanici Register islemi gerceklestiremez")
-    public void kullaniciRegisterIslemiGerceklestiremez() {
+    @Then("Goksel Register islemi gerceklestiremez")
+    public void GokselRegisterIslemiGerceklestiremez() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }
