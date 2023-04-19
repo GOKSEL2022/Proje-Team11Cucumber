@@ -7,8 +7,8 @@ public class US09_TC02_StepDefinitions {
     ViceDeanLessonPage viceDeanLessonPage = new ViceDeanLessonPage();
 
 
-    @Then("Kullanici Ders Listesindeki Sil Butonuna Tiklar")
-    public void kullaniciDersListesindekiSilButonunaTiklar() {
+    @Then("MDogan Ders Listesindeki Sil Butonuna Tiklar")
+    public void MDoganDersListesindekiSilButonunaTiklar() {
         viceDeanLessonPage.lessonDelete.click();
     }
 }

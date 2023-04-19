@@ -13,21 +13,21 @@ public class US09_TC01_StepDefinitions {
     HomePage homePage = new HomePage();
 
 
-    @And("Kullanici menu butonuna tiklar")
-    public void kullaniciMenuButonunaTiklar() {
+    @And("MDogan menu butonuna tiklar")
+    public void MDoganMenuButonunaTiklar() {
         adminManagementPage.menu_button_adminmanagement.click();
 
     }
 
-    @And("Kullanici Lesson Managamente tiklar")
-    public void kullaniciLessonManagamenteTiklar() {
+    @And("MDogan Lesson Managamente tiklar")
+    public void MDoganLessonManagamenteTiklar() {
         adminManagementPage.lessonManagament.click();
 
     }
 
-    @Then("Kullanici eklenen Lesson lari gorur")
-    public void kullaniciEklenenLessonLariGorur() {
-        Assert.assertTrue(viceDeanLessonPage.lessonAdd.isDisplayed());
+    @Then("MDogan eklenen Lesson lari gorur")
+    public void MDoganEklenenLessonLariGorur() {
+        Assert.assertTrue(adminManagementPage.lessonManagament.isDisplayed());
 
     }
 
