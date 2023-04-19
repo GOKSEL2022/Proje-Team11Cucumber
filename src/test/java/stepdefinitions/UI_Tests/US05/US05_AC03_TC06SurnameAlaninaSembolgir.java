@@ -8,6 +8,8 @@ import pages.RegisterPage;
 import pages. * ;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC06SurnameAlaninaSembolgir {
     
     Actions actions = new Actions(Driver.getDriver());
@@ -22,11 +24,14 @@ public class US05_AC03_TC06SurnameAlaninaSembolgir {
     @And("Alı Surname alanina sembol girer")
     public void AlıSurnameAlaninaSembolGirer() throws IOException {
 
-    @And("Kullanici Surname alanina sembol girer")
-    public void kullaniciSurnameAlaninaSembolGirer() {
-
-        editDeanPage.surname_Edit_Dean.clear();
-        editDeanPage.surname_Edit_Dean.sendKeys("*****");
-        Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
     }
-}
+
+        @And("Kullanici Surname alanina sembol girer")
+        public void kullaniciSurnameAlaninaSembolGirer () {
+
+            editDeanPage.surname_Edit_Dean.clear();
+            editDeanPage.surname_Edit_Dean.sendKeys("*****");
+            Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+        }
+
+    }

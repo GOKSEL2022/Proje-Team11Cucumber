@@ -9,6 +9,8 @@ import pages.RegisterPage;
 import pages.*;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC07_SurnameRakamGir {
     
     Actions actions = new Actions(Driver.getDriver());
@@ -21,7 +23,7 @@ public class US05_AC03_TC07_SurnameRakamGir {
 
 
     @And("Alı Surname alanina rakam girer")
-    public void AlıSurnameAlaninaRakamGirer() throws InterruptedException, IOException {
+    public void AlıSurnameAlaninaRakamGirer() throws InterruptedException, IOException {}
 
     @And("Kullanici Surname alanina rakam girer")
     public void kullaniciSurnameAlaninaRakamGirer() throws InterruptedException {

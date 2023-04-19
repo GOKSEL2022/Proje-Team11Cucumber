@@ -10,6 +10,8 @@ import pages.RegisterPage;
 import pages.*;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC12_BirthPlaceSpaceGir {
     
 
@@ -22,7 +24,7 @@ public class US05_AC03_TC12_BirthPlaceSpaceGir {
     EditDeanPage editDeanPage = new EditDeanPage();
 
     @And("Alı Birth Place textboxinin icine space girer")
-    public void AlıBirthPlaceTextboxininIcineSpaceGirer() throws IOException {
+    public void AlıBirthPlaceTextboxininIcineSpaceGirer() throws IOException {}
 
     @And("Kullanıcı Birth Place textboxinin icine space girer")
     public void kullaniciBirthPlaceTextboxininIcineSpaceGirer() {
