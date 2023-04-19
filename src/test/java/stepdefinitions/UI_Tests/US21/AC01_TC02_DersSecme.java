@@ -13,12 +13,12 @@ public class AC01_TC02_DersSecme {
     MainMenuPage mainMenuPage = new MainMenuPage();
     ChooseLessonManagement chooseLessonManagement = new ChooseLessonManagement();
 
-    @Then("kullanici Choose Lesson yazisinin altindaki ders kutucuklarini tiklar")
-    public void kullanici_choose_lesson_yazisinin_altindaki_ders_kutucuklarini_tiklar() {
+    @Then("Emin Choose Lesson yazisinin altindaki ders kutucuklarini tiklar")
+    public void Emin_choose_lesson_yazisinin_altindaki_ders_kutucuklarini_tiklar() {
        chooseLessonManagement.kutucuk.click();
     }
-    @Then("kullanici tiklandigini dogrular")
-    public void kullanici_tiklandigini_dogrular() {
+    @Then("Emin tiklandigini dogrular")
+    public void Emin_tiklandigini_dogrular() {
         Assert.assertTrue(chooseLessonManagement.kutucuk.isSelected());
     }
 
