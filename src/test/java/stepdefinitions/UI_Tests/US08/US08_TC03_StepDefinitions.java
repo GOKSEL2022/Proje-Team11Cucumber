@@ -22,10 +22,10 @@ public class US08_TC03_StepDefinitions {
     viceDeanLessonPage.creditScore.sendKeys(string);
   }
 
-  @Then("Kullanici Submit butonuna tiklar")
-  public void kullaniciSubmitButonunaTiklar() {
-    viceDeanLessonPage.lessonSubmit.click();
-  }
+//  @Then("Kullanici Submit butonuna tiklar")
+//  public void kullaniciSubmitButonunaTiklar() {
+//    viceDeanLessonPage.lessonSubmit.click();
+//  }
 
 
 }

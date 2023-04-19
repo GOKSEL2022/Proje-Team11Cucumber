@@ -14,16 +14,16 @@ public class AC02_TC01_DevamsizlikStepDefs {
    int devamsizlik= Faker.instance().number().numberBetween(0,99);
     StudentInfoPage studentInfoPage =new StudentInfoPage();
 
-    @And("kullanici absentee ye devamsizlik girer ve gorur")
-    public void kullaniciAbsenteeYeDevamsizlikGirer() {
+    @And("kullanici55 absentee ye devamsizlik girer ve gorur")
+    public void kullanici55AbsenteeYeDevamsizlikGirer() {
         studentInfoPage.absentee_box_studentInfo.sendKeys(devamsizlik+"");
       Assert.assertEquals(3,studentInfoPage.requiredAbsente_text_studentInfo.size());
 
     }
 
 
-    @Then("kullanici student Info saved succesfully popup yazisini gorur\\(gormez)")
-    public void kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorurGormez() {
+    @Then("kullanici55 student Info saved succesfully popup yazisini gorur\\(gormez)")
+    public void kullanici55StudentInfoSavedSuccesfullyPopupYazisiniGorurGormez() {
         Assert.assertTrue(!studentInfoPage.studentSaved_alert_studentInfo.isDisplayed());
     }
 }
