@@ -9,12 +9,12 @@ import utilities.ReusableMethods;
 
 public class AC01_TeacherSavedStepDefs {
     StudentInfoPage studentInfoPage =new StudentInfoPage();
-    @And("kullanici submit buton a tiklar")
-    public void kullaniciSubmitButonATiklar() {
+    @And("kullanici55 submit buton a tiklar")
+    public void kullanici55SubmitButonATiklar() {
         studentInfoPage.submit_button_studentInfo.click();
     }
-    @Then("kullanici student Info saved succesfully popup yazisini gorur")
-    public void kullaniciStudentInfoSavedSuccesfullyPopupYazisiniGorur() {
+    @Then("kullanici55 student Info saved succesfully popup yazisini gorur")
+    public void kullanici55StudentInfoSavedSuccesfullyPopupYazisiniGorur() {
         try {
             Assert.assertTrue( studentInfoPage.studentSaved_alert_studentInfo.isDisplayed());
         } catch (NoSuchElementException e) {

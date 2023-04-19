@@ -13,39 +13,39 @@ import utilities.ReusableMethods;
 
 public class AC02_EditNotStepDefs {
     StudentInfoPage studentInfoPage = new StudentInfoPage();
-    @And("kullanici edit buton a tiklar")
-    public void kullaniciEditButonATiklar() {
+    @And("kullanici55 edit buton a tiklar")
+    public void kullanici55EditButonATiklar() {
         Driver.clickWithJS(studentInfoPage.edit_button_studentInfo);
 
     }
 
-    @And("kullanici edit yapacagi dersi secer")
-    public void kullaniciEditYapacagiDersiSecer() {
+    @And("kullanici55 edit yapacagi dersi secer")
+    public void kullanici55EditYapacagiDersiSecer() {
         Select select =new Select(studentInfoPage.edit_chooseLesson_studentInfo);
         ReusableMethods.selectRandomTextFromDropdown(select);
     }
 
-    @And("kullanici edit yapacagi donemi secer")
-    public void kullaniciEditYapacagiDonemiSecer() {
+    @And("kullanici55 edit yapacagi donemi secer")
+    public void kullanici55EditYapacagiDonemiSecer() {
         Select select =new Select(studentInfoPage.edit_educationTerm_studentInfo);
         ReusableMethods.selectRandomTextFromDropdown(select);
     }
 
 
-    @And("kullanici ogrencinin guncel final notunu {string} girer")
-    public void kullaniciOgrencininGuncelFinalNotunuGirer(String guncelNot) {
+    @And("kullanici55 ogrencinin guncel final notunu {string} girer")
+    public void kullanici55OgrencininGuncelFinalNotunuGirer(String guncelNot) {
        studentInfoPage.edit_midtermExam_studentInfo.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
          studentInfoPage.edit_midtermExam_studentInfo.sendKeys(guncelNot);
     }
 
 
-    @And("kullanici edit student Info sayfasinda submit butona tiklar")
-    public void kullaniciEditStudentInfoSayfasindaSubmitButonaTiklar() {
+    @And("kullanici55 edit student Info sayfasinda submit butona tiklar")
+    public void kullanici55EditStudentInfoSayfasindaSubmitButonaTiklar() {
         studentInfoPage.edit_submitButton_studentInfo.click();
     }
 
-    @Then("kullanici Student Info updadet Successfully popup yazisini gorur")
-    public void kullaniciStudentInfoUpdadetSuccessfullyPopupYazisiniGorur() {
+    @Then("kullanici55 Student Info updadet Successfully popup yazisini gorur")
+    public void kullanici55StudentInfoUpdadetSuccessfullyPopupYazisiniGorur() {
 
       Driver.waitForVisibility( studentInfoPage.edit_alert_text_studentInfo,5);
 
