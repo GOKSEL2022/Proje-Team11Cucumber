@@ -19,12 +19,12 @@ public class AC01_TC02_Toplantilariguncelleyebilmeli {
 
 
 
-    @When("kullanici olusturmus oldugu meet listesindeki edit butonunu tiklar")
-    public void kullanici_olusturmus_oldugu_meet_listesindeki_edit_butonunu_tiklar() {
+    @When("Emin olusturmus oldugu meet listesindeki edit butonunu tiklar")
+    public void Emin_olusturmus_oldugu_meet_listesindeki_edit_butonunu_tiklar() {
         ReusableMethods.clickByJS(mainMenuPage.edit_button);
     }
-    @When("kullanici acilan sayfada  yeni duzenlemeler {string} yapar")
-    public void kullanici_acilan_sayfada_yeni_duzenlemeler_yapar(String string) throws InterruptedException {
+    @When("Emin acilan sayfada  yeni duzenlemeler {string} yapar")
+    public void Emin_acilan_sayfada_yeni_duzenlemeler_yapar(String string) throws InterruptedException {
         mainMenuPage.choose_students.click();
         Thread.sleep(2000);
         Actions action=new Actions(Driver.getDriver());
@@ -32,12 +32,12 @@ public class AC01_TC02_Toplantilariguncelleyebilmeli {
         mainMenuPage.date_of_meet.sendKeys(string);
         mainMenuPage.start_time.sendKeys(string);
     }
-    @When("kullanici submitt butonuna tiklar")
-    public void kullanici_submitt_butonuna_tiklar() {
+    @When("Emin submitt butonuna tiklar")
+    public void Emin_submitt_butonuna_tiklar() {
        mainMenuPage.edit_submit.click();
     }
-    @Then("kullanici meet update successfull yazisini gormelidir")
-    public void kullanici_meet_update_successfull_yazisini_gormelidir() {
+    @Then("Emin meet update successfull yazisini gormelidir")
+    public void Emin_meet_update_successfull_yazisini_gormelidir() {
 Assert.assertTrue(mainMenuPage.Updated_Successfully.isDisplayed());
     }
 

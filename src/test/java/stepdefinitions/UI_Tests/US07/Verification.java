@@ -13,46 +13,46 @@ public class Verification {
 
     DeanPage deanPage = new DeanPage();
 
-    @Given("Kullanıcı dean olarak giris yapar")
-    public void kullanıcıDeanOlarakGirisYapar() {
+    @Given("rabia dean olarak giris yapar")
+    public void rabiaDeanOlarakGirisYapar() {
         ReusableMethods.login("gooddean","12345678");
 
 
     }
 
-    @When("Kullanıcı dean olarak giris yaptığını dogrular.")
-    public void kullanıcıDeanOlarakGirisYaptığınıDogrular() {
+    @When("rabia dean olarak giris yaptığını dogrular.")
+    public void rabiaDeanOlarakGirisYaptığınıDogrular() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("vicedean"));
     }
 
-    @And("Kullanıcı menu butonuna tıklar.")
-    public void kullanıcıMenuButonunaTıklar() {
+    @And("rabia menu butonuna tıklar.")
+    public void rabiaMenuButonunaTıklar() {
         deanPage.menu_button.click();
     }
 
-    @And("Kullanıcı açılan sekmede Contact Get All linkine tıklar.")
-    public void kullanıcıAçılanSekmedeContactGetAllLinkineTıklar() {
+    @And("rabia açılan sekmede Contact Get All linkine tıklar.")
+    public void rabiaAçılanSekmedeContactGetAllLinkineTıklar() {
         deanPage.contact_getAll_button.click();
     }
 
-    @And("Kullanıcı contact-getAll sayfasındadır.")
-    public void kullanıcıContactGetAllSayfasındadır() {
+    @And("rabia contact-getAll sayfasındadır.")
+    public void rabiaContactGetAllSayfasındadır() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("contact-getAll"));
 
     }
 
-    @Then("Kullanıcı sayfada mesajları görüntüler.")
-    public void kullanıcıSayfadaMesajlarıGörüntüler() {
+    @Then("rabia sayfada mesajları görüntüler.")
+    public void rabiaSayfadaMesajlarıGörüntüler() {
         Assert.assertTrue(deanPage.message_column.isDisplayed());
     }
 
-    @Then("Kullanıcı sayfada mesajların yazarlarını göründügünü dogrular")
-    public void kullanıcıSayfadaMesajlarınYazarlarınıGöründügünüDogrular() {
+    @Then("rabia sayfada mesajların yazarlarını göründügünü dogrular")
+    public void rabiaSayfadaMesajlarınYazarlarınıGöründügünüDogrular() {
         Assert.assertTrue(deanPage.name_column_2.isDisplayed());
     }
 
-    @Then("Kullanıcı sayfada mesajları  mesaj gönderenlerin emaillerinin görüntülendigini dogrular")
-    public void kullanıcıSayfadaMesajlarıMesajGönderenlerinEmaillerininGörüntülendiginiDogrular() {
+    @Then("rabia sayfada mesajları  mesaj gönderenlerin emaillerinin görüntülendigini dogrular")
+    public void rabiaSayfadaMesajlarıMesajGönderenlerinEmaillerininGörüntülendiginiDogrular() {
         Assert.assertTrue(deanPage.email_column.isDisplayed());
     }
 
@@ -61,8 +61,8 @@ public class Verification {
         Assert.assertTrue(deanPage.date_column_2.isDisplayed());
     }
 
-    @Then("Kullanıcı sayfada mesajların subject bilgilerini görüntüledigini dogrular")
-    public void kullanıcıSayfadaMesajlarınSubjectBilgileriniGörüntülediginiDogrular() {
+    @Then("rabia sayfada mesajların subject bilgilerini görüntüledigini dogrular")
+    public void rabiaSayfadaMesajlarınSubjectBilgileriniGörüntülediginiDogrular() {
         Assert.assertTrue(deanPage.subject_column.isDisplayed());
     }
 

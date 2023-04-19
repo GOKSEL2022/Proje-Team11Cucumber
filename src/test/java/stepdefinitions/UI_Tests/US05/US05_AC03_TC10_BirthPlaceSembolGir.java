@@ -6,13 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-import pages.Admin_ManagementPage;
-import pages.DeanManagementPage;
-import pages.EditDeanPage;import utilities.Driver;
-import utilities.ReusableMethods;
-
-import java.io.IOException;
-import java.time.LocalDateTime;
+import pages.*;
+import utilities.Driver;
 
 public class US05_AC03_TC10_BirthPlaceSembolGir {
     Actions actions = new Actions(Driver.getDriver());
@@ -23,11 +18,9 @@ public class US05_AC03_TC10_BirthPlaceSembolGir {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Kullanıcı Birth Place textboxinin icine sembol girer")
-    public void kullanıcıBirthPlaceTextboxininIcineSembolGirer() throws IOException {
+    public void kullanıcıBirthPlaceTextboxininIcineSembolGirer() {
         editDeanPage.birthPlace_Edit_Dean.clear();
         editDeanPage.birthPlace_Edit_Dean.sendKeys("*****");
         Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
-        LocalDateTime currentTime =  LocalDateTime.now();
-        ReusableMethods.getScreenshot("FAIL");
     }
 }

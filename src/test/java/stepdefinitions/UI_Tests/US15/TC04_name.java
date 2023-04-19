@@ -15,14 +15,14 @@ public class TC04_name {
     LoginPage loginPage =new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici name alanini bos birakir")
-    public void kullaniciNameAlaniniBosBirakir() {
+    @And("Fatih name alanini bos birakir")
+    public void FatihNameAlaniniBosBirakir() {
 
     vice_deanPage.student_name.sendKeys(" ", Keys.TAB);
     }
 
-    @And("Kullanici bos birakilan name alanindaki required yazisini dogrular")
-    public void kullaniciBosBirakilanNameAlanindakiRequiredYazisiniDogrular() {
+    @And("Fatih bos birakilan name alanindaki required yazisini dogrular")
+    public void FatihBosBirakilanNameAlanindakiRequiredYazisiniDogrular() {
         assertFalse(vice_deanPage.required1.isDisplayed());
 
 

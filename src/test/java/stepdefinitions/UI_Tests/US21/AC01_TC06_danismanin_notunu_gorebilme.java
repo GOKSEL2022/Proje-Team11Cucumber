@@ -13,16 +13,16 @@ public class AC01_TC06_danismanin_notunu_gorebilme {
     LoginPage loginpage = new LoginPage();
     MainMenuPage mainMenuPage = new MainMenuPage();
     ChooseLessonManagement chooseLessonManagement = new ChooseLessonManagement();
-    @When("kullanici menuuu butonuna tiklar")
-    public void kullanici_menuuu_butonuna_tiklar() {
+    @When("Emin menuuu butonuna tiklar")
+    public void Emin_menuuu_butonuna_tiklar() {
         mainMenuPage.menu_button.click();
     }
-    @When("kullanici Gradess and Announcements yazisina tiklar")
-    public void kullanici_gradess_and_announcements_yazisina_tiklar() {
+    @When("Emin Gradess and Announcements yazisina tiklar")
+    public void Emin_gradess_and_announcements_yazisina_tiklar() {
         chooseLessonManagement.grades_and_announcements.click();
     }
-    @Then("kullanici danismanin olusturdugu dersi dogrular")
-    public void kullanici_danismanin_olusturdugu_dersi_dogrular() {
+    @Then("Emin danismanin olusturdugu dersi dogrular")
+    public void Emin_danismanin_olusturdugu_dersi_dogrular() {
         Assert.assertTrue(chooseLessonManagement.danisman_dogrulama.isDisplayed());
     }
 

@@ -1,22 +1,22 @@
 
 Feature: name kismina isim yazilir
   Scenario: TC05_name
-    Given Kullanici anasayfaya belirtilen URL'ye gider
-    When Kullanici anasayfanın acildigini goruntuler
-    And Kullanici Login butonuna tiklar
-    And Kullanici Login menusunun altinda doldurulacak alanlari goruntuler
-    And Kullanici User Name bilgisini girer
-    And Kullanici en az sekiz karakterli bir Password bilgisini girer
-    And Kullanici Login butonuna tiklar
-    And Kullanici login isleminin basarili oldugunu dogrular
-    And Kullanici sag kosede Menu butonuna tiklar
-    And Kullanici Menu butonunun altinda acilan alt munude student management butonunu tiklar
-    And Kullanici student management sayfasinin acildigini dogrular
-    And Kullanici acilan sayfada choose teacher butonunu tiklar
-    And Kullanicin acilan drapdowndan ogrencinin danisman ogretmenini secer
-    And Kullanici danisman ogretmenin secildigini dogrular
-    And Kullanici name alanina gecerli bir isim girer
-    And Kullanici required yazisinin kayboldugunu dogrular
+    Given Fatih anasayfaya belirtilen URL'ye gider
+    When Fatih anasayfanın acildigini goruntuler
+    And Fatih Login butonuna tiklar
+    And Fatih Login menusunun altinda doldurulacak alanlari goruntuler
+    And Fatih User Name bilgisini girer
+    And Fatih en az sekiz karakterli bir Password bilgisini girer
+    And Fatih Login butonuna tiklar
+    And Fatih login isleminin basarili oldugunu dogrular
+    And Fatih sag kosede Menu butonuna tiklar
+    And Fatih Menu butonunun altinda acilan alt munude student management butonunu tiklar
+    And Fatih student management sayfasinin acildigini dogrular
+    And Fatih acilan sayfada choose teacher butonunu tiklar
+    And Fatihn acilan drapdowndan ogrencinin danisman ogretmenini secer
+    And Fatih danisman ogretmenin secildigini dogrular
+    And Fatih name alanina gecerli bir isim girer
+    And Fatih required yazisinin kayboldugunu dogrular
 
 
 

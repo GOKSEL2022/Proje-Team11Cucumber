@@ -8,8 +8,8 @@ import utilities.ConfigReader;
 public class TC10_gecerliemail {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
     Faker faker =new Faker();
-    @And("Kullanici email alanina gecerli bir adres girer")
-    public void kullaniciEmailAlaninaGecerliBirAdresGirer() {
+    @And("Fatih email alanina gecerli bir adres girer")
+    public void FatihEmailAlaninaGecerliBirAdresGirer() {
         vice_deanPage.student_email.sendKeys(faker.internet().emailAddress());
 
     }
