@@ -9,6 +9,8 @@ import pages.RegisterPage;
 import pages.*;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC11_BirthPlaceRakamGir {
     
 
@@ -21,7 +23,7 @@ public class US05_AC03_TC11_BirthPlaceRakamGir {
     EditDeanPage editDeanPage = new EditDeanPage();
 
     @And("Alı Birth Place textboxinin icine rakam girer")
-    public void AlıBirthPlaceTextboxininIcineRakamGirer() throws IOException {
+    public void AlıBirthPlaceTextboxininIcineRakamGirer() throws IOException {}
 
     @And("Kullanıcı Birth Place textboxinin icine rakam girer")
     public void kullanıcıBirthPlaceTextboxininIcineRakamGirer() {

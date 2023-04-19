@@ -9,6 +9,8 @@ import pages.RegisterPage;
 import pages.*;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class US05_AC03_TC10_BirthPlaceSembolGir {
     
     Actions actions = new Actions(Driver.getDriver());
@@ -20,7 +22,7 @@ public class US05_AC03_TC10_BirthPlaceSembolGir {
     EditDeanPage editDeanPage = new EditDeanPage();
 
     @And("Alı Birth Place textboxinin icine sembol girer")
-    public void AlıBirthPlaceTextboxininIcineSembolGirer() throws IOException {
+    public void AlıBirthPlaceTextboxininIcineSembolGirer() throws IOException {}
 
     @And("Kullanıcı Birth Place textboxinin icine sembol girer")
     public void kullanıcıBirthPlaceTextboxininIcineSembolGirer() {
