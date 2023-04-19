@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.AdminManagementPage;
 import pages.HomePage;
-import pages.US08_Pages.ViceDeanLessonPage;
+import pages.ViceDeanLessonPage;
 
 public class US09_TC01_StepDefinitions {
     ViceDeanLessonPage viceDeanLessonPage = new ViceDeanLessonPage();

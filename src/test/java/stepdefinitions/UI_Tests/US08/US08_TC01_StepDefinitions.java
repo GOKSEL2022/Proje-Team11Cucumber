@@ -6,7 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.US08_Pages.ViceDeanLessonPage;
+import pages.ViceDeanLessonPage;
 import utilities.Driver;
 
 public class US08_TC01_StepDefinitions {
