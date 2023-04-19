@@ -8,8 +8,8 @@ import utilities.ConfigReader;
 public class TC17_username {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
     Faker faker = new Faker();
-    @And("Kullanici ogrenci username girer")
-    public void kullaniciOgrenciUsernameGirer() {
+    @And("Fatih ogrenci username girer")
+    public void FatihOgrenciUsernameGirer() {
         vice_deanPage.student_username.sendKeys(faker.name().username());
 
 

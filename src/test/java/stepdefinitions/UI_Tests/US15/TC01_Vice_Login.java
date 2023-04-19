@@ -21,8 +21,8 @@ public class TC01_Vice_Login {
     RegisterPage registerPage = new RegisterPage();
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
 
-    @Given("Kullanici anasayfaya belirtilen URL'ye gider")
-    public void kullaniciAnasayfayaBelirtilenURLYeGider() {
+    @Given("Fatih anasayfaya belirtilen URL'ye gider")
+    public void FatihAnasayfayaBelirtilenURLYeGider() {
 
         Driver.getDriver().get(ConfigReader.getProperty("managementonschools"));
         ReusableMethods.waitForClickablility(homePage.login_Button_Home,15);
@@ -30,8 +30,8 @@ public class TC01_Vice_Login {
     }
 
 
-    @When("Kullanici anasayfanın acildigini goruntuler")
-    public void kullanici_anasayfanın_acildigini_goruntuler() {
+    @When("Fatih anasayfanın acildigini goruntuler")
+    public void Fatih_anasayfanın_acildigini_goruntuler() {
         ReusableMethods.waitForClickablility(homePage.login_Button_Home,15);
         assertTrue(homePage.Home_isDisplayed.isDisplayed());
 
@@ -39,35 +39,35 @@ public class TC01_Vice_Login {
 
     }
 
-    @When("Kullanici Login butonuna tiklar")
-    public void kullanici_login_butonuna_tiklar() {
+    @When("Fatih Login butonuna tiklar")
+    public void Fatih_login_butonuna_tiklar() {
         homePage.login_Button_Home.click();
 
 
     }
-    @When("Kullanici Login menusunun altinda doldurulacak alanlari goruntuler")
-    public void kullanici_login_menusunun_altinda_doldurulacak_alanlari_goruntuler() {
+    @When("Fatih Login menusunun altinda doldurulacak alanlari goruntuler")
+    public void Fatih_login_menusunun_altinda_doldurulacak_alanlari_goruntuler() {
 
       //  assertTrue(loginPage.login_isDisplayed.isDisplayed());
 
 
     }
-    @When("Kullanici User Name bilgisini girer")
-    public void kullanici_user_name_bilgisini_girer() {
+    @When("Fatih User Name bilgisini girer")
+    public void Fatih_user_name_bilgisini_girer() {
         loginPage.username_Box_Login.sendKeys(ConfigReader.getProperty("vice_username"));
 
 
 
     }
-    @When("Kullanici en az sekiz karakterli bir Password bilgisini girer")
-    public void kullanici_en_az_sekiz_karakterli_bir_password_bilgisini_girer() {
+    @When("Fatih en az sekiz karakterli bir Password bilgisini girer")
+    public void Fatih_en_az_sekiz_karakterli_bir_password_bilgisini_girer() {
 
         loginPage.password_Box_Login.sendKeys(ConfigReader.getProperty("vice_password"));
 
 
     }
-    @When("Kullanici login isleminin basarili oldugunu dogrular")
-    public void kullanici_login_isleminin_basarili_oldugunu_dogrular() {
+    @When("Fatih login isleminin basarili oldugunu dogrular")
+    public void Fatih_login_isleminin_basarili_oldugunu_dogrular() {
 
         ReusableMethods.clickByJS(loginPage.login_Button_Login);
 

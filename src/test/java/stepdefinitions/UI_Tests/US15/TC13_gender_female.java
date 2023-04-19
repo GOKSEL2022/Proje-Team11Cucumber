@@ -5,8 +5,8 @@ import pages.Vice_DeanPage;
 
 public class TC13_gender_female {
     Vice_DeanPage vice_deanPage = new Vice_DeanPage();
-    @And("Kullanici female butonuna tiklar")
-    public void kullaniciFemaleButonunaTiklar() {
+    @And("Fatih female butonuna tiklar")
+    public void FatihFemaleButonunaTiklar() {
         vice_deanPage.student_female.click();
 
     }
