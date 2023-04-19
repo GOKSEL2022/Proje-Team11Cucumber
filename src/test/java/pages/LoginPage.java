@@ -16,10 +16,19 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id='password']")
     public WebElement password_Box_Login;
 
+
+    @FindBy(xpath = "//button[@class='fw-semibold btn btn-primary']")
+    public WebElement login_Button_Login;}
+
     @FindBy(xpath = "//button[@fw-semibold btn btn-primary']")
     public WebElement login_Button_Login;
 
+
+
 }
+
+}
+
 
 
 

@@ -1,4 +1,4 @@
-@US22_AC08
+@US22_AC08,@team11
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu
