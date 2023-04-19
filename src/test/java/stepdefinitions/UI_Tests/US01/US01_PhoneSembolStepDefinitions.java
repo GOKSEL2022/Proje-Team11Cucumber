@@ -6,12 +6,12 @@ import pages.RegisterPage;
 
 public class US01_PhoneSembolStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Phone {string} i girer")
-    public void kullaniciPhoneIGirer(String string) {
+    @And("Goksel Phone {string} i girer")
+    public void GokselPhoneIGirer(String string) {
         registerPage.phoneNumber_Box_Register.sendKeys(string);
     }
-    @Then("Kullanici Register isleminin basarili oldugunu gösteren popupı görüntülerr")
-    public void kullaniciRegisterIslemininBasariliOldugunuGösterenPopupıGörüntülerr() {
+    @Then("Goksel Register isleminin basarili oldugunu gösteren popupi goruntulerr")
+    public void GokselRegisterIslemininBasariliOldugunuGösterenpopupigoruntulerr() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 }

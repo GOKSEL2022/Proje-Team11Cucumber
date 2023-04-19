@@ -10,12 +10,12 @@ public class US01_DateOfBirthGecersizTarihStepDefinitions {
     int gun= Faker.instance().number().numberBetween(1,29);
     int ay= Faker.instance().number().numberBetween(1,12);
     int yil= Faker.instance().number().numberBetween(1900,1915);
-    @And("Kullanici Date Of Birt {string} girer.")
-    public void kullaniciDateOfBirtGirer(String string) {
+    @And("Goksel Date Of Birt {string} girer.")
+    public void GokselDateOfBirtGirer(String string) {
         registerPage.dateOfBirth_Box_Register.sendKeys(gun+"."+ay+"."+yil);
     }
-    @Then("Kullanici Register olmadıgını görüntüler")
-    public void kullaniciRegisterOlmadıgınıGörüntüler() {
-        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
+    @Then("Goksel Register olmadıgını goruntuler")
+    public void GokselRegisterOlmadıgınıgoruntuler() {
+        Assert.assertFalse(registerPage.alert_Register.isDisplayed());
     }
 }

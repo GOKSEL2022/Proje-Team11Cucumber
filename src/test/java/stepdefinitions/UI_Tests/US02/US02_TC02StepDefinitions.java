@@ -27,8 +27,8 @@ public class US02_TC02StepDefinitions {
         adminLogin();
 
     }
-    @And("Goksel sayfanin sag üst kösesinde Menu butonunu görüntüler")
-    public void GokselSayfaninSagÜstKösesindeMenuButonunuGörüntüler() {
+    @And("Goksel sayfanin sag üst kösesinde Menu butonunu goruntuler")
+    public void GokselSayfaninSagÜstKösesindeMenuButonunugoruntuler() {
         Assert.assertTrue(adminManagementPage.menu_Button_Menu.isDisplayed());
     }
     @And("Goksel sayfanin sag üst kösesinde Menu butonunu tiklar")
@@ -36,8 +36,8 @@ public class US02_TC02StepDefinitions {
         adminManagementPage.menu_Button_Menu.click();
     }
 
-    @And("Goksel Main Menuyü görüntüler")
-    public void GokselMainMenuyüGörüntüler() {
+    @And("Goksel Main Menuyü goruntuler")
+    public void GokselMainMenuyügoruntuler() {
         Assert.assertTrue(adminManagementPage.main_Menu_Text_Menu.isDisplayed());
 
     }
@@ -46,29 +46,24 @@ public class US02_TC02StepDefinitions {
         Driver.clickWithJS(adminManagementPage.guest_User_Button_Menu);
     }
 
-    @And("Goksel Guest User List basligini görüntüler")
-    public void GokselGuestUserListBasliginiGörüntüler() {
+    @And("Goksel Guest User List basligini goruntuler")
+    public void GokselGuestUserListBasliginigoruntuler() {
         Assert.assertTrue(guestUserPage.guest_User_List_Text_Guest_User.isDisplayed());
     }
-    @And("Goksel Name Surname altbasligini görüntüler")
-    public void GokselNameSurnameAltbasliginiGörüntüler() {
+    @And("Goksel Name Surname altbasligini goruntuler")
+    public void GokselNameSurnameAltbasliginigoruntuler() {
         Assert.assertTrue(guestUserPage.name_Surname_Text_Guest_User.isDisplayed());
     }
-    @And("Goksel Phone Number altbasligini görüntüler")
-    public void GokselPhoneNumberAltbasliginiGörüntüler() {
+    @And("Goksel Phone Number altbasligini goruntuler")
+    public void GokselPhoneNumberAltbasliginigoruntuler() {
         Assert.assertTrue(guestUserPage.phone_Number_Text_Guest_User.isDisplayed());
     }
-    @When("Goksel Ssn altbasligini görüntüler")
-    public void GokselSsnAltbasliginiGörüntüler() {
+    @When("Goksel Ssn altbasligini goruntuler")
+    public void GokselSsnAltbasliginigoruntuler() {
         Assert.assertTrue(guestUserPage.ssn_Text_Guest_User.isDisplayed());
     }
-    @Then("Goksel User Name altbasligini görüntüler")
-    public void GokselUserNameAltbasliginiGörüntüler() {
+    @Then("Goksel User Name altbasligini goruntuler")
+    public void GokselUserNameAltbasliginigoruntuler() {
         Assert.assertTrue(guestUserPage.user_Name_Text_Guest_User.isDisplayed());
-    }
-
-    @And("Goksel bir sn bekler")
-    public void gokselBirSnBekler() {
-
     }
 }

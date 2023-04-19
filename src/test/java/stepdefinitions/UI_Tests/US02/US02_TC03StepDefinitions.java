@@ -10,20 +10,20 @@ public class US02_TC03StepDefinitions {
     HomePage homePage=new HomePage();
     AdminManagementPage adminManagementPage=new AdminManagementPage();
     GuestUserPage guestUserPage=new GuestUserPage();
-    @And("Goksel sil butonlarini görüntüler")
-    public void GokselkullaniciSilButonlariniGörüntüler() {
+    @And("Goksel sil butonlarini goruntuler")
+    public void GokselkullaniciSilButonlarinigoruntuler() {
        Assert.assertTrue(guestUserPage.first_Delete_Button_Guest_User.isDisplayed());
     }
     @And("Goksel sil butonlarindan ilkine tiklar")
     public void GokselkullaniciSilButonlarindanIlkineTiklar() {
         guestUserPage.first_Delete_Button_Guest_User.click();
     }
-    @When("Kullanici Guest User deleted Successful alertini görüntüler")
-    public void GokselkullaniciGuestUserDeletedSuccessfulAlertiniGörüntüler() {
+    @When("Kullanici Guest User deleted Successful alertini goruntuler")
+    public void GokselkullaniciGuestUserDeletedSuccessfulAlertinigoruntuler() {
         Assert.assertTrue(guestUserPage.alert_Guest_User.isDisplayed());
     }
 
-    @When("Goksel Guest User deleted Successful alertini görüntüler")
-    public void gokselGuestUserDeletedSuccessfulAlertiniGörüntüler() {
+    @When("Goksel Guest User deleted Successful alertini goruntuler")
+    public void gokselGuestUserDeletedSuccessfulAlertinigoruntuler() {
     }
 }

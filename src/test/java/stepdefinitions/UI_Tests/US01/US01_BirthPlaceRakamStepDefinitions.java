@@ -6,12 +6,13 @@ import pages.RegisterPage;
 
 public class US01_BirthPlaceRakamStepDefinitions {
     RegisterPage registerPage=new RegisterPage();
-    @And("Kullanici Birth Place {string} e girer")
-    public void kullaniciBirthPlaceEGirer(String string) {
+    @And("Goksel Birth Place {string} e girer")
+    public void GokselBirthPlaceEGirer(String string) {
         registerPage.birthPlace_Box_Register.sendKeys(string);
     }
-    @Then("Kullanici Register islemi yapamaz")
-    public void kullaniciRegisterIslemiYapamaz() {
+    @Then("Goksel Register islemi yapamaz")
+    public void GokselRegisterIslemiYapamaz() {
         Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
+
 }
