@@ -1,27 +1,26 @@
-@US06_TC05 @team11 @smoke
-Feature: Dean Vice Dean hesabi olusturabilmelidir
+@Nilufer
 
-  Background:Managementon_Schools_sayfasina_git
+Feature: US06
+
+  Scenario Outline : US06
+
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
-    Given Nilufer Home sayfasindaki Login buttonuna tiklar
-    Given Nilufer Dean olarak User Name'i girer
-    Given Nilufer Dean olarak Password'u girer
-    Given Nilufer Login buttonuna tiklar
-    Given Nilufer "Vice Dean Management" sayfasinda oldugunu dogrular
-
-  Scenario Outline:US06_TC05_Password_alaninin_testi
-    When Nilufer Kullanici Name alanina valid bir "<Name>" girer
-    And Nilufer Kullanici Surname alanina valid bir "<Surname>" girer
-    And Nilufer Kullanici Birth Place alanina valid bir "<Birth Place>" girer
-    And Nilufer Kullanici Gender alanini bos birakir
-    And Nilufer Kullanici Date Of Birth alanina valid bir "<Date Of Birth>" girer
-    And Nilufer Kullanici Phone alanina valid bir "<Phone>" girer
-    And Nilufer Kullanici Ssn alanina valid bir "<Ssn>" girer
-    And Nilufer Kullanici User Name alanina valid bir "<User Name>" girer
-    And Nilufer Kullanici Password alanina valid bir "<Password>" girer
-    And Nilufer Kullanici Submit butonuna tiklayamaz
-    Then Nilufer Menu buttonuna tiklar
-    Then Nilufer Logout yapar
+    When Nilufer Home sayfasindaki Login buttonuna tiklar
+    And Nilufer Dean olarak User Name'i girer
+    And Nilufer Dean olarak Password'u girer
+    And Nilufer Login buttonuna tiklar
+    And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
+    And Nilufer Name alanina valid bir "<Name>" girer
+    And Nilufer Surname alanina valid bir "<Surname>" girer
+    And Nilufer Birth Place alanina valid bir "<Birth Place>" girer
+    And Nilufer Gender alanini bos birakir
+    And Nilufer Date Of Birth alanina valid bir "<Date Of Birth>" girer
+    And Nilufer Phone alanina valid bir "<Phone>" girer
+    And Nilufer Ssn alanina valid bir "<Ssn>" girer
+    And Nilufer User Name alanina valid bir "<User Name>" girer
+    And Nilufer Password alanina valid bir "<Password>" girer
+    And Nilufer Submit butonuna tiklayamaz
+    Then close the application
 
 
 
