@@ -19,6 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
         tags = "@team11",
+
         dryRun = false
 )
 
