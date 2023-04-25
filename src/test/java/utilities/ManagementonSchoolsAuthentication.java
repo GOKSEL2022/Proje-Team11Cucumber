@@ -43,7 +43,9 @@ public class ManagementonSchoolsAuthentication {
         }
 
         public static String generateToken(){
-            String postBody = "{ \"password\": \"485424698\",  \"username\": \"Admin\"\n" +"}";
+            Map<String, Object> postBody = new HashMap<>();
+            postBody.put("password","485424698");
+            postBody.put("username","Admin");
 
             Response response = given().contentType(ContentType.JSON).body(postBody).post("http://209.38.244.227/auth/login");
 

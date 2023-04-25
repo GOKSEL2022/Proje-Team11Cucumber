@@ -14,16 +14,16 @@ public class Hooks {
     public void before(){
         setUp();
     }
-    @After
-    public void tearDownScenarios(Scenario scenario){
-        System.out.println("After Method");
-//          Eger bir scenario fail ederse, ekran goruntusunu al ve rapora ekle
-        if (scenario.isFailed()){
-            final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            //               ekran goruntusu        file tipi(uzantisi)        ekran goruntusunun adi
-            scenario.attach(failedScreenshot, "image/png","failed_scenario"+scenario.getName());
-            Driver.closeDriver();
-        }
+   //@After
+   //public void tearDownScenarios(Scenario scenario){
+   //    System.out.println("After Method");
+// //        Eger bir scenario fail ederse, ekran goruntusunu al ve rapora ekle
+   //    if (scenario.isFailed()){
+   //        final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+   //        //               ekran goruntusu        file tipi(uzantisi)        ekran goruntusunun adi
+   //        scenario.attach(failedScreenshot, "image/png","failed_scenario"+scenario.getName());
+   //        Driver.closeDriver();
+   //    }
 
-    }
+   //}
 }

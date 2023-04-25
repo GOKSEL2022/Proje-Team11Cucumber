@@ -7,6 +7,7 @@ import io.restassured.specification.RequestSpecification;
 
 
 import static io.restassured.RestAssured.given;
+import static utilities.ManagementonSchoolsAuthentication.generateToken;
 
 public class ManagementonSchoolsBaseUrl  {
    //static String username ;
@@ -39,11 +40,13 @@ public class ManagementonSchoolsBaseUrl  {
 //
    // }
 
+
+
     public static RequestSpecification spec;
 
     public static void setUp(){
         spec = new RequestSpecBuilder().
-                addHeader("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MjQ0NzczMSwiZXhwIjoxNjgyNDU2MzcxfQ.KWrkIWZW1-yuoDBmF7PowdU1Eu5QOCVXVRz085LkMMqpYU4NoC7yXh6Q9u8oO55EORLyUPYCLF3PBcS3rV7syA").
+                addHeader("Authorization","Bearer"+generateToken()).
                 setBaseUri("http://209.38.244.227/").
                 build();
     }
