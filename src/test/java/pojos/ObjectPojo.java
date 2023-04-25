@@ -1,7 +1,7 @@
 package pojos;
 
-public class Vice_Dean_Controller {
-
+public class ObjectPojo {
+    private int userId;
     private String username;
     private String name;
     private String surname;
@@ -10,11 +10,13 @@ public class Vice_Dean_Controller {
     private String birthPlace;
     private String phoneNumber;
     private String gender;
+    private String email;
 
-    public Vice_Dean_Controller() {
+    public ObjectPojo() {
     }
 
-    public Vice_Dean_Controller(String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
+    public ObjectPojo(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender, String email) {
+        this.userId = userId;
         this.username = username;
         this.name = name;
         this.surname = surname;
@@ -23,6 +25,15 @@ public class Vice_Dean_Controller {
         this.birthPlace = birthPlace;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
+        this.email = email;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -89,10 +100,19 @@ public class Vice_Dean_Controller {
         this.gender = gender;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
-        return "Vice_Dean_Controller{" +
-                "username='" + username + '\'' +
+        return "ObjectPojo{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthDay='" + birthDay + '\'' +
@@ -100,6 +120,7 @@ public class Vice_Dean_Controller {
                 ", birthPlace='" + birthPlace + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

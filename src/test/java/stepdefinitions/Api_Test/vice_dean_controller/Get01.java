@@ -20,10 +20,11 @@ public class Get01 {
     public void user_sends_post_request_for_vice_dean_data() {
         //Set the url
         spec.pathParams("first", "vicedean", "second", "getAll");
+        
 
         //Set the expected data
-        expectedData = new Vice_Dean_Controller("06.08.1965 ","Izmir","Female","Nilufer",
-                "552-919-2222","103-13-1031","Ozkul","niloz ");
+        expectedData = new Vice_Dean_Controller("team11team","team","team11","1999-02-02","151-11-1533","ankara","563-873-9384","MALE");
+        System.out.println("response = " + response);
         //Send the request and get the response
         response = given(spec).body(expectedData).post("{first}/{second}");
         response.prettyPrint();
@@ -34,15 +35,19 @@ public class Get01 {
         assertEquals(200, response.statusCode());
         // Validation
        Vice_Dean_Controller actualDataObjectMapper = new ObjectMapper().readValue(response.asString(), Vice_Dean_Controller.class);
-
-        assertEquals(expectedData.getBirthDay(), actualDataObjectMapper.getBirthDay());
-        assertEquals(expectedData.getBirthPlace(), actualDataObjectMapper.getBirthPlace());
-        assertEquals(expectedData.getGender(), actualDataObjectMapper.getGender());
-        assertEquals(expectedData.getName(), actualDataObjectMapper.getName());
-        assertEquals(expectedData.getPhoneNumber(), actualDataObjectMapper.getPhoneNumber());
-        assertEquals(expectedData.getSsn(), actualDataObjectMapper.getSsn());
-        assertEquals(expectedData.getSurname(), actualDataObjectMapper.getSurname());
         assertEquals(expectedData.getUsername(), actualDataObjectMapper.getUsername());
+        assertEquals(expectedData.getName(), actualDataObjectMapper.getName());
+        assertEquals(expectedData.getSurname(), actualDataObjectMapper.getSurname());
+        assertEquals(expectedData.getBirthDay(), actualDataObjectMapper.getBirthDay());
+        assertEquals(expectedData.getSsn(), actualDataObjectMapper.getSsn());
+        assertEquals(expectedData.getBirthPlace(), actualDataObjectMapper.getBirthPlace());
+        assertEquals(expectedData.getPhoneNumber(), actualDataObjectMapper.getPhoneNumber());
+        assertEquals(expectedData.getGender(), actualDataObjectMapper.getGender());
+
+
+
+
+
 
 
 
