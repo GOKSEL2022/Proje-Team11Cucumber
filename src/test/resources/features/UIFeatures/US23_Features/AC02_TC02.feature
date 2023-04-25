@@ -2,7 +2,7 @@
 
 Feature: US23
 
-  Scenario Outline : US23
+  Scenario Outline: US23
 
     Given Nilufer "https://www.managementonschools.com/" url'ine git
     When Nilufer Home sayfasindaki Login buttonuna tikla

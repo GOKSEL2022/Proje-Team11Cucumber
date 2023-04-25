@@ -1,6 +1,6 @@
-@Nilufer @US06_TC01
+@Nilufer @team11
 Feature: US06
-  Scenario US06
+  Scenario:US06
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
     When Nilufer Home sayfasindaki Login buttonuna tiklar
     And Nilufer Dean olarak User Name'i girer
