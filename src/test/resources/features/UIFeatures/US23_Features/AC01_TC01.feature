@@ -1,7 +1,7 @@
-@US23_TC01 @team11 @smoke
+@Nilufer @team11
 
 Feature: US23
-  Scenario : US23
+   Scenario: US23
 
     Given Nilufer "https://www.managementonschools.com/" url'ine git
     When Nilufer Home sayfasindaki Login buttonuna tikla

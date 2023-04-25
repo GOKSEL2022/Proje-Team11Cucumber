@@ -1,8 +1,8 @@
-@Nilufer
+@Nilufer @team11
 
 Feature: US06
 
-  Scenario Outline : US06
+  Scenario Outline: US06
 
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
     When Nilufer Home sayfasindaki Login buttonuna tiklar

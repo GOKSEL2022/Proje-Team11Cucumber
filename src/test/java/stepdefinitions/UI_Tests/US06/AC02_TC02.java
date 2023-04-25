@@ -1,28 +1,30 @@
 package stepdefinitions.UI_Tests.US06;
 
 import io.cucumber.java.en.And;
+import org.junit.Assert;
 import pages.DeanViceDeanPage;
+import pages.RegisterPage;
 import utilities.ReusableMethods;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class AC02_TC02 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
+    RegisterPage registerPage=new RegisterPage();
     @And("Nilufer Name alanina {string} girmeyerek bos birakir")
     public void Nilufer_kullanici_name_alanina_girmeyerek_bos_birakir(String string) {
        deanViceDeanPage.Admin_Vice_Dean_Name.sendKeys(string);
+        ReusableMethods.waitFor(2);
     }
     @And("Nilufer Surname alanina tiklar")
     public void Nilufer_kullanici_surname_alanina_tiklar() {
        deanViceDeanPage.Admin_Vice_Dean_Surname.click();
+        ReusableMethods.waitFor(2);
     }
 
     @And("Nilufer Name alani altinda Required mesajini gorur")
     public void Nilufer_kullanici_name_alani_altinda_required_mesajini_gorur() {
-        ReusableMethods.waitFor(5);
-        assertTrue(deanViceDeanPage.Admin_Vice_Dean_Name_Error_Message.isDisplayed());
-        ReusableMethods.waitFor(5);
+      assertEquals(8, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
     }
     @And("Nilufer Name alanina valid bir {string} girer")
     public void niluferNameAlaninaValidBirGirer(String arg0) {
@@ -30,9 +32,7 @@ public class AC02_TC02 {
     }
     @And("Nilufer Name alani altinda hata mesaji goruntulenmemelidir")
     public void Nilufer_kullanici_name_alani_altinda_hata_mesaji_goruntulenmemelidir() {
-        ReusableMethods.waitFor(5);
-      assertFalse(deanViceDeanPage.Admin_Vice_Dean_Name_Error_Message.isDisplayed());
-        ReusableMethods.waitFor(5);
+        assertEquals(7, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
     }
 
 

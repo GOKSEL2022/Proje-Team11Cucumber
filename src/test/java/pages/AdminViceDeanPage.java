@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminViceDeanPage {
     public AdminViceDeanPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -72,5 +74,6 @@ public class AdminViceDeanPage {
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[8]")
     public WebElement Admin_Vice_Dean_Password_Error_Message;
 
-
+    @FindBy(xpath = "//*[.='Required']")
+    public List<WebElement> requiredAbsente_text_studentInfo;
 }

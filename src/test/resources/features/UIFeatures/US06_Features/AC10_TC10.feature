@@ -1,8 +1,8 @@
-@Nilufer
+@Nilufer @team11
 
 Feature: US06
 
-  Scenario Outline : US06
+  Scenario Outline: US06
 
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
     When Nilufer Home sayfasindaki Login buttonuna tiklar
@@ -31,7 +31,7 @@ Feature: US06
     And Nilufer User Name alanina valid bir "<User Name>" girer
     And Nilufer Password alanina "<Password>" olarak yedi karakter veri girer
     And Nilufer Submit butonuna tiklayamaz
-    And Nilufer Password alani altinda Minimum 8 character mesajini gorur
+    And Nilufer Password alani altinda Minimum sekiz character mesajini gorur
     Then close the application
 
     Examples: Dean_Vice_Dean_Bilgileri

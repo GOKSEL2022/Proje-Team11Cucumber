@@ -1,8 +1,8 @@
-@US23_TC10 @team11 @smoke
+@Nilufer @team11
 
 Feature: US23
 
-  Scenario Outline : US23
+  Scenario Outline: US23
 
     Given Nilufer "https://www.managementonschools.com/" url'ine git
     When Nilufer Home sayfasindaki Login buttonuna tikla
@@ -31,7 +31,7 @@ Feature: US23
     And Nilufer User Name alanina valid bir "<User Name>" gir
     And Nilufer Password alanina "<Password>" olarak yedi karakter veri gir
     And Nilufer Submit butonuna tiklayama
-    And Nilufer Password alani altinda Minimum 8 character mesajini gor
+    And Nilufer Password alani altinda Minimum sekiz character mesajini gor
     Then close the application
 
     Examples: Admin_Vice_Dean_Bilgileri
