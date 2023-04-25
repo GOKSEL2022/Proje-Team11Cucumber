@@ -1,3 +1,4 @@
+@ApiViceDeanController
 Feature: Vice_Dean_Controller_Get01
 
   Scenario: Vice_Dean_Controller_Get01
