@@ -1,16 +1,16 @@
-@US23_TC05 @team11 @smoke
-Feature: Admin Vice Dean hesabi olusturabilmelidir
+@Nilufer @team11
 
-  Background:Managementon_Schools_sayfasina_git
+Feature: US23
+
+  Scenario Outline: US23
+
     Given Nilufer "https://www.managementonschools.com/" url'ine git
-    Given Nilufer Home sayfasindaki Login buttonuna tikla
-    Given Nilufer Admin olarak User Name'i gir
-    Given Nilufer Admin olarak Password'u gir
-    Given Nilufer Login buttonuna tikla
-    Given Nilufer Vice Dean Management sayfasinda oldugunu dogrula
-
-  Scenario Outline:US23_TC05_Password_alaninin_testi
-    When Nilufer Name alanina valid bir "<Name>" gir
+    When Nilufer Home sayfasindaki Login buttonuna tikla
+    And Nilufer Admin olarak User Name'i gir
+    And Nilufer Admin olarak Password'u gir
+    And Nilufer Login buttonuna tikla
+    And Nilufer Vice Dean Management sayfasinda oldugunu dogrula
+    And Nilufer Name alanina valid bir "<Name>" gir
     And Nilufer Surname alanina valid bir "<Surname>" gir
     And Nilufer Birth Place alanina valid bir "<Birth Place>" gir
     And Nilufer Gender alanini bos birak
@@ -20,8 +20,7 @@ Feature: Admin Vice Dean hesabi olusturabilmelidir
     And Nilufer User Name alanina valid bir "<User Name>" gir
     And Nilufer Password alanina valid bir "<Password>" gir
     And Nilufer Submit butonuna tiklayama
-    Then Nilufer Menu buttonuna tiklar
-    Then Nilufer Logout yapar
+    Then close the application
 
 
 
