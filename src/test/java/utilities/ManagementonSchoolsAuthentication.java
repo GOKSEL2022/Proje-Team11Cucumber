@@ -39,6 +39,7 @@ public class ManagementonSchoolsAuthentication {
 
 
         public static void main(String[] args) {
+
             System.out.println(generateToken());
         }
 
@@ -52,5 +53,11 @@ public class ManagementonSchoolsAuthentication {
             return response.jsonPath().getString("token");
 
         }
+
+
+
+
+
+
 
 }
