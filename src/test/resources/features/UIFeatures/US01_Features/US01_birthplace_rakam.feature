@@ -18,7 +18,7 @@ Feature:US01
     And   Goksel Surname "<Surname>"  girer
     And   Goksel bir sn bekler
     And   Goksel Surname textboxinin altindaki required yazisinin kalktigini  goruntuler
-    And   Goksel Birth Place "<Birth Place>" e girer.
+    And   Goksel Birth Place "<Birth Place>" e girer
     And   Goksel bir sn bekler
     And   Goksel Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler
     And   Goksel Phone "<Phone>" girer

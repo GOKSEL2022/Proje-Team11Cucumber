@@ -13,7 +13,7 @@ public class GuestUserPage {
     @FindBy(xpath = "//*[@class='fw-bold p-3 card-header']")
     public WebElement guest_User_List_Text_Guest_User;
 
-    @FindBy(xpath = "//*[.='Name Surname']")
+    @FindBy(xpath = "//*[.='Name']")
     public WebElement name_Surname_Text_Guest_User;
 
     @FindBy(xpath = "//*[.='Phone Number']")
