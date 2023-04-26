@@ -24,12 +24,12 @@ public class US04_AC06_TC02Phone11karakterVeriGir {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Phone {string} alanina istenilen onbir karakter veri girer")
+    @And("Ali Phone {string} alanina istenilen onbir karakter veri girer")
     public void AlıPhoneAlaninaIstenilenOnbirKarakterVeriGirer(String arg0) {
         deanManagementPage.phoneNumber_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı karakter uyari mesaji gorur")
+    @Then("Ali karakter uyari mesaji gorur")
     public void AlıKarakterUyariMesajiGorur() {
         Assert.assertTrue(deanManagementPage.phoneNumber_Minimum12_Character_Message_Add_Dean.isDisplayed());
 

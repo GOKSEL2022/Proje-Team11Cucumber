@@ -18,12 +18,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
-    
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
     int ssnNo1 = Faker.instance().number().numberBetween(100,999);
     int ssnNo2= Faker.instance().number().numberBetween(10,99);
@@ -38,7 +32,7 @@ public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
 
     Actions actions = new Actions(Driver.getDriver());
 
-    @Then("Alı Delete butonunun olmadıgını dogrular")
+    @Then("Ali Delete butonunun olmadıgını dogrular")
     public void AlıDeleteButonununOlmadiginiDogrular() throws IOException {
 
         //Assert.assertFalse("Delete",false);

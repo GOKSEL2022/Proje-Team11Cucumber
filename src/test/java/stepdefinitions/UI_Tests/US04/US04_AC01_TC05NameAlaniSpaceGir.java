@@ -35,13 +35,13 @@ public class US04_AC01_TC05NameAlaniSpaceGir {
 
         Faker faker = new Faker();
 
-    @And("Alı Name alanina veri girer.")
+    @And("Ali Name alanina veri girer.")
     public void AlıNameAlaninaVeriGirer() {
         deanManagementPage.name_Add_Dean.sendKeys(Keys.SPACE,Keys.TAB);
 
     }
 
-    @Then("Alı Dean Save mesajini gorur.")
+    @Then("Ali Dean Save mesajini gorur.")
     public void AlıDeanSaveMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

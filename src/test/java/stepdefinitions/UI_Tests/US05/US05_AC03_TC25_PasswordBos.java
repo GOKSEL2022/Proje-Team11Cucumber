@@ -10,16 +10,8 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC25_PasswordBos {
-    
-
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Alı password alanini siler.")
+    @And("Ali password alanini siler.")
     public void AliPasswordAlaniniSiler() {
         editDeanPage.password_Edit_Dean.clear();
         Assert.assertTrue(editDeanPage.Required_edit_Dean_Password.isDisplayed());

@@ -24,12 +24,12 @@ public class US04_AC07_TC04SsnSembolGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Ssn {string} alanina sembol girer")
+    @And("Ali Ssn {string} alanina sembol girer")
     public void AlıSsnAlaninaSembolGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı textbox altinda uyari mesaji gorur")
+    @Then("Ali textbox altinda uyari mesaji gorur")
     public void AlıTextboxAltindaUyariMesajiGorur() {
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 

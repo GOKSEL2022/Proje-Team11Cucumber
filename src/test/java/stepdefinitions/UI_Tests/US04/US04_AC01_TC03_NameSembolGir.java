@@ -16,33 +16,23 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class US04_AC01_TC03_NameSembolGir {
-    
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
     int ssnNo1 = Faker.instance().number().numberBetween(100,999);
     int ssnNo2= Faker.instance().number().numberBetween(10,99);
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
-
     int phoneNo1= Faker.instance().number().numberBetween(100,999);
-
     int phoneNo2= Faker.instance().number().numberBetween(100,999);
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-
-
-
-    @And("Alı Name {string} alanina sembol girer.")
+    @And("Ali Name {string} alanina sembol girer.")
     public void AlıNameAlaninaSembolGirer(String arg0) {
 
         deanManagementPage.name_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı Dean Save uyari mesaj alir")
+    @Then("Ali Dean Save uyari mesaj alir")
     public void AlıDeanSaveUyariMesajAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

@@ -35,13 +35,13 @@ public class US04_AC03_TC02BirthPlaceSembolGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Bırth Place {string} alanina sembol girer")
+    @And("Ali Bırth Place {string} alanina sembol girer")
     public void AlıBırthPlaceAlaninaSembolGirer(String arg0) {
         deanManagementPage.birthPlace_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Alı Dean Save mesaji alir")
+    @Then("Ali Dean Save mesaji alir")
     public void AlıDeanSaveMesajiAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

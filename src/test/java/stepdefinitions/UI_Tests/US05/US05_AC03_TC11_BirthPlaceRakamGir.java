@@ -12,20 +12,8 @@ import utilities.Driver;
 import java.io.IOException;
 
 public class US05_AC03_TC11_BirthPlaceRakamGir {
-    
-
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-
-    @And("Alı Birth Place textboxinin icine rakam girer")
-    public void AlıBirthPlaceTextboxininIcineRakamGirer() throws IOException {}
-
-    @And("Kullanıcı Birth Place textboxinin icine rakam girer")
+    @And("Ali Birth Place textboxinin icine rakam girer")
     public void kullanıcıBirthPlaceTextboxininIcineRakamGirer() {
 
         editDeanPage.birthPlace_Edit_Dean.clear();
