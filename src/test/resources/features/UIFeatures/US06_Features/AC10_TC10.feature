@@ -1,16 +1,16 @@
-@US06_TC10 @team11 @smoke
-Feature: Dean Vice Dean hesabi olusturabilmelidir
+@Nilufer @team11
 
-  Background:Managementon_Schools_sayfasina_git
+Feature: US06
+
+  Scenario Outline: US06
+
     Given Nilufer "https://www.managementonschools.com/" url'ine gider
-    Given Nilufer Home sayfasindaki Login buttonuna tiklar
-    Given Nilufer Dean olarak User Name'i girer
-    Given Nilufer Dean olarak Password'u girer
-    Given Nilufer Login buttonuna tiklar
-    Given Nilufer "Vice Dean Management" sayfasinda oldugunu dogrular
-
-  Scenario Outline:US06_TC10_Password_alaninin_testi
-    When Nilufer Name alanina valid bir "<Name>" girer
+    When Nilufer Home sayfasindaki Login buttonuna tiklar
+    And Nilufer Dean olarak User Name'i girer
+    And Nilufer Dean olarak Password'u girer
+    And Nilufer Login buttonuna tiklar
+    And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
+    And Nilufer Name alanina valid bir "<Name>" girer
     And Nilufer Surname alanina valid bir "<Surname>" girer
     And Nilufer Birth Place alanina valid bir "<Birth Place>" girer
     And Nilufer Gender alanina valid bir Gender secer
@@ -31,9 +31,8 @@ Feature: Dean Vice Dean hesabi olusturabilmelidir
     And Nilufer User Name alanina valid bir "<User Name>" girer
     And Nilufer Password alanina "<Password>" olarak yedi karakter veri girer
     And Nilufer Submit butonuna tiklayamaz
-    And Nilufer Password alani altinda Minimum 8 character mesajini gorur
-    Then Nilufer Menu buttonuna tiklar
-    Then Nilufer Logout yapar
+    And Nilufer Password alani altinda Minimum sekiz character mesajini gorur
+    Then close the application
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
