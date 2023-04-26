@@ -10,19 +10,9 @@ import utilities.Driver;
 
 
 public class US05_AC03_TC26_Password7KarakterGir {
-
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-
-
-
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Alı password alanina {int} karakter veri girer.")
+    @And("Ali password alanina {int} karakter veri girer.")
     public void AlıPasswordAlaninaKarakterVeriGirer(int arg0) {
         editDeanPage.password_Edit_Dean.clear();
         editDeanPage.password_Edit_Dean.sendKeys("9876543");

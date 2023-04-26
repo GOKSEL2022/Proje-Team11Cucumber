@@ -12,21 +12,13 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC15Date_Of_BirthAlaniSilinir {
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Alı Date Of Bırth alanini siler")
+    @And("Ali Date Of Bırth alanini siler")
     public void AlıDateOfBirthAlaniniSiler() {
         editDeanPage.dateOfBirth_Edit_Dean.click();
         editDeanPage.dateOfBirth_Edit_Dean.sendKeys(Keys.DELETE,Keys.TAB,Keys.DELETE,Keys.TAB,Keys.DELETE);
-
     }
-    @Then("Alı Required mesajini gorur.")
+    @Then("Ali Required mesajini gorur.")
     public void AlıRequiredMesajiniGorur() {
         Assert.assertTrue(editDeanPage.Required_edit_Dean_DateOfBirth.isDisplayed());
     }

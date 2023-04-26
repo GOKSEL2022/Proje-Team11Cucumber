@@ -10,15 +10,8 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC13_GenderAlaniBos {
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @Then("Alı Json parse error uyari mesajini gorur.")
+    @Then("Ali Json parse error uyari mesajini gorur.")
     public void AlıJsonParseErrorUyariMesajiniGorur() {
         Assert.assertTrue(editDeanPage.json_parse_error_message_Edit_Dean.isDisplayed());
 

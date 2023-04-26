@@ -26,12 +26,12 @@ public class US04_AC07_TC01SsnOnKarakterGir {
     Faker faker = new Faker();
 
 
-    @And("Alı Ssn {string} alanina on karakter veri girer")
+    @And("Ali Ssn {string} alanina on karakter veri girer")
     public void AlıSsnAlaninaOnKarakterVeriGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı uyari mesajini minimum {int} character gorur")
+    @Then("Ali uyari mesajini minimum {int} character gorur")
     public void AlıUyariMesajiniMinimumCharacterGorur(int arg0) {
         Assert.assertTrue(deanManagementPage.ssn_Minimum11Character_Message_Add_Dean.isDisplayed());
 

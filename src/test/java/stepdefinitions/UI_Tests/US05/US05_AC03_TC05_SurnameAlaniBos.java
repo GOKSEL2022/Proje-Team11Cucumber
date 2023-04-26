@@ -15,41 +15,32 @@ import pages.EditDeanPage;
 import utilities.Driver;
 
 public class US05_AC03_TC05_SurnameAlaniBos {
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    int ssnNo1 = Faker.instance().number().numberBetween(100,999);
-    int ssnNo2= Faker.instance().number().numberBetween(10,99);
-    int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
-    int phoneNo1= Faker.instance().number().numberBetween(100,999);
-    int phoneNo2= Faker.instance().number().numberBetween(100,999);
-    int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
-    Faker faker = new Faker();
 
-    @And("Alı Surname alanina veri girmez")
-    public void AlıSurnameAlaninaVeriGirmez() throws InterruptedException {
-        while(!editDeanPage.name_Edit_Dean.getAttribute("value").equals("")){
-             editDeanPage.name_Edit_Dean.sendKeys(Keys.BACK_SPACE);
-         }
-        Thread.sleep(1000);
-
+    @And("Ali name {string} alanina veri girer.")
+    public void aliNameAlaninaVeriGirer(String arg0) {
+        editDeanPage.name_Edit_Dean.sendKeys(arg0,Keys.TAB,Keys.DELETE);
     }
-    
-    @Then("Alı Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.")
+    @And("Ali Surname alanina veri girmez")
+    public void AlıSurnameAlaninaVeriGirmez() throws InterruptedException {
+        editDeanPage.surname_Edit_Dean.clear();
+        Thread.sleep(2000);
+    }
+
+        @And("Ali Gender alaninda checkbox`a tiklar")
+        public void AlıGenderAlanindaGerekliCheckboxATiklar() {
+            editDeanPage.female_Checkbox_Edit_Dean.click();
+        }
+
+
+    @And("Ali Edit Dean alanindaki Submit butonuna tiklar.")
+    public void aliEditDeanAlanindakiSubmitButonunaTiklar() {
+
+        editDeanPage.submit_Button_Edit_Dean.click();
+    }
+    @Then("Ali Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.")
     public void AlıEditDeanAlanindaSurnameTextboxininAltindaRequiredUyariMesajiniGorur() throws InterruptedException {
         Assert.assertTrue(editDeanPage.Required_edit_Dean_Surname.isDisplayed());
         Thread.sleep(1000);
     }
-
-    @And("Alı Gender alaninda checkbox`a tiklar")
-    public void AlıGenderAlanindaGerekliCheckboxATiklar() {
-
-        editDeanPage.female_Checkbox_Edit_Dean.click();
-    }
-
 }
