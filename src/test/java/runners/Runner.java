@@ -18,7 +18,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
-        tags = "@team11",
+        tags = "@ApiViceDeanController",
+
         dryRun = false
 )
 
