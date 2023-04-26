@@ -70,7 +70,7 @@ public class ManagementonSchoolsBaseUrl  {
     // }
 
 
-
+/*
     public static RequestSpecification spec;
 
     public static void setUp(){
@@ -79,6 +79,8 @@ public class ManagementonSchoolsBaseUrl  {
                 addHeader("Authorization","Bearer"+generateToken()).
                 setBaseUri("http://209.38.244.227/").
                 build();
+
+ */
 
     }
 }
