@@ -39,6 +39,7 @@ public class GetTeacherByIdStepDefs {
         expectedData = new TeacherPojo(objectPojo,"Teacher successfully found","OK");
         System.out.println("expectedData = " + expectedData);
 
+        //Send the request and get the response
         response = given(spec).get("{first}/{second}/{third}");
         response.prettyPrint();
 

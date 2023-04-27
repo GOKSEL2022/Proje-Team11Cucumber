@@ -23,12 +23,12 @@ public class US04_AC07_TC03SsnHarfGirer {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Ssn {string} alanina harf girer")
+    @And("Ali Ssn {string} alanina harf girer")
     public void AlıSsnAlaninaHarfGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı pencerenin ustunde uyari mesajini gorur")
+    @Then("Ali pencerenin ustunde uyari mesajini gorur")
     public void AlıPencereninUstundeUyariMesajiniGorur() {
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
     }

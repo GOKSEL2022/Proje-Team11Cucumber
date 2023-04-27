@@ -29,12 +29,12 @@ public class US04_AC02_TC01SurnameAlaniBos {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Surname {string} alanini bos girer")
+    @And("Ali Surname {string} alanini bos girer")
     public void AlıSurnameAlaniniBosGirer(String arg0) {
 
     }
 
-    @Then("Alı Required uyari mesajini alir.")
+    @Then("Ali Required uyari mesajini alir.")
     public void AlıRequiredUyariMesajiniAlir() {
         Assert.assertTrue(deanManagementPage.surname_Required_Message_Add_Dean.isDisplayed());
     }

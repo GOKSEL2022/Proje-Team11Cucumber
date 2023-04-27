@@ -2,47 +2,47 @@
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
-    Given Alı "https://www.managementonschools.com" gider
-    And Alı bır sanıye bekler
-    When Alı Login butonuna tiklar
-    And Alı bır sanıye bekler
-    And Alı Admin olarak Username "<Username>" girer
-    And Alı bır sanıye bekler
-    And Alı Admin olarak Password "<Password>" girer
-    And Alı bır sanıye bekler
-    And Alı Login sayfasinda Login butona tiklar.
-    And Alı bır sanıye bekler
-    And Alı Menu butonuna tiklar
-    And Alı bır sanıye bekler
-    And Alı Main Menu listinin acildigini gorur
-    And Alı bır sanıye bekler
-    And Alı Main Menu Listinden Dean Management text`ine tiklar
-    And Alı bır sanıye bekler
-    And Alı Dean Management alaninin goruldugunu dogrular
-    And Alı bır sanıye bekler
-    And Alı Dean Management`in altinda Add Dean alaninin goruldugunu dogrular
-    And Alı bır sanıye bekler
-    And Alı Name "<Name>" alanina veri girer
-    And Alı bır sanıye bekler
-    And Alı Surname "<Surname>" alanina veri girer
-    And Alı bır sanıye bekler
-    And Alı Bırth Place "<Birth Place>" alanina veri girer
-    And Alı bır sanıye bekler
-    And Alı Gender alaninda gerekli checkbox`a tiklar
-    And Alı bır sanıye bekler
-    And Alı Date Of Bırth alanini bos birakir
-    And Alı bır sanıye bekler
-    And Alı Phone alanina istenilen formatta veri girer
-    And Alı bır sanıye bekler
-    And Alı Ssn alanina istenilen formatta veri girer
-    And Alı bır sanıye bekler
-    And Alı User Name alanina veri girer
-    And Alı bır sanıye bekler
-    And Alı password alanina gecerli sifre girer
-    And Alı bır sanıye bekler
-    When Alı Submit butonuna tiklar
-    And Alı bır sanıye bekler
-    Then Alı kayit olunamadigi required mesajini alir
+    Given Ali "https://www.managementonschools.com" gider
+    And Ali bır sanıye bekler
+    When Ali Login butonuna tiklar
+    And Ali bır sanıye bekler
+    And Ali Admin olarak Username "<Username>" girer
+    And Ali bır sanıye bekler
+    And Ali Admin olarak Password "<Password>" girer
+    And Ali bır sanıye bekler
+    And Ali Login sayfasinda Login butona tiklar.
+    And Ali bır sanıye bekler
+    And Ali Menu butonuna tiklar
+    And Ali bır sanıye bekler
+    And Ali Main Menu listinin acildigini gorur
+    And Ali bır sanıye bekler
+    And Ali Main Menu Listinden Dean Management text`ine tiklar
+    And Ali bır sanıye bekler
+    And Ali Dean Management alaninin goruldugunu dogrular
+    And Ali bır sanıye bekler
+    And Ali Dean Management`in altinda Add Dean alaninin goruldugunu dogrular
+    And Ali bır sanıye bekler
+    And Ali Name "<Name>" alanina veri girer
+    And Ali bır sanıye bekler
+    And Ali Surname "<Surname>" alanina veri girer
+    And Ali bır sanıye bekler
+    And Ali Bırth Place "<Birth Place>" alanina veri girer
+    And Ali bır sanıye bekler
+    And Ali Gender alaninda gerekli checkbox`a tiklar
+    And Ali bır sanıye bekler
+    And Ali Date Of Bırth alanini bos birakir
+    And Ali bır sanıye bekler
+    And Ali Phone alanina istenilen formatta veri girer
+    And Ali bır sanıye bekler
+    And Ali Ssn alanina istenilen formatta veri girer
+    And Ali bır sanıye bekler
+    And Ali User Name alanina veri girer
+    And Ali bır sanıye bekler
+    And Ali password alanina gecerli sifre girer
+    And Ali bır sanıye bekler
+    When Ali Submit butonuna tiklar
+    And Ali bır sanıye bekler
+    Then Ali kayit olunamadigi required mesajini Alir
 
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

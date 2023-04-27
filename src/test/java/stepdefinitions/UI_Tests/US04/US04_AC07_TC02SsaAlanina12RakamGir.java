@@ -24,12 +24,12 @@ public class US04_AC07_TC02SsaAlanina12RakamGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Ssn {string} alanina oniki karakter veri girer")
+    @And("Ali Ssn {string} alanina oniki karakter veri girer")
     public void AlıSsnAlaninaOnikiKarakterVeriGirer(String arg0) {
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı textboxin altinda uyari mesjini gorur")
+    @Then("Ali textboxin altinda uyari mesjini gorur")
     public void AlıTextboxinAltindaUyariMesjiniGorur() {
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 

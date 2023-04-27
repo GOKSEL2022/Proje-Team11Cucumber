@@ -1,20 +1,22 @@
 package pojos;
 
-public class Vice_Dean_Controller {
+public class Admin_Object_Pojo {
 
-    private String username;
-    private String name;
-    private String surname;
-    private String birthDay;
-    private String ssn;
-    private String birthPlace;
-    private String phoneNumber;
-    private String gender;
+        private int userId;
+        private String username;
+        private String name;
+        private String surname;
+        private Object birthDay;
+        private String ssn;
+        private Object birthPlace;
+        private String phoneNumber;
+        private String gender;
 
-    public Vice_Dean_Controller() {
+    public Admin_Object_Pojo() {
     }
 
-    public Vice_Dean_Controller(String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
+    public Admin_Object_Pojo(int userId, String username, String name, String surname, Object birthDay, String ssn, Object birthPlace, String phoneNumber, String gender) {
+        this.userId = userId;
         this.username = username;
         this.name = name;
         this.surname = surname;
@@ -23,6 +25,14 @@ public class Vice_Dean_Controller {
         this.birthPlace = birthPlace;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -49,11 +59,11 @@ public class Vice_Dean_Controller {
         this.surname = surname;
     }
 
-    public String getBirthDay() {
+    public Object getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(String birthDay) {
+    public void setBirthDay(Object birthDay) {
         this.birthDay = birthDay;
     }
 
@@ -65,11 +75,11 @@ public class Vice_Dean_Controller {
         this.ssn = ssn;
     }
 
-    public String getBirthPlace() {
+    public Object getBirthPlace() {
         return birthPlace;
     }
 
-    public void setBirthPlace(String birthPlace) {
+    public void setBirthPlace(Object birthPlace) {
         this.birthPlace = birthPlace;
     }
 
@@ -91,15 +101,18 @@ public class Vice_Dean_Controller {
 
     @Override
     public String toString() {
-        return "Vice_Dean_Controller{" +
-                "username='" + username + '\'' +
+        return "Admin_Pojo{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", birthDay='" + birthDay + '\'' +
+                ", birthDay=" + birthDay +
                 ", ssn='" + ssn + '\'' +
-                ", birthPlace='" + birthPlace + '\'' +
+                ", birthPlace=" + birthPlace +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender='" + gender + '\'' +
                 '}';
     }
 }
+
+

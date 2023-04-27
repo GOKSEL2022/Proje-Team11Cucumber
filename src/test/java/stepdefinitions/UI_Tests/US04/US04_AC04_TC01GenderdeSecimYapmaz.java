@@ -29,16 +29,16 @@ public class US04_AC04_TC01GenderdeSecimYapmaz {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
 
-    @Given("Alı {string} gider.")
+    @Given("Ali {string} gider.")
     public void AlıGider(String arg0) {
         Driver.getDriver().get(arg0);
     }
-    @And("Alı Gender alaninda gerekli checkbox`a tiklamaz.")
+    @And("Ali Gender alaninda gerekli checkbox`a tiklamaz.")
     public void AlıGenderAlanindaGerekliCheckboxATiklamaz() {
     deanManagementPage.female_Checkbox_Add_Dean.sendKeys(Keys.TAB);
     }
 
-    @Then("Alı Dean Kaydi yapilmadigi gorulur")
+    @Then("Ali Dean Kaydi yapilmadigi gorulur")
     public void AlıDeanKaydiYapilmadigiGorulur() {
 
     }

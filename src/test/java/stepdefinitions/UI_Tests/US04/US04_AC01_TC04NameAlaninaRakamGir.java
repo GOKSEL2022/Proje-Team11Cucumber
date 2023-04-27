@@ -36,13 +36,13 @@ public class US04_AC01_TC04NameAlaninaRakamGir {
 
 
 
-    @And("Alı Name {string} alanina rakam girer")
+    @And("Ali Name {string} alanina rakam girer")
     public void AlıNameAlaninaRakamGirer(String arg0) {
         deanManagementPage.name_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Alı Dean Save kayit olundu mesajini gorur")
+    @Then("Ali Dean Save kayit olundu mesajini gorur")
     public void AlıDeanSaveKayitOlunduMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
