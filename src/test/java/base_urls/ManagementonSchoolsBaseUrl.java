@@ -34,10 +34,11 @@ public class ManagementonSchoolsBaseUrl  {
                 addHeader("Authorization",generateToken("123456789","Team11Cucumber"))
                 .setBaseUri("http://209.38.244.227").build();
     }
-    public  static void schoolsetupStudent(){
-        spec=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","m.emin"))
+    public  static void schoolsetupStudent() {
+        spec = new RequestSpecBuilder().setContentType(ContentType.JSON).
+                addHeader("Authorization", generateToken("12345678", "m.emin"))
                 .setBaseUri("http://209.38.244.227").build();
+    }
 
     //static String username ;
     //static String password ;
@@ -68,10 +69,6 @@ public class ManagementonSchoolsBaseUrl  {
 //
 //
     // }
-
-
-
-    public static RequestSpecification spec;
 
     public static void setUp(){
         spec = new RequestSpecBuilder().
