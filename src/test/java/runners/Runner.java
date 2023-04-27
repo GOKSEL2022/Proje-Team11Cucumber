@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@US05_AC03_TC09",
+        tags = "@Api_contact_message",
 
 
         dryRun = false
