@@ -80,12 +80,23 @@ public class ManagementonSchoolsBaseUrl  {
 //
     // }
 
+
+
+/*
+    public static RequestSpecification spec;
+
+
+
     public static void setUp(){
         spec = new RequestSpecBuilder().
                 setContentType(ContentType.JSON).
                 addHeader("Authorization","Bearer"+generateToken()).
                 setBaseUri("http://209.38.244.227/").
                 build();
+
+
+ */
+
 
 
     }

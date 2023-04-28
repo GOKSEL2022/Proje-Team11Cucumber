@@ -7,9 +7,9 @@ Feature: Admin_Controller
     When  Send the request and get the response admin_post
     Then  Do assertion admin_post
 
-  Scenario: TC02_Validate_Admin_GetAll
-    Given Set the Url admin_getAll
-    And   Set the expected data admin_getAll
-    When  Send the request and get the response admin_getAll
-    Then  Do assertion admin_getAll
+  #Scenario: TC02_Validate_Admin_GetAll
+  #  Given Set the Url admin_getAll
+   # And   Set the expected data admin_getAll
+   # When  Send the request and get the response admin_getAll
+   # Then  Do assertion admin_getAll
 

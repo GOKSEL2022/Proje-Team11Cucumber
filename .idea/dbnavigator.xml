@@ -13,7 +13,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db">
+    
+      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM admins WHERE id =3;]]></console>
+
       <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM teacher WHERE id = 5;]]></console>
+
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -23,6 +27,8 @@
     <open-files />
   </component>
 
+
+
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db" dataset="public.dean" active-filter-id="5ef26d6b-5539-48fd-a700-7fa558ec4b60">
       <filter id="5ef26d6b-5539-48fd-a700-7fa558ec4b60" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
@@ -30,6 +36,7 @@
       </filter>
     </filter-actions>
   </component>
+
 
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
