@@ -19,6 +19,7 @@ public class US05_AC03_TC12_BirthPlaceSpaceGir {
 
         editDeanPage.birthPlace_Edit_Dean.clear();
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.SPACE);
+        editDeanPage.female_Checkbox_Edit_Dean.click();
         Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
     }
 }

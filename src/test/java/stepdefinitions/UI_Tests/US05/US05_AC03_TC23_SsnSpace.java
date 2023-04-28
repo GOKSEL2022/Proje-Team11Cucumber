@@ -15,6 +15,8 @@ public class US05_AC03_TC23_SsnSpace {
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Ali Ssn alanina space girer.")
     public void AlıSsnAlaninaSpaceGirer() {
+        editDeanPage.female_Checkbox_Edit_Dean.click();
+        editDeanPage.ssn_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         editDeanPage.ssn_Edit_Dean.sendKeys(Keys.SPACE);
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
     }

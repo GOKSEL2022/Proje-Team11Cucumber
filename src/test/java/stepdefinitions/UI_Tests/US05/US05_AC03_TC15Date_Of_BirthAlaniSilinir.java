@@ -15,6 +15,7 @@ public class US05_AC03_TC15Date_Of_BirthAlaniSilinir {
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Ali Date Of Bırth alanini siler")
     public void AlıDateOfBirthAlaniniSiler() {
+        editDeanPage.female_Checkbox_Edit_Dean.click();
         editDeanPage.dateOfBirth_Edit_Dean.click();
         editDeanPage.dateOfBirth_Edit_Dean.sendKeys(Keys.DELETE,Keys.TAB,Keys.DELETE,Keys.TAB,Keys.DELETE);
     }
