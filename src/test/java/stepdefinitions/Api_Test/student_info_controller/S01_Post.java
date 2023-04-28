@@ -7,27 +7,37 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.StudentInfoPojo;
-import utilities.ObjectMapperUtils;
 
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+
+import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class StudentInfoStepDefs {
+public class S01_Post {
+    static int student_info_id;
     Response response;
     StudentInfoPojo expectedData;
+
+    static int absente = Faker.instance().number().numberBetween(4,99);
+    static int educationTermId =  Faker.instance().number().numberBetween(1,2);
+    static double finalExam =  Faker.instance().number().randomDouble(1,1,99);
+    static String infoNote =  Faker.instance().lorem().sentence(11);
+    static int lessonId =  Faker.instance().number().numberBetween(1,2);
+    static double midtermExam =  Faker.instance().number().randomDouble(1,1,99);
+    static int studentId =  Faker.instance().number().numberBetween(4,305);
+
     @Given("teacher sends the student info data_POST")
     public void teacherSendsTheStudentInfoData() {
-        spec.pathParams("first", "studentInfo", "second", "save");
-        StudentInfoPojo expectedData = new StudentInfoPojo(1,
-                1,
-                70.2,
-                "omurdedigin",
-                2,
-                85.5,
-                Faker.instance().number().numberBetween(4,305));
+        specTeacher.pathParams("first", "studentInfo", "second", "save");
+        StudentInfoPojo expectedData = new StudentInfoPojo(absente,
+                educationTermId,
+                finalExam,
+                infoNote,
+                lessonId,
+                midtermExam,
+                studentId);
         System.out.println("expectedData = " + expectedData);
-        response = given().spec(spec).when().body(expectedData).post("{first}/{second}");
+        response = given().spec(specTeacher).when().body(expectedData).post("{first}/{second}");
         response.prettyPrint();
     }
 
@@ -35,7 +45,6 @@ public class StudentInfoStepDefs {
     public void teacherGetsTheStudentInfoDataAndAssert() {
         JsonPath jsonPath = response.jsonPath();
         Assert.assertEquals(200,response.statusCode());
-
 
         Assert.assertEquals(expectedData.getAbsentee(),jsonPath.getInt("object.absentee"));
         Assert.assertEquals(expectedData.getEducationTermId(),jsonPath.getInt("object.educationTermId"));
@@ -47,5 +56,12 @@ public class StudentInfoStepDefs {
 
         assertEquals("CREATED", jsonPath.getString("httpStatus"));
         assertEquals("Student Info saved Successfully", jsonPath.getString("message"));
+
+        student_info_id = jsonPath.getInt("object.id");
+        System.out.println("student_info_id"+ student_info_id);
+
+
+
+
     }
 }
