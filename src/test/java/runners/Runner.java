@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@Api_contact_message",
+
 
 
 
