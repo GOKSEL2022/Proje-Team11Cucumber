@@ -10,27 +10,20 @@ import utilities.Driver;
 import java.io.IOException;
 
 public class US05_AC03_TC08SurnameSpacegir {
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-
-
-    @And("Alı Surname alanina space girer.")
-    public void AlıSurnameAlaninaSpaceGirer() throws InterruptedException, IOException {}
-
-    @And("Kullanici Surname alanina space girer.")
+    @And("Ali Surname alanina space girer.")
     public void kullaniciSurnameAlaninaSpaceGirer() throws InterruptedException {
-
-        editDeanPage.surname_Edit_Dean.clear();
+        editDeanPage.surname_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         Thread.sleep(1000);
         editDeanPage.surname_Edit_Dean.sendKeys(Keys.SPACE);
         Thread.sleep(1000);
-        Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+        editDeanPage.female_Checkbox_Edit_Dean.click();
+        Thread.sleep(1000);
+        editDeanPage.password_Edit_Dean.sendKeys("12345678");
+        Thread.sleep(1000);
+        editDeanPage.submit_Button_Edit_Dean.click();
+        Assert.assertFalse(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+
         Thread.sleep(1000);
     }
 }

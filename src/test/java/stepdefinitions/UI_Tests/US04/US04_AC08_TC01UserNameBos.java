@@ -26,13 +26,13 @@ public class US04_AC08_TC01UserNameBos {
     int ssnNo2= Faker.instance().number().numberBetween(10,99);
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Alı User Name {string} alanini bos birakir")
+    @And("Ali User Name {string} alanini bos birakir")
     public void AlıUserNameAlaniniBosBirakir(String arg0) {
         deanManagementPage.username_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Alı uyari mesaji Required gorur")
+    @Then("Ali uyari mesaji Required gorur")
     public void AlıUyariMesajiRequiredGorur() {
         Assert.assertTrue(deanManagementPage.username_Required_Message_Add_Dean.isDisplayed());
     }

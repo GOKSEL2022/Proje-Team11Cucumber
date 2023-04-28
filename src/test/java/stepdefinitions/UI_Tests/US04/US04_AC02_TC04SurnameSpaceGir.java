@@ -32,13 +32,13 @@ public class US04_AC02_TC04SurnameSpaceGir {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Surname alanina space girer")
+    @And("Ali Surname alanina space girer")
     public void AlıSurnameAlaninaSpaceGirer() {
         deanManagementPage.surname_Add_Dean.sendKeys(Keys.SPACE,Keys.TAB);
 
     }
 
-    @Then("Alı Dean Save kayit mesajini gorur")
+    @Then("Ali Dean Save kayit mesajini gorur")
     public void AlıDeanSaveKayitMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

@@ -33,11 +33,11 @@ public class US04_AC03_TC04BirthPlaceSpaceGir {
     Faker faker = new Faker();
 
 
-    @And("Alı Birth Place alanina space girer")
+    @And("Ali Birth Place alanina space girer")
     public void AlıBirthPlaceAlaninaSpaceGirer() {
         deanManagementPage.birthPlace_Add_Dean.sendKeys(Keys.SPACE, Keys.TAB);
     }
-    @Then("Alı Dean Save mesajin alir")
+    @Then("Ali Dean Save mesajin alir")
     public void AlıDeanSaveMesajinAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();

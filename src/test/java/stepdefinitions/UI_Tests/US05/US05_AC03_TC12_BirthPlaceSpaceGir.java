@@ -13,24 +13,13 @@ import utilities.Driver;
 import java.io.IOException;
 
 public class US05_AC03_TC12_BirthPlaceSpaceGir {
-    
-
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-
-    @And("Alı Birth Place textboxinin icine space girer")
-    public void AlıBirthPlaceTextboxininIcineSpaceGirer() throws IOException {}
-
-    @And("Kullanıcı Birth Place textboxinin icine space girer")
+    @And("Ali Birth Place textboxinin icine space girer")
     public void kullaniciBirthPlaceTextboxininIcineSpaceGirer() {
 
         editDeanPage.birthPlace_Edit_Dean.clear();
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.SPACE);
+        editDeanPage.female_Checkbox_Edit_Dean.click();
         Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
     }
 }

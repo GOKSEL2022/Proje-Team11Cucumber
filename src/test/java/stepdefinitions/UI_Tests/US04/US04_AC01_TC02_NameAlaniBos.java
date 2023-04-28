@@ -27,7 +27,7 @@ public class US04_AC01_TC02_NameAlaniBos {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Name {string} alanina veri girmez")
+    @And("Ali Name {string} alanina veri girmez")
     public void AlıNameAlaninaVeriGirmez(String arg0) {
 
         Assert.assertFalse(deanManagementPage.name_Required_Message_Add_Dean.isDisplayed());

@@ -24,14 +24,14 @@ public class US04_AC06_TC01PhoneBos {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Phone {string} alanina istenilen formatta veri girer")
+    @And("Ali Phone {string} alanina istenilen formatta veri girer")
     public void AlıPhoneAlaninaIstenilenFormattaVeriGirer(String arg0) {
         deanManagementPage.phoneNumber_Add_Dean.sendKeys(arg0);
 
 
     }
 
-    @Then("Alı kayit olunamadigi mesaji alir")
+    @Then("Ali kayit olunamadigi mesaji alir")
     public void AlıKayitOlunamadigiMesajiAlir() {
         Assert.assertTrue(deanManagementPage.phoneNumber_Required_Message_Add_Dean.isDisplayed());
 

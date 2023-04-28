@@ -1,6 +1,8 @@
 package stepdefinitions.UI_Tests.US05;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.LoginPage;
@@ -11,27 +13,26 @@ import utilities.Driver;
 import java.io.IOException;
 
 public class US05_AC03_TC06SurnameAlaninaSembolgir {
-    
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
-    DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
 
-
-    @And("Alı Surname alanina sembol girer")
-    public void AlıSurnameAlaninaSembolGirer() throws IOException {
-
+    @And("Ali name alanina veri girer")
+    public void aliNameAlaninaVeriGirer() {
+        editDeanPage.name_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+        editDeanPage.name_Edit_Dean.sendKeys("Sevilay");
     }
-
-        @And("Kullanici Surname alanina sembol girer")
-        public void kullaniciSurnameAlaninaSembolGirer () {
-
-            editDeanPage.surname_Edit_Dean.clear();
+        @And("Ali Surname alanina sembol girer")
+        public void kullaniciSurnameAlaninaSembolGirer () throws InterruptedException {
+            editDeanPage.surname_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
             editDeanPage.surname_Edit_Dean.sendKeys("*****");
-            Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
-        }
 
+            editDeanPage.female_Checkbox_Edit_Dean.click();
+            editDeanPage.password_Edit_Dean.sendKeys("12345678");
+            editDeanPage.submit_Button_Edit_Dean.click();
+
+        }
+    @Then("Ali dean Update mesajini gorur")
+    public void aliDeanUpdateMesajiniGorur() throws InterruptedException {
+        Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+        Thread.sleep(1000);
     }
+}

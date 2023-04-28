@@ -34,14 +34,14 @@ public class US04_AC02_TC03SurnameRakamGirer {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Surname {string} alanina rakam girer")
+    @And("Ali Surname {string} alanina rakam girer")
     public void kullaniciSurnameAlaninaRakamGirer(String arg0) {
         deanManagementPage.surname_Add_Dean.sendKeys(arg0);
 
 
     }
 
-    @Then("Alı Dean Save mesajini gorur")
+    @Then("Ali Dean Save mesajini gorur")
     public void AlıDeanSaveMesajiniGorur() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
