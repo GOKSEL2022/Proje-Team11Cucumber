@@ -11,17 +11,12 @@ import pages.*;
 import utilities.Driver;
 
 public class US05_AC03_TC19_PhoneSpacegir {
-    
-
-    Actions actions = new Actions(Driver.getDriver());
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
-    RegisterPage registerPage = new RegisterPage();
-    Admin_ManagementPage admin_managementPage = new Admin_ManagementPage();
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
-    @And("Alı Phone alanini space girer.")
+    @And("Ali Phone alanini space girer.")
     public void AlıPhoneAlaniniSpaceGirer() {
+        editDeanPage.female_Checkbox_Edit_Dean.click();
+        editDeanPage.phoneNumber_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         editDeanPage.phoneNumber_Edit_Dean.sendKeys(Keys.SPACE);
         Assert.assertTrue(deanManagementPage.phoneNumber_PleaseEntervalidPhoneNumber_Character_Message_Add_Dean.isDisplayed());
     }

@@ -17,13 +17,13 @@ public class EditDeanPage {
     @FindBy(xpath = "(//*[.='Edit Dean'])[2]")
     public WebElement text_Edit_Dean;
 
-    @FindBy(xpath = "(//input[@placeholder='Name'])")
+    @FindBy(xpath = "(//*[@type='text'])[7]")
     public WebElement name_Edit_Dean;
 
-    @FindBy(xpath = "//*[@id='surname']")
+    @FindBy(xpath = "(//*[@id='surname'])[2]")
     public WebElement surname_Edit_Dean;
 
-    @FindBy(xpath = "//*[@id='birthPlace']")
+    @FindBy(xpath = "(//*[@id='birthPlace'])[2]")
     public WebElement birthPlace_Edit_Dean;
 
     @FindBy(xpath = "//input[@id='phoneNumber']")
@@ -47,14 +47,15 @@ public class EditDeanPage {
     @FindBy(xpath = "(//*[@id='password'])[2]")
     public WebElement password_Edit_Dean;
 
-    @FindBy(xpath = "(//*[.='Submit'])[6]")
+    @FindBy(xpath = "(//*[@class='fw-semibold btn btn-primary btn-lg'])[2]")
     public WebElement submit_Button_Edit_Dean;
 
     @FindBy(xpath = "/html/body/div[3]/div[1]/button")
     public WebElement close_editDeanKapatma_x_Button;
 
-    @FindBy(xpath = "//*[.='Name Surname']")
+    @FindBy(xpath = "(//*[.='Name'])[2]")
     public WebElement header_Name_Surname;
+
     @FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/div[3]/div/div/div[1]/table/thead/tr/th[2]")
     public WebElement header_Gender;
 
@@ -67,10 +68,10 @@ public class EditDeanPage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/main/div/div[1]/div[3]/div/div/div[1]/table/thead/tr/th[5]")
     public WebElement header_User_Name;
 
-    @FindBy(xpath = "(//*[.='Required'])[7]")
+    @FindBy(xpath = "(//*[@class='invalid-feedback'])[9]")
     public WebElement Required_edit_Dean_Name;
 
-    @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div/form/div/div[2]/div/div")
+    @FindBy(xpath = "(//*[.='Required'])[7]")
     public WebElement Required_edit_Dean_Surname;
 
     @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div/form/div/div[3]/div/div")
@@ -91,10 +92,10 @@ public class EditDeanPage {
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[16]")
     public WebElement Required_edit_Dean_Password;
 
-    @FindBy(xpath = "//div[@id='3']")
+    @FindBy(xpath = "(//*[.='Dean updated Successful'])[9]")
     public WebElement dean_Saved_message_name_Edit_Dean;
 
-    @FindBy(xpath = "//div[@id='4']")
+    @FindBy(xpath = "//*[@class='Toastify__toast Toastify__toast-theme--colored Toastify__toast--success Toastify__toast--close-on-click']")
     public WebElement dean_Saved_message_Surname_Edit_Dean;
 
     @FindBy(xpath = " (//*[@id='2'])[2]")

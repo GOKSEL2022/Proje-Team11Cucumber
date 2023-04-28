@@ -6,9 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class MessagePostPojo {
 
 
-    private MessageSavePojo object;
-    private String message;
-    private String httpStatus;
+        private MessageSavePojo object;
+        private String message;
+        private String httpStatus;
 
     public MessagePostPojo() {
     }
