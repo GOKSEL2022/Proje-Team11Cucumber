@@ -21,7 +21,7 @@ public class Admin_Controller_Post_StepDefs {
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
-        admin_object_pojo=new Admin_Object_Pojo(54,"Alicannn","Alicann","Celik","null","785-25-6321","null","523-456-7891","FEMALE");
+        admin_object_pojo=new Admin_Object_Pojo(45,"Mustafa","Atatürk","Kemal","null","188-11-9380","null","938-938-3838","MALE");
         expectedData=new Admin_Pojo(admin_object_pojo,"Admin Saved","CREATED");
         System.out.println("expectedData = " + expectedData);
     }
@@ -36,7 +36,8 @@ public class Admin_Controller_Post_StepDefs {
         Admin_Pojo actualData=response.as(Admin_Pojo.class);
 
         Assert.assertEquals(200, response.statusCode());
-        Assert.assertEquals("CREATED",response.statusLine());
+        Assert.assertEquals("CREATED",actualData.getHttpStatus());
+        Assert.assertEquals("Admin Saved",actualData.getMessage());
         Assert.assertEquals(expectedData.getObject().getUserId(),admin_object_pojo.getUserId());
         Assert.assertEquals(expectedData.getObject().getUsername(),admin_object_pojo.getUsername());
         Assert.assertEquals(expectedData.getObject().getName(),admin_object_pojo.getName());
@@ -49,21 +50,22 @@ public class Admin_Controller_Post_StepDefs {
 
 
         /*
-        {
+   {
     "object": {
-        "userId": 81,
-        "username": "AliKamil",
-        "name": "AliKemal",
-        "surname": "Melik",
+        "userId": 45,
+        "username": "Mustafa",
+        "name": "Atatürk",
+        "surname": "Kemal",
         "birthDay": null,
-        "ssn": "785-25-6961",
+        "ssn": "188-11-9380",
         "birthPlace": null,
-        "phoneNumber": "523-456-7802",
+        "phoneNumber": "938-938-3838",
         "gender": "MALE"
     },
     "message": "Admin Saved",
     "httpStatus": "CREATED"
 }
+
          */
 
 

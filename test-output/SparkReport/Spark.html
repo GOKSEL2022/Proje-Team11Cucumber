@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 26, 2023 11:43:40 PM</span></a>
+<a href="#"><span class="badge badge-primary">Apr 28, 2023 03:03:42 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 26, 2023 11:43:40 PM</h3>
+<h3>Apr 28, 2023 03:03:42 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 26, 2023 11:43:50 PM</h3>
+<h3>Apr 28, 2023 03:04:04 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='75%'><b>3</b> steps passed</small></div>
+<div><small data-tooltip='33%'><b>1</b> steps passed</small></div>
 <div>
-<small data-tooltip='25%'><b>1</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='33%'><b>1</b> steps failed,
+<b>1</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Post_Admin":5.591
+"jdbc":13.652
 };
 </script>
 <div class="row">
@@ -177,7 +177,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@ApiPostAdmin</td>
+<td>@DBtest</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -218,10 +218,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 3,
+passGrandChild: 1,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 1,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -243,7 +243,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@ApiPostAdmin</a>
+<a class="dropdown-item" href="#">@DBtest</a>
 </ul>
 </li>
 </ul>
@@ -254,9 +254,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Post_Admin</p>
+            <p class="name">jdbc</p>
             <p class="text-sm">
-              <span>11:43:44 PM</span> / <span>00:00:05:591</span>
+              <span>3:03:50 PM</span> / <span>00:00:13:652</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -264,10 +264,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Post_Admin</h5>
-<span class='badge badge-success'>04.26.2023 11:43:44 PM</span>
-<span class='badge badge-danger'>04.26.2023 11:43:50 PM</span>
-<span class='badge badge-default'>00:00:05:591</span>
+<h5 class="test-status text-fail">jdbc</h5>
+<span class='badge badge-success'>04.28.2023 3:03:50 PM</span>
+<span class='badge badge-danger'>04.28.2023 3:04:04 PM</span>
+<span class='badge badge-default'>00:00:13:652</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -279,141 +279,40 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>TC01_Validate_Admin</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>JDBC_DENEME</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.setTheUrlAdmin_post()">
-                <span>Given Set the Url admin_post</span>
+              <div class="step fail-bg" title="stepdefinitions.Api_Test.student_info_controller.DataBaseDeneme.queryGonderir()">
+                <span>Given query gonderir</span>
       <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.setTheExpectedDataAdmin_post()">
-                <span>And Set the expected data admin_post</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.sendTheRequestAndGetTheResponseAdmin_post()">
-                <span>When Send the request and get the response admin_post</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.doAssertionAdmin_post()">
-                <span>Then Do assertion admin_post</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "path" (class pojos.Admin_Pojo), not marked as ignorable (3 known properties: "httpStatus", "object", "message"])
- at [Source: (String)"{"path":"/admin/save","error":"Unauthorized","message":"Full authentication is required to access this resource","status":401}"; line: 1, column: 10] (through reference chain: pojos.Admin_Pojo["path"])
-	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
-	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
-	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
-	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:229)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
-	at stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.doAssertionAdmin_post(Admin_Controller_Post_StepDefs.java:36)
-	at ✽.Do assertion admin_post(file:///C:/Users/Public/team11/./src/test/resources/features/ApiFeatures/Admin_Controller_Post.feature:7)
-Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "path" (class pojos.Admin_Pojo), not marked as ignorable (3 known properties: "httpStatus", "object", "message"])
- at [Source: (String)"{"path":"/admin/save","error":"Unauthorized","message":"Full authentication is required to access this resource","status":401}"; line: 1, column: 10] (through reference chain: pojos.Admin_Pojo["path"])
-	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1132)
-	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2202)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1705)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1683)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4730)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3677)
-	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
-	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
-	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
-	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
-	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
-	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:229)
-	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
-	at stepdefinitions.Api_Test.admin_controller.Admin_Controller_Post_StepDefs.doAssertionAdmin_post(Admin_Controller_Post_StepDefs.java:36)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+        <textarea disabled class="code-block">java.sql.SQLException: No suitable driver found for jdbc:postgresql://164.92.252.42:5432/school_management
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at stepdefinitions.Api_Test.student_info_controller.DataBaseDeneme.queryGonderir(DataBaseDeneme.java:20)
+	at ✽.query gonderir(file:///C:/Users/ferhat/IdeaProjects/team11/./src/test/resources/features/ApiFeatures/jdbc_deneme.feature:4)
 </textarea>
       
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.Api_Test.student_info_controller.DataBaseDeneme.valideteData()">
+                <span>Then validete data</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.tearDownScenarios(io.cucumber.java.Scenario)</span>
+      <div>failed_scenario_JDBC_DENEME
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
       </div>
               </div>
           </div>
@@ -444,12 +343,12 @@ Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unr
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@ApiPostAdmin</p>
+<p class="name">@DBtest</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@ApiPostAdmin</h4>
+<h4>@DBtest</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -463,11 +362,11 @@ Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unr
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>23:43:44 PM</td>
+<td>15:03:50 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_Validate_Admin</a>
+<a href="#" class="linked" test-id='1' id='2'>JDBC_DENEME</a>
 <div class="">
-<span class="badge badge-default">Post_Admin.TC01_Validate_Admin</span>
+<span class="badge badge-default">jdbc.JDBC_DENEME</span>
 </div>
 </td>
 </tr>
@@ -496,12 +395,12 @@ Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unr
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.RuntimeException</p>
+<p class="name">java.sql.SQLException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.RuntimeException</h4>
+<h4>java.sql.SQLException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -515,11 +414,11 @@ Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unr
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>23:43:49 PM</td>
+<td>15:03:50 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='7'>Then Do assertion admin_post</a>
+<a href="#" class="linked" test-id='1' id='3'>Given query gonderir</a>
 <div class="">
-<span class="badge badge-default">Post_Admin.TC01_Validate_Admin.Then Do assertion admin_post</span>
+<span class="badge badge-default">jdbc.JDBC_DENEME.Given query gonderir</span>
 </div>
 </td>
 </tr>

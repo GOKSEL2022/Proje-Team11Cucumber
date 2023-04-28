@@ -109,10 +109,10 @@ public class GetTeacherByIdStepDefs {
     }
 
     //@Given("get a token with {string} username and {string} password")
-   //public void getATokenWithUsernameAndPassword(String arg0, String arg1) {
-   //     username = arg0;
-   //     password = arg1;
-   //    generateToken(username, password);
+    //public void getATokenWithUsernameAndPassword(String arg0, String arg1) {
+    //     username = arg0;
+    //     password = arg1;
+    //    generateToken(username, password);
 
-   //}
+    //}
 }

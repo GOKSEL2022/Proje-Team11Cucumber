@@ -36,78 +36,78 @@ public class AddAdmin {
 
 
 
-    @Given("Kullanıcı {string} gider.")
-    public void kullanıcıGider(String arg0) {
+    @Given("rabia {string} gider.")
+    public void rabiaGider(String arg0) {
         Driver.getDriver().get(arg0);
     }
 
-    @When("Kullanıcı admin olarak giris yapar.")
-    public void kullanıcıAdminOlarakGirisYapar() {
+    @When("rabia admin olarak giris yapar.")
+    public void rabiaAdminOlarakGirisYapar() {
         ReusableMethods.login("rabiaaa","12345678");
 
     }
 
-    @When("Kullanıcı  Add Admin bölümünün oldugunu dogrular.")
-    public void kullanıcıAddAdminBölümününOldugunuDogrular() {
+    @When("rabia  Add Admin bölümünün oldugunu dogrular.")
+    public void rabiaAddAdminBölümününOldugunuDogrular() {
         assertTrue(addAdminPage.add_Admin_Text.isDisplayed());
     }
 
-    @And("Kullanıcı namee kutusuna tıklar.")
-    public void kullanıcıNameeKutusunaTıklar() {
+    @And("rabia namee kutusuna tıklar.")
+    public void rabiaNameeKutusunaTıklar() {
         addAdminPage.name_admin.click();
     }
 
-    @And("Kullanıcı Namee kutusuna {string} girer.")
-    public void kullanıcıNameeKutusunaGirer(String arg0) {
+    @And("rabia Namee kutusuna {string} girer.")
+    public void rabiaNameeKutusunaGirer(String arg0) {
         addAdminPage.name_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı surnamee kutusuna {string} girer")
-    public void kullanıcıSurnameeKutusunaGirer(String arg0) {
+    @And("rabia surnamee kutusuna {string} girer")
+    public void rabiaSurnameeKutusunaGirer(String arg0) {
         addAdminPage.surname_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı surname kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıSurnameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia surname kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaSurnameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         assertTrue(addAdminPage.required_surname.isDisplayed());
 
     }
 
-    @And("Kullanıcı birthPLacee kutusuna {string} girer.")
-    public void kullanıcıBirthPLaceeKutusunaGirer(String arg0) {
+    @And("rabia birthPLacee kutusuna {string} girer.")
+    public void rabiaBirthPLaceeKutusunaGirer(String arg0) {
         addAdminPage.birthPlace_admin.sendKeys(faker.address().cityName());
     }
 
-    @And("Kullanıcı gender secer.")
-    public void kullanıcıGenderSecer() {
+    @And("rabia gender secer.")
+    public void rabiaGenderSecer() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Driver.clickWithJS(addAdminPage.female_admin);
     }
 
-    @And("Kullanıcı Date Of Birth kutusuna {string} gırer.")
-    public void kullanıcıDateOfBirthKutusunaGırer(String arg0) {
+    @And("rabia Date Of Birth kutusuna {string} gırer.")
+    public void rabiaDateOfBirthKutusunaGırer(String arg0) {
         addAdminPage.birthDay_admin.sendKeys("12.05.2000");
     }
 
-    @And("Kullanıcı Phone kutusuna {string} gırer")
-    public void kullanıcıPhoneKutusunaGırer(String arg0) {
+    @And("rabia Phone kutusuna {string} gırer")
+    public void rabiaPhoneKutusunaGırer(String arg0) {
         addAdminPage.phoneNumber_admin.sendKeys(phoneNo1+"-"+phoneNo2+"-"+phoneNo3);
     }
 
-    @And("Kullanıcı SSN kutusuna {string} gırer")
-    public void kullanıcıSSNKutusunaGırer() {
+    @And("rabia SSN kutusuna {string} gırer")
+    public void rabiaSSNKutusunaGırer() {
         addAdminPage.ssn_admin.sendKeys(ssnNo1+"-"+ssnNo2+"-"+ssnNo3);
 
     }
 
-    @And("Kullanıcı username kutusuna {string} gırer.")
-    public void kullanıcıUsernameKutusunaGırer(String arg0) {
+    @And("rabia username kutusuna {string} gırer.")
+    public void rabiaUsernameKutusunaGırer(String arg0) {
         addAdminPage.username_admin.sendKeys(faker.name().username());
 
     }
 
-    @And("Kullanıcı Password kutusuna {string} gırer")
-    public void kullanıcıPasswordKutusunaGırer(String arg0) {
+    @And("rabia Password kutusuna {string} gırer")
+    public void rabiaPasswordKutusunaGırer(String arg0) {
         addAdminPage.password_admin.sendKeys(faker.internet().password(8,12));
     }
 
@@ -119,8 +119,8 @@ public class AddAdmin {
 
     }
 
-    @And("Kullanıcı submit butonuna tıklar.")
-    public void kullanıcıSubmitButonunaTıklar() {
+    @And("rabia submit butonuna tıklar.")
+    public void rabiaSubmitButonunaTıklar() {
         try {
             Driver.clickWithJS(addAdminPage.submit_button_admin);
         } catch (Exception e) {
@@ -128,53 +128,53 @@ public class AddAdmin {
         }
     }
 
-    @And("Kullanıcı SSN kutusuna SSN gırer")
-    public void kullanıcıSSNKutusunaSSNGırer() {
+    @And("rabia SSN kutusuna SSN gırer")
+    public void rabiaSSNKutusunaSSNGırer() {
         addAdminPage.ssn_admin.sendKeys(ssnNo1+"-"+ssnNo2+"-"+ssnNo3);
     }
 
-    @And("Kullanıcı birtPlace kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıBirtPlaceKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia birtPlace kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaBirtPlaceKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_birthPlace.isDisplayed());
     }
 
-    @And("Kullanıcı date of birth kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıDateOfBirthKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia date of birth kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaDateOfBirthKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_birthDay.isDisplayed());
     }
 
-    @And("Kullanıcı phone kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıPhoneKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia phone kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaPhoneKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_phone.isDisplayed());
     }
 
-    @And("Kullanıcı ssn kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıSsnKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia ssn kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaSsnKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_ssn.isDisplayed());
     }
 
-    @And("Kullanıcı username kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıUsernameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia username kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaUsernameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_username.isDisplayed());
     }
 
-    @And("Kullanıcı password kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıPasswordKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia password kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaPasswordKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_password.isDisplayed());
     }
 
 
-    @And("Kullanıcı name kutusu altında required yazısının oldugunu gorur.")
-    public void kullanıcıNameKutusuAltındaRequiredYazısınınOldugunuGorur() {
+    @And("rabia name kutusu altında required yazısının oldugunu gorur.")
+    public void rabiaNameKutusuAltındaRequiredYazısınınOldugunuGorur() {
         Assert.assertTrue(addAdminPage.required_name.isDisplayed());
     }
 
-    @And("Kullanıcı name kutusu altında required yazısının kaltıgını gorur.")
-    public void kullanıcıNameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
+    @And("rabia name kutusu altında required yazısının kaltıgını gorur.")
+    public void rabiaNameKutusuAltındaRequiredYazısınınKaltıgınıGorur() {
         Assert.assertTrue(!addAdminPage.required_name.isDisplayed());
     }
 
-    @And("Kullanıcı admin ekleme isleminin gerçeklesmediğini dogrular.")
+    @And("rabia admin ekleme isleminin gerçeklesmediğini dogrular.")
     public void rabiaAdminEklemeIslemininGerceklesmediginiDogrular() {
         ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
         ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
@@ -182,8 +182,8 @@ public class AddAdmin {
     }
 
 
-    @And("Kullanıcı surname kutusu altında required yazısının oldugunu gorur.")
-    public void kullanıcıSurnameKutusuAltındaRequiredYazısınınOldugunuGorur() {
+    @And("rabia surname kutusu altında required yazısının oldugunu gorur.")
+    public void rabiaSurnameKutusuAltındaRequiredYazısınınOldugunuGorur() {
         // actions.sendKeys(Keys.ARROW_DOWN).perform();
         //Assert.assertTrue(addAdminPage.required_surname.isDisplayed());
         // ReusableMethods.waitForVisibility(addAdminPage.required_surname,5);
@@ -191,56 +191,56 @@ public class AddAdmin {
     }
 
 
-    @And("Kullanıcı birtPlace kutusu altında required yazısının oldugunu gorur.")
-    public void kullanıcıBirtPlaceKutusuAltındaRequiredYazısınınOldugunuGorur() {
+    @And("rabia birtPlace kutusu altında required yazısının oldugunu gorur.")
+    public void rabiaBirtPlaceKutusuAltındaRequiredYazısınınOldugunuGorur() {
         Assert.assertTrue(addAdminPage.required_birthPlace.isDisplayed());
     }
 
-    @And("Kullanıcı gender olarak female secer.")
-    public void kullanıcıGenderOlarakFemaleSecer() {
+    @And("rabia gender olarak female secer.")
+    public void rabiaGenderOlarakFemaleSecer() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Driver.clickWithJS(addAdminPage.female_admin);
     }
 
-    @And("Kullanıcı gender olarak male secer.")
-    public void kullanıcıGenderOlarakMaleSecer() {
+    @And("rabia gender olarak male secer.")
+    public void rabiaGenderOlarakMaleSecer() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Driver.clickWithJS(addAdminPage.male_admin);
     }
 
-    @And("Kullanıcı birthPLacee kutusuna space {string} girer.")
-    public void kullanıcıBirthPLaceeKutusunaSpaceGirer(String arg0) {
+    @And("rabia birthPLacee kutusuna space {string} girer.")
+    public void rabiaBirthPLaceeKutusunaSpaceGirer(String arg0) {
         addAdminPage.birthPlace_admin.sendKeys(" ");
     }
 
-    @And("Kullanıcı Date Of Birth kutusunu bos bırakır.")
-    public void kullanıcıDateOfBirthKutusunuBosBırakır() {
+    @And("rabia Date Of Birth kutusunu bos bırakır.")
+    public void rabiaDateOfBirthKutusunuBosBırakır() {
         addAdminPage.birthDay_admin.sendKeys("");
     }
 
-    @Then("Kullanıcı date of birth kutusu altında required yazısının oldugunu gorur.")
-    public void kullanıcıDateOfBirthKutusuAltındaRequiredYazısınınOldugunuGorur() {
+    @Then("rabia date of birth kutusu altında required yazısının oldugunu gorur.")
+    public void rabiaDateOfBirthKutusuAltındaRequiredYazısınınOldugunuGorur() {
         Assert.assertTrue(addAdminPage.required_birthDay.isDisplayed());
     }
 
 
-    @And("Kullanıcı Date Of Birth kutusuna bir gün sonrasını \\(ileri tarih) girer.")
-    public void kullanıcıDateOfBirthKutusunaBirGünSonrasınıIleriTarihGirer() {
+    @And("rabia Date Of Birth kutusuna bir gün sonrasını \\(ileri tarih) girer.")
+    public void rabiaDateOfBirthKutusunaBirGünSonrasınıIleriTarihGirer() {
         LocalDate birGunSonrasi = LocalDate.now().plusDays(1);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String tarih = birGunSonrasi.format(formatter);
         addAdminPage.birthDay_admin.sendKeys(formatter.format(birGunSonrasi));
     }
 
-    @Then("Kullanıcı {string} mesajını gorur.")
-    public void kullanıcıMesajınıGorur(String arg0) {
+    @Then("rabia {string} mesajını gorur.")
+    public void rabiaMesajınıGorur(String arg0) {
         ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
         ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
         Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
     }
 
-    @And("Kullanıcı Date Of Birth kutusuna icinde bulundugu gunun tarihini girer.")
-    public void kullanıcıDateOfBirthKutusunaIcindeBulunduguGununTarihiniGirer() {
+    @And("rabia Date Of Birth kutusuna icinde bulundugu gunun tarihini girer.")
+    public void rabiaDateOfBirthKutusunaIcindeBulunduguGununTarihiniGirer() {
         LocalDate bugununTarihi = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String tarih = bugununTarihi.format(formatter);
@@ -249,38 +249,38 @@ public class AddAdmin {
 
 
 
-    @And("Kullanıcı Date Of Birth kutusuna birgün öncesinin tarihini\\(geçmiş tarih) girer.")
-    public void kullanıcıDateOfBirthKutusunaBirgünÖncesininTarihiniGeçmişTarihGirer() {
+    @And("rabia Date Of Birth kutusuna birgün öncesinin tarihini\\(geçmiş tarih) girer.")
+    public void rabiaDateOfBirthKutusunaBirgünÖncesininTarihiniGeçmişTarihGirer() {
         LocalDate yesterday = LocalDate.now().minusDays(1);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String tarih = yesterday.format(formatter);
         addAdminPage.birthDay_admin.sendKeys(formatter.format(yesterday));
     }
 
-    @And("Kullanıcı Date Of Birth kutusuna gecerli bir tarih girer.")
-    public void kullanıcıDateOfBirthKutusunaGecerliBirTarihGirer() {
+    @And("rabia Date Of Birth kutusuna gecerli bir tarih girer.")
+    public void rabiaDateOfBirthKutusunaGecerliBirTarihGirer() {
         addAdminPage.birthDay_admin.sendKeys("12.05.2005");
     }
 
 
-    @And("Kullanıcı Phone kutusuna oniki rakamdan olusan deger gırer")
-    public void kullanıcıPhoneKutusunaOnikiRakamdanOlusanDegerGırer() {
+    @And("rabia Phone kutusuna oniki rakamdan olusan deger gırer")
+    public void rabiaPhoneKutusunaOnikiRakamdanOlusanDegerGırer() {
         addAdminPage.phoneNumber_admin.sendKeys("123456789123");
     }
 
-    @And("Kullanıcı Phone kutusuna onbir rakamdan olusan deger gırer")
-    public void kullanıcıPhoneKutusunaOnbirRakamdanOlusanDegerGırer() {
+    @And("rabia Phone kutusuna onbir rakamdan olusan deger gırer")
+    public void rabiaPhoneKutusunaOnbirRakamdanOlusanDegerGırer() {
         addAdminPage.phoneNumber_admin.sendKeys("12345678912");
     }
 
-    @And("Kullanıcı Phone kutusuna onüç rakamdan olusan deger gırer")
-    public void kullanıcıPhoneKutusunaOnüçRakamdanOlusanDegerGırer() {
+    @And("rabia Phone kutusuna onüç rakamdan olusan deger gırer")
+    public void rabiaPhoneKutusunaOnüçRakamdanOlusanDegerGırer() {
         addAdminPage.phoneNumber_admin.sendKeys("1234567891234");
     }
 
 
-    @And("Kullanıcı Phone kutusuna daha önce sistemde ekli olan bir deger gırer")
-    public void kullanıcıPhoneKutusunaDahaÖnceSistemdeEkliOlanBirDegerGırer() {
+    @And("rabia Phone kutusuna daha önce sistemde ekli olan bir deger gırer")
+    public void rabiaPhoneKutusunaDahaÖnceSistemdeEkliOlanBirDegerGırer() {
         addAdminPage.phoneNumber_admin.sendKeys("530-695-4588");
 
     }
@@ -292,126 +292,126 @@ public class AddAdmin {
         Assert.assertEquals("Admin Saved", addAdminPage.saved_alert.getText());
     }
 
-    @And("Kullanıcı SSN kutusuna daha önceden kayıtlı {string} gırer")
-    public void kullanıcıSSNKutusunaDahaÖncedenKayıtlıGırer(String arg0) {
+    @And("rabia SSN kutusuna daha önceden kayıtlı {string} gırer")
+    public void rabiaSSNKutusunaDahaÖncedenKayıtlıGırer(String arg0) {
         addAdminPage.ssn_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı SSN kutusuna invalid deger {string} gırer")
-    public void kullanıcıSSNKutusunaInvalidDegerGırer(String arg0) {
+    @And("rabia SSN kutusuna invalid deger {string} gırer")
+    public void rabiaSSNKutusunaInvalidDegerGırer(String arg0) {
         addAdminPage.ssn_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı ssn kutusu altında required yazısının görünür oldugunu dogrular.")
-    public void kullanıcıSsnKutusuAltındaRequiredYazısınınGörünürOldugunuDogrular() {
+    @And("rabia ssn kutusu altında required yazısının görünür oldugunu dogrular.")
+    public void rabiaSsnKutusuAltındaRequiredYazısınınGörünürOldugunuDogrular() {
         Assert.assertTrue(addAdminPage.required_ssn.isDisplayed());
     }
 
-    @And("Kullanıcı username kutusu altında required yazısının görünür olduğunu dogrular")
-    public void kullanıcıUsernameKutusuAltındaRequiredYazısınınGörünürOlduğunuDogrular() {
+    @And("rabia username kutusu altında required yazısının görünür olduğunu dogrular")
+    public void rabiaUsernameKutusuAltındaRequiredYazısınınGörünürOlduğunuDogrular() {
         Assert.assertTrue(addAdminPage.required_username.isDisplayed());
     }
 
-    @Then("Kullanıcı admin ekleme isleminin gerçeklesmediğini gösteren uyarı mesajı alır.")
-    public void kullanıcıAdminEklemeIslemininGerçeklesmediğiniGösterenUyarıMesajıAlır() {
+    @Then("rabia admin ekleme isleminin gerçeklesmediğini gösteren uyarı mesajı alır.")
+    public void rabiaAdminEklemeIslemininGerçeklesmediğiniGösterenUyarıMesajıAlır() {
         Assert.assertTrue(addAdminPage.username_already_register_alert.isDisplayed());
     }
 
-    @And("Kullanıcı username kutusunu bos bırakır")
-    public void kullanıcıUsernameKutusunuBosBırakır() {
+    @And("rabia username kutusunu bos bırakır")
+    public void rabiaUsernameKutusunuBosBırakır() {
         addAdminPage.username_admin.sendKeys("");
     }
 
-    @And("Kullanıcı username kutusuna önceden kayıtlı {string} gırer.")
-    public void kullanıcıUsernameKutusunaÖncedenKayıtlıGırer(String arg0) {
+    @And("rabia username kutusuna önceden kayıtlı {string} gırer.")
+    public void rabiaUsernameKutusunaÖncedenKayıtlıGırer(String arg0) {
         addAdminPage.username_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı Password kutusuna invalid deger {string} gırer")
-    public void kullanıcıPasswordKutusunaInvalidDegerGırer(String arg0) {
+    @And("rabia Password kutusuna invalid deger {string} gırer")
+    public void rabiaPasswordKutusunaInvalidDegerGırer(String arg0) {
         addAdminPage.password_admin.sendKeys(arg0);
     }
 
-    @And("Kullanıcı password kutusu altında uyarı mesajı gördügünü dogrular")
-    public void kullanıcıPasswordKutusuAltındaUyarıMesajıGördügünüDogrular() {
+    @And("rabia password kutusu altında uyarı mesajı gördügünü dogrular")
+    public void rabiaPasswordKutusuAltındaUyarıMesajıGördügünüDogrular() {
         addAdminPage.min8_character.isDisplayed();
     }
 
 
 
-    @And("Kullanıcı Password kutusuna dokuz karakter {string} gırer")
-    public void kullanıcıPasswordKutusunaDokuzKarakterGırer(String arg0) {
+    @And("rabia Password kutusuna dokuz karakter {string} gırer")
+    public void rabiaPasswordKutusunaDokuzKarakterGırer(String arg0) {
         addAdminPage.password_admin.sendKeys(arg0);
 
     }
 
-    @And("Kullanıcı password kutusu altında required yazısının gorunur oldugunu dogrular")
-    public void kullanıcıPasswordKutusuAltındaRequiredYazısınınGorunurOldugunuDogrular() {
+    @And("rabia password kutusu altında required yazısının gorunur oldugunu dogrular")
+    public void rabiaPasswordKutusuAltındaRequiredYazısınınGorunurOldugunuDogrular() {
         Assert.assertTrue(addAdminPage.required_password.isDisplayed());
     }
 
-    @Then("Kullanıcı gender secenegi altında required yazısını gorur.")
-    public void kullanıcıGenderSecenegiAltındaRequiredYazısınıGorur() {
+    @Then("rabia gender secenegi altında required yazısını gorur.")
+    public void rabiaGenderSecenegiAltındaRequiredYazısınıGorur() {
         Assert.assertTrue(addAdminPage.required_ssn.isDisplayed());
 
     }
 
 
-    @Then("Kullanıcı please enter valid phone number uyarısı aldıgını dogrular.")
-    public void kullanıcıPleaseEnterValidPhoneNumberUyarısıAldıgınıDogrular() {
+    @Then("rabia please enter valid phone number uyarısı aldıgını dogrular.")
+    public void rabiaPleaseEnterValidPhoneNumberUyarısıAldıgınıDogrular() {
         ReusableMethods.waitForVisibility(addAdminPage.eror_validphonenumber_alert, 6);
         ReusableMethods.hover(addAdminPage.eror_validphonenumber_alert);
         Assert.assertTrue(addAdminPage.eror_validphonenumber_alert.isDisplayed());
     }
 
-    @And("Kullanıcı phone kutusu altında Minimum {int} character \\(XXX-XXX-XXXX) yazısının görünür oldugunu dogrular")
-    public void kullanıcıPhoneKutusuAltındaMinimumCharacterXXXXXXXXXXYazısınınGörünürOldugunuDogrular(int arg0) {
+    @And("rabia phone kutusu altında Minimum {int} character \\(XXX-XXX-XXXX) yazısının görünür oldugunu dogrular")
+    public void rabiaPhoneKutusuAltındaMinimumCharacterXXXXXXXXXXYazısınınGörünürOldugunuDogrular(int arg0) {
         Assert.assertTrue(addAdminPage.min12_character.isDisplayed());
     }
 
-    @And("Kullanıcı Phone kutusuna \\( - karakteri bulunmadan) on rakamdan oluşan bir deger gırer")
-    public void kullanıcıPhoneKutusunaKarakteriBulunmadanOnRakamdanOluşanBirDegerGırer() {
+    @And("rabia Phone kutusuna \\( - karakteri bulunmadan) on rakamdan oluşan bir deger gırer")
+    public void rabiaPhoneKutusunaKarakteriBulunmadanOnRakamdanOluşanBirDegerGırer() {
         addAdminPage.phoneNumber_admin.sendKeys("1234567891");
     }
 
 
-    @Then("Kullanıcı{string} uyarısı alır")
-    public void kullanıcıUyarısıAlır(String arg0) {
+    @Then("rabia{string} uyarısı alır")
+    public void rabiaUyarısıAlır(String arg0) {
         ReusableMethods.waitForVisibility(addAdminPage.eror_phonenumber_alert, 6);
         ReusableMethods.hover(addAdminPage.eror_phonenumber_alert);
         Assert.assertTrue(addAdminPage.eror_phonenumber_alert.isDisplayed());
     }
 
-    @Then("Kullanıcı {string} uyarısını aldıgını dogrular")
-    public void kullanıcıUyarısınıAldıgınıDogrular(String arg0) {
+    @Then("rabia {string} uyarısını aldıgını dogrular")
+    public void rabiaUyarısınıAldıgınıDogrular(String arg0) {
         ReusableMethods.waitForVisibility(addAdminPage.ssn_already_register, 6);
         ReusableMethods.hover(addAdminPage.ssn_already_register);
         Assert.assertTrue(addAdminPage.ssn_already_register.isDisplayed());
     }
 
-    @Then("Kullanıcı Please enter valid SSN number uyarısını gorur")
-    public void kullanıcıPleaseEnterValidSSNNumberUyarısınıGorur() {
+    @Then("rabia Please enter valid SSN number uyarısını gorur")
+    public void rabiaPleaseEnterValidSSNNumberUyarısınıGorur() {
         ReusableMethods.waitForVisibility(addAdminPage.ssn_entervalid, 6);
         ReusableMethods.hover(addAdminPage.ssn_entervalid);
         Assert.assertTrue(addAdminPage.ssn_entervalid.isDisplayed());
     }
 
-    @Then("Kullanıcı {string} uyarısını gorur")
-    public void kullanıcıUyarısınıGorur(String arg0) {
+    @Then("rabia {string} uyarısını gorur")
+    public void rabiaUyarısınıGorur(String arg0) {
         ReusableMethods.waitForVisibility(addAdminPage.min11_character, 6);
         ReusableMethods.hover(addAdminPage.min11_character);
         Assert.assertTrue(addAdminPage.min11_character.isDisplayed());
     }
 
-    @Then("Kullanıcı Error: User with username AdminB{int} already register uyarısını gorur")
-    public void kullanıcıErrorUserWithUsernameAdminBAlreadyRegisterUyarısınıGorur(int arg0) {
+    @Then("rabia Error: User with username AdminB{int} already register uyarısını gorur")
+    public void rabiaErrorUserWithUsernameAdminBAlreadyRegisterUyarısınıGorur(int arg0) {
         ReusableMethods.waitForVisibility(addAdminPage.username_already_register_alert, 6);
         ReusableMethods.hover(addAdminPage.username_already_register_alert);
         Assert.assertTrue(addAdminPage.username_already_register_alert.isDisplayed());
     }
 
-    @Then("Kullanıcı geçmiş tarih olmalı uyarı yazısını gorur")
-    public void kullanıcıGeçmişTarihOlmalıUyarıYazısınıGorur() {
+    @Then("rabia geçmiş tarih olmalı uyarı yazısını gorur")
+    public void rabiaGeçmişTarihOlmalıUyarıYazısınıGorur() {
         ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 6);
         ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
         Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
