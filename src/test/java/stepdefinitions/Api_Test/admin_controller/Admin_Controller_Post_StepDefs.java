@@ -7,7 +7,8 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.Admin_Object_Pojo;
 import pojos.Admin_Pojo;
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+
+import static base_urls.ManagementonSchoolsBaseUrl.*;
 import static io.restassured.RestAssured.given;
 
 public class Admin_Controller_Post_StepDefs {
@@ -17,7 +18,7 @@ public class Admin_Controller_Post_StepDefs {
     @Given("Set the Url admin_post")
     public void setTheUrlAdmin_post() {
         //{{baseUrl}}/admin/save
-        spec.pathParams("firsth","admin","second","save");
+        specViceDean.pathParams("firsth","admin","second","save");
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
@@ -27,7 +28,7 @@ public class Admin_Controller_Post_StepDefs {
     }
     @When("Send the request and get the response admin_post")
     public void sendTheRequestAndGetTheResponseAdmin_post() {
-        response=given(spec).when().body(expectedData).post("{firsth}/{second}");
+        response=given(specAdmin).when().body(expectedData).post("{firsth}/{second}");
         response.prettyPrint();
     }
     @Then("Do assertion admin_post")
