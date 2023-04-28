@@ -14,8 +14,7 @@ import pojos.TeacherPojo;
 import java.util.HashMap;
 import java.util.Map;
 
-
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
@@ -32,7 +31,7 @@ public class GetTeacherByIdStepDefs {
     @Given("send get request to get teacher")
     public void send_get_request_to_get_teacher() {
         //Set the url
-        spec.pathParams("first","teachers","second","getSavedTeacherById","third",35);
+        specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",35);
 
         //Set the expected data
         objectPojo = new ObjectPojo(35,"alican","Ali","Can","2000-01-05", "222-55-9977","Ankara","333-333-9955","MALE","ali.can@gmail.com");
@@ -40,7 +39,7 @@ public class GetTeacherByIdStepDefs {
         System.out.println("expectedData = " + expectedData);
 
         //Send the request and get the response
-        response = given(spec).get("{first}/{second}/{third}");
+        response = given(specTeacher).get("{first}/{second}/{third}");
         response.prettyPrint();
 
     }
