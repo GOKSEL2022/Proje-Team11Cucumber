@@ -29,7 +29,7 @@ public class ManagementonSchoolsBaseUrl  {
     }
     public  static void schoolsetupDean(){
         specDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","Team11Proje"))
+                addHeader("Authorization",generateToken("12345678","gooddean"))
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupViceDean(){
