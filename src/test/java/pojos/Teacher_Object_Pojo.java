@@ -1,9 +1,6 @@
 package pojos;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ObjectPojo {
+public class Teacher_Object_Pojo {
     private int userId;
     private String username;
     private String name;
@@ -15,10 +12,10 @@ public class ObjectPojo {
     private String gender;
     private String email;
 
-    public ObjectPojo() {
+    public Teacher_Object_Pojo() {
     }
 
-    public ObjectPojo(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender, String email) {
+    public Teacher_Object_Pojo(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender, String email) {
         this.userId = userId;
         this.username = username;
         this.name = name;
@@ -113,7 +110,7 @@ public class ObjectPojo {
 
     @Override
     public String toString() {
-        return "ObjectPojo{" +
+        return "Teacher_Object_Pojo{" +
                 "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +

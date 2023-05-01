@@ -9,7 +9,7 @@ import org.junit.Assert;
 import pojos.MessageSavePojo;
 import pojos.MessagePostPojo;
 
-import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
 

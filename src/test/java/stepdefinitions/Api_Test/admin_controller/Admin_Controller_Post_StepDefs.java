@@ -8,7 +8,7 @@ import org.junit.Assert;
 import pojos.Admin_Object_Pojo;
 import pojos.Admin_Pojo;
 
-import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+import static base_urls.ManagementonSchoolsBaseUrl.*;
 import static io.restassured.RestAssured.given;
 
 public class Admin_Controller_Post_StepDefs {
@@ -18,13 +18,13 @@ public class Admin_Controller_Post_StepDefs {
     @Given("Set the Url admin_post")
     public void setTheUrlAdmin_post() {
         //{{baseUrl}}/admin/save
-        specAdmin.pathParams("firsth","admin","second","save");
+        specViceDean.pathParams("firsth","admin","second","save");
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
         admin_object_pojo=new Admin_Object_Pojo(45,"Mustafa","Atatürk","Kemal","null","188-11-9380","null","938-938-3838","MALE");
         expectedData=new Admin_Pojo(admin_object_pojo,"Admin Saved","CREATED");
-
+        System.out.println("expectedData = " + expectedData);
     }
     @When("Send the request and get the response admin_post")
     public void sendTheRequestAndGetTheResponseAdmin_post() {
@@ -35,7 +35,6 @@ public class Admin_Controller_Post_StepDefs {
     public void doAssertionAdmin_post() {
 
         Admin_Pojo actualData=response.as(Admin_Pojo.class);
-
 
         Assert.assertEquals(200, response.statusCode());
         Assert.assertEquals("CREATED",actualData.getHttpStatus());

@@ -19,31 +19,30 @@ public class ManagementonSchoolsBaseUrl  {
 
     public  static void schoolsetupAdmin(){
         specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("485424698"," Admin"))
-                .setBaseUri("http://164.92.252.42").build();
+                addHeader("Authorization",generateToken("485424698","Admin"))
+                .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupTeacher(){
         specTeacher=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","emin"))
-                .setBaseUri("http://164.92.252.42").build();
+                addHeader("Authorization",generateToken("12345678","team11emin"))
+                .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupDean(){
         specDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","Team11Proje"))
-                .setBaseUri("http://164.92.252.42").build();
+                addHeader("Authorization",generateToken("12345678","gooddean"))
+                .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupViceDean(){
         specViceDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
                 addHeader("Authorization",generateToken("123456789","Team11Cucumber"))
-                .setBaseUri("http://164.92.252.42").build();
+                .setBaseUri("http://164.92.252.42:8080").build();
     }
 
     public  static void schoolsetupStudent(){
         specStudent=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","m.emin"))
-                .setBaseUri("http://164.92.252.42").build();
-
-
-
+                addHeader("Authorization",generateToken("12345678","team11"))
+                .setBaseUri("http://164.92.252.42:8080").build();
     }
 }
+
+

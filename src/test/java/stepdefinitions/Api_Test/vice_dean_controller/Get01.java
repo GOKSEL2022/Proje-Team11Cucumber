@@ -12,8 +12,6 @@ import utilities.ObjectMapperUtils;
 import java.io.IOException;
 import java.util.Map;
 
-
-import static base_urls.ManagementonSchoolsBaseUrl.specViceDean;
 import static base_urls.ManagementonSchoolsBaseUrl.specViceDean;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -56,7 +54,7 @@ public class Get01 {
      */
     Response response;
 
-  Vice_Dean_Controller_Object_Pojo expectedData;
+    Vice_Dean_Controller_Object_Pojo expectedData;
 
     @Given("user sends get request for vice_dean data")
     public void user_sends_post_request_for_vice_dean_data() {
