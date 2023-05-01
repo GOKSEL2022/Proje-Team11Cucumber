@@ -1,22 +1,22 @@
 package stepdefinitions.Api_Test.guest_user_controller;
 
-public class Get {
-
+public class Post {
     /*
     {
     "object": {
-        "userId": 26,
-        "username": "Beşiktaş",
-        "name": "Kara",
-        "surname": "Kartal",
+        "userId": 198,
+        "username": "Goksel",
+        "name": "Goksel",
+        "surname": "Celik",
         "birthDay": null,
-        "ssn": "256-78-4125",
+        "ssn": "258-45-7852",
         "birthPlace": null,
-        "phoneNumber": "546-523-7852",
+        "phoneNumber": "542-453-8523",
         "gender": "MALE"
     },
     "message": "Guest User registered.",
     "httpStatus": "CREATED"
 }
      */
+
 }

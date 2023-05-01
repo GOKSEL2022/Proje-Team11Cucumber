@@ -13,7 +13,8 @@ import java.io.IOException;
 import java.util.Map;
 
 
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+import static base_urls.ManagementonSchoolsBaseUrl.specViceDean;
+import static base_urls.ManagementonSchoolsBaseUrl.specViceDean;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
@@ -61,7 +62,7 @@ public class Get01 {
     public void user_sends_post_request_for_vice_dean_data() {
         // http://209.38.244.227/vicedean/getAll
         //Set the url
-        spec.pathParams("first", "vicedean", "second", "save");
+        specViceDean.pathParams("first", "vicedean", "second", "save");
 
 
         //Set the expected data
@@ -70,7 +71,7 @@ public class Get01 {
                 "niloz");
 
         //Send the request and get the response
-        response = given(spec).body(expectedData).post("{first}/{second}");
+        response = given(specViceDean).body(expectedData).post("{first}/{second}");
         response.prettyPrint();
         System.out.println("response = " + response);
     }
