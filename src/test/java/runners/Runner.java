@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
 
-        tags = "@ApiGetTeacher",
+        tags = "@Dean_Controller",
 
 
 
