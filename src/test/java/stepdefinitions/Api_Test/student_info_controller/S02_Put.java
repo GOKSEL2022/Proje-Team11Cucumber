@@ -10,7 +10,7 @@ import pojos.StudentInfoPojo;
 import pojos.StudentInfoRootPojo;
 import utilities.ObjectMapperUtils;
 
-import static base_urls.ManagementonSchoolsBaseUrl.spect;
+//import static base_urls.ManagementonSchoolsBaseUrl.spect;
 import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
