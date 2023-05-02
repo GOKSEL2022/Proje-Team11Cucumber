@@ -3,6 +3,7 @@ package stepdefinitions.Api_Test.vice_dean_controller;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
+
 import org.codehaus.jackson.map.ObjectMapper;
 import pojos.Vice_Dean_Controller_Object_Pojo;
 import pojos.Vice_Dean_Controller_Root_Pojo;
@@ -13,46 +14,21 @@ import java.io.IOException;
 import java.util.Map;
 
 import static base_urls.ManagementonSchoolsBaseUrl.specViceDean;
+
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+
 
 public class Get01 {
-    /*
-    Given
-     1) Url : http://209.38.244.227/vicedean/save
-     2) {
-          "birthDay": "1341-08-06",
-          "birthPlace": "Izmir",
-          "gender": "MALE",
-          "name": "Nilufer",
-          "password": "123123Ee",
-          "phoneNumber": "896-865-4545",
-          "ssn": "761-25-3434",
-          "surname": "ozkul",
-          "username": "niloz"
-        }
-             I send POST Request to the Url
-        Then
-            Status code is 200
-        And
-            response body is like     {
-                                        "object": {
-                                            "userId": 8,
-                                            "username": "niloz",
-                                            "name": "Nilufer",
-                                            "surname": "ozkul",
-                                            "birthDay": "1341-08-06",
-                                            "ssn": "761-25-3434",
-                                            "birthPlace": "Izmir",
-                                            "phoneNumber": "896-865-4545",
-                                            "gender": "MALE"
-                                        },
-                                        "message": "Vice dean Saved",
-                                        "httpStatus": "CREATED"
-                                       }
-
-     */
+    //http://164.92.252.42:8080/vicedean/getAll
     Response response;
+
+    @Given("Nilufer Send query to get guest user by userId={string}")
+    public void nilufer_send_query_to_get_guest_user_by_user_id(String string) {
+       specAdmin.pathParams("first","vicedean","second","getAll");
+       response = given(specAdmin).get("{first}/{second}");
+       response.prettyPrint();
+
 
     Vice_Dean_Controller_Object_Pojo expectedData;
 
@@ -72,23 +48,10 @@ public class Get01 {
         response = given(specViceDean).body(expectedData).post("{first}/{second}");
         response.prettyPrint();
         System.out.println("response = " + response);
+
     }
-
-    @Then("user gets the vice_dean data and assert")
-    public void user_gets_the_vice_dean_data_and_assert() throws IOException {
-        Vice_Dean_Controller_Object_Pojo actualData = ObjectMapperUtils.convertJsonToJava(response.asString(),Vice_Dean_Controller_Object_Pojo.class);
-        System.out.println("actualData = " + actualData);
-        assertEquals(200, response.statusCode());
-        assertEquals(expectedData.getBirthDay(), actualData.getBirthDay());
-        assertEquals(expectedData.getBirthPlace(), actualData.getBirthPlace());
-        assertEquals(expectedData.getGender(), actualData.getGender());
-        assertEquals(expectedData.getName(), actualData.getName());
-        assertEquals(expectedData.getPassword(), actualData.getPassword());
-        assertEquals(expectedData.getPhoneNumber(), actualData.getPhoneNumber());
-        assertEquals(expectedData.getSsn(), actualData.getSsn());
-        assertEquals(expectedData.getSurname(), actualData.getSurname());
-        assertEquals(expectedData.getUsername(), actualData.getUsername());
-
+    @Then("Nilufer body should be like : username={string} name={string} surname={string} birthDay={string} sss={string} birthPlace={string} phoneNumber\"{int}-{int}-{int}\" gender=\"MALE\"")
+    public void nilufer_body_should_be_like_username_name_surname_birth_day_sss_birth_place_phone_number_gender_male(String string, String string2, String string3, String string4, String string5, String string6, Integer int1, Integer int2, Integer int3) {
 
     }
 }

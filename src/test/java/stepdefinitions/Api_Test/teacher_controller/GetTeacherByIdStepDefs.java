@@ -8,9 +8,8 @@ import com.google.gson.Gson;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import pojos.ObjectPojo;
-import pojos.TeacherPojo;
-
+import pojos.Teacher_Object_Pojo;
+import pojos.TeacherrPojo;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,19 +22,32 @@ import static org.junit.Assert.assertEquals;
 
 public class GetTeacherByIdStepDefs {
     Response response;
-    TeacherPojo expectedData;
-    ObjectPojo objectPojo;
+    TeacherrPojo expectedData;
+    Teacher_Object_Pojo teacher_object_pojo;
     String username;
     String password;
 
+    //@Given("get a token with {string} username and {string} password")
+    //public void get_a_token_with_username_and_password(String string, String string2) {
+    //    // Write code here that turns the phrase above into concrete actions
+    //    throw new io.cucumber.java.PendingException();
+    //}
+
     @Given("send get request to get teacher")
     public void send_get_request_to_get_teacher() {
+
         //Set the url
         specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",35);
 
+
+        //Set the url     http://164.92.252.42:8080/teachers/getSavedTeacherById/148
+
+        specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",148);
+
+
         //Set the expected data
-        objectPojo = new ObjectPojo(35,"alican","Ali","Can","2000-01-05", "222-55-9977","Ankara","333-333-9955","MALE","ali.can@gmail.com");
-        expectedData = new TeacherPojo(objectPojo,"Teacher successfully found","OK");
+        teacher_object_pojo = new Teacher_Object_Pojo(148,"team111","mehmet","emin","2000-12-12", "888-22-3698","elazig","555-444-6666","MALE","alican@gmail.com");
+         expectedData = new TeacherrPojo(teacher_object_pojo,"Teacher successfully found","OK");
         System.out.println("expectedData = " + expectedData);
 
         //Send the request and get the response
@@ -48,18 +60,23 @@ public class GetTeacherByIdStepDefs {
 
         //1. Validation:
         response.then().statusCode(200).
-                body("object.username",equalTo(objectPojo.getUsername()),
-                        "object.name",equalTo(objectPojo.getName()),
-                        "object.surname",equalTo(objectPojo.getSurname()),
-                        "object.birthDay",equalTo(objectPojo.getBirthDay()),//Diğerleri Ödev...
+                body("object.username",equalTo(teacher_object_pojo.getUsername()),
+                        "object.name",equalTo(teacher_object_pojo.getName()),
+                        "object.surname",equalTo(teacher_object_pojo.getSurname()),
+                        "object.birthDay",equalTo(teacher_object_pojo.getBirthDay()),
+                        "object.ssn",equalTo(teacher_object_pojo.getSsn()),
+                        "object.birthPlace",equalTo(teacher_object_pojo.getBirthPlace()),
+                        "object.phoneNumber",equalTo(teacher_object_pojo.getPhoneNumber()),
+                        "object.gender",equalTo(teacher_object_pojo.getGender()),
+                        "object.email",equalTo(teacher_object_pojo.getEmail()),
                         "message",equalTo(expectedData.getMessage()));
 
         //2. Validation
         JsonPath jsonPath = response.jsonPath();
 
         assertEquals(200,response.getStatusCode());
-        assertEquals(objectPojo.getUsername(), jsonPath.getString("object.username"));
-        assertEquals(objectPojo.getName(), jsonPath.getString("object.name"));//Gerisi Ödev
+        assertEquals(teacher_object_pojo.getUsername(), jsonPath.getString("object.username"));
+        assertEquals(teacher_object_pojo.getName(), jsonPath.getString("object.name"));
 
 
         assertEquals(expectedData.getHttpStatus(), jsonPath.getString("httpStatus"));
@@ -69,38 +86,38 @@ public class GetTeacherByIdStepDefs {
         Map<String, Object> actualDataMap = response.as(HashMap.class);
 
         assertEquals(200,response.getStatusCode());
-        assertEquals(objectPojo.getUsername(),  ((Map)actualDataMap.get("object")).get("username"));
-        assertEquals(objectPojo.getName(),  ((Map)actualDataMap.get("object")).get("name"));//Gerisi Ödev
+        assertEquals(teacher_object_pojo.getUsername(),  ((Map)actualDataMap.get("object")).get("username"));
+        assertEquals(teacher_object_pojo.getName(),  ((Map)actualDataMap.get("object")).get("name"));
 
         assertEquals(expectedData.getMessage(), actualDataMap.get("message"));
         assertEquals(expectedData.getHttpStatus(), actualDataMap.get("httpStatus"));
 
         //4. Validation
-        TeacherPojo actualTeacherPojo = response.as(TeacherPojo.class);
+        TeacherrPojo actualTeacherPojo = response.as(TeacherrPojo.class);
 
-        assertEquals(objectPojo.getUsername(), actualTeacherPojo.getObject().getUsername());
-        assertEquals(objectPojo.getName(), actualTeacherPojo.getObject().getName());
-        assertEquals(objectPojo.getSurname(), actualTeacherPojo.getObject().getSurname());//Gerisi Ödev
+        assertEquals(teacher_object_pojo.getUsername(), actualTeacherPojo.getObject().getUsername());
+        assertEquals(teacher_object_pojo.getName(), actualTeacherPojo.getObject().getName());
+        assertEquals(teacher_object_pojo.getSurname(), actualTeacherPojo.getObject().getSurname());
 
         assertEquals(expectedData.getMessage(),actualTeacherPojo.getMessage());
         assertEquals(expectedData.getHttpStatus(),actualTeacherPojo.getHttpStatus());
 
         //5. Validation
-        TeacherPojo actualDataPojoMapper = new ObjectMapper().readValue(response.asString(), TeacherPojo.class);
+        TeacherrPojo actualDataPojoMapper = new ObjectMapper().readValue(response.asString(), TeacherrPojo.class);
 
-        assertEquals(objectPojo.getUsername(), actualDataPojoMapper.getObject().getUsername());
-        assertEquals(objectPojo.getName(), actualDataPojoMapper.getObject().getName());
-        assertEquals(objectPojo.getSurname(), actualDataPojoMapper.getObject().getSurname());//Gerisi Ödev
+        assertEquals(teacher_object_pojo.getUsername(), actualDataPojoMapper.getObject().getUsername());
+        assertEquals(teacher_object_pojo.getName(), actualDataPojoMapper.getObject().getName());
+        assertEquals(teacher_object_pojo.getSurname(), actualDataPojoMapper.getObject().getSurname());
 
         assertEquals(expectedData.getMessage(),actualDataPojoMapper.getMessage());
         assertEquals(expectedData.getHttpStatus(),actualDataPojoMapper.getHttpStatus());
 
         //6. Validation
-        TeacherPojo actualDataPojoGson = new Gson().fromJson(response.asString(), TeacherPojo.class);
+        TeacherrPojo actualDataPojoGson = new Gson().fromJson(response.asString(), TeacherrPojo.class);
 
-        assertEquals(objectPojo.getUsername(), actualDataPojoGson.getObject().getUsername());
-        assertEquals(objectPojo.getName(), actualDataPojoGson.getObject().getName());
-        assertEquals(objectPojo.getSurname(), actualDataPojoGson.getObject().getSurname());//Gerisi Ödev
+        assertEquals(teacher_object_pojo.getUsername(), actualDataPojoGson.getObject().getUsername());
+        assertEquals(teacher_object_pojo.getName(), actualDataPojoGson.getObject().getName());
+        assertEquals(teacher_object_pojo.getSurname(), actualDataPojoGson.getObject().getSurname());
 
         assertEquals(expectedData.getMessage(),actualDataPojoGson.getMessage());
         assertEquals(expectedData.getHttpStatus(),actualDataPojoGson.getHttpStatus());

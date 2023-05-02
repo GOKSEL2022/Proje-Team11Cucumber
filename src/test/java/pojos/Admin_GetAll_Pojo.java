@@ -1,42 +1,40 @@
 package pojos;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+public class Admin_GetAll_Pojo {
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ObjectPojo {
-    private int userId;
-    private String username;
-    private String name;
-    private String surname;
-    private String birthDay;
-    private String ssn;
-    private String birthPlace;
-    private String phoneNumber;
-    private String gender;
-    private String email;
+        private int id;
+        private String username;
+        private String ssn;
+        private String name;
+        private String surname;
+        private String birthDay;
+        private String birthPlace;
+        private String phoneNumber;
+        private String gender;
+        private boolean built_in;
 
-    public ObjectPojo() {
+    public Admin_GetAll_Pojo() {
     }
 
-    public ObjectPojo(int userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender, String email) {
-        this.userId = userId;
+    public Admin_GetAll_Pojo(int id, String username, String ssn, String name, String surname, String birthDay, String birthPlace, String phoneNumber, String gender, boolean built_in) {
+        this.id = id;
         this.username = username;
+        this.ssn = ssn;
         this.name = name;
         this.surname = surname;
         this.birthDay = birthDay;
-        this.ssn = ssn;
         this.birthPlace = birthPlace;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
-        this.email = email;
+        this.built_in = built_in;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -45,6 +43,14 @@ public class ObjectPojo {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
     public String getName() {
@@ -71,14 +77,6 @@ public class ObjectPojo {
         this.birthDay = birthDay;
     }
 
-    public String getSsn() {
-        return ssn;
-    }
-
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
-
     public String getBirthPlace() {
         return birthPlace;
     }
@@ -103,27 +101,28 @@ public class ObjectPojo {
         this.gender = gender;
     }
 
-    public String getEmail() {
-        return email;
+    public boolean isBuilt_in() {
+        return built_in;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setBuilt_in(boolean built_in) {
+        this.built_in = built_in;
     }
 
     @Override
     public String toString() {
-        return "ObjectPojo{" +
-                "userId=" + userId +
+        return "Admin_GetAll_Pojo{" +
+                "id=" + id +
                 ", username='" + username + '\'' +
+                ", ssn='" + ssn + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthDay='" + birthDay + '\'' +
-                ", ssn='" + ssn + '\'' +
                 ", birthPlace='" + birthPlace + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender='" + gender + '\'' +
-                ", email='" + email + '\'' +
+                ", built_in=" + built_in +
                 '}';
     }
 }
+

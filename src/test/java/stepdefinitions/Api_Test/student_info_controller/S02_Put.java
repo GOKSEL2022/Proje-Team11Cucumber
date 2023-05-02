@@ -10,7 +10,11 @@ import pojos.StudentInfoPojo;
 import pojos.StudentInfoRootPojo;
 import utilities.ObjectMapperUtils;
 
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+//import static base_urls.ManagementonSchoolsBaseUrl.spect;
+import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
+
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static stepdefinitions.Api_Test.student_info_controller.S01_Post.student_info_id;
@@ -29,7 +33,11 @@ public class S02_Put {
     @Given("teacher sends the student info data_PUT")
     public void teacherSendsTheStudentInfoData_PUT() {
 
-        spec.pathParams("first", "studentInfo", "second", "save","third",student_info_id);
+
+        specTeacher.pathParams("first", "studentInfo", "second", "save","third",student_info_id);
+
+        specAdmin.pathParams("first", "studentInfo", "second", "save","third",student_info_id);
+
         expectedData = new StudentInfoPojo(absente_update,
                 educationTermId,
                 finalExam_update,
@@ -38,7 +46,11 @@ public class S02_Put {
                 midtermExam_update,
                 studentId);
         System.out.println("expectedData = " + expectedData);
-        response = given().spec(spec).when().body(expectedData).put("{first}/{second}/{third}");
+
+        response = given().spec(specTeacher).when().body(expectedData).put("{first}/{second}/{third}");
+
+        response = given().spec(specAdmin).when().body(expectedData).put("{first}/{second}/{third}");
+
         response.prettyPrint();
 
     }
