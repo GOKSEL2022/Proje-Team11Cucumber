@@ -12,6 +12,7 @@ import pojos.Teacher_Object_Pojo;
 import pojos.TeacherrPojo;
 import java.util.HashMap;
 import java.util.Map;
+
 import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -35,9 +36,14 @@ public class GetTeacherByIdStepDefs {
     @Given("send get request to get teacher")
     public void send_get_request_to_get_teacher() {
 
+        //Set the url
+        specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",35);
+
+
         //Set the url     http://164.92.252.42:8080/teachers/getSavedTeacherById/148
 
         specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",148);
+
 
         //Set the expected data
         teacher_object_pojo = new Teacher_Object_Pojo(148,"team111","mehmet","emin","2000-12-12", "888-22-3698","elazig","555-444-6666","MALE","alican@gmail.com");
