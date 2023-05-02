@@ -28,13 +28,13 @@ public class US04_AC05_TC01DateOfBirthBos {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
 
-    @And("Alı Date Of Bırth alanini bos birakir")
+    @And("Ali Date Of Bırth alanini bos birakir")
     public void AlıDateOfBırthAlaniniBosBirakir() {
         deanManagementPage.dateOfBirth_Add_Dean.sendKeys(Keys.TAB);
     }
 
 
-    @Then("Alı kayit olunamadigi required mesajini alir")
+    @Then("Ali kayit olunamadigi required mesajini alir")
     public void AlıKayitOlunamadigiRequiredMesajiniAlir() {
         Assert.assertFalse(deanManagementPage.dateOfBirth_Required_Message_Add_Dean.isDisplayed());
     }

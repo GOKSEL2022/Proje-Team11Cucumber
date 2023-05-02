@@ -27,12 +27,12 @@ public class US04_AC03_TC01BirthPlaceBos {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Bırth Place {string} alanini bos birakir")
+    @And("Ali Bırth Place {string} alanini bos birakir")
     public void AlıBırthPlaceAlaniniBosBirakir(String arg0) {
 
     }
 
-    @Then("Alı textboxin altinda Required mesajini gorur")
+    @Then("Ali textboxin altinda Required mesajini gorur")
     public void AlıTextboxinAltindaRequiredMesajiniGorur() {
         Assert.assertTrue(deanManagementPage.birthPlace_Required_Message_Add_Dean.isDisplayed());
     }

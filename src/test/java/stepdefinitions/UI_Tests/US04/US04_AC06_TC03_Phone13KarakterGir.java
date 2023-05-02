@@ -23,13 +23,13 @@ public class US04_AC06_TC03_Phone13KarakterGir {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
 
     Faker faker = new Faker();
-    @And("Alı Phone {string} alanina onuc karakter veri girer")
+    @And("Ali Phone {string} alanina onuc karakter veri girer")
     public void AlıPhoneAlaninaOnucKarakterVeriGirer(String arg0) {
         deanManagementPage.phoneNumber_Add_Dean.sendKeys(arg0);
 
     }
 
-    @Then("Alı sayfada  Phone number should be exact {int} characters mesaji alir")
+    @Then("Ali sayfada  Phone number should be exact {int} characters mesaji alir")
     public void AlıSayfadaPhoneNumberShouldBeExactCharactersMesajiAlir(int arg0) {
         Assert.assertTrue(deanManagementPage.phoneNumber_Minimum12_Character_Message_Add_Dean.isDisplayed());
     }

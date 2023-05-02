@@ -44,3 +44,5 @@ public class ManagementonSchoolsBaseUrl  {
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
 }
+
+
