@@ -28,7 +28,7 @@ public class ManagementonSchoolsBaseUrl  {
         specDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
                 addHeader("Authorization",generateToken("12345678","gooddean"))
 
-                .setBaseUri("http://164.92.252.42").build();
+
 
                 .setBaseUri("http://164.92.252.42:8080").build();
 
