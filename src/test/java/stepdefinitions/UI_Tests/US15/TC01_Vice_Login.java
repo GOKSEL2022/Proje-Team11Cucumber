@@ -1,6 +1,7 @@
 package stepdefinitions.UI_Tests.US15;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
@@ -71,7 +72,4 @@ public class TC01_Vice_Login {
 
 
     }
-
-
-
 }
