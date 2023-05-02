@@ -4,7 +4,7 @@ Feature: US23
 
   Scenario Outline: US23
 
-    Given Nilufer "https://www.managementonschools.com/" url'ine git
+    Given Nilufer "http://139.59.159.36:3000/" url'ine git
     When Nilufer Home sayfasindaki Login buttonuna tikla
     And Nilufer Admin olarak User Name'i gir
     And Nilufer Admin olarak Password'u gir
