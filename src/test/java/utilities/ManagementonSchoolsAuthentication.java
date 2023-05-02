@@ -21,4 +21,8 @@ public class ManagementonSchoolsAuthentication {
         return response.jsonPath().getString("token");
     }
 
+
 }
+
+    }
+

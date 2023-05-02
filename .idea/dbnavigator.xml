@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db">
-      <console name="ManagementOnSchools" type="STANDARD" schema="school_management" session="Main"><![CDATA[select * from teacher]]></console>
+      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM teacher WHERE id = 5;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -21,6 +21,16 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db" dataset="public.dean" active-filter-id="5ef26d6b-5539-48fd-a700-7fa558ec4b60">
+      <filter id="5ef26d6b-5539-48fd-a700-7fa558ec4b60" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="birth_day" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -34,12 +44,12 @@
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="14.7" />
+          <database-version value="15.2" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="209.38.244.227" />
+          <host value="164.92.252.42" />
           <port value="5432" />
           <database value="school_management" />
           <type value="USER_PASSWORD" />

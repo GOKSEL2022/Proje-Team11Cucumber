@@ -28,12 +28,12 @@ public class US04_AC09_TC01PasswordBos {
     int ssnNo2= Faker.instance().number().numberBetween(10,99);
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
-    @And("Alı password {string} alanini bos birakir")
+    @And("Ali password {string} alanini bos birakir")
     public void AlıPasswordAlaniniBosBirakir(String arg0) {
         deanManagementPage.password_Add_Dean.sendKeys(arg0);
     }
 
-    @Then("Alı Required uyari mesajini alir")
+    @Then("Ali Required uyari mesajini alir")
     public void AlıRequiredUyariMesajiniAlir() {
         Assert.assertTrue(deanManagementPage.password_Required_Message_Add_Dean.isDisplayed());
     }

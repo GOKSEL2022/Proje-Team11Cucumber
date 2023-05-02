@@ -10,7 +10,11 @@ import pojos.MessageSavePojo;
 import pojos.MessagePostPojo;
 
 
+
 import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
+
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+
 import static io.restassured.RestAssured.given;
 
 public class post_message {
@@ -21,7 +25,11 @@ public class post_message {
 
     @Given("Set the Url post message")
     public void setTheUrlPostMessage() {
+
         specTeacher.pathParams("first","contactMessages","second","save");
+
+        specAdmin.pathParams("first","contactMessages","second","save");
+
     }
 
     @And("Set the expected data post message")
@@ -33,7 +41,11 @@ public class post_message {
 
     @When("Send the request and get the response post message")
     public void sendTheRequestAndGetTheResponsePostMessage() {
+
         response=given(specTeacher).when().body(expectedData).post("{first}/{second}");
+
+        response=given(specAdmin).when().body(expectedData).post("{first}/{second}");
+
         response.prettyPrint();
     }
 
