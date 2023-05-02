@@ -20,4 +20,9 @@ public class ManagementonSchoolsAuthentication {
         response.prettyPrint();
         return response.jsonPath().getString("token");
     }
+
+
+}
+
     }
+
