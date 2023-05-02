@@ -11,6 +11,7 @@ import pojos.Dean_Pojo;
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertEquals;
 
 public class Dean_Controller_PostStepDefs {
 
@@ -80,8 +81,8 @@ http://164.92.252.42:8080/dean/delete/userid(29)
 
      */
 //http://164.92.252.42:8080/dean/save
-    @Given("dean olusturmak icin data istegi gonder ve gelen datayi al")
-    public void dean_olusturmak_icin_data_istegi_gonder_ve_gelen_datayi_al() {
+    @Given("Ali dean olusturmak icin data istegi gonder ve gelen datayi al")
+    public void aliDeanOlusturmakIcinDataIstegiGonderVeGelenDatayi() {
         specAdmin.pathParams("first","dean","second","save");
 
         dean_object_pojo=new Dean_Object_Pojo(200,"hasan36","veli","tarik","2000-01-01","405-47-6721","van","230-545-2004","MALE");
@@ -91,12 +92,45 @@ http://164.92.252.42:8080/dean/delete/userid(29)
         response.prettyPrint();
     }
 
-    @Given("gelen datalari test et")
-    public void gelen_datalari_test_et() {
+    @And("Ali gelen datalari test et")
+    public void aliGelenDatalariTestEt() {
+        Dean_Pojo actualDeanPojo = response.as(Dean_Pojo.class);
 
-        //1.validation
+        assertEquals(dean_object_pojo.getUsername(), actualDeanPojo.getObject().getUsername());
+        assertEquals(dean_object_pojo.getName(), actualDeanPojo.getObject().getName());
+        assertEquals(dean_object_pojo.getSurname(), actualDeanPojo.getObject().getSurname());
+        assertEquals(dean_object_pojo.getBirthDay(), actualDeanPojo.getObject().getBirthDay());
+        assertEquals(dean_object_pojo.getSsn(), actualDeanPojo.getObject().getSsn());
+        assertEquals(dean_object_pojo.getBirthPlace(), actualDeanPojo.getObject().getBirthPlace());
+        assertEquals(dean_object_pojo.getPhoneNumber(), actualDeanPojo.getObject().getPhoneNumber());
+        assertEquals(dean_object_pojo.getGender(), actualDeanPojo.getObject().getGender());
 
+
+        assertEquals(expectedData.getMessage(),actualDeanPojo.getMessage());
+        assertEquals(expectedData.getHttpStatus(),actualDeanPojo.getHttpStatus());
+    }
+
+
+
+    {
+       /* "birthDay": "2000-01-01",
+            "birthPlace": "van",
+            "gender": "MALE",
+            "name": "veli",
+            "password": "987654321",
+            "phoneNumber": "230-545-2004",
+            "ssn": "405-47-6721",
+            "surname": "tarik",
+            "username": "hasan36"
+
+        */
+    }
 
 
     }
-}
+
+
+
+
+
+
