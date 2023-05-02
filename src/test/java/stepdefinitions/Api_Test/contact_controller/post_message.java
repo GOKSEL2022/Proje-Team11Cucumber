@@ -11,6 +11,9 @@ import pojos.MessagePostPojo;
 
 
 
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
+
+
 import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
@@ -25,6 +28,9 @@ public class post_message {
 
     @Given("Set the Url post message")
     public void setTheUrlPostMessage() {
+
+        specAdmin.pathParams("first","contactMessages","second","save");
+
 
         specTeacher.pathParams("first","contactMessages","second","save");
 
@@ -41,6 +47,9 @@ public class post_message {
 
     @When("Send the request and get the response post message")
     public void sendTheRequestAndGetTheResponsePostMessage() {
+
+        response=given(specAdmin).when().body(expectedData).post("{first}/{second}");
+
 
         response=given(specTeacher).when().body(expectedData).post("{first}/{second}");
 
