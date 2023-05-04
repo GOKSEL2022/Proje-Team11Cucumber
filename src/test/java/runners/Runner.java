@@ -22,7 +22,6 @@ import org.junit.runner.RunWith;
         tags = "@admin",
 
 
-        tags = "@Dean_Controller",
 
 
 

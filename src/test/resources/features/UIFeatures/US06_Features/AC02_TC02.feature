@@ -10,7 +10,7 @@ Feature: US06
     And Nilufer Dean olarak Password'u girer
     And Nilufer Login buttonuna tiklar
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
-    And Nilufer Name alanina "<Name>" girmeyerek bos birakir
+    And Nilufer Name alanina Name girmeyerek bos birakir
     And Nilufer Surname alanina tiklar
     And Nilufer Name alani altinda Required mesajini gorur
     And Nilufer Name alanina valid bir "<Name>" girer
@@ -19,7 +19,6 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Name    |
-      |         |
       | Nilufer |
 
 

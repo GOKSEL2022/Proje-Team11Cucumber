@@ -10,7 +10,7 @@ Feature: US06
     And Nilufer Dean olarak Password'u girer
     And Nilufer Login buttonuna tiklar
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
-    And Nilufer Phone alanina "<Phone>" girmeyerek bos birakir
+    And Nilufer Phone alanina Phone girmeyerek bos birakir
     And Nilufer Ssn alanina tiklar
     And Nilufer Phone alani altinda Required mesajini gorur
     And Nilufer Phone alanina valid bir "<Phone>" girer
@@ -19,5 +19,4 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Phone        |
-      |              |
       | 552-919-2222 |
