@@ -1,4 +1,4 @@
-package stepdefinitions.Api_Test.stundent_controller;
+package stepdefinitions.DataBase_Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,17 +12,17 @@ public class US15_JDBC_Fatih {
     ResultSet resultSet;
     Connection connection;
     Statement statement;
-    @Given("Find student by ID")
+    @Given("Fatih Find student by ID")
     public void findStudentByID() throws SQLException {
         //SELECT * FROM student WHERE id = 54;
-        connection = DriverManager.getConnection("postgresql://164.92.252.42:8080/school_management", "select_user", "43w5ijfso");
+        connection = DriverManager.getConnection("jdbc:postgresql://164.92.252.42:5432/school_management", "select_user", "43w5ijfso");
         statement = connection.createStatement();
         resultSet = statement.executeQuery("SELECT * FROM student WHERE id = 54");
 
         resultSet.next();
     }
 
-    @Then("Validate data student")
+    @Then("Fatih Validate data student")
     public void validateDataStudent() throws SQLException {
 
         assertEquals("2005-05-24", resultSet.getString("birth_day"));
