@@ -13,7 +13,7 @@ import static base_urls.ManagementonSchoolsBaseUrl.*;
 public class Hooks {
 
 
-    @Before("@gokselAPI")
+    @Before("@admin")
     public void beforeApiAdmin() {
         System.out.println("Before Method for admin");
         schoolsetupAdmin();
