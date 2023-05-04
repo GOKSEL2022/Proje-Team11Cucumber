@@ -1,4 +1,4 @@
-@Admin_Controller @gokselAPI
+@Admin_Controller @gokselAPI @admin
 Feature: Admin_Controller
 
   Scenario: TC01_Validate_Admin_Post

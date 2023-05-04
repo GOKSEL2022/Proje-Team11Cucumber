@@ -1,4 +1,4 @@
-@gokselAPI
+@gokselAPI @admin
 Feature: GuestUser_Controller
 
   Scenario: TC02_Validate_GuestUser_Post
