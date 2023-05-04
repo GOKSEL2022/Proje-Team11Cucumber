@@ -20,6 +20,14 @@ public class ManagementonSchoolsAuthentication {
         response.prettyPrint();
         return response.jsonPath().getString("token");
     }
+    public static String generateToken1(){
+        String postBody = "{ \"password\": \"485424698\",  \"username\": \"Admin\"\n" +"}";
+
+        Response response = given().contentType(ContentType.JSON).body(postBody).post("http://164.92.252.42:8080/auth/login");
+
+        return response.jsonPath().getString("token");
+
+    }
 
 
 }

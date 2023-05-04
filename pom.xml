@@ -125,7 +125,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.5.4</version>
         </dependency>
-
     </dependencies>
     <!--    PLUG INS-->
     <build>

@@ -8,7 +8,6 @@ public class AC05_TC05 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
     @And("Nilufer Gender alanini bos birakir")
     public void kullanici_gender_alanini_bos_birakir() {
-        deanViceDeanPage.Admin_Vice_Dean_Female_Radio_Button.click();
         ReusableMethods.waitFor(2);
 
     }
