@@ -44,6 +44,7 @@ public class TC03_Admin_Controller_DeleteStepDefs {
     @Then("Do assertion Admin_Delete")
     public void do_assertion_admin_delete() {
         assertEquals(200, response.statusCode());
+        //assertEquals(500, response.statusCode());
         assertEquals(expectedData, response.asString());
 
     }
