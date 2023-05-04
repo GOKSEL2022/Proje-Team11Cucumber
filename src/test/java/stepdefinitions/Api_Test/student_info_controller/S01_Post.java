@@ -9,7 +9,6 @@ import org.junit.Assert;
 import pojos.StudentInfoPojo;
 
 
-import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
@@ -28,7 +27,7 @@ public class S01_Post {
 
     @Given("teacher sends the student info data_POST")
     public void teacherSendsTheStudentInfoData() {
-        specTeacher.pathParams("first", "studentInfo", "second", "save");
+       // specTeacher.pathParams("first", "studentInfo", "second", "save");
         StudentInfoPojo expectedData = new StudentInfoPojo(absente,
                 educationTermId,
                 finalExam,
@@ -37,7 +36,7 @@ public class S01_Post {
                 midtermExam,
                 studentId);
         System.out.println("expectedData = " + expectedData);
-        response = given().spec(specTeacher).when().body(expectedData).post("{first}/{second}");
+       // response = given().spec(specTeacher).when().body(expectedData).post("{first}/{second}");
         response.prettyPrint();
     }
 

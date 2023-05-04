@@ -8,32 +8,29 @@ import static org.junit.Assert.*;
 
 public class AC02_TC02 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
-    @And("Nilufer Name alanina {string} girmeyerek bos birak")
-    public void name_alanina_girmeyerek_bos_birak(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Name.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
+
     @And("Nilufer Surname alanina tikla")
-    public void surname_alanina_tikla() {
+    public void Nilufer_kullanici_surname_alanina_tiklar() {
         adminViceDeanPage.Admin_Vice_Dean_Surname.click();
         ReusableMethods.waitFor(2);
     }
+
     @And("Nilufer Name alani altinda Required mesajini gor")
-    public void name_alani_altinda_required_mesajini_gor() {
-        ReusableMethods.waitFor(5);
+    public void Nilufer_kullanici_name_alani_altinda_required_mesajini_gorur() {
         assertEquals(8, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
-        ReusableMethods.waitFor(5);
     }
     @And("Nilufer Name alanina valid bir {string} gir")
-    public void niluferNameAlaninaValidBirGir(String arg0) {
+    public void niluferNameAlaninaValidBirGirer(String arg0) {
         adminViceDeanPage.Admin_Vice_Dean_Name.sendKeys(arg0);
     }
     @And("Nilufer Name alani altinda hata mesaji goruntulenmemeli")
-    public void name_alani_altinda_hata_mesaji_goruntulenmemeli() {
-        ReusableMethods.waitFor(5);
+    public void Nilufer_kullanici_name_alani_altinda_hata_mesaji_goruntulenmemelidir() {
         assertEquals(7, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
-        ReusableMethods.waitFor(5);
     }
 
 
+    @And("Nilufer Name alanina Name girmeyerek bos birak")
+    public void niluferNameAlaninaNameGirmeyerekBosBirakir() {
+        adminViceDeanPage.Admin_Vice_Dean_Name.click();
+    }
 }
