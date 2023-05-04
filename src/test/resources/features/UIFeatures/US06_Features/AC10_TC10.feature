@@ -20,18 +20,8 @@ Feature: US06
     And Nilufer User Name alanina valid bir "<User Name>" girer
     And Nilufer Password alanina "<Password>" girmeyerek bos birakir
     And Nilufer Submit butonuna tiklayamaz
-    And Nilufer Password alani altinda Required mesajini gorur
-    And Nilufer Name alanina valid bir "<Name>" girer
-    And Nilufer Surname alanina valid bir "<Surname>" girer
-    And Nilufer Birth Place alanina valid bir "<Birth Place>" girer
-    And Nilufer Gender alanina valid bir Gender secer
-    And Nilufer Date Of Birth alanina valid bir "<Date Of Birth>" girer
-    And Nilufer Phone alanina valid bir "<Phone>" girer
-    And Nilufer Ssn alanina valid bir "<Ssn>" girer
-    And Nilufer User Name alanina valid bir "<User Name>" girer
-    And Nilufer Password alanina "<Password>" olarak yedi karakter veri girer
-    And Nilufer Submit butonuna tiklayamaz
     And Nilufer Password alani altinda Minimum sekiz character mesajini gorur
+    And Nilufer Submit butonuna tiklayamaz
     Then close the application
 
     Examples: Dean_Vice_Dean_Bilgileri

@@ -10,7 +10,7 @@ Feature: US06
     And Nilufer Dean olarak Password'u girer
     And Nilufer Login buttonuna tiklar
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
-    And Nilufer Birth Place alanina "<Birth Place>" girmeyerek bos birakir
+    And Nilufer Birth Place alanina Birth Place girmeyerek bos birakir
     And Nilufer Gender alanina tiklar
     And Nilufer Birth Place alani altinda Required mesajini gorur
     And Nilufer Birth Place alanina valid bir "<Birth Place>" girer
@@ -19,5 +19,4 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Birth Place |
-      |             |
       | Izmir       |

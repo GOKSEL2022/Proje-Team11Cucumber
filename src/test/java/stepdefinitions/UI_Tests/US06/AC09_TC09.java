@@ -8,11 +8,7 @@ import static org.junit.Assert.*;
 
 public class AC09_TC09 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
-    @And("Nilufer User Name alanina {string} girmeyerek bos birakir")
-    public void kullanici_user_name_alanina_girmeyerek_bos_birakir(String string) {
-          deanViceDeanPage.Admin_Vice_Dean_Username.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
+
     @And("Nilufer Password alanina tiklar")
     public void kullanici_password_alanina_tiklar() {
          deanViceDeanPage.Admin_Vice_Dean_Password.click();
@@ -27,6 +23,12 @@ public class AC09_TC09 {
     @And("Nilufer User Name alani altinda hata mesaji goruntulenmemelidir")
     public void kullanici_user_name_alani_altinda_hata_mesaji_goruntulenmemelidir() {
         assertEquals(7, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
+        ReusableMethods.waitFor(2);
+    }
+
+    @And("Nilufer User Name alanina User Name girmeyerek bos birakir")
+    public void niluferUserNameAlaninaUserNameGirmeyerekBosBirakir() {
+        deanViceDeanPage.Admin_Vice_Dean_Username.click();
         ReusableMethods.waitFor(2);
     }
 }

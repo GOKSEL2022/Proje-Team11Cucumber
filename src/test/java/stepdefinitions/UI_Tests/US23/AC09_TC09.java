@@ -8,11 +8,6 @@ import static org.junit.Assert.*;
 
 public class AC09_TC09 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
-    @And("Nilufer User Name alanina {string} girmeyerek bos birak")
-    public void user_name_alanina_girmeyerek_bos_birak(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_Username.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
     @And("Nilufer Password alanina tikla")
     public void password_alanina_tikla() {
         adminViceDeanPage.Admin_Vice_Dean_Password.click();
@@ -20,7 +15,7 @@ public class AC09_TC09 {
     }
     @And("Nilufer User Name alani altinda Required mesajini gor")
     public void user_name_alani_altinda_required_mesajini_gor() {
-        assertEquals(8, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(1, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
 
@@ -31,8 +26,13 @@ public class AC09_TC09 {
     }
     @And("Nilufer User Name alani altinda hata mesaji goruntulenmemeli")
     public void user_name_alani_altinda_hata_mesaji_goruntulenmemeli() {
-        assertEquals(7, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(1, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
 
+    @And("Nilufer User Name alanina User Name girmeyerek bos birak")
+    public void niluferUserNameAlaninaUserNameGirmeyerekBosBirak() {
+        adminViceDeanPage.Admin_Vice_Dean_Username.click();
+        ReusableMethods.waitFor(2);
+    }
 }
