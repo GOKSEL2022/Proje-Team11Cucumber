@@ -12,7 +12,7 @@ import pojos.Guest_User_Pojo;
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
 
-public class GuestUserPostStepDefs {
+public class GuestUser_PostStepDefs {
     Response response;
     Guest_User_Object_Pojo guest_user_object_pojo;
     Guest_User_Pojo expectedData;

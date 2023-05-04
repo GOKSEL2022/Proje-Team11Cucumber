@@ -17,15 +17,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
-
-
-        tags = "@admin",
-
-
-        tags = "@Dean_Controller",
-
-
-
+        tags = "@gokselDatabase",
         dryRun = false
 )
 
