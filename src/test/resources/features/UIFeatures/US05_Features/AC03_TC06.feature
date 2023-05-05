@@ -3,7 +3,7 @@ Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
 
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     And Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -33,12 +33,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     Then Ali dean Update mesajini gorur
 
-
-
-
-
-
 #
     Examples: dean_bilgileri
       | Username   | Password   | Name    | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | karakartal | 987654321  | sevilay | *****    | " "         | 29-03-2001    | 090-505-8196  | 505-41-6328  |Team11     | 57916929 |
+      | Admin      | 485424698  | sevilay | *****    | " "         | 29-03-2001    | 090-505-8196  | 505-41-6328  |Team11     | 57916929 |

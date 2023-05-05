@@ -10,12 +10,7 @@ import static org.junit.Assert.*;
 
 public class AC02_TC02 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
-    RegisterPage registerPage=new RegisterPage();
-    @And("Nilufer Name alanina {string} girmeyerek bos birakir")
-    public void Nilufer_kullanici_name_alanina_girmeyerek_bos_birakir(String string) {
-       deanViceDeanPage.Admin_Vice_Dean_Name.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
+
     @And("Nilufer Surname alanina tiklar")
     public void Nilufer_kullanici_surname_alanina_tiklar() {
        deanViceDeanPage.Admin_Vice_Dean_Surname.click();
@@ -36,4 +31,8 @@ public class AC02_TC02 {
     }
 
 
+    @And("Nilufer Name alanina Name girmeyerek bos birakir")
+    public void niluferNameAlaninaNameGirmeyerekBosBirakir() {
+        deanViceDeanPage.Admin_Vice_Dean_Name.click();
+    }
 }

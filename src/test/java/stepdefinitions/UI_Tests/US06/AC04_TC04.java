@@ -8,11 +8,7 @@ import static org.junit.Assert.*;
 
 public class AC04_TC04 {
     DeanViceDeanPage deanViceDeanPage = new DeanViceDeanPage();
-    @And("Nilufer Birth Place alanina {string} girmeyerek bos birakir")
-    public void kullanici_birth_place_alanina_girmeyerek_bos_birakir(String string) {
-      deanViceDeanPage.Admin_Vice_Dean_BirthPlace.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
+
     @And("Nilufer Gender alanina tiklar")
     public void kullanici_gender_alanina_tiklar() {
         deanViceDeanPage.Admin_Vice_Dean_Female_Radio_Button.click();
@@ -37,4 +33,9 @@ public class AC04_TC04 {
     }
 
 
+    @And("Nilufer Birth Place alanina Birth Place girmeyerek bos birakir")
+    public void niluferBirthPlaceAlaninaBirthPlaceGirmeyerekBosBirakir() {
+        deanViceDeanPage.Admin_Vice_Dean_BirthPlace.click();
+        ReusableMethods.waitFor(2);
+    }
 }
