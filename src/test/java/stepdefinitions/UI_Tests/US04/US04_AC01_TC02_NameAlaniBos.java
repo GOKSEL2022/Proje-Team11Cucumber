@@ -28,7 +28,7 @@ public class US04_AC01_TC02_NameAlaniBos {
 
     Faker faker = new Faker();
     @And("Ali Name {string} alanina veri girmez")
-    public void AlıNameAlaninaVeriGirmez(String arg0) {
+    public void AliNameAlaninaVeriGirmez(String arg0) {
 
         Assert.assertFalse(deanManagementPage.name_Required_Message_Add_Dean.isDisplayed());
 

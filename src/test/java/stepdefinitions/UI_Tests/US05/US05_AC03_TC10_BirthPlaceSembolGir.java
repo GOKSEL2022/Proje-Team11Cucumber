@@ -15,7 +15,7 @@ import java.io.IOException;
 public class US05_AC03_TC10_BirthPlaceSembolGir {
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Ali Birth Place textboxinin icine sembol girer")
-    public void kullanıcıBirthPlaceTextboxininIcineSembolGirer() {
+    public void kullaniciBirthPlaceTextboxininIcineSembolGirer() {
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         editDeanPage.birthPlace_Edit_Dean.sendKeys("*****");
         editDeanPage.female_Checkbox_Edit_Dean.click();
