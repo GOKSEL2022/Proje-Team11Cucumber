@@ -49,14 +49,15 @@ public class AC01_TC01_OgrenciSecebilmeStepDefinition {
     }
     @When("Emin menuu butonuna tiklar")
     public void Emin_menuu_butonuna_tiklar() {
-        mainMenuPage.menu_button.click();
+       // mainMenuPage.menu_button.click();
+        ReusableMethods.clickByJS(mainMenuPage.menu_button);
         ReusableMethods.waitFor(1);
     }
 
 
     @When("Emin Meet Management butonuna tiklar")
     public void Emin_meet_management_butonuna_tiklar() {
-     mainMenuPage.meet_management_button.click();
+     ReusableMethods.clickByJS(mainMenuPage.meet_management_button);
         ReusableMethods.waitFor(2);
     }
     @When("Emin choose student alanindan ogrenci secer")
@@ -64,7 +65,7 @@ public class AC01_TC01_OgrenciSecebilmeStepDefinition {
         mainMenuPage.choose_students.click();
         Thread.sleep(2000);
         Actions action=new Actions(Driver.getDriver());
-        action.keyDown(Keys.ARROW_DOWN).sendKeys("Ogrenci 23",Keys.ENTER).perform();
+        action.keyDown(Keys.ARROW_DOWN).sendKeys("Huseyin Kemal Bulat",Keys.ENTER).perform();
          ReusableMethods.waitFor(2);
     }
     @Then("Emin secilen ogrenciyi dogrular")
