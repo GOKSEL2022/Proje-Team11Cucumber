@@ -43,7 +43,7 @@ public class GetTeacherByIdStepDefss {
 //        "email": "alican@gmail.com"
 //    },
 
-
+//
         //Send the request and get the response
         response = given(specAdmin).get("{first}/{second}/{third}");
         response.prettyPrint();
