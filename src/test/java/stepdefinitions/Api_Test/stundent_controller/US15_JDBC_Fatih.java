@@ -21,7 +21,6 @@ public class US15_JDBC_Fatih {
 
         resultSet.next();
     }
-
     @Then("Validate data student")
     public void validateDataStudent() throws SQLException {
 
