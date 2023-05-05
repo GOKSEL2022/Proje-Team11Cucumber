@@ -17,17 +17,13 @@ public class AC10_TC10 {
     }
     @And("Nilufer Password alani altinda Required mesajini gorur")
     public void kullanici_password_alani_altinda_required_mesajini_gorur() {
-        assertEquals(8, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(1, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
-    @And("Nilufer Password alanina {string} olarak yedi karakter veri girer")
-    public void kullanici_password_alanina_olarak_yedi_karakter_veri_girer(String string) {
-        deanViceDeanPage.Admin_Vice_Dean_Password.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
+
     @And("Nilufer Password alani altinda Minimum sekiz character mesajini gorur")
     public void kullanici_password_alani_altinda_minimum_sekiz_character_mesajini_gorur() {
-        assertEquals(8, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(0, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
 }

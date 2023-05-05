@@ -8,7 +8,7 @@ public class AC05_TC05 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
     @And("Nilufer Gender alanini bos birak")
     public void gender_alanini_bos_birak() {
-
+        ReusableMethods.waitFor(2);
     }
     @And("Nilufer Submit butonuna tiklayama")
     public void submit_butonuna_tiklayama() {
