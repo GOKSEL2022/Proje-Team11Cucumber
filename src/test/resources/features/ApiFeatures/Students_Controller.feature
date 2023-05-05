@@ -1,14 +1,10 @@
-@AC15_student
+@admin
 Feature:
 
   Scenario: US15_student_as_a_admin_post
     Given Fatih admin sends the student data_POST
     Then Fatih admin gets the student data and assert_POST
 
-
-  Scenario: TC15_student_as_a_admin_put
-    Given Fatih admin sends the student data_PUT
-    Then Fatih admin gets the student data and assert_PUT
 
 
   Scenario Outline: TC15_student_as_a_admin_GET
@@ -17,7 +13,7 @@ Feature:
     Examples:
       | userId | username      | name     | surname | birthDay   | birthPlace | phoneNumber  | gender | studentNumber | motherName | fatherName | email                | active |
       | 662    | kalmelikatmet | username | kaskkc  | 1999-09-12 | konya      | 235-524-8872 | MALE   | 1658          | ummu       | aliosman   | fatih987@hotmail.com | true   |
-
+      
       #     {
       #    "object": {
       #        "userId": 662,
@@ -36,6 +32,3 @@ Feature:
       #    },
       #    "message": "Student saved Successfully"
 
-  Scenario: TC15_student_as_a_admin_DELETE
-    Given Fatih admin sends the student data_DELETE
-    Then Fatih admin gets the student data and assert_DELETE

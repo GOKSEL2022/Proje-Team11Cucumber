@@ -2,8 +2,8 @@ package pojos;
 
 public class Student_Post_Pojo {
 
-    public Student_Post_Object_Pojo object;
-    public String message;
+    private Student_Post_Object_Pojo object;
+    private String message;
 
 
     public Student_Post_Pojo() {
