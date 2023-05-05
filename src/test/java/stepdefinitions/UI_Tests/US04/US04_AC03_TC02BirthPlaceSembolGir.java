@@ -42,7 +42,7 @@ public class US04_AC03_TC02BirthPlaceSembolGir {
     }
 
     @Then("Ali Dean Save mesaji alir")
-    public void AlıDeanSaveMesajiAlir() throws IOException {
+    public void AliDeanSaveMesajiAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

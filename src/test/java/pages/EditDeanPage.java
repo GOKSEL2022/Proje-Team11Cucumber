@@ -38,7 +38,7 @@ public class EditDeanPage {
     @FindBy(xpath = "//*[@id='birthDay']")
     public WebElement dateOfBirth_Edit_Dean;
 
-    @FindBy(xpath = "//input[@id='ssn']")
+    @FindBy(xpath = "//*[@id='ssn']")
     public WebElement ssn_Edit_Dean;
 
     @FindBy(xpath = "//*[@id='username']")
@@ -71,7 +71,7 @@ public class EditDeanPage {
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[9]")
     public WebElement Required_edit_Dean_Name;
 
-    @FindBy(xpath = "(//*[.='Required'])[7]")
+    @FindBy(xpath = "//*[.='Required']")
     public WebElement Required_edit_Dean_Surname;
 
     @FindBy(xpath = "/html/body/div[3]/div[2]/div/div/div/form/div/div[3]/div/div")
@@ -97,6 +97,16 @@ public class EditDeanPage {
 
     @FindBy(xpath = "//*[@class='Toastify__toast Toastify__toast-theme--colored Toastify__toast--success Toastify__toast--close-on-click']")
     public WebElement dean_Saved_message_Surname_Edit_Dean;
+
+    @FindBy(xpath = "(//*[.='Your surname should be at least 2 characters'])[3]")
+    public WebElement Your_surname_should_be_at_least_2_characters_message_Surname_Edit_Dean;
+
+    @FindBy(xpath = "(//*[.='Your surname must consist of the characters .'])[5]")
+    public WebElement Your_surname_must_consist_of_the_characters_message_Surname_Edit_Dean;
+
+
+
+
 
     @FindBy(xpath = " (//*[@id='2'])[2]")
     public WebElement dean_Saved_message_Birth_Place_Edit_Dean;

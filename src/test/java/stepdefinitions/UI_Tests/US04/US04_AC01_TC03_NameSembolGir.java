@@ -27,13 +27,13 @@ public class US04_AC01_TC03_NameSembolGir {
 
     Faker faker = new Faker();
     @And("Ali Name {string} alanina sembol girer.")
-    public void AlıNameAlaninaSembolGirer(String arg0) {
+    public void AliNameAlaninaSembolGirer(String arg0) {
 
         deanManagementPage.name_Add_Dean.sendKeys(arg0);
     }
 
     @Then("Ali Dean Save uyari mesaj alir")
-    public void AlıDeanSaveUyariMesajAlir() throws IOException {
+    public void AliDeanSaveUyariMesajAlir() throws IOException {
         Assert.assertFalse(deanManagementPage.dean_Saved_message.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");

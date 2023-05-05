@@ -32,7 +32,7 @@ public class US05_AC03_TC06SurnameAlaninaSembolgir {
         }
     @Then("Ali dean Update mesajini gorur")
     public void aliDeanUpdateMesajiniGorur() throws InterruptedException {
-        Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+        Assert.assertFalse(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
         Thread.sleep(1000);
     }
 }

@@ -1,9 +1,10 @@
 @ApiViceDeanController @admin
-Feature: Vice_Dean_Controller_Get01
+Feature: Vice_Dean_Controller_GetAll
 
-  Scenario Outline: Vice_Dean_Controller_Get01
-    Given Nilufer Send query to get guest user by userId="<iduserId>"
-    Then Nilufer body should be like : username="<username>" name="<name>" surname="<surname>" birthDay="<birthDay>" sss="<ssn>" birthPlace="<birthPlace>" phoneNumber"<phoneNumber>" gender="<gender>"
+  Scenario Outline: Vice_Dean_Controller_GetAll
+    #Tüm Dean öğeleri içinden groovy ile eleme yaparak istediğim Dean'e ulaşabilirim. Yada id ile de request gönderebilirim.
+    Given Nilufer Get request ile tum Deanleri al
+    Then Nilufer bodyi dogrula: userId="<userId>", username="<username>", name="<name>", surname="<surname>", birthDay="<birthDay>", ssn="<ssn>", birthPlace="<birthPlace>", phoneNumber="<phoneNumber>", gender="<gender>"
     Examples:
-      | userId | username         | name    | surname | birthDay   | ssn         | birthPlace  | phoneNumber  | gender |
-      | 2      | roderick.okuneva | Nicolle | Haley   | 2000-01-01 | 890-96-3848 | Dominictown | 240-640-1805 | MALE   |
+      | userId | username     | name   | surname | birthDay   | ssn         | birthPlace | phoneNumber  | gender |
+      | 360    | yildizselcuk | Selcuk | Yildiz  | 1995-01-01 | 211-11-8904 | Istanbul   | 211-110-8904 | MALE   |
