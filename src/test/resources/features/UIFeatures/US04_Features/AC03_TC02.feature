@@ -42,7 +42,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
-    Then Ali Dean Save mesaji Alir
+    Then Ali Dean Save mesaji alir
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

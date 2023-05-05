@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
 
-        tags = "@AC15_student",
+        tags = "US04_AC04_TC01",
 
 
 
