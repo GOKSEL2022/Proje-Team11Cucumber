@@ -22,13 +22,13 @@ public class US05_AC03_TC05_SurnameAlaniBos {
         editDeanPage.name_Edit_Dean.sendKeys(arg0,Keys.TAB,Keys.DELETE);
     }
     @And("Ali Surname alanina veri girmez")
-    public void AlıSurnameAlaninaVeriGirmez() throws InterruptedException {
+    public void AliSurnameAlaninaVeriGirmez() throws InterruptedException {
         editDeanPage.surname_Edit_Dean.clear();
         Thread.sleep(2000);
     }
 
         @And("Ali Gender alaninda checkbox`a tiklar")
-        public void AlıGenderAlanindaGerekliCheckboxATiklar() {
+        public void AliGenderAlanindaGerekliCheckboxATiklar() {
             editDeanPage.female_Checkbox_Edit_Dean.click();
         }
 
@@ -39,7 +39,7 @@ public class US05_AC03_TC05_SurnameAlaniBos {
         editDeanPage.submit_Button_Edit_Dean.click();
     }
     @Then("Ali Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.")
-    public void AlıEditDeanAlanindaSurnameTextboxininAltindaRequiredUyariMesajiniGorur() throws InterruptedException {
+    public void AliEditDeanAlanindaSurnameTextboxininAltindaRequiredUyariMesajiniGorur() throws InterruptedException {
         Assert.assertTrue(editDeanPage.Required_edit_Dean_Surname.isDisplayed());
         Thread.sleep(1000);
     }

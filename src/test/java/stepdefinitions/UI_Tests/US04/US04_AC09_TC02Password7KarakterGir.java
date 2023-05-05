@@ -26,7 +26,7 @@ public class US04_AC09_TC02Password7KarakterGir {
     int ssnNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
     @And("Ali password {string} alanina yedi karakter sifre girer")
-    public void AlıPasswordAlaninaYediKarakterSifreGirer(String arg0) {
+    public void AliPasswordAlaninaYediKarakterSifreGirer(String arg0) {
         deanManagementPage.password_Add_Dean.sendKeys(arg0);
     }
 

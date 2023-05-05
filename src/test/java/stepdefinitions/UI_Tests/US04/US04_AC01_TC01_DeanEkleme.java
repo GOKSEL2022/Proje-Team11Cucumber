@@ -30,26 +30,26 @@ public class US04_AC01_TC01_DeanEkleme {
     int phoneNo3 = Faker.instance().number().numberBetween(1000,9999);
     Faker faker = new Faker();
     @Given("Ali {string} sayfasina gider")
-    public void AlıGider(String arg0) {
+    public void AliGider(String arg0) {
         Driver.getDriver().get(arg0);
     }
     @And("Ali bır sanıye bekler")
-    public void AlıBirSaniyeBekler() throws InterruptedException {
+    public void AliBirSaniyeBekler() throws InterruptedException {
         Thread.sleep(1000);
     }
     @When("Ali Login butonuna tiklar")
-    public void AlıLoginButonunaTiklar() {
+    public void AliLoginButonunaTiklar() {
 
         homePage.login_Button_Home.click();
     }
     @And("Ali Admin olarak Username {string} girer")
-    public void AlıAdminOlarakUsernameGirer(String arg0) {
+    public void AliAdminOlarakUsernameGirer(String arg0) {
 
         loginPage.username_Box_Login.sendKeys(arg0);
     }
 
     @And("Ali Admin olarak Password {string} girer")
-    public void AlıAdminOlarakPasswordGirer(String arg0) {
+    public void AliAdminOlarakPasswordGirer(String arg0) {
 
         loginPage.password_Box_Login.sendKeys(arg0);
     }
