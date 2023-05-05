@@ -53,8 +53,6 @@ public class Get01 {
 
     @Then("Fatih admin gets the student data and and assert_GET username={string} name={string} surname={string} birthDay={string} birthPlace={string} phoneNumber={string} gender={string} studentNumber={string} motherName ={string} fatherName = {string} email={string} active={string}")
     public void fatihAdminGetsTheStudentDataAndAndAssert_GETUsernameNameSurnameBirthDayBirthPlacePhoneNumberGenderStudentNumberMotherNameFatherNameEmailActive(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9, String arg10, String arg11) {
-
-
     }
 
 

@@ -1,5 +1,7 @@
 package stepdefinitions.Api_Test.stundent_controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
@@ -37,14 +39,14 @@ public class Post01 {
 
     }
     @Then("Fatih admin gets the student data and assert_POST")
-    public void fatih_admin_gets_the_student_data_and_assert_post() {
+    public void fatih_admin_gets_the_student_data_and_assert_post() throws JsonProcessingException {
 
 
 
-        Student_Post_Pojo actualData = response.as(Student_Post_Pojo.class);
+        Student_Post_Pojo actualData = new ObjectMapper().readValue(response.asString(),  Student_Post_Pojo.class);
 
         assertEquals(200, response.statusCode());
-        assertEquals("Student saved Successfully", actualData.message);
+        assertEquals("Student saved Successfully", actualData.getMessage());
         assertEquals(expectedData.getObject().getUserId(), actualData.getObject().getUserId());
         assertEquals(expectedData.getObject().getUsername(), actualData.getObject().getUsername());
         assertEquals(expectedData.getObject().getName(), actualData.getObject().getName());
