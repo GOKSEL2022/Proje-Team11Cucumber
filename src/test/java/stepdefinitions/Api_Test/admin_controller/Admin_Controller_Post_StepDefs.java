@@ -7,7 +7,8 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.Admin_Object_Pojo;
 import pojos.Admin_Pojo;
-import static base_urls.ManagementonSchoolsBaseUrl.spec;
+
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
 
 public class Admin_Controller_Post_StepDefs {
@@ -17,7 +18,7 @@ public class Admin_Controller_Post_StepDefs {
     @Given("Set the Url admin_post")
     public void setTheUrlAdmin_post() {
         //{{baseUrl}}/admin/save
-        spec.pathParams("firsth","admin","second","save");
+        specAdmin.pathParams("firsth","admin","second","save");
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
@@ -27,7 +28,7 @@ public class Admin_Controller_Post_StepDefs {
     }
     @When("Send the request and get the response admin_post")
     public void sendTheRequestAndGetTheResponseAdmin_post() {
-        response=given(spec).when().body(expectedData).post("{firsth}/{second}");
+        response=given(specAdmin).when().body(expectedData).post("{firsth}/{second}");
         response.prettyPrint();
     }
     @Then("Do assertion admin_post")
@@ -47,24 +48,6 @@ public class Admin_Controller_Post_StepDefs {
         Assert.assertEquals(expectedData.getObject().getPhoneNumber(),admin_object_pojo.getPhoneNumber());
         Assert.assertEquals(expectedData.getObject().getGender(),admin_object_pojo.getGender());
 
-
-        /*
-        {
-    "object": {
-        "userId": 81,
-        "username": "AliKamil",
-        "name": "AliKemal",
-        "surname": "Melik",
-        "birthDay": null,
-        "ssn": "785-25-6961",
-        "birthPlace": null,
-        "phoneNumber": "523-456-7802",
-        "gender": "MALE"
-    },
-    "message": "Admin Saved",
-    "httpStatus": "CREATED"
-}
-         */
 
 
     }

@@ -19,7 +19,7 @@ public class DataBaseDeneme {
         //SELECT * FROM teacher WHERE id = 35;
         connection = DriverManager.getConnection("jdbc:postgresql://164.92.252.42:5432/school_management", "select_user", "43w5ijfso");
         statement = connection.createStatement();
-        resultSet = statement.executeQuery("SELECT * FROM teacher WHERE id = 5");
+        resultSet = statement.executeQuery("SELECT * FROM student_info where id=74");
 
         resultSet.next();
 
@@ -29,17 +29,16 @@ public class DataBaseDeneme {
 
     @Then("validete data")
     public void valideteData() throws SQLException {
-        assertEquals("1995-06-07", resultSet.getString("birth_day"));
-        assertEquals("USA", resultSet.getString("birth_place"));
-        assertEquals("FEMALE", resultSet.getString("gender"));
-        assertEquals("Nancy", resultSet.getString("name"));
-        assertEquals("555-990-6767", resultSet.getString("phone_number"));
-        assertEquals("555-90-6767", resultSet.getString("ssn"));
-        assertEquals("CAN", resultSet.getString("surname"));
-        assertEquals("nancy13", resultSet.getString("username"));
-        assertEquals("nancy_can@gmail.com", resultSet.getString("email"));
-        assertTrue(resultSet.getBoolean("is_advisor"));
-        assertEquals(4, resultSet.getInt("user_role_id"));
+        assertEquals(0, resultSet.getInt("absentee"));
+        assertEquals(99, resultSet.getInt("exam_average"));
+        assertEquals(99, resultSet.getInt("final_exam"));
+        assertEquals("Basarili Ogrenci", resultSet.getString("info_note"));
+        assertEquals("AA", resultSet.getString("letter_grade"));
+        assertEquals(99, resultSet.getInt("midterm_exam"));
+        assertEquals(2, resultSet.getInt("education_term_id"));
+        assertEquals(3, resultSet.getInt("lesson_lesson_id"));
+        assertEquals(10, resultSet.getInt("student_id"));
+        assertEquals(40, resultSet.getInt("teacher_id"));
 
         connection.close();
         statement.close();
