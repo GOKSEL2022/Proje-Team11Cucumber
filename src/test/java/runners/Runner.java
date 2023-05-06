@@ -18,8 +18,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
+        tags = "@studentInfiDB",
 
-        tags = "US04_AC04_TC01",
 
 
 

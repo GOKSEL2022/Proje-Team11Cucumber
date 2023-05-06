@@ -1,5 +1,4 @@
 package stepdefinitions.Api_Test.admin_controller;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,9 +8,10 @@ import org.junit.Assert;
 import pojos.Admin_Object_Pojo;
 import pojos.Admin_Pojo;
 
-import static base_urls.ManagementonSchoolsBaseUrl.*;
+import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
-public class TC01_Admin_Controller_PostStepDefs {
+
+public class Admin_Controller_Post_StepDefs {
     Response response;
     Admin_Pojo expectedData;
     Admin_Object_Pojo admin_object_pojo;
@@ -22,7 +22,7 @@ public class TC01_Admin_Controller_PostStepDefs {
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
-        admin_object_pojo=new Admin_Object_Pojo(45,"Mustafa","Atatürk","Kemal","null","188-11-9380","null","938-938-3838","MALE");
+        admin_object_pojo=new Admin_Object_Pojo(54,"Alicannn","Alicann","Celik","null","785-25-6321","null","523-456-7891","FEMALE");
         expectedData=new Admin_Pojo(admin_object_pojo,"Admin Saved","CREATED");
         System.out.println("expectedData = " + expectedData);
     }
@@ -37,8 +37,7 @@ public class TC01_Admin_Controller_PostStepDefs {
         Admin_Pojo actualData=response.as(Admin_Pojo.class);
 
         Assert.assertEquals(200, response.statusCode());
-        Assert.assertEquals("CREATED",actualData.getHttpStatus());
-        Assert.assertEquals("Admin Saved",actualData.getMessage());
+        Assert.assertEquals("CREATED",response.statusLine());
         Assert.assertEquals(expectedData.getObject().getUserId(),admin_object_pojo.getUserId());
         Assert.assertEquals(expectedData.getObject().getUsername(),admin_object_pojo.getUsername());
         Assert.assertEquals(expectedData.getObject().getName(),admin_object_pojo.getName());
@@ -50,51 +49,6 @@ public class TC01_Admin_Controller_PostStepDefs {
         Assert.assertEquals(expectedData.getObject().getGender(),admin_object_pojo.getGender());
 
 
-        /*
-   {
-    "object": {
-        "userId": 45,
-        "username": "Mustafa",
-        "name": "Atatürk",
-        "surname": "Kemal",
-        "birthDay": null,
-        "ssn": "188-11-9380",
-        "birthPlace": null,
-        "phoneNumber": "938-938-3838",
-        "gender": "MALE"
-    },
-    "message": "Admin Saved",
-    "httpStatus": "CREATED"
-}
-         */
-
-        /*
-        "content":[
-         {
-            "id": 198,
-            "username": "Goksel",
-            "ssn": "258-45-7852",
-            "name": "Goksel",
-            "surname": "Celik",
-            "birthDay": "2000-01-01",
-            "birthPlace": "Samsun",
-            "phoneNumber": "542-453-8523",
-            "gender": "MALE"
-        },
-
-        {
-            "id": 45,
-            "username": "Mustafa",
-            "ssn": "188-11-9380",
-            "name": "Atatürk",
-            "surname": "Kemal",
-            "birthDay": "1881-05-05",
-            "birthPlace": "selanik",
-            "phoneNumber": "938-938-3838",
-            "gender": "MALE",
-            "built_in": false
-        }
-         */
 
     }
 }

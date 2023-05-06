@@ -24,7 +24,7 @@ public class ManagementonSchoolsBaseUrl  {
     }
     public  static void schoolsetupTeacher(){
         specTeacher=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","team11emin"))
+                addHeader("Authorization",generateToken("123456789","ferhat5255"))
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupDean(){
@@ -34,7 +34,7 @@ public class ManagementonSchoolsBaseUrl  {
     }
     public  static void schoolsetupViceDean(){
         specViceDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","yildizselcuk"))
+                addHeader("Authorization",generateToken("123456789","Team11Cucumber"))
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
 
@@ -44,5 +44,3 @@ public class ManagementonSchoolsBaseUrl  {
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
 }
-
-
