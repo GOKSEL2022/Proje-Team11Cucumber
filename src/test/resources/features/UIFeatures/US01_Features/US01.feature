@@ -1,4 +1,4 @@
-@goksel @team11
+@goksel @team11 @smoke
 Feature:US01
   Scenario Outline:US01
 
@@ -39,12 +39,12 @@ Feature:US01
     And   Goksel bir sn bekler
     Then  Goksel Register isleminin basarili oldugunu gösteren popupı goruntuler
     Examples:
-      | Name    | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name    | Password |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 903-58-1258 | Goksel Celik | 12345678 |
-      | Admin   | 12345   | Ordu        | 452-481-2166 | 01.01.2000   | 950-78-0258 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452481002166 | 01.01.2000   | 363-78-1008 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 06.04.2023   | 463-78-1228 | Goksel Celik | 12345678 |
-      | Admin   | Celik   | Ordu        | 452-481-2166 | 01.01.2000   | 76307884278 | Goksel Celik | abcdefgh |
+      | Name      | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name       | Password |
+      | Admin1111 | Celik11 | Ordu        | 452-481-2166 | 01.01.2000   | 905-58-1275 | Goksel Celik111 | 12345678 |
+      | Admin2222 | 12345   | Ordu        | 452-481-2166 | 01.01.2001   | 949-78-0250 | Goksel Celik222 | 12345678 |
+      | Admin3333 | Celik33 | Ordu        | 452481002166 | 01.01.2002   | 323-78-1003 | Goksel Celik333 | 12345678 |
+      | Admin4444 | Celik44 | Ordu        | 452-481-2166 | 06.04.2023   | 419-78-1204 | Goksel Celik444 | 12345678 |
+      | Admin5555 | Celik55 | Ordu        | 452-481-2166 | 01.01.2004   | 76567884459 | Goksel Celik555 | abcdefgh |
 
 
 

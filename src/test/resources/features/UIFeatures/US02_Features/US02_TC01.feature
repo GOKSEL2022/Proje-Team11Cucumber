@@ -1,4 +1,4 @@
-@team111
+@smoke
 Feature:US02_TC01
   Scenario:US02_TC01
 

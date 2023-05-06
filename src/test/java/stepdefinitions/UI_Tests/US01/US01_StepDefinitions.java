@@ -62,7 +62,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Name {string} girer")
     public void GokselNameGirer(String string) {
-        registerPage.name_Box_Register.sendKeys(faker.name().firstName());
+        //registerPage.name_Box_Register.sendKeys(faker.name().firstName());
+        registerPage.name_Box_Register.sendKeys(string);
     }
     @And("Goksel Name textboxinin altindaki Required yazisinin kalktigini  goruntuler")
     public void GokselNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -70,8 +71,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Surname {string}  girer")
     public void GokselSurnameGirer(String string) {
-        registerPage.surname_Box_Register.sendKeys(faker.name().lastName());
-       // registerPage.surname_Box_Register.sendKeys(string);
+        //registerPage.surname_Box_Register.sendKeys(faker.name().lastName());
+        registerPage.surname_Box_Register.sendKeys(string);
     }
     @And("Goksel Surname textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselSurnameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -79,8 +80,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Birth Place {string} girer")
     public void GokselBirthPlaceGirer(String string) {
-        registerPage.birthPlace_Box_Register.sendKeys(faker.address().city());
-        //registerPage.birthPlace_Box_Register.sendKeys(string);
+        //registerPage.birthPlace_Box_Register.sendKeys(faker.address().city());
+        registerPage.birthPlace_Box_Register.sendKeys(string);
     }
     @And("Goksel Birth Place textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselBirthPlaceTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -88,8 +89,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Phone {string} girer")
     public void GokselPhoneGirer(String string) {
-        //registerPage.phoneNumber_Box_Register.sendKeys(string);
-        registerPage.phoneNumber_Box_Register.sendKeys(phoneNo1+"-"+phoneNo2+"-"+phoneNo3);
+        registerPage.phoneNumber_Box_Register.sendKeys(string);
+        //registerPage.phoneNumber_Box_Register.sendKeys(phoneNo1+"-"+phoneNo2+"-"+phoneNo3);
     }
     @And("Goksel Phone textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselPhoneTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -102,7 +103,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Date Of Birt {string} girer")
     public void GokselDateOfBirtGirer(String string) {
-        registerPage.dateOfBirth_Box_Register.sendKeys(gun+"."+ay+"."+yil);
+        //registerPage.dateOfBirth_Box_Register.sendKeys(gun+"."+ay+"."+yil);
+        registerPage.dateOfBirth_Box_Register.sendKeys(string);
     }
     @And("Goksel Date Of Birt textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselDateOfBirtTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -110,8 +112,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel Ssn {string} girer")
     public void GokselSsnGirer(String string) {
-        //registerPage.ssn_Box_Register.sendKeys(string);
-        registerPage.ssn_Box_Register.sendKeys(ssnNo1+"-"+ssnNo2+"-"+ssnNo3);
+        registerPage.ssn_Box_Register.sendKeys(string);
+        //registerPage.ssn_Box_Register.sendKeys(ssnNo1+"-"+ssnNo2+"-"+ssnNo3);
     }
     @And("Goksel Ssn textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselSsnTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {
@@ -119,8 +121,8 @@ public class US01_StepDefinitions {
     }
     @And("Goksel User Name {string} girer")
     public void GokselUserNameGirer(String string) {
-        registerPage.username_Box_Register.sendKeys(faker.name().firstName());
-        //registerPage.username_Box_Register.sendKeys(string);
+       // registerPage.username_Box_Register.sendKeys(faker.name().firstName());
+        registerPage.username_Box_Register.sendKeys(string);
     }
     @And("Goksel User Name textboxinin altindaki required yazisinin kalktigini  goruntuler")
     public void GokselUserNameTextboxininAltindakiRequiredYazisininKalktiginiGoruntuler() {

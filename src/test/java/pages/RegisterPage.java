@@ -43,9 +43,9 @@ public class RegisterPage {
     @FindBy(xpath = "//button[@class='fw-semibold btn btn-primary']")
     public WebElement register_Button_Register;
 
-    @FindBy(xpath = "//div[text()='Guest User registered.']")
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement alert_Register;
-
+    //Toastify__toast-body
     @FindBy(xpath = "//div[@class='mb-4 fw-semibold shadow-sm bg-body-tertiary card-title h5']")
     public WebElement register_Text_Register;
 

@@ -1,4 +1,4 @@
-@team11
+@smoke
 Feature:US02_TC03
   Scenario:US02_TC03
     Given Goksel "https://www.managementonschools.com/" gider
