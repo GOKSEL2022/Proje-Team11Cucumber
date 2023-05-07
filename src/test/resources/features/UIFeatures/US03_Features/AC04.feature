@@ -1,4 +1,4 @@
-@US03_AC04,@team11
+@US03_AC04 @team11 @US03 @US22
 Feature: AC04 rabia mesaj yazmalıdır
   Background: ana sayfaya git
     Given rabia ana sayfaya gider.

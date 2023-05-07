@@ -19,11 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
 
-        tags = "@admin",
-
-
-        tags = "@Dean_Controller",
-
+        tags = "@DataBase_US03",
 
 
         dryRun = false

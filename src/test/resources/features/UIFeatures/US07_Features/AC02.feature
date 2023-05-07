@@ -1,4 +1,4 @@
-@US07_AC02,@team11
+@US07_AC02 @team11 @US07 @US22
 Feature: Dean mesajları silebilmelidir.
 
   Background: rabia contact_getAll sayfasına erişir

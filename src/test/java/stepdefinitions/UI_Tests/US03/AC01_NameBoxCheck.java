@@ -45,7 +45,7 @@ public class AC01_NameBoxCheck {
 
     @And("rabia subject  kutusuna {string} girer")
     public void rabiaSubjectKutusunaGirer(String arg0) {
-        contactPage.subject_textBox.sendKeys(faker.lorem().word());
+        contactPage.subject_textBox.sendKeys(faker.lorem().sentence(1));
     }
 
     @And("rabia message kutusuna {string} girer.")

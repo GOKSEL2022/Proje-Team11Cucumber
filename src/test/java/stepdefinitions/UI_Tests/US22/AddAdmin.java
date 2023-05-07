@@ -1,5 +1,6 @@
 package stepdefinitions.UI_Tests.US22;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import static org.junit.Assert.assertTrue;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AddAdmin {
 
     HomePage homePage= new HomePage();
