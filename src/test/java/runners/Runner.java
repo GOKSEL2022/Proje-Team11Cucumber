@@ -19,7 +19,12 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
 
-        tags = "@DataBase_US03",
+        tags = "US04_AC04_TC01",
+
+
+
+
+
 
 
         dryRun = false

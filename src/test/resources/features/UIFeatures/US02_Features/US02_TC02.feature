@@ -1,4 +1,4 @@
-@team11
+@smoke
 Feature:US02_AC0TC02
   Scenario:US02_AC0TC02
 

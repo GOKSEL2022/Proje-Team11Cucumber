@@ -4,7 +4,7 @@ Feature: US06
 
   Scenario Outline:US06
 
-    Given Nilufer "https://www.managementonschools.com/" url'ine gider
+    Given Nilufer "http://139.59.159.36:3000/" url'ine gider
     When Nilufer Home sayfasindaki Login buttonuna tiklar
     And Nilufer Dean olarak User Name'i girer
     And Nilufer Dean olarak Password'u girer
@@ -26,4 +26,4 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
-      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     |          |
+      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     | 12345678 |

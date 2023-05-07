@@ -13,14 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db">
-      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[select * from contact_message 
-select name from contact_message where email = 'rabia123@gmail.com'
-
-select * from admins where username ='ercan12345'
-select * from admins where username = 'ercan12345'
-select * from contact_message WHERE email
-select message from contact_message where email = 'rabiaa@gmail.com'
-SELECT * FROM student_info where id=74]]></console>
+      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM guest_user where id=21 ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -30,7 +23,6 @@ SELECT * FROM student_info where id=74]]></console>
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db" dataset="public.contact_message" active-filter-id="" />
     <filter-actions connection-id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db" dataset="public.dean" active-filter-id="5ef26d6b-5539-48fd-a700-7fa558ec4b60">
       <filter id="5ef26d6b-5539-48fd-a700-7fa558ec4b60" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="birth_day" operator="=" value="" active="true" />
@@ -168,13 +160,13 @@ SELECT * FROM student_info where id=74]]></console>
       </filters>
       <sorting>
         <object-type name="COLUMN" sorting-type="NAME" />
-        <object-type name="FUNCTİON" sorting-type="NAME" />
+        <object-type name="FUNCTION" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
-        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRIBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
-        <object-type name="VİEW" editor-type="SELECTION" />
+        <object-type name="VIEW" editor-type="SELECTION" />
         <object-type name="PACKAGE" editor-type="SELECTION" />
         <object-type name="TYPE" editor-type="SELECTION" />
       </default-editors>
@@ -185,24 +177,24 @@ SELECT * FROM student_info where id=74]]></console>
           <object-type name="SCHEMA" enabled="true" />
           <object-type name="USER" enabled="false" />
           <object-type name="ROLE" enabled="false" />
-          <object-type name="PRİVİLEGE" enabled="false" />
+          <object-type name="PRIVILEGE" enabled="false" />
           <object-type name="CHARSET" enabled="false" />
           <object-type name="TABLE" enabled="true" />
-          <object-type name="VİEW" enabled="true" />
-          <object-type name="MATERİALİZED VİEW" enabled="true" />
-          <object-type name="İNDEX" enabled="true" />
-          <object-type name="CONSTRAİNT" enabled="true" />
-          <object-type name="DATASET TRİGGER" enabled="true" />
-          <object-type name="DATABASE TRİGGER" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET TRIGGER" enabled="true" />
+          <object-type name="DATABASE TRIGGER" enabled="true" />
           <object-type name="SYNONYM" enabled="false" />
           <object-type name="SEQUENCE" enabled="true" />
           <object-type name="PROCEDURE" enabled="true" />
-          <object-type name="FUNCTİON" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
           <object-type name="PACKAGE" enabled="true" />
           <object-type name="TYPE" enabled="true" />
-          <object-type name="DİMENSİON" enabled="false" />
+          <object-type name="DIMENSION" enabled="false" />
           <object-type name="CLUSTER" enabled="false" />
-          <object-type name="DBLİNK" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
         </lookup-objects>
         <force-database-load value="false" />
         <prompt-connection-selection value="true" />

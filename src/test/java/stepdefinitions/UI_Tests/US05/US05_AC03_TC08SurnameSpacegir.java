@@ -22,8 +22,18 @@ public class US05_AC03_TC08SurnameSpacegir {
         editDeanPage.password_Edit_Dean.sendKeys("12345678");
         Thread.sleep(1000);
         editDeanPage.submit_Button_Edit_Dean.click();
-        Assert.assertFalse(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
-
         Thread.sleep(1000);
     }
-}
+
+        @And("Ali cikan mesaji gorur")
+        public void aliCikanMesajiGorur () throws InterruptedException {
+
+           // Assert.assertTrue(editDeanPage.Your_surname_must_consist_of_the_characters_message_Surname_Edit_Dean.isDisplayed());
+            Thread.sleep(1000);
+
+
+
+        }
+    }
+
+

@@ -3,9 +3,9 @@
 Feature:"Choose_Students"_öğrenci_seçilebilmeli
 
   Background:
-    Given Emin anasayfaya "https://www.managementonschools.com/" gider
+    Given Emin anasayfaya "http://139.59.159.36:3000/" gider
     When Emin login butonuna tiklar
-    And Emin User Name alanina teacher bilgileri "emin" ile girer
+    And Emin User Name alanina teacher bilgileri "team11emin" ile girer
     And Emin Password alanina sifresini "12345678" girer
     And Emin login_login butonuna tiklar
     And Emin menuu butonuna tiklar
