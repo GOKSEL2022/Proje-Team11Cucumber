@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions"},   //stepdefinitions path
-        tags = "@team11",
+        tags = "@team11Regression",
         dryRun = false
 )
 public class RegressionTestRunner {
