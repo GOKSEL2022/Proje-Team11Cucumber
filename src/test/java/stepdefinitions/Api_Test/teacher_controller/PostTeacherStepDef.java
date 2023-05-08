@@ -24,6 +24,7 @@ public class PostTeacherStepDef {
     public void eminBodyiDogrulaUserIdUsernameNameSurnameBirthDaySsnBirthPlacePhoneNumberGenderEmail(String userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
         JsonPath jsonPath = response.jsonPath();
 
+
         String actUserId = jsonPath.getList("findAll{it.username=='mehmet'}.userId").get(0).toString();
         String actUsername = jsonPath.getList("findAll{it.username=='mehmet'}.username").get(0).toString();
         String actName = jsonPath.getList("findAll{it.username=='mehmet'}.name").get(0).toString();
@@ -35,7 +36,7 @@ public class PostTeacherStepDef {
         String actGender = jsonPath.getList("findAll{it.username=='mehmet'}.gender").get(0).toString();
 
 
-        //assertEquals(200,response.statusCode());
+        assertEquals(200,response.statusCode());
         assertEquals(userId, actUserId);
         assertEquals(username,actUsername);
         assertEquals(name,actName);
@@ -46,9 +47,7 @@ public class PostTeacherStepDef {
         assertEquals(phoneNumber,actPhoneNumber);
         assertEquals(gender,actGender);
 
-
     }
-
 }
 //{
 //    "object": {
