@@ -10,17 +10,16 @@ public class MessageSavePojo {
     private String email;
     private String subject;
     private String message;
-    private String date;
+
 
     public MessageSavePojo() {
     }
 
-    public MessageSavePojo(String name, String email, String subject, String message, String date) {
+    public MessageSavePojo(String name, String email, String subject, String message) {
         this.name = name;
         this.email = email;
         this.subject = subject;
         this.message = message;
-        this.date = date;
     }
 
     public String getName() {
@@ -55,13 +54,9 @@ public class MessageSavePojo {
         this.message = message;
     }
 
-    public String getDate() {
-        return date;
-    }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+
+
 
     @Override
     public String toString() {
@@ -70,7 +65,6 @@ public class MessageSavePojo {
                 ", email='" + email + '\'' +
                 ", subject='" + subject + '\'' +
                 ", message='" + message + '\'' +
-                ", date='" + date + '\'' +
                 '}';
     }
 }

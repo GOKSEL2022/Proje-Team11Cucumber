@@ -1,4 +1,4 @@
-@US07_AC00,@team11
+@US07_AC00 @team11 @US07 @US22 @team11Regression
 Feature: Dean olarak login olma
 
   Scenario: TC01 rabianın dean olarak giriş yapabilmesi durumu
