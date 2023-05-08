@@ -30,12 +30,12 @@ public class S02_Put {
 
         specTeacher.pathParams("first", "studentInfo", "second", "update","third",student_info_id);
 
-        expectedData = new StudentInfoUpdatePojo(absenteUpdate,
+        expectedData = new StudentInfoUpdatePojo(5,
                 educationTermId,
-                finalExamUpdate,
+                5,
                 infoNoteUpdate,
                 lessonId,
-                midtermExamUpdate);
+                5);
 
         System.out.println("expectedData = " + expectedData);
 
