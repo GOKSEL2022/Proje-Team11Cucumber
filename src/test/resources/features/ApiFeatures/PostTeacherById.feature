@@ -1,7 +1,7 @@
 @teacher
   Feature: Admin teacher ekleyebilmeli
 
-    @admin
+    @admin @emin
     Scenario Outline:US20_olusan teacher`i dogrula
       Given emin Get request ile tum Teacher al
       Then emin bodyi dogrula: userId="<userId>", username="<username>", name="<name>", surname="<surname>", birthDay="<birthDay>", ssn="<ssn>", birthPlace="<birthPlace>", phoneNumber="<phoneNumber>", gender="<gender>",email="<email>"
