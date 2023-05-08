@@ -1,4 +1,4 @@
-@US07_AC01,@team11
+@US07_AC01 @team11 @US07 @US22 @team11Regression
 Feature: Dean, mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve  subject bilgilerini görüntüleyebilmelidir
 
   Background: rabia contact_getAll sayfasına erişir

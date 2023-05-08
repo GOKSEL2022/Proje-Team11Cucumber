@@ -1,4 +1,4 @@
-@US22_AC00,@team11
+@US22_AC00 @team11 @US22
 Feature: Pre-Condition
 
   Scenario: TC01 Admin olarak giriş yapabilmesi durumu

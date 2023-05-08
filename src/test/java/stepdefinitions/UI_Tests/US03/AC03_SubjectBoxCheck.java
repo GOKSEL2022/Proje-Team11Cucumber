@@ -3,6 +3,7 @@ package stepdefinitions.UI_Tests.US03;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.ContactPage;
 
@@ -25,7 +26,7 @@ public class AC03_SubjectBoxCheck {
 
     @And("rabia subject kutusuna {string} girer.")
     public void rabiaSubjectKutusunaGirer(String arg0) {
-        contactPage.subject_textBox.sendKeys(faker.lorem().word());
+        contactPage.subject_textBox.sendKeys("1234567891425262787687424424");
 
     }
 
@@ -33,4 +34,11 @@ public class AC03_SubjectBoxCheck {
     public void mesajGonderimIslemiGerceklesir() {
         Assert.assertTrue(contactPage.successfully_alert_css.isDisplayed());
     }
+
+
+    @When("bos bırakılan kutunun altında required yazısı oldugunu doğrular.")
+    public void bos_bırakılan_kutunun_altında_required_yazısı_oldugunu_doğrular() {
+        Assert.assertTrue(contactPage.required_name.isDisplayed());
+    }
+
 }
