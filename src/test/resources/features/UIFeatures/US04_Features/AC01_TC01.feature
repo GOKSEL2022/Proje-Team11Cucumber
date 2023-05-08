@@ -1,4 +1,4 @@
-@US04_AC01_TC01 @team11
+@US04_AC01_TC01 @team11 @team11Regression  @team11Smoke @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
@@ -42,7 +42,8 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
-    Then Ali Dean List bolumunde Dean kaydi gorulur
+    And Ali Dean Save kayit mesaji Alinir
+
 
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

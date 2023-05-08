@@ -15,10 +15,13 @@ import java.io.IOException;
 public class US05_AC03_TC10_BirthPlaceSembolGir {
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Ali Birth Place textboxinin icine sembol girer")
-    public void kullaniciBirthPlaceTextboxininIcineSembolGirer() {
+    public void kullaniciBirthPlaceTextboxininIcineSembolGirer() throws InterruptedException {
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         editDeanPage.birthPlace_Edit_Dean.sendKeys("*****");
         editDeanPage.female_Checkbox_Edit_Dean.click();
-        Assert.assertTrue(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
+        editDeanPage.password_Edit_Dean.sendKeys("12345678");
+        editDeanPage.submit_Button_Edit_Dean.click();
+        Assert.assertFalse(editDeanPage.dean_Saved_message_Birth_Place_Edit_Dean.isDisplayed());
+        Thread.sleep(1000);
     }
 }

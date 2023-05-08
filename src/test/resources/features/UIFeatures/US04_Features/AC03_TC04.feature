@@ -1,4 +1,4 @@
-@US04_AC03_TC04 @team11
+@US04_AC03_TC04 @team11 @admin @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
@@ -42,7 +42,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
-    Then Ali Dean Save mesajin Alir
+    Then Ali Dean Save mesajin alir
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

@@ -1,4 +1,4 @@
-@DeanSilmeGetAll @admin
+@DeanSilmeGetAll @team11Regression @admin
 Feature: US05_DeanSilme
 Scenario: US05 AC02 TC01 Admin Guest User List bilgilerini silebilir (Api Test)
 

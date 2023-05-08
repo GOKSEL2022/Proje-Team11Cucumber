@@ -1,4 +1,4 @@
-@Dean_ControllerPostGetAll @admin
+@Dean_ControllerPostGetAll @team11Regression  @team11Smoke @admin
 Feature:Admin Dean ekleyebilmeli
   Scenario Outline: US04_AC01_TC01 Oluşan Dean'i doğrula (Api)
     #Tüm Dean öğeleri içinden groovy ile eleme yaparak istediğim Dean'e ulaşabilirim. Yada id ile de request gönderebilirim.
