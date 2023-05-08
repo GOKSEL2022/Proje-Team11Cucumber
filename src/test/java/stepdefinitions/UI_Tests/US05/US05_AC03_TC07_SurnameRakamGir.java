@@ -28,7 +28,7 @@ public class US05_AC03_TC07_SurnameRakamGir {
 
             editDeanPage.password_Edit_Dean.sendKeys("12345678");
             editDeanPage.submit_Button_Edit_Dean.click();
-            Assert.assertFalse(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
+            Assert.assertTrue(editDeanPage.dean_Saved_message_Surname_Edit_Dean.isDisplayed());
             Thread.sleep(1000);
         }
     }

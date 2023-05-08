@@ -1,4 +1,4 @@
-@US05_AC03_TC09 @team11
+@US05_AC03_TC09 @team11Regression @team11 @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC09_Birth_Place_Guncelle
@@ -22,14 +22,12 @@ Feature:Dean ekleyebilme
     And Ali Dean List alanindaki Edit butonuna tiklar
     And Ali Edit Dean bolumunun acildigini gorur
     And Ali bır sanıye bekler
-    And Ali surname alanina veri girer
     And Ali Birth Place textboxinin icindeki veriyi siler.
     And Ali bır sanıye bekler
     And Ali Gender alaninda checkbox`a tiklar
     And Ali bır sanıye bekler
-    And Ali password alanina gecerli sifre girer.
-    And Ali bır sanıye bekler
     And Ali Edit Dean alanindaki Submit butonuna tiklar
+    And Ali Required mesajini birth placede gorur.
 
 #
     Examples: dean_bilgileri

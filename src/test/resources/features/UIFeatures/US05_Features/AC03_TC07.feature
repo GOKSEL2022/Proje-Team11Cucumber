@@ -1,4 +1,4 @@
-@US05_AC03_TC07 @team11
+@US05_AC03_TC07 @team11 @team11Regression @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
