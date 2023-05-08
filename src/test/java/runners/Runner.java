@@ -18,13 +18,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
-
-        tags = "@AC15_student",
-
-
-
-
-
+        tags = " @admin",
 
         dryRun = false
 )
