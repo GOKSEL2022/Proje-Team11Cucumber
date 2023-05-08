@@ -1,9 +1,11 @@
+@team11Regression
 Feature:  Kullanıcı admin ekleyebilmelidir.(Contact)
 
   Scenario Outline:
     Given Database icin contact saglanir
-    Then Rabia user creates message
-    Then body should be like: id="<id>" date="<date>" email="<email>" message="<message>" name="<name>" subject="<subject>"
+    When "<Ssn>" ile gönderi sorgulanir
+    Then resultSet ile veriyi dogrula: name="<Name>" gender="<Gender>" phoneNumber="<Phone Number>" ssn="<Ssn>" userName="<User Name>"
     Examples:
-      | id | date | email | message | name | subject |
-      | id | date | email | message | name | subject |
+      | Ssn         | Name | Gender | Phone Number | Ssn         | User Name |
+      | 748-93-9012 | Lina | MALE   | 128-013-1421 | 748-93-9012 | Lina12    |
+

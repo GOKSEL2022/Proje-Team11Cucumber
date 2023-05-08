@@ -1,11 +1,11 @@
-@admin
+@team11Regression
 Feature:Contact_Controller
 
   Scenario:US03_TC01 Post Message Positive Testing
     Given Set the Url post message
     And   Set the expected data post message
     When  Send the request and get the response post message
- #   Then  Do assertion post message
+  #Then  Do assertion post message
 
 
   Scenario Outline: US07_TC01 Contact Message Get All
@@ -37,13 +37,13 @@ Feature:Contact_Controller
   Scenario: US22_TC02 Admin Controller Get All
     Given Set the Url admin_controller_getAll
     When  Send the request and get the response admin_controller_getAll
-  Then  Do assertion admin_controller_getAll
+    Then  Do assertion admin_controller_getAll
 #    Then Do assertion this body username="<username>" ssn="<ssn>" name="<name>" surname="<surname>" birthDay="<birthDay>" birthPlace="<birthPlace>" phoneNumber="<phoneNumber>" gender="<gender>" built_in="<built_in>"
 #
 #    Examples:
 #      | username      | ssn         | name     | surname | birthDay   | birthPlace   | phoneNumber  | gender | built_in |
 #      | donnell.bauch | 460-91-5996 | aaaaaaaa | Kub     | 2020-02-02 | North Shonna | 850-987-1345 | MALE   | false
-#
+
 
 
 

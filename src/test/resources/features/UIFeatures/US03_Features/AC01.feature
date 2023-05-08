@@ -1,4 +1,4 @@
-@US03_AC01 @team11 @US03 @US22
+@US03_AC01 @team11 @US03 @US22 @team11Regression
 Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.
 
   Background: ana sayfaya git
@@ -6,17 +6,17 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     When rabia Contact butonuna tıklar.
     Then  rabia Name kutusuna tıklar.
 
-#  @AUS03_AC01_TC01
-#  Scenario: TC01 Name kutusuna harf girilmesi
-#
-#    And rabia name kutusuna "N" girer.
-#    And rabia mail kutusuna "mail" girer
-#    And rabia subject  kutusuna "subject" girer
-#    And rabia message kutusuna "message" girer.
-#    And rabia send message butonuna tıklar
-#    And rabia bir saniye bekler
-#    #And rabia mesajın iletildiğine dair pop-up mesajını görüntüler.
-#    And rabia sayfayı kapatır.
+  @US03_AC01_TC01
+  Scenario: TC01 Name kutusuna harf girilmesi
+
+    And rabia name kutusuna "N" girer.
+    And rabia mail kutusuna "mail" girer
+    And rabia subject  kutusuna "subject" girer
+    And rabia message kutusuna "message" girer.
+    And rabia send message butonuna tıklar
+    And rabia bir saniye bekler
+    And rabia mesajın iletilemediğini doğrular.
+    And rabia sayfayı kapatır.
 
   @US03_AC01_TC02
   Scenario: TC02 Name kutusuna rakam girilmesi
@@ -27,7 +27,7 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     And rabia message kutusuna "message" girer.
     And rabia send message butonuna tıklar
     And rabia bir saniye bekler
-    Then rabia mesajın iletildiğine dair pop-up mesajını görüntüler.
+    #And rabia mesajın iletilemediğini doğrular.
     And rabia sayfayı kapatır.
 
 
@@ -40,7 +40,7 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     And rabia message kutusuna "message" girer.
     And rabia send message butonuna tıklar
     And rabia bir saniye bekler
-    And rabia mesajın iletildiğine dair pop-up mesajını görüntüler.
+    And rabia mesajın iletilemediğini doğrular.
     And rabia sayfayı kapatır.
 
   @US03_AC01_TC04

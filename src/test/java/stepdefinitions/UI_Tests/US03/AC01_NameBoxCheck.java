@@ -72,7 +72,7 @@ public class AC01_NameBoxCheck {
 
     @And("rabia mesajın iletilemediğini doğrular.")
     public void rabiaMesajınIletilemediğiniDoğrular() {
-        Assert.assertTrue(!contactPage.successfully_alert_css.isDisplayed());
+        Assert.assertTrue(contactPage.name_at_least_4.isDisplayed());
     }
 
 

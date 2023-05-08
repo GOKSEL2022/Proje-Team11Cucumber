@@ -1,4 +1,4 @@
-@US03_AC02 @team11 @US03 @US22
+@US03_AC02 @team11 @US03 @US22 @team11Regression
 Feature: AC02 rabia e-mail adresini girmelidir. Email adresinde "@" ve "." karakterleri olmalıdır.
 
   Background: ana sayfaya git

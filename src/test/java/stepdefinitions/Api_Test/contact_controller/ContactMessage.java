@@ -1,5 +1,6 @@
 package stepdefinitions.Api_Test.contact_controller;
 
+import base_urls.ManagementonSchoolsBaseUrl;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -28,7 +29,7 @@ public class ContactMessage {
 
     @Given("Set the Url post message")
     public void setTheUrlPostMessage() {
-
+        ManagementonSchoolsBaseUrl.schoolsetupAdmin();
         specAdmin.pathParams("first","contactMessages","second","save");
 
     }

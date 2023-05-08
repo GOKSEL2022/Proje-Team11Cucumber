@@ -1,6 +1,5 @@
-@DataBase_US03
+@team11Regression
 Feature: Kullanıcılar sayfadan mesaj gönderebilmelidir.(Contact)
-
 
   Scenario Outline: US03 Mesajı doğrula (DataBase)
     #Scenario Outline ile istediğim email ile sorgu yapabilirim

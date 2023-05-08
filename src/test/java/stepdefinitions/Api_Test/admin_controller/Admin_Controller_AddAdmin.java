@@ -1,5 +1,6 @@
 package stepdefinitions.Api_Test.admin_controller;
 
+import base_urls.ManagementonSchoolsBaseUrl;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,10 +11,8 @@ import io.restassured.response.Response;
 import pojos.AddAdminAcPojo;
 import pojos.AddAdminExPojo;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static base_urls.ManagementonSchoolsBaseUrl.schoolsetupAdmin;
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
 import static io.restassured.RestAssured.given;
 import static junit.framework.TestCase.assertEquals;
@@ -40,7 +39,7 @@ public class Admin_Controller_AddAdmin {
     Response response;
     AddAdminExPojo addAdminExPojo;
     AddAdminAcPojo addAdminAcPojo;
-    List<Object> getAdmins=new ArrayList<>();
+
 
 
 /*
@@ -79,7 +78,7 @@ public class Admin_Controller_AddAdmin {
 
     @Given("Set the Url admin_controller_postAdmin")
     public void setTheUrlAdmin_controller_postAdmin() {
-        schoolsetupAdmin();
+        ManagementonSchoolsBaseUrl.schoolsetupAdmin();
         specAdmin.pathParams("first","admin","second","save");
 
 
@@ -121,7 +120,7 @@ public class Admin_Controller_AddAdmin {
 
     @Given("Set the Url admin_controller_getAll")
     public void setTheUrlAdmin_controller_getAll() {
-        schoolsetupAdmin();
+        ManagementonSchoolsBaseUrl.schoolsetupAdmin();
         specAdmin.pathParams("first","admin","second","getAll");
     }
 
@@ -133,8 +132,6 @@ public class Admin_Controller_AddAdmin {
 
     @Then("Do assertion admin_controller_getAll")
     public void doAssertionAdmin_controller_getAll() {
-
-        JsonPath jsonPath = response.jsonPath();
         assertEquals(200,response.statusCode());
 
 //        String actName = jsonPath.getList("content.findAll{it.phoneNumber=='276-758-7895'}.ssn").get(0).toString();
@@ -153,13 +150,13 @@ public class Admin_Controller_AddAdmin {
 
 
     @Then("Do assertion this body username={string} ssn={string} name={string} surname={string} birthDay={string} birthPlace={string} phoneNumber={string} gender={string} built_in={string}")
-    public void doAssertionThisBodyUsernameSsnNameSurnameBirthDayBirthPlacePhoneNumberGenderBuilt_in(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8) {
+    public void doAssertionThisBodyUsernameSsnNameSurnameBirthDayBirthPlacePhoneNumberGenderBuilt_in(String username, String ssn, String name, String surname, String birthDay, String birthPlace, String phoneNumber, String gender, String built_in) {
 
         assertEquals(200,response.statusCode());
         JsonPath jsonPath = response.jsonPath();
-        List<Object> list = jsonPath.getList("findAll{it.id>100}.username");
+        List<String> list = jsonPath.getList("content.findAll{it.id>100}.username");
         System.out.println("list = " + list);
-        assertTrue(list.contains(arg0));
+        assertTrue(list.contains(username));
 
     }
 }
