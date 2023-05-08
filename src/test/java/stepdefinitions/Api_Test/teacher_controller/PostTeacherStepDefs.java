@@ -55,7 +55,7 @@ public class PostTeacherStepDefs {
    }
    @When("Send the request and get the response teacher_post")
    public void send_the_request_and_get_the_response_teacher_post() {
-        response=given(specAdmin).when().body(expectedata).post("{firsth}/{second}");
+        response=given(specAdmin).body(expectedata).post("{firsth}/{second}");
         response.prettyPrint();
    }
    @Then("Do assertion teacher_post")

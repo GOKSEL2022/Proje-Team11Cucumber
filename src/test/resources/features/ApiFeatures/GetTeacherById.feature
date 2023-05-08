@@ -7,7 +7,7 @@ Feature: Get_Teacher
     Then validate body
 
 
-  @admin
+  @admin @mehmet
   Scenario: TC01_Validate_Teacher_Post
     Given Set the Url teacher_post
     And   Set the expected data teacher_post
