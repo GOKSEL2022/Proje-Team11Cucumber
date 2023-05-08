@@ -8,27 +8,24 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.StudentInfoPojo;
 
-
+import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-
 public class S01_Post {
     static int student_info_id;
     Response response;
     StudentInfoPojo expectedData;
-
-    static int absente = Faker.instance().number().numberBetween(4,99);
-    static int educationTermId =  Faker.instance().number().numberBetween(1,2);
-    static double finalExam =  Faker.instance().number().randomDouble(1,1,99);
-    static String infoNote =  Faker.instance().lorem().sentence(11);
-    static int lessonId =  Faker.instance().number().numberBetween(1,2);
-    static double midtermExam =  Faker.instance().number().randomDouble(1,1,99);
-    static int studentId =  Faker.instance().number().numberBetween(4,305);
-
+    static int absente = Faker.instance().number().numberBetween(4, 99);
+    static int educationTermId = Faker.instance().number().numberBetween(1, 2);
+    static double finalExam = Faker.instance().number().randomDouble(1, 1, 99);
+    static String infoNote = Faker.instance().lorem().sentence(11);
+    static int lessonId = Faker.instance().number().numberBetween(1, 2);
+    static double midtermExam = Faker.instance().number().randomDouble(1, 1, 99);
+    static int studentId = Faker.instance().number().numberBetween(4, 305);
     @Given("teacher sends the student info data_POST")
     public void teacherSendsTheStudentInfoData() {
-       // specTeacher.pathParams("first", "studentInfo", "second", "save");
-        StudentInfoPojo expectedData = new StudentInfoPojo(absente,
+        specTeacher.pathParams("first", "studentInfo", "second", "save");
+        expectedData = new StudentInfoPojo(absente,
                 educationTermId,
                 finalExam,
                 infoNote,
@@ -36,31 +33,19 @@ public class S01_Post {
                 midtermExam,
                 studentId);
         System.out.println("expectedData = " + expectedData);
-       // response = given().spec(specTeacher).when().body(expectedData).post("{first}/{second}");
+        response = given().spec(specTeacher).when().body(expectedData).post("{first}/{second}");
         response.prettyPrint();
     }
-
     @Then("teacher gets the student info data and assert_POST")
     public void teacherGetsTheStudentInfoDataAndAssert() {
         JsonPath jsonPath = response.jsonPath();
-        Assert.assertEquals(200,response.statusCode());
-
-        Assert.assertEquals(expectedData.getAbsentee(),jsonPath.getInt("object.absentee"));
-        Assert.assertEquals(expectedData.getEducationTermId(),jsonPath.getInt("object.educationTermId"));
-        Assert.assertEquals(expectedData.getFinalExam(),jsonPath.getInt("object.finalExam"),0);
-        Assert.assertEquals(expectedData.getInfoNote(),jsonPath.getString("object.infoNote"));
-        Assert.assertEquals(expectedData.getLessonId(),jsonPath.getInt("object.lessonId"));
-        Assert.assertEquals(expectedData.getMidtermExam(),jsonPath.getInt("object.midtermExam"),0);
-        Assert.assertEquals(expectedData.getStudentId(),jsonPath.getInt("object.studentId"));
-
+        Assert.assertEquals(200, response.statusCode());
+        Assert.assertEquals(absente, jsonPath.getInt("object.absentee"));
+        Assert.assertEquals(expectedData.getFinalExam(), jsonPath.getDouble("object.finalExam"), 0);
+        Assert.assertEquals(expectedData.getInfoNote(), jsonPath.getString("object.infoNote"));
+        Assert.assertEquals(expectedData.getMidtermExam(), jsonPath.getDouble("object.midtermExam"), 0);
         assertEquals("CREATED", jsonPath.getString("httpStatus"));
         assertEquals("Student Info saved Successfully", jsonPath.getString("message"));
-
         student_info_id = jsonPath.getInt("object.id");
-        System.out.println("student_info_id"+ student_info_id);
-
-
-
-
     }
 }

@@ -15,7 +15,7 @@ public class TC03_Admin_Controller_DeleteStepDefs {
     String expectedData;
     /*
        Given
-            http://164.92.252.42:8080/admin/delete/208
+            http://164.92.252.42:8080/admin/delete/100
        When
            Send delete request
        Then
@@ -28,7 +28,7 @@ public class TC03_Admin_Controller_DeleteStepDefs {
     @Given("Set the url Admin_Delete")
     public void set_the_url_admin_delete() {
         //http://164.92.252.42:8080/admin/delete/208
-        specAdmin.pathParams("first","admin","second","delete","thirt","208");
+        specAdmin.pathParams("first","admin","second","delete","thirt","100");
 
     }
     @When("Set the expected data Admin_Delete")
@@ -44,6 +44,7 @@ public class TC03_Admin_Controller_DeleteStepDefs {
     @Then("Do assertion Admin_Delete")
     public void do_assertion_admin_delete() {
         assertEquals(200, response.statusCode());
+        //assertEquals(500, response.statusCode());
         assertEquals(expectedData, response.asString());
 
     }
