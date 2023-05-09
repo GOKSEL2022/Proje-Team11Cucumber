@@ -1,4 +1,4 @@
-@US22_AC06 @team11 @US22
+@US22_AC06 @team11 @US22 @team11Regression
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu

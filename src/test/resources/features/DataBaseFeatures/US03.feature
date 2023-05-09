@@ -1,4 +1,4 @@
-@team11Regression @team11Smoke
+@team11Regression
 Feature: Kullanıcılar sayfadan mesaj gönderebilmelidir.(Contact)
 
   Scenario Outline: US03 Mesajı doğrula (DataBase)
