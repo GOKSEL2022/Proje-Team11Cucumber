@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: name bos birakilamaz
   Scenario: TC04_name
     Given Fatih anasayfaya belirtilen URL'ye gider

@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: surname kismina gecerli bir surname yazilir
   Scenario: TC07_surname
     Given Fatih anasayfaya belirtilen URL'ye gider

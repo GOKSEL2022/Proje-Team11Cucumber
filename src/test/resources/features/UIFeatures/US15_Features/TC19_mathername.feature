@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: mothername alanina gecerli bir isim girilir
   Scenario: TC19_mothername
     Given Fatih anasayfaya belirtilen URL'ye gider

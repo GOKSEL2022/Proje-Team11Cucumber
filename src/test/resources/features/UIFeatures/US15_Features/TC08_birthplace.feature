@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: birthplace kismina bir yer ismi yazilir
   Scenario: TC08_birthplace
     Given Fatih anasayfaya belirtilen URL'ye gider

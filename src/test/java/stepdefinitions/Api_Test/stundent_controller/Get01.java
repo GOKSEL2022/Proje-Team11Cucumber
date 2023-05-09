@@ -24,7 +24,7 @@ public class Get01 {
                 "konya","235-524-8872","MALE",1658,
                 "ummu","aliosman","fatih987@hotmail.com",true);
 
-        response = given(specAdmin).when().body(expectedData).get("{first}/{second}");
+//        response = given(specAdmin).when().body(expectedData).get("{first}/{second}");
 
                     /*
 

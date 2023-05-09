@@ -1,10 +1,10 @@
-@admin
+
+@admin @team11Regression @team11Smoke
 Feature:
 
   Scenario: US15_student_as_a_admin_post
     Given Fatih admin sends the student data_POST
-    Then Fatih admin gets the student data and assert_POST
-
+   Then Fatih admin gets the student data and assert_POST
 
 
   Scenario Outline: TC15_student_as_a_admin_GET

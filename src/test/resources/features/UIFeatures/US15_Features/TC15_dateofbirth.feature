@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: date of birth alanina gecerli bir tarih girilir
   Scenario: TC15_dateofbirth
     Given Fatih anasayfaya belirtilen URL'ye gider
