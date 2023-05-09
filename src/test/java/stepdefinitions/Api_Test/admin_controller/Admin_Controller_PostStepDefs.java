@@ -1,5 +1,4 @@
 package stepdefinitions.Api_Test.admin_controller;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,14 +10,15 @@ import pojos.Admin_Pojo;
 
 import static base_urls.ManagementonSchoolsBaseUrl.*;
 import static io.restassured.RestAssured.given;
-public class TC01_Admin_Controller_PostStepDefs {
+
+public class Admin_Controller_PostStepDefs {
     Response response;
     Admin_Pojo expectedData;
     Admin_Object_Pojo admin_object_pojo;
     @Given("Set the Url admin_post")
     public void setTheUrlAdmin_post() {
         //{{baseUrl}}/admin/save
-        specAdmin.pathParams("firsth","admin","second","save");
+        specViceDean.pathParams("firsth","admin","second","save");
     }
     @And("Set the expected data admin_post")
     public void setTheExpectedDataAdmin_post() {
@@ -66,35 +66,9 @@ public class TC01_Admin_Controller_PostStepDefs {
     "message": "Admin Saved",
     "httpStatus": "CREATED"
 }
+
          */
 
-        /*
-        "content":[
-         {
-            "id": 198,
-            "username": "Goksel",
-            "ssn": "258-45-7852",
-            "name": "Goksel",
-            "surname": "Celik",
-            "birthDay": "2000-01-01",
-            "birthPlace": "Samsun",
-            "phoneNumber": "542-453-8523",
-            "gender": "MALE"
-        },
-
-        {
-            "id": 45,
-            "username": "Mustafa",
-            "ssn": "188-11-9380",
-            "name": "Atatürk",
-            "surname": "Kemal",
-            "birthDay": "1881-05-05",
-            "birthPlace": "selanik",
-            "phoneNumber": "938-938-3838",
-            "gender": "MALE",
-            "built_in": false
-        }
-         */
 
     }
 }

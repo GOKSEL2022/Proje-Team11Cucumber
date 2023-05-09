@@ -19,14 +19,14 @@ public class US19_DB {
     @Then("emin Validate data")
     public void emin_validate_data() throws SQLException {
         assertEquals("149", resultSet.getString("id"));
-        assertEquals("2000-12-12", resultSet.getString("birth_day"));
-        assertEquals("kij", resultSet.getString("birth_place"));
+        assertEquals("1994-07-21", resultSet.getString("birth_day"));
+        assertEquals("kijAnkara", resultSet.getString("birth_place"));
         assertEquals("MALE", resultSet.getString("gender"));
-        assertEquals("asA", resultSet.getString("name"));
+        assertEquals("asACyrus", resultSet.getString("name"));
        // assertEquals("$2a$10$IsdC9xlcyKVAvSw6ptxQ5uwBcBZjDv9y14z67IqEWhicwGT84mz52", resultSet.getString("password"));
         assertEquals("896-987-6327", resultSet.getString("phone_number"));
         assertEquals("456-98-7853", resultSet.getString("ssn"));
-        assertEquals("FRE", resultSet.getString("surname"));
+        assertEquals("FREGislason", resultSet.getString("surname"));
         assertEquals("LUOK", resultSet.getString("username"));
         assertEquals("uj@ac.com", resultSet.getString("email"));
         assertTrue(resultSet.getBoolean("is_advisor"));

@@ -1,4 +1,4 @@
-@US05_AC03_TC08 @team11
+@US05_AC03_TC08 @team11 @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
@@ -25,6 +25,10 @@ Feature:Dean ekleyebilme
     And Ali Surname alanina space girer.
     And Ali bır sanıye bekler
     And Ali Gender alaninda checkbox`a tiklar
+    And Ali bır sanıye bekler
+    And Ali password alanina gecerli sifre girer
+    And Ali bır sanıye bekler
+    And Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     And Ali cikan mesaji gorur
 

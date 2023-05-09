@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import java.sql.*;
 
 import static org.junit.Assert.assertEquals;
-public class DataBaseDeneme {
+public class DataBaseDeneme1 {
     ResultSet resultSet;
     Connection connection;
     Statement statement;

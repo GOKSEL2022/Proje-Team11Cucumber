@@ -13,6 +13,6 @@ public class US01_TC07_SurnameSpaceStepDefinitions {
     }
     @Then("Goksel Register işleminin basarili oldugunu gösteren popupi goruntuler")
     public void GokselRegisterIşlemininBasariliOldugunuGösterenpopupigoruntuler() {
-        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
+        Assert.assertTrue(registerPage.alert_Register.isDisplayed());
     }
 }

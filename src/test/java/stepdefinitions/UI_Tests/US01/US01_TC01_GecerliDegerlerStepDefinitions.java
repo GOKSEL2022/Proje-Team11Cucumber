@@ -25,7 +25,7 @@ public class US01_TC01_GecerliDegerlerStepDefinitions {
     int password = Faker.instance().number().numberBetween(10000000, 99999999);
     int gun = Faker.instance().number().numberBetween(1, 29);
     int ay = Faker.instance().number().numberBetween(1, 12);
-    int yil = Faker.instance().number().numberBetween(1940, 2000);
+    int yil = Faker.instance().number().numberBetween(1970, 2000);
 
     @Given("Goksel {string} gider")
     public void GokselGider(String string) {

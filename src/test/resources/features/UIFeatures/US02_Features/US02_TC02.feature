@@ -1,4 +1,4 @@
-@smoke
+@admin @team11Regression
 Feature:US02_AC0TC02
   Scenario:US02_AC0TC02
 

@@ -1,4 +1,4 @@
-@DBtest
+@studentInfiDB
 Feature: jdbc
   Scenario: JDBC_DENEME
     Given query gonderir

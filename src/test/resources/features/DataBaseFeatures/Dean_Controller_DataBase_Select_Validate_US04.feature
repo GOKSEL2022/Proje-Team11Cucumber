@@ -1,4 +1,4 @@
-@DBTest_US04 @admin
+@DBTest_US04 @team11Regression  @team11Smoke @admin
 Feature: Dean_DataBase_Test
 
   Scenario:DB US04_AC01_TC01 Validate_Dean_DB

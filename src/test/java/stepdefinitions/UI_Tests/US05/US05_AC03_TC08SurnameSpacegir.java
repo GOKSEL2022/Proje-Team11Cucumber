@@ -24,11 +24,10 @@ public class US05_AC03_TC08SurnameSpacegir {
         editDeanPage.submit_Button_Edit_Dean.click();
         Thread.sleep(1000);
     }
-
         @And("Ali cikan mesaji gorur")
         public void aliCikanMesajiGorur () throws InterruptedException {
 
-           // Assert.assertTrue(editDeanPage.Your_surname_must_consist_of_the_characters_message_Surname_Edit_Dean.isDisplayed());
+            Assert.assertTrue(editDeanPage.Your_surname_must_consist_of_the_characters_message_Surname_Edit_Dean.isDisplayed());
             Thread.sleep(1000);
 
 

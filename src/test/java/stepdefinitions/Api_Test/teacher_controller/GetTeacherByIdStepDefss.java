@@ -1,3 +1,4 @@
+
 package stepdefinitions.Api_Test.teacher_controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.java.en.*;
@@ -18,32 +19,16 @@ public class GetTeacherByIdStepDefss {
 
     @Given("send get request to get teacher")
     public void send_get_request_to_get_teacher() {
-     //http://164.92.252.42:8080/teachers/save
-        //Set the url     http://164.92.252.42:8080/teachers/getSavedTeacherById/148
+     //164.92.252.42:8080/teachers/getSavedTeacherById/179
 
-
-        specTeacher.pathParams("first","teachers","second","getSavedTeacherById","third",148);
-
+        specAdmin.pathParams("first","teachers","second","getSavedTeacherById","third",179);
 
         //Set the expected data
-        teacher_object_pojo = new Teacher_Object_Pojo(148,"team111","mehmet","emin","2000-12-12", "888-22-3698","elazig","555-444-6666","MALE","alican@gmail.com");
+        teacher_object_pojo = new Teacher_Object_Pojo(179,"Elbert772","Hilma","Batz"
+                ,"2000-01-01", "333-61-4435","Customer-focused","387-939-3856","MALE","Morris725@gmail.com");
          expectedData = new TeacherrPojo(teacher_object_pojo,"Teacher successfully found","OK");
         System.out.println("expectedData = " + expectedData);
 
-//    // {
-//        "userId": 148,
-//        "username": "team111",
-//        "name": "mehmet",
-//        "surname": "emin",
-//        "birthDay": "2000-12-12",
-//        "ssn": "888-22-3698",
-//        "birthPlace": "elazig",
-//        "phoneNumber": "555-444-6666",
-//        "gender": "MALE",
-//        "email": "alican@gmail.com"
-//    },
-
-//
         //Send the request and get the response
         response = given(specAdmin).get("{first}/{second}/{third}");
         response.prettyPrint();
@@ -65,3 +50,20 @@ public class GetTeacherByIdStepDefss {
                         "message",equalTo(expectedData.getMessage()));
     }
 }
+//{
+//    "object": {
+//        "userId": 179,
+//        "username": "Elbert772",
+//        "name": "Hilma",
+//        "surname": "Batz",
+//        "birthDay": "2000-01-01",
+//        "ssn": "333-61-4435",
+//        "birthPlace": "Customer-focused",
+//        "phoneNumber": "387-939-3856",
+//        "gender": "MALE",
+//        "email": "Morris725@gmail.com"
+//    },
+//    "message": "Teacher successfully found",
+//    "httpStatus": "OK"
+//}
+

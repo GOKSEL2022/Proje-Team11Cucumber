@@ -142,10 +142,9 @@ public class US04_AC01_TC01_DeanEkleme {
         Thread.sleep(1000);
     }
 
-    @Then("Ali Dean List bolumunde Dean kaydi gorulur")
-    public void AlıDeanListBolumundeDeanKaydiGorulur() throws InterruptedException {
+    @Then("Ali Dean Save kayit mesaji Alinir")
+    public void ali_dean_save_kayit_mesaji_alinir() {
         Assert.assertTrue(deanManagementPage.text_Dean_List.isDisplayed());
-
 
     }
 

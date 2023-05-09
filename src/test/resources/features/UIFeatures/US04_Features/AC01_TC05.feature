@@ -1,4 +1,4 @@
-@US04_AC01_TC05 @team11
+@US04_AC01_TC05 @team11Regression @team11 @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
