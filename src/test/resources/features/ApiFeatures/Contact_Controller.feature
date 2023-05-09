@@ -1,6 +1,7 @@
 @team11Regression
 Feature:Contact_Controller
 
+  @team11Smoke @admin
   Scenario:US03_TC01 Post Message Positive Testing
     Given Set the Url post message
     And   Set the expected data post message
@@ -27,7 +28,7 @@ Feature:Contact_Controller
     When  Send the request and get the response contact_message_get_searchBySubject
     Then  Do assertion contact_message_get_searchBySubject
 
-
+  @team11Smoke @admin
   Scenario: US22_TC01 Admin Controller Save Admin
     Given Set the Url admin_controller_postAdmin
     And   Set the expected data admin_controller_postAdmin

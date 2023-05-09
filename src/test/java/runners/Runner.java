@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
 
 
-        tags = "@US22_AC01",
+        tags = "@US03",
 
 
 

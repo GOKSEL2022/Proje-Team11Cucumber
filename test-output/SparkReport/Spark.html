@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 8, 2023 08:47:51 PM</span></a>
+<a href="#"><span class="badge badge-primary">May 9, 2023 06:26:02 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 8, 2023 08:47:51 PM</h3>
+<h3>May 9, 2023 06:26:02 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 8, 2023 08:48:10 PM</h3>
+<h3>May 9, 2023 06:26:23 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -130,7 +130,7 @@
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='100%'><b>3</b> scenarios failed,
+<small data-tooltip='100%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div><small data-tooltip='81%'><b>9</b> steps passed</small></div>
 <div>
-<small data-tooltip='3%'><b>3</b> steps failed,
-<b>75</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='9%'><b>1</b> steps failed,
+<b>1</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Admin_ekleme":16.738
+"AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.":19.664
 };
 </script>
 <div class="row">
@@ -177,15 +177,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@US22</td>
-<td>0</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>@US22_AC01_TC03</td>
+<td>@US03</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -193,7 +185,7 @@ var timeline = {
 <td>0%</td>
 </tr>
 <tr>
-<td>@US22_AC01_TC02</td>
+<td>@US03_AC01_TC05</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -203,13 +195,13 @@ var timeline = {
 <tr>
 <td>@team11</td>
 <td>0</td>
-<td>3</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0%</td>
 </tr>
 <tr>
-<td>@US22_AC01_TC04</td>
+<td>@US22</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -217,9 +209,17 @@ var timeline = {
 <td>0%</td>
 </tr>
 <tr>
-<td>@US22_AC01</td>
+<td>@US03_AC01</td>
 <td>0</td>
-<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@team11Regression</td>
+<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0%</td>
@@ -253,15 +253,15 @@ warningParent: 0,
 skipParent: 0,
 childCount: 5,
 passChild: 0,
-failChild: 3,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 0,
-failGrandChild: 3,
+passGrandChild: 9,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 75,
+skipGrandChild: 1,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -283,7 +283,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@US22</a><a class="dropdown-item" href="#">@US22_AC01_TC03</a><a class="dropdown-item" href="#">@US22_AC01_TC02</a><a class="dropdown-item" href="#">@team11</a><a class="dropdown-item" href="#">@US22_AC01_TC04</a><a class="dropdown-item" href="#">@US22_AC01</a>
+<a class="dropdown-item" href="#">@US03</a><a class="dropdown-item" href="#">@US03_AC01_TC05</a><a class="dropdown-item" href="#">@team11</a><a class="dropdown-item" href="#">@US22</a><a class="dropdown-item" href="#">@US03_AC01</a><a class="dropdown-item" href="#">@team11Regression</a>
 </ul>
 </li>
 </ul>
@@ -294,9 +294,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Admin_ekleme</p>
+            <p class="name">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.</p>
             <p class="text-sm">
-              <span>8:47:53 PM</span> / <span>00:00:16:738</span>
+              <span>6:26:03 PM</span> / <span>00:00:19:664</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -304,10 +304,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Admin_ekleme</h5>
-<span class='badge badge-success'>05.08.2023 8:47:53 PM</span>
-<span class='badge badge-danger'>05.08.2023 8:48:10 PM</span>
-<span class='badge badge-default'>00:00:16:738</span>
+<h5 class="test-status text-fail">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.</h5>
+<span class='badge badge-success'>05.09.2023 6:26:03 PM</span>
+<span class='badge badge-danger'>05.09.2023 6:26:23 PM</span>
+<span class='badge badge-default'>00:00:19:664</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -319,489 +319,93 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>AC01_TC02 Name kutusuna değer girilmesi durumu</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>TC05  "Name" kutusuna space girilmesi</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(java.lang.String)">
-                <span>Given rabia "https://www.managementonschools.com" gider.</span>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.kullaniciAnaSayfayaGider()">
+                <span>Given rabia ana sayfaya gider.</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=113.0.5672.63)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ada2ae995b94fbb66838302569a01861, get {url=https://www.managementonschools.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.63, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rabia\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51709}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51709/devtoo..., se:cdpVersion: 113.0.5672.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ada2ae995b94fbb66838302569a01861
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(AddAdmin.java:42)
-	at ✽.rabia "https://www.managementonschools.com" gider.(file:///C:/Users/rabia/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US22_Features/AC01.feature:5)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAdminOlarakGirisYapar()">
-                <span>When rabia admin olarak giris yapar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAddAdminBölümününOldugunuDogrular()">
-                <span>When rabia  Add Admin bölümünün oldugunu dogrular.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaNameeKutusunaTıklar()">
-                <span>And rabia namee kutusuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaNameKutusunaGirer(java.lang.String)">
-                <span>And rabia name kutusuna "name" girer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSurnameeKutusunaGirer(java.lang.String)">
-                <span>And rabia surnamee kutusuna "surname" girer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaBirthPLaceeKutusunaGirer(java.lang.String)">
-                <span>And rabia birthPLacee kutusuna "birth Place" girer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGenderSecer()">
-                <span>And rabia gender secer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaDateOfBirthKutusunaGırer(java.lang.String)">
-                <span>And rabia Date Of Birth kutusuna "Date Of Birth" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPhoneKutusunaGırer(java.lang.String)">
-                <span>And rabia Phone kutusuna "Phone" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSSNKutusunaSSNGırer()">
-                <span>And rabia SSN kutusuna SSN gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaUsernameKutusunaGırer(java.lang.String)">
-                <span>And rabia username kutusuna "username" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPasswordKutusunaGırer(java.lang.String)">
-                <span>And rabia Password kutusuna "password" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSubmitButonunaTıklar()">
-                <span>And rabia submit butonuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.addAdminIslemiBasariliBirsekildeGerceklesir()">
-                <span>Then Add Admin işlemi başarılı bir şekilde gerceklesir.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US07.LoginAsDean.rabiaSayfayıKapatır()">
-                <span>Then rabia sayfayı kapatır.</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>AC01_TC03 Name kutusunun bos bırakılması durumu</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(java.lang.String)">
-                <span>Given rabia "https://www.managementonschools.com" gider.</span>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaContactButonunaTiklar()">
+                <span>When rabia Contact butonuna tıklar.</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=113.0.5672.63)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ada2ae995b94fbb66838302569a01861, get {url=https://www.managementonschools.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.63, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rabia\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51709}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51709/devtoo..., se:cdpVersion: 113.0.5672.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ada2ae995b94fbb66838302569a01861
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(AddAdmin.java:42)
-	at ✽.rabia "https://www.managementonschools.com" gider.(file:///C:/Users/rabia/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US22_Features/AC01.feature:5)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAdminOlarakGirisYapar()">
-                <span>When rabia admin olarak giris yapar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAddAdminBölümününOldugunuDogrular()">
-                <span>When rabia  Add Admin bölümünün oldugunu dogrular.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaNameeKutusunaTıklar()">
-                <span>And rabia namee kutusuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaNameKutusunaGirer(java.lang.String)">
-                <span>And rabia name kutusuna "" girer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSurnameeKutusunaGirer(java.lang.String)">
-                <span>And rabia surnamee kutusuna "surname" girer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaBirthPLaceeKutusunaGirer(java.lang.String)">
-                <span>And rabia birthPLacee kutusuna "birth Place" girer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGenderSecer()">
-                <span>And rabia gender secer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaDateOfBirthKutusunaGırer(java.lang.String)">
-                <span>And rabia Date Of Birth kutusuna "Date Of Birth" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPhoneKutusunaGırer(java.lang.String)">
-                <span>And rabia Phone kutusuna "Phone" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSSNKutusunaSSNGırer()">
-                <span>And rabia SSN kutusuna SSN gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaUsernameKutusunaGırer(java.lang.String)">
-                <span>And rabia username kutusuna "username" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPasswordKutusunaGırer(java.lang.String)">
-                <span>And rabia Password kutusuna "password" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSubmitButonunaTıklar()">
-                <span>And rabia submit butonuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaNameKutusuAltındaRequiredYazısınınOldugunuGorur()">
-                <span>And rabia name kutusu altında required yazısının oldugunu gorur.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US07.LoginAsDean.rabiaSayfayıKapatır()">
-                <span>Then rabia sayfayı kapatır.</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="56"><span class="badge log fail-bg mr-2">Fail</span>AC01_TC04 Name kutusuna space karakteri girme durumu</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(java.lang.String)">
-                <span>Given rabia "https://www.managementonschools.com" gider.</span>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaNameKutusunaTiklar()">
+                <span>Then rabia Name kutusuna tıklar.</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=113.0.5672.63)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ada2ae995b94fbb66838302569a01861, get {url=https://www.managementonschools.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.63, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rabia\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51709}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51709/devtoo..., se:cdpVersion: 113.0.5672.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ada2ae995b94fbb66838302569a01861
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGider(AddAdmin.java:42)
-	at ✽.rabia "https://www.managementonschools.com" gider.(file:///C:/Users/rabia/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US22_Features/AC01.feature:5)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAdminOlarakGirisYapar()">
-                <span>When rabia admin olarak giris yapar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAddAdminBölümününOldugunuDogrular()">
-                <span>When rabia  Add Admin bölümünün oldugunu dogrular.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaNameeKutusunaTıklar()">
-                <span>And rabia namee kutusuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaNameKutusunaGirer(java.lang.String)">
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaNameKutusunaGirer(java.lang.String)">
                 <span>And rabia name kutusuna " " girer.</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaMailKutusunaGirer(java.lang.String)">
+                <span>And rabia mail kutusuna "mail" girer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaSubjectKutusunaGirer(java.lang.String)">
+                <span>And rabia subject  kutusuna "subject" girer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaMessageKutusunaGirer(java.lang.String)">
+                <span>And rabia message kutusuna "message" girer.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaSendMessageButonunaTiklar()">
+                <span>And rabia send message butonuna tıklar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
                 <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSurnameeKutusunaGirer(java.lang.String)">
-                <span>And rabia surnamee kutusuna "surname" girer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaBirthPLaceeKutusunaGirer(java.lang.String)">
-                <span>And rabia birthPLacee kutusuna "birth Place" girer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaGenderSecer()">
-                <span>And rabia gender secer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaDateOfBirthKutusunaGırer(java.lang.String)">
-                <span>And rabia Date Of Birth kutusuna "Date Of Birth" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPhoneKutusunaGırer(java.lang.String)">
-                <span>And rabia Phone kutusuna "Phone" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSSNKutusunaSSNGırer()">
-                <span>And rabia SSN kutusuna SSN gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaUsernameKutusunaGırer(java.lang.String)">
-                <span>And rabia username kutusuna "username" gırer.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaPasswordKutusunaGırer(java.lang.String)">
-                <span>And rabia Password kutusuna "password" gırer</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaSubmitButonunaTıklar()">
-                <span>And rabia submit butonuna tıklar.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaBirSaniyeBekler()">
-                <span>And rabia bir saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.UI_Tests.US22.AddAdmin.rabiaAdminEklemeIslemininGerceklesmediginiDogrular()">
-                <span>And rabia admin ekleme isleminin gerçeklesmediğini dogrular.</span>
-      <div>Step skipped
+              <div class="step fail-bg" title="stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaMesajınIletilemediğiniDoğrular()">
+                <span>And rabia mesajın iletilemediğini doğrular.</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Your name should be at least 4 characters']"}
+  (Session info: chrome=113.0.5672.92)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [793a0f276f504c34c93ff9aca8775849, findElement {using=xpath, value=//*[text()='Your name should be at least 4 characters']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rabia\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58958}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58958/devtoo..., se:cdpVersion: 113.0.5672.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 793a0f276f504c34c93ff9aca8775849
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at stepdefinitions.UI_Tests.US03.AC01_NameBoxCheck.rabiaMesajınIletilemediğiniDoğrular(AC01_NameBoxCheck.java:75)
+	at ✽.rabia mesajın iletilemediğini doğrular.(file:///C:/Users/rabia/IdeaProjects/team11/./src/test/resources/features/UIFeatures/US03_Features/AC01.feature:67)
+</textarea>
+      
       </div>
               </div>
               <div class="step skip-bg" title="stepdefinitions.UI_Tests.US07.LoginAsDean.rabiaSayfayıKapatır()">
-                <span>Then rabia sayfayı kapatır.</span>
+                <span>And rabia sayfayı kapatır.</span>
       <div>Step skipped
       </div>
               </div>
@@ -831,70 +435,14 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>3</span>
-</span>
-<p class="name">@US22</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@US22</h4>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:47:53 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>AC01_TC02 Name kutusuna değer girilmesi durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC02 Name kutusuna değer girilmesi durumu</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:03 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='29'>AC01_TC03 Name kutusunun bos bırakılması durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC03 Name kutusunun bos bırakılması durumu</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:07 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='56'>AC01_TC04 Name kutusuna space karakteri girme durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC04 Name kutusuna space karakteri girme durumu</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@US22_AC01_TC03</p>
+<p class="name">@US03</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@US22_AC01_TC03</h4>
+<h4>@US03</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -908,11 +456,11 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:03 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='29'>AC01_TC03 Name kutusunun bos bırakılması durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC03 Name kutusunun bos bırakılması durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
@@ -925,12 +473,12 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@US22_AC01_TC02</p>
+<p class="name">@US03_AC01_TC05</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@US22_AC01_TC02</h4>
+<h4>@US03_AC01_TC05</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -944,11 +492,11 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:47:53 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>AC01_TC02 Name kutusuna değer girilmesi durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC02 Name kutusuna değer girilmesi durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
@@ -959,70 +507,14 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>3</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">@team11</p>
-<p class="duration text-sm">3 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@team11</h4>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:47:53 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>AC01_TC02 Name kutusuna değer girilmesi durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC02 Name kutusuna değer girilmesi durumu</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:03 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='29'>AC01_TC03 Name kutusunun bos bırakılması durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC03 Name kutusunun bos bırakılması durumu</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:07 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='56'>AC01_TC04 Name kutusuna space karakteri girme durumu</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC04 Name kutusuna space karakteri girme durumu</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@US22_AC01_TC04</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@US22_AC01_TC04</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -1036,11 +528,11 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:07 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='56'>AC01_TC04 Name kutusuna space karakteri girme durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC04 Name kutusuna space karakteri girme durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
@@ -1051,15 +543,15 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>3</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@US22_AC01</p>
-<p class="duration text-sm">3 tests</p>
+<p class="name">@US22</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@US22_AC01</h4>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
+<h4>@US22</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1072,31 +564,83 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:47:53 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>AC01_TC02 Name kutusuna değer girilmesi durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC02 Name kutusuna değer girilmesi durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@US03_AC01</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@US03_AC01</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:03 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='29'>AC01_TC03 Name kutusunun bos bırakılması durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC03 Name kutusunun bos bırakılması durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@team11Regression</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@team11Regression</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:07 PM</td>
+<td>18:26:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='56'>AC01_TC04 Name kutusuna space karakteri girme durumu</a>
+<a href="#" class="linked" test-id='1' id='2'>TC05 "Name" kutusuna space girilmesi</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC04 Name kutusuna space karakteri girme durumu</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi</span>
 </div>
 </td>
 </tr>
@@ -1123,15 +667,15 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>3</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.WebDriverException</p>
-<p class="duration text-sm">3 tests</p>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.WebDriverException</h4>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1144,31 +688,11 @@ Session ID: ada2ae995b94fbb66838302569a01861
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>20:47:53 PM</td>
+<td>18:26:13 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Given rabia "https://www.managementonschools.com" gider.</a>
+<a href="#" class="linked" test-id='1' id='12'>And rabia mesajın iletilemediğini doğrular.</a>
 <div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC02 Name kutusuna değer girilmesi durumu.Given rabia "https://www.managementonschools.com" gider.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:03 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='30'>Given rabia "https://www.managementonschools.com" gider.</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC03 Name kutusunun bos bırakılması durumu.Given rabia "https://www.managementonschools.com" gider.</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>20:48:07 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='57'>Given rabia "https://www.managementonschools.com" gider.</a>
-<div class="">
-<span class="badge badge-default">Admin_ekleme.AC01_TC04 Name kutusuna space karakteri girme durumu.Given rabia "https://www.managementonschools.com" gider.</span>
+<span class="badge badge-default">AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir..TC05 "Name" kutusuna space girilmesi.And rabia mesajın iletilemediğini doğrular.</span>
 </div>
 </td>
 </tr>
