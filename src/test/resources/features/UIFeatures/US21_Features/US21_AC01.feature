@@ -3,9 +3,9 @@
 Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigorebilmeli
 
   Background:
-    Given Emin anasayfaya "https://www.managementonschools.com/" gider
+    Given Emin anasayfaya "http://139.59.159.36:3000/" gider
     When Emin loginn butonuna tiklar
-    And Emin User Namee alanina teacher bilgileri "m.emin" ile girer
+    And Emin User Namee alanina teacher bilgileri "team11" ile girer
     And Emin Passwordd alanina sifresini "12345678" girer
     And Emin loginn_login butonuna tiklar
 

@@ -13,10 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db">
-      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM guest_user where id=21 ;
-SELECT name FROM contact_message where email = 'rabiaa@gmail.com'
-SELECT email FROM contact_message where name='rabiaa'
-select * from admins where ssn = '748-93-9012']]></console>
+      <console name="ManagementOnSchools" type="STANDARD" schema="school_management" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

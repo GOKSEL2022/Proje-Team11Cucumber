@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: email kismina gecerli bir mail yazilir
   Scenario: TC10_gecerliemail
     Given Fatih anasayfaya belirtilen URL'ye gider

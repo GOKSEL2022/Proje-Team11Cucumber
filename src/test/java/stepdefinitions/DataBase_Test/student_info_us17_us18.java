@@ -1,4 +1,4 @@
-package stepdefinitions.Api_Test.student_info_controller;
+package stepdefinitions.DataBase_Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -6,11 +6,11 @@ import io.cucumber.java.en.Then;
 import java.sql.*;
 
 import static org.junit.Assert.assertEquals;
-public class DataBaseDeneme1 {
+public class student_info_us17_us18 {
     ResultSet resultSet;
     Connection connection;
     Statement statement;
-    @Given("query gonderir")
+    @Given("query gonderir student_info")
     public void queryGonderir() throws SQLException {
         //SELECT * FROM teacher WHERE id = 35;
         connection = DriverManager.getConnection("jdbc:postgresql://164.92.252.42:5432/school_management", "select_user", "43w5ijfso");
@@ -18,7 +18,7 @@ public class DataBaseDeneme1 {
         resultSet = statement.executeQuery("select name from contact_message where email = 'rabiaa@gmail.com'");
         resultSet.next();
     }
-    @Then("validete data")
+    @Then("validete data student_info")
     public void valideteData() throws SQLException {
         assertEquals(0, resultSet.getInt("absentee"));
         assertEquals(99, resultSet.getInt("exam_average"));

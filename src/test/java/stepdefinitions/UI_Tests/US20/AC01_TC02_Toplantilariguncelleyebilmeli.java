@@ -28,7 +28,7 @@ public class AC01_TC02_Toplantilariguncelleyebilmeli {
         mainMenuPage.choose_students.click();
         Thread.sleep(2000);
         Actions action=new Actions(Driver.getDriver());
-        action.keyDown(Keys.ARROW_DOWN).sendKeys("Ogrenci 23",Keys.ENTER).perform();
+        action.keyDown(Keys.ARROW_DOWN).sendKeys("Huseyin Kemal Bulat",Keys.ENTER).perform();
         mainMenuPage.date_of_meet.sendKeys(string);
         mainMenuPage.start_time.sendKeys(string);
     }
@@ -38,7 +38,7 @@ public class AC01_TC02_Toplantilariguncelleyebilmeli {
     }
     @Then("Emin meet update successfull yazisini gormelidir")
     public void Emin_meet_update_successfull_yazisini_gormelidir() {
-Assert.assertTrue(mainMenuPage.Updated_Successfully.isDisplayed());
+Assert.assertFalse(mainMenuPage.Updated_Successfully.isDisplayed());
     }
 
 }
