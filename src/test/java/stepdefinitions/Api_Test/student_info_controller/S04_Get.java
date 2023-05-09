@@ -21,13 +21,13 @@ public class S04_Get {
         specTeacher.pathParams("first","studentInfo","second","get","third",student_info_id);
 
        expectedData = new HashMap<>();
-       expectedData.put("message","Error: Student Info with id 646 Not found");
+       expectedData.put("message","Error: Student Info with id "+student_info_id+" Not found");
        expectedData.put("statusCode", 404);
     }
     @Then("teacher gets the student info data and assert_GET")
     public void teacherGetsTheStudentInfoDataAndAssert_GET() {
 
-        response = given().spec(specTeacher).when().delete("{first}/{second}/{third}");
+        response = given().spec(specTeacher).when().get("{first}/{second}/{third}");
         response.prettyPrint();
 
         Map<String,Object> actualData = response.as(HashMap.class);
