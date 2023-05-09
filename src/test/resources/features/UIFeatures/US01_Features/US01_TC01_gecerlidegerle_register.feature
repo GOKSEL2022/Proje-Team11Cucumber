@@ -1,4 +1,4 @@
-@goksel @team11Regression @team11Smoke
+@goksel @admin @team11Regression @team11Smoke
 Feature:US01
   Scenario Outline:US01
 

@@ -1,4 +1,4 @@
-@TC01_Login
+@admin @team11Regression @team11Smoke
 Feature: anasayfaya gidilir
 
   Scenario: TC01_Login

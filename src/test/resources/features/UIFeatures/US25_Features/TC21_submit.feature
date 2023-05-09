@@ -1,4 +1,4 @@
-@smoke
+@admin @team11Regression
 Feature:submit yapilir
   Scenario: TC21_submit
     Given Fatih anasayfaya belirtilen URL'ye gider

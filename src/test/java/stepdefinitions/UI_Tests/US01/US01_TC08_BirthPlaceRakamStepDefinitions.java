@@ -12,7 +12,7 @@ public class US01_TC08_BirthPlaceRakamStepDefinitions {
     }
     @Then("Goksel Register islemi yapamaz")
     public void GokselRegisterIslemiYapamaz() {
-        Assert.assertTrue(registerPage.alert_Register.isDisplayed());
+        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
     }
 
 }

@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: password alanina gecerli bir password olusturulur
   Scenario: TC20_password
     Given Fatih anasayfaya belirtilen URL'ye gider

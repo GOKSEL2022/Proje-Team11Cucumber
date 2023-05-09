@@ -13,7 +13,7 @@ public class US02_TC02_StepDefinitions {
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
         homePage.login_Button_Home.click();
-        loginPage.username_Box_Login.sendKeys("AdminB103");
+        loginPage.username_Box_Login.sendKeys("GokselCelik");
         loginPage.password_Box_Login.sendKeys("12345678");
         loginPage.login_Button_Login.click();
     }

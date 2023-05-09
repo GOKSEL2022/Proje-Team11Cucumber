@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: danisman secilir
   Scenario: TC03_choose_Teacher
     Given Fatih anasayfaya belirtilen URL'ye gider

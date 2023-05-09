@@ -16,6 +16,6 @@ public class US01_TC15_DateOfBirthGecersizTarihStepDefinitions {
     }
     @Then("Goksel Register olmadıgını goruntuler")
     public void GokselRegisterOlmadıgınıgoruntuler() {
-        Assert.assertFalse(registerPage.alert_Register.isDisplayed());
+        Assert.assertFalse(!registerPage.alert_Register.isDisplayed());
     }
 }

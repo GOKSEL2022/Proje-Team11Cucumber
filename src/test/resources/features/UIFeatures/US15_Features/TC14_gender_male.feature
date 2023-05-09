@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: gender alaninda male tiklanir
   Scenario: TC14_male tiklanir
     Given Fatih anasayfaya belirtilen URL'ye gider

@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: ssn alanina gecerli bir numara girilir
   Scenario: TC16_ssn
     Given Fatih anasayfaya belirtilen URL'ye gider
