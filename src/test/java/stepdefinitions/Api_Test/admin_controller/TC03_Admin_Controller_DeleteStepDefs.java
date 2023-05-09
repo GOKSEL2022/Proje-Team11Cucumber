@@ -28,7 +28,7 @@ public class TC03_Admin_Controller_DeleteStepDefs {
     @Given("Set the url Admin_Delete")
     public void set_the_url_admin_delete() {
         //http://164.92.252.42:8080/admin/delete/208
-        specAdmin.pathParams("first","admin","second","delete","thirt","100");
+        specAdmin.pathParams("first","admin","second","delete","thirt","200");
 
     }
     @When("Set the expected data Admin_Delete")
