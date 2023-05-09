@@ -1,4 +1,4 @@
-@Student
+@admin @team11Regression
 Feature:student management gidilir
 
     Scenario: TC02_menu
