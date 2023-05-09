@@ -36,7 +36,7 @@ public class US05_AC02_TC01DeanListAlanindaDeleteIslemi {
     public void AlıDeleteButonununOlmadiginiDogrular() throws IOException {
 
         //Assert.assertFalse("Delete",false);
-        Assert.assertTrue(editDeanPage.delete_Buton.isDisplayed());
+        Assert.assertFalse(editDeanPage.delete_Buton.isDisplayed());
         LocalDateTime currentTime =  LocalDateTime.now();
         ReusableMethods.getScreenshot("FAIL");
 

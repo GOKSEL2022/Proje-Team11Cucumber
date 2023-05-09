@@ -1,13 +1,13 @@
-@DataBase_US07
-Feature:  Dean, mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve
-  subject bilgilerini görüntüleyebilmelidir.
-  Background: Mesaj gonderme
-    Given Ogrenci mesaj gonderir.
+@team11Regression
+Feature:  Dean, db de mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve
+  subject bilgilerini görüntüleyebilmelidir
+#  Background: Mesaj gonderme
+#    Given Ogrenci mesaj gonderir.
 
-  Scenario: TCO1 ogrenci mesajlari sorgulamasi ve dogrulamasi
+  Scenario: TCO1 ogrenci mesajlari sorgulamasi ve dogrulamasi db
     Given Database icin contact saglanir
     When Databaseden olusturulan mesajlar sorgulanir
-    Then Gonderilen mesajlarin goruldugu dogrulanir
+   Then Gonderilen mesajlarin goruldugu dogrulanir
 
   Scenario: TCO2 mesaji gonderenlerin isimlerinin sorgulamasi ve dogrulamasi
     Given Database icin contact saglanir

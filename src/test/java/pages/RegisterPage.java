@@ -45,7 +45,7 @@ public class RegisterPage {
 
     @FindBy(xpath = "//div[text()='Guest User registered.']")
     public WebElement alert_Register;
-
+    //Toastify__toast-body
     @FindBy(xpath = "//div[@class='mb-4 fw-semibold shadow-sm bg-body-tertiary card-title h5']")
     public WebElement register_Text_Register;
 

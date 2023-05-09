@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: name kismina isim yazilir
   Scenario: TC05_name
     Given Fatih anasayfaya belirtilen URL'ye gider

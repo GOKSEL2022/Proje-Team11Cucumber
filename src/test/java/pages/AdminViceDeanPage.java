@@ -12,7 +12,7 @@ public class AdminViceDeanPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//h3[.='Vice Dean Management']")
+    @FindBy(xpath = "(//*[.='Vice Dean Management'])[2]")
     public WebElement Admin_Vice_Dean_Text;
 
     @FindBy(xpath = "(//*[.='Admin Management'])[2]")

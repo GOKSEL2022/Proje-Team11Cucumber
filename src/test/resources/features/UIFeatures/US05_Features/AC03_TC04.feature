@@ -1,8 +1,8 @@
-@US05_AC03_TC04 @team11
+@US05_AC03_TC04 @team11 @team11Regression @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_guncelleme
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     And Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -32,5 +32,5 @@ Feature:Dean ekleyebilme
 
     Examples: dean_bilgileri
       | Username   | Password   |   password |
-      | karakartal | 987654321  |   57916929 |
+      | Admin      | 485424698  |   57916929 |
 

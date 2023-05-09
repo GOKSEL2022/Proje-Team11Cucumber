@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: name kismina noktalama isareti yazilir
   Scenario: TC06_name
     Given Fatih anasayfaya belirtilen URL'ye gider

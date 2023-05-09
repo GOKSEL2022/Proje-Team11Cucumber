@@ -25,7 +25,7 @@ public class AC08_TC08 {
     }
 
     @And("Nilufer Ssn alanina Ssn girmeyerek bos birak")
-    public void niluferSsnAlaninaSsnGirmeyerekBosBirak() {
+    public void niluferSsnAlaninaGirmeyerekBosBirak() {
         adminViceDeanPage.Admin_Vice_Dean_Ssn.click();
         ReusableMethods.waitFor(2);
     }

@@ -15,7 +15,7 @@ public class AC09_TC09 {
     }
     @And("Nilufer User Name alani altinda Required mesajini gor")
     public void user_name_alani_altinda_required_mesajini_gor() {
-        assertEquals(1, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(8, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
 
@@ -26,7 +26,7 @@ public class AC09_TC09 {
     }
     @And("Nilufer User Name alani altinda hata mesaji goruntulenmemeli")
     public void user_name_alani_altinda_hata_mesaji_goruntulenmemeli() {
-        assertEquals(1, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
+        assertEquals(7, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
 

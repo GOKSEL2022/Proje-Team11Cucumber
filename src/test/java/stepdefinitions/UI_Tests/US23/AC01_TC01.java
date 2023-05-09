@@ -60,6 +60,28 @@ public class AC01_TC01 {
         loginPage.login_Button_Login.click();
         ReusableMethods.waitFor(2);
     }
+    @And("Nilufer Admin Management sayfasinda oldugunu dogrular")
+    public void niluferAdminManagementSayfasindaOldugunuDogrular() {
+        assertTrue(adminViceDeanPage.Admin_Vice_Dean_Admin_Management_Text.isDisplayed());
+        ReusableMethods.waitFor(2);
+    }
+
+    @And("Nilufer Menu buttonuna tikla")
+    public void niluferMenuButtonunaTikla() {
+        adminViceDeanPage.Admin_Vice_Dean_Menu_Button.click();
+        ReusableMethods.waitFor(2);
+    }
+
+    @And("Nilufer Main Menu buttonunun acildigini dogrula")
+    public void niluferMainMenuButtonununAcildiginiDogrula() {
+
+        assertTrue(adminViceDeanPage.Admin_Vice_Dean_Main_Menu_Text.isDisplayed());
+    }
+
+    @And("Nilufer Vice Dean Management buttonuna tikla")
+    public void niluferViceDeanManagementButtonunaTikla() {
+        adminViceDeanPage.Admin_Vice_Dean_Management_Button.click();
+    }
 
     @And("Nilufer Vice Dean Management sayfasinda oldugunu dogrula")
     public void niluferViceDeanManagementSayfasindaOldugunuDogrular() {
@@ -129,33 +151,10 @@ public class AC01_TC01 {
 
     @And("Nilufer Admin olarak Vice Dean olusturdugunu dogrula")
     public void niluferDeanOlarakViceDeanOlusturdugunuDogrular() {
-        assertTrue(adminViceDeanPage.Admin_Vice_Dean_Text.isDisplayed());
+        assertTrue(adminViceDeanPage.Admin_Vice_Dean_Vice_dean_Saved.isDisplayed());
         ReusableMethods.waitFor(2);
     }
 
-
-    @And("Nilufer Admin Management sayfasinda oldugunu dogrular")
-    public void niluferAdminManagementSayfasindaOldugunuDogrular() {
-       assertTrue(adminViceDeanPage.Admin_Vice_Dean_Admin_Management_Text.isDisplayed());
-        ReusableMethods.waitFor(2);
-    }
-
-    @And("Nilufer Menu buttonuna tikla")
-    public void niluferMenuButtonunaTikla() {
-        adminViceDeanPage.Admin_Vice_Dean_Menu_Button.click();
-        ReusableMethods.waitFor(2);
-    }
-
-    @And("Nilufer Main Menu buttonunun acildigini dogrula")
-    public void niluferMainMenuButtonununAcildiginiDogrula() {
-
-                assertTrue(adminViceDeanPage.Admin_Vice_Dean_Main_Menu_Text.isDisplayed());
-    }
-
-    @And("Nilufer Vice Dean Management buttonuna tikla")
-    public void niluferViceDeanManagementButtonunaTikla() {
-        adminViceDeanPage.Admin_Vice_Dean_Management_Button.click();
-    }
     @Then("close the applications")
     public void closeTheApplications() {
         Driver.closeDriver();

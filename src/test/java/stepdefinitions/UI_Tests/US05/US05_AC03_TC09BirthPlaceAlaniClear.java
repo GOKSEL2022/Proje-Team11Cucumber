@@ -12,26 +12,21 @@ import pages.*;
 public class US05_AC03_TC09BirthPlaceAlaniClear {
     EditDeanPage editDeanPage = new EditDeanPage();
     HomePage homePage = new HomePage();
+    DeanManagementPage deanManagementPage = new DeanManagementPage();
     @And("Ali Menu butonuna tiklar.")
     public void aliMenuButonunaTiklar() {
         homePage.menuButton.click();
 
     }
-    @And("Ali surname alanina veri girer")
-    public void aliSurnameAlaninaVeriGirer() throws InterruptedException {
-        editDeanPage.surname_Edit_Dean.sendKeys("ozyilmaz");
-        Thread.sleep(1000);
-    }
     @And("Ali Birth Place textboxinin icindeki veriyi siler.")
-    public void AlıBirthPlaceTextboxininIcindekiVeriyiSiler() throws InterruptedException {
+    public void AliBirthPlaceTextboxininIcindekiVeriyiSiler() throws InterruptedException {
         editDeanPage.birthPlace_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
         Thread.sleep(1000);
         editDeanPage.female_Checkbox_Edit_Dean.click();
-        editDeanPage.password_Edit_Dean.sendKeys("12345678");
+        editDeanPage.submit_Button_Edit_Dean.click();
+    }
+    @And("Ali Required mesajini birth placede gorur.")
+    public void aliRequiredMesajiniBirthPlacedeGorur() {
         Assert.assertTrue(editDeanPage.Required_edit_Dean_BirthPlace.isDisplayed());
     }
-
-
-
 }

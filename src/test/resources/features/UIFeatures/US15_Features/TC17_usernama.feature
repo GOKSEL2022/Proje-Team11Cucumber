@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: username alanina gecerli bir isim girilir
   Scenario: TC17_username
     Given Fatih anasayfaya belirtilen URL'ye gider

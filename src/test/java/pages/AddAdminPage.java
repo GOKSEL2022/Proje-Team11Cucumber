@@ -91,8 +91,13 @@ public class AddAdminPage {
     @FindBy(xpath = "(//*[.='Required'])[8]")
     public WebElement required_password;
 
-    @FindBy(xpath = "//div[contains(text(),'Error: User with phone number 530-695-4588 already register')]")
+    @FindBy(xpath = "//*[text()='Error: User with phone number 235-952-1002 already register']")
     public WebElement eror_phonenumber_alert;
+
+    @FindBy(xpath = "//*[text()='Error: User with ssn 407-67-9499 already register']")
+    public WebElement ssn_407;
+
+
 
     @FindBy(xpath = "//div[contains(text(),'Please enter valid phone number')]")
     public WebElement eror_validphonenumber_alert;
@@ -132,5 +137,16 @@ public class AddAdminPage {
 
     @FindBy(xpath = "//div[contains(text(),'geçmiş bir tarih olmalı')]")
     public WebElement gecmistariholmali_alert;
+
+    @FindBy(xpath = "//*[text()='Your name must consist of the characters .']")
+    public WebElement consist_character;
+
+    @FindBy(xpath = "//*[text()='Your surname must consist of the characters .']")
+    public WebElement consist_character_surname;
+
+    @FindBy(xpath = "//*[text()='Your birth place must consist of the characters .']")
+    public WebElement consist_character_birthPlace;
+
+
 
 }

@@ -2,6 +2,7 @@ package stepdefinitions.UI_Tests.US04;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
@@ -28,10 +29,12 @@ public class US04_AC01_TC02_NameAlaniBos {
 
     Faker faker = new Faker();
     @And("Ali Name {string} alanina veri girmez")
-    public void AlıNameAlaninaVeriGirmez(String arg0) {
+    public void AliNameAlaninaVeriGirmez(String arg0) {
 
-        Assert.assertFalse(deanManagementPage.name_Required_Message_Add_Dean.isDisplayed());
+    }
 
-
+    @Then("Ali name alaninin altinda required mesajini gorur")
+    public void aliNameAlanininAltindaRequiredMesajiniGorur() {
+        Assert.assertTrue(deanManagementPage.name_Required_Message_Add_Dean.isDisplayed());
     }
 }

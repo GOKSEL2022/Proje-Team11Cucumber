@@ -1,4 +1,4 @@
-@US03_AC03,@team11
+@US03_AC03 @team11 @US03 @US22 @team11Regression
 Feature: AC03 rabia yazacağı mesaj hakkında bir Subject girmelidir.
   Background: ana sayfaya git
     Given rabia ana sayfaya gider.
@@ -14,7 +14,7 @@ Feature: AC03 rabia yazacağı mesaj hakkında bir Subject girmelidir.
   And rabia message kutusuna "mesajını" girer.
   And rabia send message butonuna tıklar
   And rabia bir saniye bekler
-    And rabia mesajın iletilemediğini doğrular.
+    And bos bırakılan kutunun altında required yazısı oldugunu doğrular.
     And rabia sayfayı kapatır.
 
   @US03_AC03_TC02

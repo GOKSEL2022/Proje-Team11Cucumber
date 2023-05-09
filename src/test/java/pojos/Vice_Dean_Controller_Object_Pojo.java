@@ -6,20 +6,19 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class Vice_Dean_Controller_Object_Pojo {
 
 
-    public String username;
-    public String name;
-    public String surname;
-    public String birthDay;
-    public String ssn;
-    public String birthPlace;
-    public String phoneNumber;
-    public String gender;
+    private String username;
+    private String name;
+    private String surname;
+    private String birthDay;
+    private String ssn;
+    private String birthPlace;
+    private String phoneNumber;
+    private String gender;
 
     public Vice_Dean_Controller_Object_Pojo() {
     }
 
-    public Vice_Dean_Controller_Object_Pojo( String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
-
+    public Vice_Dean_Controller_Object_Pojo(String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
         this.username = username;
         this.name = name;
         this.surname = surname;
@@ -29,7 +28,6 @@ public class Vice_Dean_Controller_Object_Pojo {
         this.phoneNumber = phoneNumber;
         this.gender = gender;
     }
-
 
     public String getUsername() {
         return username;
@@ -98,7 +96,7 @@ public class Vice_Dean_Controller_Object_Pojo {
     @Override
     public String toString() {
         return "Vice_Dean_Controller_Object_Pojo{" +
-                ", username='" + username + '\'' +
+                "username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthDay='" + birthDay + '\'' +
@@ -108,5 +106,4 @@ public class Vice_Dean_Controller_Object_Pojo {
                 ", gender='" + gender + '\'' +
                 '}';
     }
-
 }

@@ -17,7 +17,7 @@ public class HomePage {
     public WebElement register_Button_Home;
 
 
-    @FindBy(xpath = "(//*[@class='fw-semibold text-white bg-primary navbar-toggler collapsed']")
+    @FindBy(xpath = "//*[.='Menu']")
     public WebElement menuButton;
 
 
