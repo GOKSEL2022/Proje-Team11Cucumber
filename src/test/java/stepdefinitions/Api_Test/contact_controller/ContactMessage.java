@@ -12,6 +12,9 @@ import org.junit.Assert;
 import pojos.MessagePostPojo;
 import pojos.MessageSavePojo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static base_urls.ManagementonSchoolsBaseUrl.*;
 import static io.restassured.RestAssured.given;
 import static junit.framework.TestCase.assertEquals;
@@ -25,6 +28,8 @@ public class ContactMessage {
     String fakeEmail=faker.internet().emailAddress();
 
     MessagePostPojo actualData;
+    Map<String,Object> expectedData;
+
 
 
     @Given("Set the Url post message")
@@ -36,16 +41,23 @@ public class ContactMessage {
 
     @And("Set the expected data post message")
     public void setTheExpectedDataPostMessage() {
-        saveMessage=new MessageSavePojo("rabiaa",fakeEmail,"us03 için yazılan deneme mesajıdır dikkate almayınız:)","boş mesaj");
-      // actualData=new MessagePostPojo(saveMessage,"Contact Message Created Successfully","CREATED");
+        expectedData= new HashMap<>();
+        expectedData.put("name","rabiaa");
+        expectedData.put("email",fakeEmail);
+        expectedData.put("subject","us03 için yazılan deneme mesajıdır dikkate almayınız:)");
+        expectedData.put("message","boş mesajlar gitsin");
+        System.out.println("expectedData = " + expectedData);
+
+      //  saveMessage=new MessageSavePojo("rabiaa",fakeEmail,"us03 için yazılan deneme mesajıdır dikkate almayınız:)","boş mesaj gitsin");
+      // actualData=new MessagePostPojo(expectedData,"Contact Message Created Successfully","CREATED");
     }
 
 
     @When("Send the request and get the response post message")
     public void sendTheRequestAndGetTheResponsePostMessage() {
-        response=given(specAdmin).when().body(saveMessage).post("{first}/{second}");
+        response=given(specAdmin).when().body(expectedData).post("{first}/{second}");
         response.prettyPrint();
-        actualData=response.as(MessagePostPojo.class);
+      //  actualData=response.as(MessagePostPojo.class);
     }
 
     @Then("Do assertion post message")

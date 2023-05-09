@@ -1,4 +1,4 @@
-@US22_AC00 @team11 @US22 @team11Smoke
+@US22_AC00 @team11 @US22 @team11Smoke @dean @team11Regression
 Feature: Pre-Condition
 
   Scenario: TC01 Admin olarak giriş yapabilmesi durumu

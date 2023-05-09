@@ -1,4 +1,4 @@
-@team11Regression @team11Smoke
+@team11Regression
 Feature:  Kullanıcı admin ekleyebilmelidir.(Contact)
 
   Scenario Outline:
