@@ -1,4 +1,4 @@
-@Nilufer
+@Nilufer @team11Regression
 
 Feature: US23
 
