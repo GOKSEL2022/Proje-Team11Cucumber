@@ -19,7 +19,7 @@ public class MainMenuPage {
     @FindBy(xpath = "//*[@class=' css-qbdosj-Input']")
     public WebElement choose_students;
 
-    @FindBy(xpath = "//div[text()='Ogrenci 23']")
+    @FindBy(xpath = "(//*[.='Huseyin Kemal Bulat'])[1]")
     public WebElement student_dogrulama;
 
     @FindBy(xpath = "//input[@id='date']")
@@ -43,8 +43,10 @@ public class MainMenuPage {
    @FindBy(xpath = "//th[text()='Start Time']")
     public WebElement start_time_dogrulama;
 
-   @FindBy(xpath = "(//input[@id='description'])[2]")
+   @FindBy(xpath = "//input[@id='description']")
     public WebElement description_dogrulama;
+    @FindBy(xpath = "(//*[@id='description'])[2]")
+    public WebElement edit_dogrulama;
 
     @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")
     public WebElement edit_button;
