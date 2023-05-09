@@ -19,12 +19,12 @@ public class TC03_GuestUser_DeleteStepDefinitions {
    "httpStatus": "OK"
    "Status code should be 200"
     */
-        //http://164.92.252.42:8080/guestUser/delete/354
+        //http://164.92.252.42:8080/guestUser/delete/137
     Response response;
     String expectedData;
     @Given("Set the url GuestUser_Delete")
     public void set_the_url_guest_user_delete() {
-        specAdmin.pathParams("first","guestUser","second","delete","thirt",354);
+        specAdmin.pathParams("first","guestUser","second","delete","thirt",137);
 
     }
     @When("Set the expected data GuestUser_Delete")
@@ -45,9 +45,12 @@ public class TC03_GuestUser_DeleteStepDefinitions {
     }
     @Then("Do assertion GuestUser_Delete")
     public void do_assertion_guest_user_delete() {
-        Map<String, String> actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
 
-        assertEquals(expectedData,actualData);
+
+        assertEquals(200, response.statusCode());
+        //assertEquals(500, response.statusCode());
+        assertEquals(expectedData, response.asString());
+        //assertEquals(expectedData,actualData);
     }
 
     /*

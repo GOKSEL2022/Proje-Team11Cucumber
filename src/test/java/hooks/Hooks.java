@@ -43,16 +43,16 @@ public class Hooks {
         schoolsetupStudent();
     }
 
-    @After
-    public void tearDownScenarios(Scenario scenario) {
-        System.out.println("After Metotu");
+  //  @After
+  //  public void tearDownScenarios(Scenario scenario) {
+   //     System.out.println("After Metotu");
         //      Eger bir Scenario FAIL ederse, ekran goruntusunu al ve rapora ekle
-        if (scenario.isFailed()) {
-            final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-// //                     ekran goruntusu    file tipi                  ekran goruntusunun adi
-            scenario.attach(failedScreenshot, "image/png", "failed_scenario_" + scenario.getName());
-            //       Driver.closeDriver();
+   //     if (scenario.isFailed()) {
+   //         final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+ //                     ekran goruntusu    file tipi                  ekran goruntusunun adi
+  //          scenario.attach(failedScreenshot, "image/png", "failed_scenario_" + scenario.getName());
+             //      Driver.closeDriver();
         }
-    }
-}
+
+
 

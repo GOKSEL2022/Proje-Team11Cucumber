@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class TC02_GuestUser_GetAllStepDefinitions {
     Response response;
-    //http://164.92.252.42:8080/guestUser/getAll?size=10&sort=name =309
+    //http://164.92.252.42:8080/guestUser/getAll?size=10&sort=name  613
     @Given("Send GuestUser_GetAll request by id {string}")
     public void sendGuestUser_GetAllRequestById(String id) {
         specAdmin.pathParams("first","guestUser","second","getAll").queryParams("size","10","sort","name");
@@ -25,14 +25,14 @@ public class TC02_GuestUser_GetAllStepDefinitions {
     public void guestuser_getallBodyShouldBeUsernameSsnNameSurnameBirthDayBirthPlacePhoneNumberGender(String username, String ssn, String name, String surname, String birthDay, String birthPlace, String phoneNumber, String gender) {
 
         JsonPath jsonPath = response.jsonPath();
-        String actUsername = jsonPath.getList("content.findAll{it.id==309}.username").get(0).toString();
-        String actSsn = jsonPath.getList("content.findAll{it.id==309}.ssn").get(0).toString();
-        String actName = jsonPath.getList("content.findAll{it.id==309}.name").get(0).toString();
-        String actSurname= jsonPath.getList("content.findAll{it.id==309}.surname").get(0).toString();
-        String actBirthDay= jsonPath.getList("content.findAll{it.id==309}.birthDay").get(0).toString();
-        String actBirthPlace= jsonPath.getList("content.findAll{it.id==309}.birthPlace").get(0).toString();
-        String actPhoneNumber= jsonPath.getList("content.findAll{it.id==309}.phoneNumber").get(0).toString();
-        String actGender= jsonPath.getList("content.findAll{it.id==309}.gender").get(0).toString();
+        String actUsername = jsonPath.getList("content.findAll{it.id==620}.username").get(0).toString();
+        String actSsn = jsonPath.getList("content.findAll{it.id==620}.ssn").get(0).toString();
+        String actName = jsonPath.getList("content.findAll{it.id==620}.name").get(0).toString();
+        String actSurname= jsonPath.getList("content.findAll{it.id==620}.surname").get(0).toString();
+        String actBirthDay= jsonPath.getList("content.findAll{it.id==620}.birthDay").get(0).toString();
+        String actBirthPlace= jsonPath.getList("content.findAll{it.id==620}.birthPlace").get(0).toString();
+        String actPhoneNumber= jsonPath.getList("content.findAll{it.id==620}.phoneNumber").get(0).toString();
+        String actGender= jsonPath.getList("content.findAll{it.id==620}.gender").get(0).toString();
 
         assertEquals(200,response.statusCode());
         assertEquals(username,actUsername);
@@ -45,3 +45,17 @@ public class TC02_GuestUser_GetAllStepDefinitions {
         assertEquals(gender,actGender);
     }
 }
+/*
+"content": [
+     {
+            "id": 620,
+            "username": "Elmer",
+            "ssn": "169-42-9337",
+            "name": "123456",
+            "surname": "Welch",
+            "birthDay": "1941-05-13",
+            "birthPlace": "Domenicmouth",
+            "phoneNumber": "563-810-5776",
+            "gender": "MALE"
+        },
+ */
