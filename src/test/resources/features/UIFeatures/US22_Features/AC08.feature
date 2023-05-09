@@ -2,7 +2,7 @@
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu
-    Given rabia "https://www.managementonschools.com" gider.
+    Given rabia "http://139.59.159.36:3000/" gider.
     When rabia admin olarak giris yapar.
     When rabia  Add Admin bölümünün oldugunu dogrular.
 

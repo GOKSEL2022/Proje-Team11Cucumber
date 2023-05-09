@@ -4,7 +4,7 @@ Feature: AC04 rabia mesaj yazmalıdır
     Given rabia ana sayfaya gider.
     When rabia Contact butonuna tıklar.
 
-  @US03_AC04_TC01
+  @US03_AC04_TC01 @team11Smoke
   Scenario: TC01 Message kutucuğuna valid girilmesi durumu
 
   And rabia name kutusuna "rabia" girer.
