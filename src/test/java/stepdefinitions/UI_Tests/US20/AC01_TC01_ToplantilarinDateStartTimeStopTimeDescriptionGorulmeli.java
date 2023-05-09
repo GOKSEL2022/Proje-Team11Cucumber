@@ -17,12 +17,12 @@ public class AC01_TC01_ToplantilarinDateStartTimeStopTimeDescriptionGorulmeli {
 
     @When("Emin edit butonununa tiklar")
     public void Emin_edit_butonununa_tiklar() {
-      //ReusableMethods.clickByJS(mainMenuPage.edit_button);
+      ReusableMethods.clickByJS(mainMenuPage.edit_button);
      // mainMenuPage.edit_button.click();
     }
     @Then("Emin olusturmus oldugu Date, Start Time ve Descriptionu dogrular")
     public void Emin_olusturmus_oldugu_date_start_time_ve_descriptionu_dogrular() {
-       Assert.assertTrue(mainMenuPage.description_dogrulama.isDisplayed());
+       Assert.assertTrue(mainMenuPage.edit_dogrulama.isDisplayed());
     }
 
 

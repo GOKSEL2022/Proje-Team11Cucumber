@@ -50,6 +50,6 @@ public class AC02_MailBoxCheck {
 
     @And("rabia mesajın iletilmediğinii doğrular.")
     public void rabiaMesajınIletilmediğiniiDoğrular() {
-        Assert.assertTrue(!contactPage.successfully_alert_css.isDisplayed());
+        Assert.assertTrue(contactPage.subject_at_least_16.isDisplayed());
     }
 }

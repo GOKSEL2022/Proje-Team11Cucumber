@@ -10,16 +10,16 @@ public class MainMenuPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//button[@class='fw-semibold text-white bg-primary navbar-toggler collapsed']")
+    @FindBy(xpath = "//*[.='Menu']")
     public WebElement menu_button;
 
     @FindBy(xpath = "//a[text()='Meet Management']")
     public WebElement meet_management_button;
 
-    @FindBy(xpath = "//*[@class=' css-19bb58m']")
+    @FindBy(xpath = "//*[@class=' css-qbdosj-Input']")
     public WebElement choose_students;
 
-    @FindBy(xpath = "//div[text()='Ogrenci 23']")
+    @FindBy(xpath = "(//*[.='Huseyin Kemal Bulat'])[1]")
     public WebElement student_dogrulama;
 
     @FindBy(xpath = "//input[@id='date']")
@@ -43,8 +43,10 @@ public class MainMenuPage {
    @FindBy(xpath = "//th[text()='Start Time']")
     public WebElement start_time_dogrulama;
 
-   @FindBy(xpath = "//span[text()='bugunler']")
+   @FindBy(xpath = "//input[@id='description']")
     public WebElement description_dogrulama;
+    @FindBy(xpath = "(//*[@id='description'])[2]")
+    public WebElement edit_dogrulama;
 
     @FindBy(xpath = "(//button[@class='text-dark btn btn-outline-info'])[1]")
     public WebElement edit_button;

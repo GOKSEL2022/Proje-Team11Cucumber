@@ -1,8 +1,8 @@
-@US04_AC01_TC02 @team11
+@US04_AC01_TC02 @team11Regression @team11 @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     When Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -42,8 +42,8 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
-    Then Ali Dean List bolumunde Dean kaydi gorulur
+    Then Ali name alaninin altinda required mesajini gorur
 #
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | karakartal | 987654321  |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |
+      | Admin      | 485424698  |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |

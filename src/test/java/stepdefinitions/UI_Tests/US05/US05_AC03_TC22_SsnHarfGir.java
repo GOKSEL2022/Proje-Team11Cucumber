@@ -14,10 +14,12 @@ public class US05_AC03_TC22_SsnHarfGir {
     DeanManagementPage deanManagementPage = new DeanManagementPage();
     EditDeanPage editDeanPage = new EditDeanPage();
     @And("Ali Ssn alanina harf girer.")
-    public void AlıSsnAlaninaHarfGirer() {
+    public void AliSsnAlaninaHarfGirer() {
         editDeanPage.female_Checkbox_Edit_Dean.click();
         editDeanPage.ssn_Edit_Dean.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        editDeanPage.ssn_Edit_Dean.sendKeys("Ssn");
+        editDeanPage.ssn_Edit_Dean.sendKeys("Ssn-ss-ssss");
+        editDeanPage.password_Edit_Dean.sendKeys("12345678");
+        editDeanPage.surname_Edit_Dean.click();
         Assert.assertTrue(deanManagementPage.ssn_PleaseEnterValidSsnNumber_Message_Add_Dean.isDisplayed());
 
     }

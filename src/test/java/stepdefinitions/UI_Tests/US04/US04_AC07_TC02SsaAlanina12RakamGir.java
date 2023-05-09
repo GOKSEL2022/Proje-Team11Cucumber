@@ -26,6 +26,7 @@ public class US04_AC07_TC02SsaAlanina12RakamGir {
     Faker faker = new Faker();
     @And("Ali Ssn {string} alanina oniki karakter veri girer")
     public void AlıSsnAlaninaOnikiKarakterVeriGirer(String arg0) {
+
         deanManagementPage.ssn_Add_Dean.sendKeys(arg0);
     }
 

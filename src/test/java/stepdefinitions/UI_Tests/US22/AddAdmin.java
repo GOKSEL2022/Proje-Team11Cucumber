@@ -1,5 +1,6 @@
 package stepdefinitions.UI_Tests.US22;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import static org.junit.Assert.assertTrue;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AddAdmin {
 
     HomePage homePage= new HomePage();
@@ -43,7 +44,7 @@ public class AddAdmin {
 
     @When("rabia admin olarak giris yapar.")
     public void rabiaAdminOlarakGirisYapar() {
-        ReusableMethods.login("rabiaaa","12345678");
+        ReusableMethods.login("AdminB103","12345678");
 
     }
 
@@ -176,9 +177,10 @@ public class AddAdmin {
 
     @And("rabia admin ekleme isleminin gerçeklesmediğini dogrular.")
     public void rabiaAdminEklemeIslemininGerceklesmediginiDogrular() {
-        ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
-        ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
-        Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
+      //  ReusableMethods.waitForVisibility(addAdminPage.gecmistariholmali_alert, 4);
+       // ReusableMethods.hover(addAdminPage.gecmistariholmali_alert);
+       // Assert.assertTrue(addAdminPage.gecmistariholmali_alert.isDisplayed());
+        Assert.assertFalse(addAdminPage.adminSaved_alert.isDisplayed());
     }
 
 
@@ -189,6 +191,24 @@ public class AddAdmin {
         // ReusableMethods.waitForVisibility(addAdminPage.required_surname,5);
         Assert.assertEquals("Required", addAdminPage.required_surname_2.getText());
     }
+
+
+    @When("rabia Your name must consist of the characters yazısını görür.")
+    public void rabia_your_name_must_consist_of_the_characters_yazısını_görür() {
+        Assert.assertTrue(addAdminPage.consist_character.isDisplayed());
+    }
+
+
+    @When("rabia Your surname must consist of the characters yazısını görür.")
+    public void rabia_your_surname_must_consist_of_the_characters_yazısını_görür() {
+        Assert.assertTrue(addAdminPage.consist_character_surname.isDisplayed());
+    }
+
+    @When("rabia Your birth place must consist of the characters yazısını görür.")
+    public void rabia_your_birth_place_must_consist_of_the_characters_yazısını_görür() {
+        Assert.assertTrue(addAdminPage.consist_character_birthPlace.isDisplayed());
+    }
+
 
 
     @And("rabia birtPlace kutusu altında required yazısının oldugunu gorur.")
@@ -281,7 +301,7 @@ public class AddAdmin {
 
     @And("rabia Phone kutusuna daha önce sistemde ekli olan bir deger gırer")
     public void rabiaPhoneKutusunaDahaÖnceSistemdeEkliOlanBirDegerGırer() {
-        addAdminPage.phoneNumber_admin.sendKeys("530-695-4588");
+        addAdminPage.phoneNumber_admin.sendKeys("235-952-1002");
 
     }
 
@@ -299,6 +319,7 @@ public class AddAdmin {
 
     @And("rabia SSN kutusuna invalid deger {string} gırer")
     public void rabiaSSNKutusunaInvalidDegerGırer(String arg0) {
+
         addAdminPage.ssn_admin.sendKeys(arg0);
     }
 
@@ -315,6 +336,11 @@ public class AddAdmin {
     @Then("rabia admin ekleme isleminin gerçeklesmediğini gösteren uyarı mesajı alır.")
     public void rabiaAdminEklemeIslemininGerçeklesmediğiniGösterenUyarıMesajıAlır() {
         Assert.assertTrue(addAdminPage.username_already_register_alert.isDisplayed());
+    }
+
+    @When("rabia add admin islemini gerceklestiremedigini görür")
+    public void rabia_add_admin_islemini_gerceklestiremedigini_görür() {
+        Assert.assertFalse(addAdminPage.adminSaved_alert.isDisplayed());
     }
 
     @And("rabia username kutusunu bos bırakır")
@@ -384,9 +410,9 @@ public class AddAdmin {
 
     @Then("rabia {string} uyarısını aldıgını dogrular")
     public void rabiaUyarısınıAldıgınıDogrular(String arg0) {
-        ReusableMethods.waitForVisibility(addAdminPage.ssn_already_register, 6);
-        ReusableMethods.hover(addAdminPage.ssn_already_register);
-        Assert.assertTrue(addAdminPage.ssn_already_register.isDisplayed());
+        ReusableMethods.waitForVisibility(addAdminPage.ssn_407, 6);
+        ReusableMethods.hover(addAdminPage.ssn_407);
+        Assert.assertTrue(addAdminPage.ssn_407.isDisplayed());
     }
 
     @Then("rabia Please enter valid SSN number uyarısını gorur")

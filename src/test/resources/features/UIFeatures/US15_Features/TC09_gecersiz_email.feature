@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: email kismina gecersiz bir mail yazilir
   Scenario: TC09_gecersizemail
     Given Fatih anasayfaya belirtilen URL'ye gider
