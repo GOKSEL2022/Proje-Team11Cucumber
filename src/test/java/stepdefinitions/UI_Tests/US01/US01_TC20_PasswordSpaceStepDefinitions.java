@@ -13,6 +13,6 @@ public class US01_TC20_PasswordSpaceStepDefinitions {
     }
     @Then("Goksel Register isleminin basarili oldugunu gösteren popupi goruntuler..")
     public void GokselRegisterIslemininBasariliOldugunuGösterenpopupigoruntuler() {
-        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
+        Assert.assertTrue(registerPage.alert_Register.isDisplayed());
     }
 }
