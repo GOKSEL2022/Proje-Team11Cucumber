@@ -7,78 +7,55 @@ import io.restassured.response.Response;
 import pojos.Vice_Dean_Controller_Object_Pojo;
 import pojos.Vice_Dean_Controller_Root_Pojo;
 
-import java.io.IOException;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
-
 import static io.restassured.RestAssured.given;
-
 import static org.junit.Assert.assertEquals;
 
-
 public class ViceDeanPost {
-    //http://164.92.252.42:8080/vicedean/getAll?size=10000
     Response response;
-    @Given("Nilufer Get request ile tum Deanleri al")
-    public void nilufer_get_request_ile_tum_deanleri_al() {
-        specAdmin.pathParams("first","vicedean","second","getAll");
 
-        response = given(specAdmin).get("{first}/{second}");
-        //response.prettyPrint();
+
+    Map<String, Object> expectedData;
+    static int viceDeanUserId;
+
+    @Given("Nilufer post yapabilmeli")
+    public void nilufer_post_yapabilmeli() {
+        specAdmin.pathParams("first", "vicedean", "second", "save");
+        expectedData = new HashMap<>();
+        expectedData.put("birthDay", "1995-04-04");
+        expectedData.put("birthPlace", "izmir");
+        expectedData.put("password", "123123Nn");
+        expectedData.put("phoneNumber", "157-123-9052");
+        expectedData.put("gender", "FEMALE");
+        expectedData.put("surname", "niluozkul");
+        expectedData.put("name", "lulus");
+        expectedData.put("ssn", "456-01-0123");
+        expectedData.put("username", "lulusozkul");
+        System.out.println("expectedData = " + expectedData);
+
+        response = given(specAdmin).body(expectedData).post("{first}/{second}");
+        response.prettyPrint();
     }
-    @Then("Nilufer bodyi dogrula: userId={string}, username={string}, name={string}, surname={string}, birthDay={string}, ssn={string}, birthPlace={string}, phoneNumber={string}, gender={string}")
-    public void bodyi_dogrula_user_id_username_name_surname_birth_day_ssn_birth_place_phone_number_gender(String userId, String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
+
+    @Then("Nilufer assertion yapar")
+    public void nilufer_assertion_yapar() {
         JsonPath jsonPath = response.jsonPath();
-        //findAll{} list dönen noktadan itibaren kullanılır. Body direkt list döndüğü için findAll{} ile başlıyoruz.
-        String actUserId = jsonPath.getList("findAll{it.username=='yildizselcuk'}.userId").get(0).toString();
-        String actUsername = jsonPath.getList("findAll{it.username=='yildizselcuk'}.username").get(0).toString();
-        String actName = jsonPath.getList("findAll{it.username=='yildizselcuk'}.name").get(0).toString();
-        String actSurname = jsonPath.getList("findAll{it.username=='yildizselcuk'}.surname").get(0).toString();
-        String actBirthDay = jsonPath.getList("findAll{it.username=='yildizselcuk'}.birthDay").get(0).toString();
-        String actSsn = jsonPath.getList("findAll{it.username=='yildizselcuk'}.ssn").get(0).toString();
-        String actBirthPlace = jsonPath.getList("findAll{it.username=='yildizselcuk'}.birthPlace").get(0).toString();
-        String actPhoneNumber = jsonPath.getList("findAll{it.username=='yildizselcuk'}.phoneNumber").get(0).toString();
-        String actGender = jsonPath.getList("findAll{it.username=='yildizselcuk'}.gender").get(0).toString();
+      assertEquals(200, response.statusCode());
+      assertEquals(expectedData.get("birthDay"), jsonPath.getString("object.birthDay"));
+      assertEquals(expectedData.get("birthPlace"), jsonPath.getString("object.birthPlace"));
+      assertEquals(expectedData.get("password"), jsonPath.getString("object.password"));
+      assertEquals(expectedData.get("phoneNumber"), jsonPath.getString("object.phoneNumber"));
+      assertEquals(expectedData.get("gender"), jsonPath.getString("object.gender"));
+      assertEquals(expectedData.get("surname"), jsonPath.getString("object.surname"));
+      assertEquals(expectedData.get("name"), jsonPath.getString("object.name"));
+      assertEquals(expectedData.get("ssn"), jsonPath.getString("object.ssn"));
+      assertEquals("Vice dean Saved", jsonPath.getString("message"));
+      assertEquals("CREATED", jsonPath.getString("httpStatus"));
 
-        assertEquals(200,response.statusCode());
-        assertEquals(userId, actUserId);
-        assertEquals(username,actUsername);
-        assertEquals(name,actName);
-        assertEquals(surname,actSurname);
-        assertEquals(birthDay,actBirthDay);
-        assertEquals(ssn,actSsn);
-        assertEquals(birthPlace,actBirthPlace);
-        assertEquals(phoneNumber,actPhoneNumber);
-        assertEquals(gender,actGender);
-
+      viceDeanUserId = jsonPath.getInt("userId");
     }
-
-
 }
-//{
-//  "birthDay": "1995-01-01",
-//  "birthPlace": "Istanbul",
-//  "gender": "MALE",
-//  "name": "Selcuk",
-//  "password": "12345678",
-//  "phoneNumber": "211-110-8904",
-//  "ssn": "211-11-8904",
-//  "surname": "Yildiz",
-//  "username": "yildizselcuk"
-//}
-
-//{
-//    "object": {
-//        "userId": 360,
-//        "username": "yildizselcuk",
-//        "name": "Selcuk",
-//        "surname": "Yildiz",
-//        "birthDay": "1995-01-01",
-//        "ssn": "211-11-8904",
-//        "birthPlace": "Istanbul",
-//        "phoneNumber": "211-110-8904",
-//        "gender": "MALE"
-//    },
-//    "message": "Vice dean Saved",
-//    "httpStatus": "CREATED"
-//}

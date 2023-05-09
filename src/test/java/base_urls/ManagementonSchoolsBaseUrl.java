@@ -5,7 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 import static utilities.ManagementonSchoolsAuthentication.generateToken;
-//import static utilities.ManagementonSchoolsAuthentication.generateToken;
+
 
 public class ManagementonSchoolsBaseUrl  {
     public static RequestSpecification specAdmin;
@@ -15,8 +15,13 @@ public class ManagementonSchoolsBaseUrl  {
     public static RequestSpecification specStudent;
 
     public  static void schoolsetupAdmin(){
+
+        specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).setAccept(ContentType.JSON).
+                addHeader("Authorization",generateToken("12345678","GokselCelik"))
+
         specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).
                 addHeader("Authorization",generateToken("485424698","Admin"))
+
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupTeacher(){

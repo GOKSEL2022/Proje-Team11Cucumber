@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression
 
 Feature: US06
 

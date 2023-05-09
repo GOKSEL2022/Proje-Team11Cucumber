@@ -13,7 +13,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bae9e7b5-4ebf-4a6c-97d3-85ffeccdc0db">
+
+      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM vice_dean where id=360 ;]]></console>
+
       <console name="ManagementOnSchools" type="STANDARD" schema="school_management" session="Main" />
+
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

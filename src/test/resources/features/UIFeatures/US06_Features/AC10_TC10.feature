@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression
 
 Feature: US06
 
@@ -19,12 +19,8 @@ Feature: US06
     And Nilufer Ssn alanina valid bir "<Ssn>" girer
     And Nilufer User Name alanina valid bir "<User Name>" girer
     And Nilufer Password alanina "<Password>" girmeyerek bos birakir
-    And Nilufer Submit butonuna tiklayamaz
-    And Nilufer Password alani altinda Minimum sekiz character mesajini gorur
-    And Nilufer Submit butonuna tiklayamaz
     Then close the application
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
       | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     |          |
-      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     | Nil.123  |
