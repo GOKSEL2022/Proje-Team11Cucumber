@@ -1,6 +1,6 @@
-
+@teacher
 Feature: Add_Student_info
-  @teacher
+
   Scenario: TC17_Add_Student_info_POST
     Given teacher sends the student info data_POST
     Then teacher gets the student info data and assert_POST
