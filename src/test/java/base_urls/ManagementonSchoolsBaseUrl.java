@@ -18,11 +18,7 @@ public class ManagementonSchoolsBaseUrl  {
 
         specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).setAccept(ContentType.JSON).
                 addHeader("Authorization",generateToken("12345678","GokselCelik"))
-
-        specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("485424698","Admin"))
-
-                .setBaseUri("http://164.92.252.42:8080").build();
+        .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupTeacher(){
         specTeacher=new RequestSpecBuilder().setContentType(ContentType.JSON).
@@ -32,9 +28,6 @@ public class ManagementonSchoolsBaseUrl  {
     public  static void schoolsetupDean(){
         specDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
                 addHeader("Authorization",generateToken("12345678","gooddean"))
-
-
-
                 .setBaseUri("http://164.92.252.42:8080").build();
 
     }
