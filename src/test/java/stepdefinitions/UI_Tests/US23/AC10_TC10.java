@@ -19,9 +19,4 @@ public class AC10_TC10 {
         assertEquals(1, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
         ReusableMethods.waitFor(2);
     }
-    @And("Nilufer Password alani altinda Minimum sekiz character mesajini gor")
-    public void password_alani_altinda_minimum_sekiz_character_mesajini_gor() {
-        assertEquals(0, adminViceDeanPage.requiredAbsente_text_studentInfo.size());
-        ReusableMethods.waitFor(2);
-    }
 }

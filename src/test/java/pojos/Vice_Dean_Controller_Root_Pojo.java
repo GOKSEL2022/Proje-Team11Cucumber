@@ -1,9 +1,9 @@
 package pojos;
 
 public class Vice_Dean_Controller_Root_Pojo {
-    public Vice_Dean_Controller_Object_Pojo object;
-    public String message;
-    public String httpStatus;
+    private Vice_Dean_Controller_Object_Pojo object;
+    private String message;
+    private String httpStatus;
 
     public Vice_Dean_Controller_Root_Pojo() {
     }

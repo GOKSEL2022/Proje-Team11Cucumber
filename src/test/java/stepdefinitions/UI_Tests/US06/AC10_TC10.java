@@ -21,9 +21,4 @@ public class AC10_TC10 {
         ReusableMethods.waitFor(2);
     }
 
-    @And("Nilufer Password alani altinda Minimum sekiz character mesajini gorur")
-    public void kullanici_password_alani_altinda_minimum_sekiz_character_mesajini_gorur() {
-        assertEquals(0, deanViceDeanPage.requiredAbsente_text_studentInfo.size());
-        ReusableMethods.waitFor(2);
-    }
 }

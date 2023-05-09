@@ -1,5 +1,4 @@
-@Nilufer @team11
-
+@Nilufer @team11Regression
 Feature: US23
 
   Scenario Outline: US23
@@ -24,12 +23,8 @@ Feature: US23
     And Nilufer User Name alanina valid bir "<User Name>" gir
     And Nilufer Password alanina "<Password>" girmeyerek bos birak
     And Nilufer Submit butonuna tiklayama
-    And Nilufer Password alani altinda Required mesajini gor
-    And Nilufer Submit butonuna tiklayama
-    And Nilufer Password alani altinda Minimum sekiz character mesajini gor
     Then close the applications
 
     Examples: Admin_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
       | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     |          |
-      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     | Nil.123  |

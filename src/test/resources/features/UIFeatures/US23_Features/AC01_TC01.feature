@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @team11Smoke
 
 Feature: US23
    Scenario: US23
