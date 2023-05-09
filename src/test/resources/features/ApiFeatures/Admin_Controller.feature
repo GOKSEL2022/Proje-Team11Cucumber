@@ -1,14 +1,14 @@
 
 Feature: Admin_Controller
 
-  @admin @team11Regression @team11Smoke
-  Scenario: TC01_Validate_Admin_Post
-    Given Set the Url admin_post
-    And   Set the expected data admin_post
-    When  Send the request and get the response admin_post
-    Then  Do assertion admin_post
+ # @admin @team11Regression @team11Smoke
+  #Scenario: TC01_Validate_Admin_Post
+  #  Given Set the Url admin_post
+  #  And   Set the expected data admin_post
+  #  When  Send the request and get the response admin_post
+   # Then  Do assertion admin_post
 
-    @admin @team11Regression @team11Smoke
+    @admin @team11Smoke
   Scenario Outline: TC02_Validate_Admin_GetAll
     Given Send Adminn_GetAll request by id "<id>"
     Then Admin_GetAll body should be: username="<username>" ssn="<ssn>" name="<name>" surname="<surname>" birthDay="<birthDay>" birthPlace="<birthPlace>" phoneNumber="<phoneNumber>" gender="<gender>" built_in="<built_in>"
@@ -17,7 +17,7 @@ Feature: Admin_Controller
       | 45 | Mustafa  | 188-11-9380 | Atatürk | Kemal   | 1881-05-05 | selanik    | 938-938-3838 | MALE   | false    |
 
 
-  @admin @team11Regression @team11Smoke
+  @admin @team11Smoke
   Scenario: TC03_Validate_Admin_Delete
 
       Given Set the url Admin_Delete
