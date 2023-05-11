@@ -17,4 +17,5 @@ Feature: name kismina noktalama isareti yazilir
     And Fatih danisman ogretmenin secildigini dogrular
     And Fatih name alanina noktalama isareti girer
     And  Fatih Required yazisinin kalkmadigini dogrular
+    Then close the application
 

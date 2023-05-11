@@ -1,4 +1,4 @@
-@edit_not
+@edit_not @team11Regression
 Feature:edit_not
   Scenario:Öğrenci Not bilgisini güncelleyebilmeli
     Given kullanici55 url e gider
@@ -23,3 +23,4 @@ Feature:edit_not
     And kullanici55 ogrencinin guncel final notunu "99" girer
     And kullanici55 edit student Info sayfasinda submit butona tiklar
     Then kullanici55 Student Info updadet Successfully popup yazisini gorur
+    Then close the application

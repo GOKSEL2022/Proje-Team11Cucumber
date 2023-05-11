@@ -20,6 +20,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     And Ali Dean List alaninin goruldugunu dogrular
     Then Ali Delete butonunun olmadıgını dogrular
+    Then close the application
 
 #
     Examples: dean_bilgileri

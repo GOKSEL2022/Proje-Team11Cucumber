@@ -26,3 +26,4 @@ Feature: fathername alanina gecerli bir isim girilir
     And Fatih ogrenci username girer
     And Fatih fathername alanina bir isim girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

@@ -1,4 +1,4 @@
-@US16_AC01,@team11
+@US16_AC01,@team11 @team11Regression @team11Smoke
 Feature: US16_TC01
 
   Scenario: US16_TC01
@@ -19,3 +19,4 @@ Feature: US16_TC01
     And MDogan e maillerini goruntuler
     And MDogan gonderilme tarihini (date) goruntuler
     Then MDogan subject bilgilerini goruntuler
+    Then close the application

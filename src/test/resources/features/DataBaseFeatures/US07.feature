@@ -1,4 +1,4 @@
-@team11Regression
+@team11Regression @sunum
 Feature:  Dean, db de mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve
   subject bilgilerini görüntüleyebilmelidir
 #  Background: Mesaj gonderme

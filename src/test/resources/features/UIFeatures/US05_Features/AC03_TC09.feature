@@ -28,6 +28,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali Required mesajini birth placede gorur.
+    Then close the application
 
 #
     Examples: dean_bilgileri

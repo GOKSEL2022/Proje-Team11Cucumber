@@ -1,4 +1,4 @@
-@US05_AC03_TC08 @team11 @admin
+@US05_AC03_TC08 @team11 @admin @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC05_Dean_Surname_Guncelle
@@ -31,6 +31,7 @@ Feature:Dean ekleyebilme
     And Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     And Ali cikan mesaji gorur
+    Then close the application
 
 #
     Examples: dean_bilgileri

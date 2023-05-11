@@ -1,4 +1,4 @@
-@team11
+@team11 @team11Regression
 Feature:
   Scenario:
     Given Kullanici "https://www.managementonschools.com/" gider
@@ -17,3 +17,4 @@ Feature:
   And Kullanıcı Password textboxına geçerli bir değer girer
   And Kullanıcı Submit butonuna tıklar
   Then Kullanici  isleminin basarili oldugunu gösteren popupı görüntüler
+    Then close the application

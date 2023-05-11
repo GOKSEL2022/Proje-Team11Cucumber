@@ -26,6 +26,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     Then Ali dean Saved uyari mesajini gorur.
+    Then close the application
 
 
 

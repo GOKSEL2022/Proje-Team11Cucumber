@@ -1,4 +1,4 @@
-@US03_AC02 @team11 @US03 @US22 @team11Regression
+@US03_AC02 @team11 @US03 @US22 @team11Regression @sunum
 Feature: AC02 rabia e-mail adresini girmelidir. Email adresinde "@" ve "." karakterleri olmalıdır.
 
   Background: ana sayfaya git
@@ -17,6 +17,7 @@ Feature: AC02 rabia e-mail adresini girmelidir. Email adresinde "@" ve "." karak
     And rabia bir saniye bekler
     And rabia mesajın iletilmediğini doğrular.
     And rabia sayfayı kapatır.
+
 
   @US03_AC02_TC02
   Scenario: TC02 Email adresinde "@"  işaretinin bulunmama ve "." karakterlerinin bulunma durumu

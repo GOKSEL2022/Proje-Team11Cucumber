@@ -1,4 +1,4 @@
-@team11
+@team11 @team11Regression
 Feature:
   Scenario:
     Given Kullanici "https://www.managementonschools.com/" gider
@@ -16,3 +16,4 @@ Feature:
   And SSN  textboxını geçerli değer ile günceller
   And User Name geçerli değer ile günceller
   And Password geçerli değer ile günceller
+    Then close the application

@@ -1,4 +1,4 @@
-@US05_AC03_TC15 @team11
+@US05_AC03_TC15 @team11 @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC10_Takvim_Alani_Guncelle
@@ -28,6 +28,7 @@ Feature:Dean ekleyebilme
     And Ali password "<password>" alanina gecerli sifre girer.
     And Ali bır sanıye bekler
     And Ali Edit Dean alanindaki Submit butonuna tiklar
+    Then close the application
 
 
 

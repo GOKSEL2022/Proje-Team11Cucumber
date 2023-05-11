@@ -38,6 +38,7 @@ Feature:US01
     And   Goksel Password "<Password>" girer ve Register_Register butonunu tiklar
     And   Goksel bir sn bekler
     Then  Goksel Register isleminin basarili oldugunu gösteren popupı goruntuler
+    Then close the application
     Examples:
       | Name    | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name    | Password |
       | Admin   | Celik   | Ordu        | aaa-aaa-aaaa | 01.01.2000   | 163-78-1058 | Goksel Celik | 12345678 |

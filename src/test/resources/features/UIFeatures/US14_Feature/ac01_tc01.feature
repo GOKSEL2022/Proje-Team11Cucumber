@@ -1,4 +1,4 @@
-@team11
+@team11 @team11Regression
          Feature:
            Scenario:
              Given Kuullanici "https://www.managementonschools.com/" giider
@@ -6,3 +6,4 @@
            And Kullanıcı Oluşturulan kullanıcılardan birine giriş yapar
            And Kullanıcı Teacher listten seçilen öğretmenin Edit butonuna tıklar
            Then Oluşturulann revetment Name, Phone Number, SSN,User Name bilgileri görülebilmeli
+             Then close the application

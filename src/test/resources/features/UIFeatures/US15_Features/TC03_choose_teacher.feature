@@ -15,3 +15,4 @@ Feature: danisman secilir
     And Fatih acilan sayfada choose teacher butonunu tiklar
     And Fatihn acilan drapdowndan ogrencinin danisman ogretmenini secer
     And Fatih danisman ogretmenin secildigini dogrular
+    Then close the application

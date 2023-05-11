@@ -1,4 +1,4 @@
-@US05_AC03_TC21 @team11
+@US05_AC03_TC21 @team11 @team11Regression
 Feature:Dean ekleyebilme
   
   Scenario Outline:AC03_TC10_Ssn_Alani_Guncelle
@@ -28,6 +28,7 @@ Feature:Dean ekleyebilme
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali hata mesajini gorur.
+    Then close the application
 
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

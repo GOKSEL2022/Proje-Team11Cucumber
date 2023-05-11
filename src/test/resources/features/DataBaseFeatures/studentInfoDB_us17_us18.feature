@@ -1,4 +1,4 @@
-@studentInfiDB
+@studentInfiDB @sunum
 Feature: student_info
   Scenario: student_info not devamsizlik info notu
     Given query gonderir student_info

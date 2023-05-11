@@ -1,4 +1,4 @@
-@team11Regression
+@team11Regression @sunum
 Feature:  Kullanıcı admin ekleyebilmelidir.(Contact)
 
   Scenario Outline:

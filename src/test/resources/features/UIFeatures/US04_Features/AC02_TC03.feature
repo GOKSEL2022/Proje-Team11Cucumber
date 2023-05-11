@@ -42,6 +42,7 @@ Feature:Dean ekleyebilme
     And Ali bır sanıye bekler
     When Ali Submit butonuna tiklar
     Then Ali Dean Save mesajini gorur
+    Then close the application
 #
     Examples: dean_bilgileri
     | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

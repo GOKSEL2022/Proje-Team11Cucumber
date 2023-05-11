@@ -43,6 +43,7 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     And Ali Dean Save kayit mesaji Alinir
+    Then close the application
 
 
     Examples: dean_bilgileri

@@ -1,4 +1,4 @@
-@team11
+@team11 @team11Regression
 Feature:
   Scenario:
     Given Kuullanici "https://www.managementonschools.com/" gider
@@ -17,3 +17,4 @@ Feature:
     And Kuullanıcı Password textboxına geçerli bir değer girer
     And Kuullanıcı Submit butonuna tıklar
     Then Kuullanici  isleminin basarili oldugunu gösteren popupı görüntüler
+    Then close the application
