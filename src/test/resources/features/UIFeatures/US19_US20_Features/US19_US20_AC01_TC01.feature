@@ -1,4 +1,4 @@
-@US19 @team11  @team11Regression
+@US19 @team11  @team11Regression @team11Smoke
 
 Feature:"Choose_Students"_öğrenci_seçilebilmeli
 
@@ -18,6 +18,7 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
   Scenario:"Choose Students" öğrenci seçilebilmeli
     And Emin choose student alanindan ogrenci secer
     Then Emin secilen ogrenciyi dogrular
+    Then close the application
 
 
   @US19_AC01_TC02  @team11Regression
@@ -30,6 +31,7 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
       And Emin Description alanina valid bir deger "veli" girer
       And Emin submit butonuna tiklar
       Then Emin hata mesaji gorur ve toplanti olusturamaz
+    Then close the application
 
   @US19_AC01_TC03  @team11Regression
 
@@ -39,6 +41,7 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
       And Emin Start Time alanina validd bir deger "09:00" girer
       And Emin Stop Time alanina valid bir deger "11:00" girer
       Then Emin Star time Stop time alanlarini dogrular
+    Then close the application
 
   @US19_AC01_TC04  @team11Regression
 
@@ -49,11 +52,13 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
         And Emin Stop Time alanina valid bir deger "11:00" girer
         And Emin Description alanina validd bir deger "meet" girer
         Then Emin Description alanini dogrular
+    Then close the application
 
   @US20_AC01_TC01  @team11Regression
   Scenario:ToplantılarınDateStartTimeStopTimeveDescriptiongörülmeli
     And Emin edit butonununa tiklar
     Then Emin olusturmus oldugu Date, Start Time ve Descriptionu dogrular
+    Then close the application
 
   @US20_AC01_TC02
 
@@ -62,6 +67,7 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
     And Emin acilan sayfada  yeni duzenlemeler "04.07.2023" yapar
     And Emin submitt butonuna tiklar
     Then Emin meet update successfull yazisini gormelidir
+    Then close the application
 
     @US20_AC01_TC03 @team11Regression
 
@@ -69,6 +75,7 @@ Feature:"Choose_Students"_öğrenci_seçilebilmeli
 
       And Emin olusturmus oldugu meet listesindeki silme butonunu tiklar
       Then Emin meet update successfulll yazisini gormelidir
+      Then close the application
 
 
 

@@ -1,4 +1,4 @@
-@US16_AC02,@team11
+@US16_AC02,@team11 @team11Regression
 Feature: US16_TC01
 
   Scenario: US16_TC01
@@ -14,5 +14,6 @@ Feature: US16_TC01
     And MDogan bir saniye bekler
     And MDogan Contact Get All sekmesine tiklar
     Then MDogan delete butonuna tiklar
+    Then close the application
 
 

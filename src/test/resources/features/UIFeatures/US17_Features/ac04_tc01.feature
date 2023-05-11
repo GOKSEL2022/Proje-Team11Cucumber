@@ -1,4 +1,4 @@
-@info_notu
+@info_notu @team11Regression
 Feature:info_notu
 
   Scenario:Öğrenci hakkında Info notu girebilmelidir.
@@ -16,3 +16,4 @@ Feature:info_notu
     And kullanici55 midterm exam a not girer ve gorur
     And kullanici55 final exam a not girer ve gorur
     And kullanici55 info note a bilgi notu girer ve gorur
+    Then close the application

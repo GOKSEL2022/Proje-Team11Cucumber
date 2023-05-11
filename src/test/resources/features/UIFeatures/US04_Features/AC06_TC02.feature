@@ -1,4 +1,4 @@
-@US04_AC06_TC02 @team11
+@US04_AC06_TC02 @team11 @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Dean_olustur
@@ -43,6 +43,7 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali karakter uyari mesaji gorur
+    Then close the application
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

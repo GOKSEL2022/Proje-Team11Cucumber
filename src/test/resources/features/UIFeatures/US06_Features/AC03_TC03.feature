@@ -1,4 +1,4 @@
-@Nilufer @team11Regression
+@Nilufer @team11Regression @sunum
 
 Feature: US06
 

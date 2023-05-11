@@ -38,6 +38,7 @@ Feature:US01
     And   Goksel Password "<Password>" girer ve Register_Register butonunu tiklar
     And   Goksel bir sn bekler
     Then  Goksel Register değil
+    Then close the application
 
     Examples:
       | Name     | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name      | Password |

@@ -1,4 +1,4 @@
-@team11
+@team11 @team11Regression @team11Smoke
 Feature:AC01_TC01
   Scenario:AC01_TC01
 
@@ -19,3 +19,4 @@ Feature:AC01_TC01
   And Kullanıcı Password textboxına geçerli bir değer girer
   And Kullanıcı Submit butonuna tıklar
   Then Kullanici  isleminin basarili oldugunu gösteren popupı görüntüler
+    Then close the application

@@ -25,6 +25,7 @@ Feature:Dean ekleyebilme
     And Ali password "<password>" alanina gecerli sifre girer.
     And Ali bır sanıye bekler
     Then Ali dean Saved uyari mesajini gorur,
+    Then close the application
 
 
 

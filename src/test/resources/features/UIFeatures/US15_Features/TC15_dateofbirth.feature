@@ -23,3 +23,4 @@ Feature: date of birth alanina gecerli bir tarih girilir
     And Fatih male butonuna tiklar
     And Fatih date of birth alanina gecerli bir tarih girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

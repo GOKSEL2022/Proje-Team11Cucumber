@@ -1,4 +1,4 @@
-@US05_AC03_TC12 @team11
+@US05_AC03_TC12 @team11 @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC10_Birth_Place_Guncelle
@@ -30,6 +30,7 @@ Feature:Dean ekleyebilme
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali Edit Dean alaninda Surname textboxinin altinda Required uyari mesajini gorur.
+    Then close the application
 
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

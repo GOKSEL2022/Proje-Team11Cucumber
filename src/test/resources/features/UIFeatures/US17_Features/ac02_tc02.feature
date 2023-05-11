@@ -1,4 +1,4 @@
-@eksiDevamsizlik
+@eksiDevamsizlik @team11Regression
   Feature:devamsizliga eksi deger
     Scenario:devamsizliga eksi deger girer
 
@@ -18,3 +18,4 @@
       And kullanici55 info note a bilgi notu girer ve gorur
     And kullanici55 submit buton a tiklar
     Then kullanici55 student Info saved succesfully popup yazisini gorur(gormez)
+      Then close the application

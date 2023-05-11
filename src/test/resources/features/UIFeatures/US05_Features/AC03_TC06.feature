@@ -32,6 +32,7 @@ Feature:Dean ekleyebilme
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali dean Update mesajini gorur
+    Then close the application
 
 #
     Examples: dean_bilgileri

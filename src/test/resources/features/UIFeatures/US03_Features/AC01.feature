@@ -1,4 +1,4 @@
-@US03_AC01 @team11 @US03 @US22 @team11Regression
+@US03_AC01 @team11 @US03 @US22 @team11Regression @team11Smoke
 Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girmelidir.
 
   Background: ana sayfaya git
@@ -18,6 +18,7 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     And rabia mesajın iletilemediğini doğrular.
     And rabia sayfayı kapatır.
 
+
   @US03_AC01_TC02
   Scenario: TC02 Name kutusuna rakam girilmesi
 
@@ -29,6 +30,7 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     And rabia bir saniye bekler
     #And rabia mesajın iletilemediğini doğrular.
     And rabia sayfayı kapatır.
+
 
 
   @US03_AC01_TC03
@@ -54,6 +56,7 @@ Feature: AC01 Herhangi bir karakter içeren ve boş bırakılamayan "Name" girme
     And rabia bir saniye bekler
     And rabia mesajın iletilemediğini doğrular.
     And rabia sayfayı kapatır.
+
 
   @US03_AC01_TC05
   Scenario: TC05  "Name" kutusuna space girilmesi

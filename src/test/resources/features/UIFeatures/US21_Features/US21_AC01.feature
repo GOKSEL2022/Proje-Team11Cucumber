@@ -1,4 +1,4 @@
-@US21  @team11
+@US21  @team11 @team11Regression @team11Smoke
 
 Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigorebilmeli
 
@@ -13,12 +13,14 @@ Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigor
 
     Scenario:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigorebilmeli
       Then Emin Choose Lesson sayfasindan Lesson,Teacheri dogrular
+      Then close the application
 
       @US21_AC01_TC02
 
       Scenario:İstedigi_ders_veya_dersleri_secebilmeli
         And Emin Choose Lesson yazisinin altindaki ders kutucuklarini tiklar
         Then Emin tiklandigini dogrular
+        Then close the application
 
       @US21_AC01_TC03
 
@@ -27,6 +29,7 @@ Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigor
         And Emin choose Lesson listesindeki ayni gun ve saatlerin kutucuklarini tiklar
         And Emin submittt butonuna tiklar
         Then Emin giris yapamadigini dogrular
+        Then close the application
 
       @US21_AC01_TC04
 
@@ -34,6 +37,7 @@ Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigor
         And Emin Choose Lesson yazisinin altindaki  ders kutucuklarini tiklar
         And Emin submitte butonuna tiklar
         Then Emin Program listi dogrular
+        Then close the application
 
       @US21_AC01_TC05
 
@@ -42,6 +46,7 @@ Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigor
         And Emin mennu butonuna tiklar
         And Emin Grades and Announcements yazisina tiklar
         Then Emin ders notlarini dogrular
+        Then close the application
 
       @US21_AC01_TC06
 
@@ -50,3 +55,4 @@ Feature:OgrenciChooseLessonlistesindeTeacherDayStartTimeVeStopTimebilgilerinigor
         And Emin menuuu butonuna tiklar
         And Emin Gradess and Announcements yazisina tiklar
         Then Emin danismanin olusturdugu dersi dogrular
+        Then close the application

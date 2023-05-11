@@ -17,6 +17,7 @@ Feature: name kismina isim yazilir
     And Fatih danisman ogretmenin secildigini dogrular
     And Fatih name alanina gecerli bir isim girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application
 
 
 

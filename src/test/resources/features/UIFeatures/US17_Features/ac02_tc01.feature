@@ -1,4 +1,4 @@
-@devamsizlik
+@devamsizlik @team11Regression
 Feature:Devamsızlık
   Scenario:Devamsızlık girebilmelidir.
     Given kullanici55 url e gider
@@ -12,3 +12,4 @@ Feature:Devamsızlık
     And kullanici55 choose student den bir ogrenci secer ve gorur
     And  kullanici55 choose education term den donem secer ve gorur
   Then kullanici55 absentee ye devamsizlik girer ve gorur
+    Then close the application

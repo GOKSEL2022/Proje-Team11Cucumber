@@ -28,3 +28,4 @@ Feature:submit yapilir
     And Fatih mothername alanina bir isim girer
     And Fatih student icin password olusturur
     And Fatih submit butonuna tiklar
+    Then close the application

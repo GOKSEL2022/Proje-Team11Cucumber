@@ -1,7 +1,7 @@
 @ApiGetTeacher
 Feature: Get_Teacher
 
-  @admin @team11Regression
+  @admin @team11Regression @sunum
   Scenario: TC01_Validate_Teacher
     Given  send get request to get teacher
     Then validate body

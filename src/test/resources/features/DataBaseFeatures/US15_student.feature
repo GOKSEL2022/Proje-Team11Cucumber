@@ -1,4 +1,4 @@
-@admin @team11Regression @team11Smoke
+@admin @team11Regression @team11Smoke @sunum
 Feature: jdbc_fatih_us15
   Scenario: jdbc_fatih_us15
 

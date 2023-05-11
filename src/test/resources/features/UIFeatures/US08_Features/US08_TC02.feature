@@ -1,4 +1,4 @@
-@US08_AC02,@team11
+@US08_AC02,@team11 @team11Regression
 Feature: US08_TC02
 
   Scenario: US08_TC02
@@ -16,4 +16,5 @@ Feature: US08_TC02
     And MDogan bir saniye bekler
     And MDogan Lesson name "Arapca" girer
     Then MDogan Compulsory kutucugunu tiklar
+    Then close the application
 

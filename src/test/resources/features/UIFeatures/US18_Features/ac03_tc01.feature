@@ -1,4 +1,4 @@
-@not_silme
+@not_silme @team11Regression
 Feature:not_silme
   Scenario:Öğrenci Not bilgisini silebilmeli
 
@@ -20,3 +20,4 @@ Feature:not_silme
     Then kullanici55 student Info saved succesfully popup yazisini gorur
      And kullanici55 delete buton a tiklar
   And kullanici55 ogrencinin not bilgisinin silindigini gorur(popup cikar)
+    Then close the application

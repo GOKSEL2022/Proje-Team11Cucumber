@@ -43,6 +43,7 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali Required uyari mesajini Alir.
+    Then close the application
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |

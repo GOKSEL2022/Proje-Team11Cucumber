@@ -43,7 +43,8 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali Dean Save uyari mesaj alir
-#
+    Then close the application
+
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
       | Admin      | 485424698  | *-+/% | tarik    | Van         | 29-03-2001    | 090-505-8186  | 555-41-6328  |Team11     | 57916929 |

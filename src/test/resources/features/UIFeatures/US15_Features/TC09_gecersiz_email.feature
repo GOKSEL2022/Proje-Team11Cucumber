@@ -20,3 +20,4 @@ Feature: email kismina gecersiz bir mail yazilir
     And Fatih birt place alanina gecerli bir sehir ismi girer
     And Fatih gecersiz bir mail adresi girer
     And Fatih Required yazisinin kalkmadigini dogrular
+    Then close the application
