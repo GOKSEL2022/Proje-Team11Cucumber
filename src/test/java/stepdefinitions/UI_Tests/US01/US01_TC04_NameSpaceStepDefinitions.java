@@ -13,6 +13,6 @@ public class US01_TC04_NameSpaceStepDefinitions {
     }
     @Then("Goksel Register değil")
     public void GokselRegisterDeğil() {
-        Assert.assertTrue(!registerPage.alert_Register.isDisplayed());
+        Assert.assertFalse(registerPage.alert_Register.isDisplayed());
     }
 }
