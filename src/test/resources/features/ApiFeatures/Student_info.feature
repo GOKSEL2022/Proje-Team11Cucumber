@@ -1,4 +1,4 @@
-@teacher
+@teacher @sunum
 Feature: Add_Student_info
 
   Scenario: TC17_Add_Student_info_POST

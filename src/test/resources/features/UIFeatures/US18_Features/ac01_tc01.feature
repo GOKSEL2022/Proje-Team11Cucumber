@@ -1,4 +1,4 @@
-@ogrencibilgileri
+@ogrencibilgileri @team11Regression @team11Smoke
 Feature:ogrenci_bilgileri
   Scenario:teacher ogrenci bilgilerini gorebilmeli
 
@@ -19,3 +19,4 @@ Feature:ogrenci_bilgileri
     And kullanici55 info note a bilgi notu girer ve gorur
     And kullanici55 submit buton a tiklar
     Then kullanici55 student Info saved succesfully popup yazisini gorur
+    Then close the application

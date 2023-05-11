@@ -19,3 +19,4 @@ Feature: birthplace kismina bir yer ismi yazilir
     And Fatih surname alanina gecerli bir isim girer
     And Fatih birt place alanina gecerli bir sehir ismi girer
     And  Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

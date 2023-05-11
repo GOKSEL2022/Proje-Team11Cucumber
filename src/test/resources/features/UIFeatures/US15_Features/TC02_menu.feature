@@ -13,3 +13,4 @@ Feature:student management gidilir
     And Fatih sag kosede Menu butonuna tiklar
     And Fatih Menu butonunun altinda acilan alt munude student management butonunu tiklar
     And Fatih student management sayfasinin acildigini dogrular
+        Then close the application

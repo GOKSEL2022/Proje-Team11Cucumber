@@ -1,4 +1,4 @@
-@US05_AC01_TC01 @team11 @team11Regression @admin
+@US05_AC01_TC01 @team11 @team11Regression  @team11Smoke @admin
 Feature:Deanlari gorebilme ve silebilme
 
   Scenario Outline: TC01_Dean_List_Bilgilerini_Gorur
@@ -19,6 +19,7 @@ Feature:Deanlari gorebilme ve silebilme
     And Ali Main Menu Listinden Dean Management text`ine tiklar
     And Ali bır sanıye bekler
     Then Ali Dean List alaninin goruldugunu dogrular
+    Then close the application
 
 
 #

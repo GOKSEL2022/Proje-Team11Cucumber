@@ -20,3 +20,4 @@ Feature: email kismina gecerli bir mail yazilir
     And Fatih birt place alanina gecerli bir sehir ismi girer
     And Fatih email alanina gecerli bir adres girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

@@ -22,3 +22,4 @@ Feature: gender alaninda female tiklanir
     And Fatih phone alanina gecerli bir phone numarasi girer
     And Fatih female butonuna tiklar
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

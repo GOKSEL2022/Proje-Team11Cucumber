@@ -28,6 +28,7 @@ Feature:Dean guncelleme
     And Ali bır sanıye bekler
     Then Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
+    Then close the application
 
 #
     Examples: dean_bilgileri

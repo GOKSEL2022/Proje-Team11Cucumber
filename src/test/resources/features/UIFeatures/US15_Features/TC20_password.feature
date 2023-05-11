@@ -28,3 +28,4 @@ Feature: password alanina gecerli bir password olusturulur
     And Fatih mothername alanina bir isim girer
     And Fatih student icin password olusturur
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

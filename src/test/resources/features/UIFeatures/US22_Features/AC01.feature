@@ -1,4 +1,4 @@
-@US22_AC01 @team11 @US22 @team11Regression
+@US22_AC01 @team11 @US22 @team11Regression @team11Smoke
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu

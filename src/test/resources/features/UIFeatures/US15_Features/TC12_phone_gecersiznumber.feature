@@ -21,3 +21,4 @@ Feature: phone number alanina gecersiz bir numara yazar
     And Fatih email alanina gecerli bir adres girer
     And Fatih phone alanina gecersiz bir numara yazar
     And Fatih Required yazisinin kalkmadigini dogrular
+    Then close the application

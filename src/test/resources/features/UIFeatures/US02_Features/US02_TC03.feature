@@ -16,3 +16,4 @@ Feature:US02_TC03
     And Goksel sil butonlarini görüntüler
     And Goksel sil butonlarindan ilkine tiklar
     When Goksel Guest User deleted Successful alertini görüntüler
+    Then close the application

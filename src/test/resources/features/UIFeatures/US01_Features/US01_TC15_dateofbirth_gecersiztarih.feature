@@ -38,6 +38,7 @@ Feature:US01
     And   Goksel Password "<Password>" girer ve Register_Register butonunu tiklar
     And   Goksel bir sn bekler
     Then  Goksel Register olmaz
+    Then close the application
     Examples:
       | Name    | Surname | Birth Place | Phone        | Date Of Birt | Ssn         | User Name    | Password |
       | Admin   | Celik   | Ordu        | 452-481-2166 | 01.01.1900   | 563-78-1118 | Goksel Celik | 12345678 |

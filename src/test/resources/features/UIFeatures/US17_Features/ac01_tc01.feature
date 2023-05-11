@@ -1,4 +1,4 @@
-@f
+@f @team11Regression @team11Smoke
 Feature: Ders_Öğrenci_ve_dönem_seç
 
   Scenario: Ders, Ögrenci ve dönem seçmelidir
@@ -12,3 +12,4 @@ Feature: Ders_Öğrenci_ve_dönem_seç
     And  kullaninin sectigi dersi gorur
     And kullanici55 choose student den bir ogrenci secer ve gorur
    And  kullanici55 choose education term den donem secer ve gorur
+    Then close the application

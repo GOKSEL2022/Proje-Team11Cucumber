@@ -25,3 +25,4 @@ Feature: username alanina gecerli bir isim girilir
     And Fatih ssn alanina gecerli formatta bir numara girer
     And Fatih ogrenci username girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

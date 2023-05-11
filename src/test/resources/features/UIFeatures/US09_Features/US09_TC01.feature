@@ -1,4 +1,4 @@
-@US09_AC01,@team11
+@US09_AC01,@team11 @team11Regression @team11Smoke
 Feature: US09_TC01
 
   Scenario: US09_TC01
@@ -15,3 +15,4 @@ Feature: US09_TC01
     And  MDogan Lessons a tiklar
     And MDogan bir saniye bekler
     Then MDogan eklenen Lesson lari gorur
+    Then close the application

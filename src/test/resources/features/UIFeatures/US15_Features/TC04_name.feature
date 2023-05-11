@@ -17,3 +17,4 @@ Feature: name bos birakilamaz
     And Fatih danisman ogretmenin secildigini dogrular
     And Fatih name alanini bos birakir
     And Fatih bos birakilan name alanindaki required yazisini dogrular
+    Then close the application

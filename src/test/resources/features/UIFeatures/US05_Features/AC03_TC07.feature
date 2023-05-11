@@ -27,6 +27,7 @@ Feature:Dean ekleyebilme
     And Ali Gender alaninda checkbox`a tiklar
     And Ali bır sanıye bekler
     And Ali password alanina gecerli sifre girer.
+    Then close the application
 #
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
