@@ -1,4 +1,4 @@
-@gokselAPI @admin
+@gokselAPI @admin @team11Cucumber
 Feature: GuestUser_Controller
   #Scenario: TC02_Validate_GuestUser_Post
    # Given Set the Url GuestUser_post

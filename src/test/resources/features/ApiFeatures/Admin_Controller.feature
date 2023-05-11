@@ -1,4 +1,4 @@
-
+@admin @team11Cucumber
 Feature: Admin_Controller
 
  # @admin @team11Regression @team11Smoke
