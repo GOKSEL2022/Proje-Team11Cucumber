@@ -1,6 +1,6 @@
 
 
-@gokselDatabase @admin @team11Smoke @team11Regression @sunum
+@goksel @admin @team11Smoke @team11Regression @sunum
 
 Feature: jdbc_goksel_us01
   Scenario: jdbc_goksel_us01

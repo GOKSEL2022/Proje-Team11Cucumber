@@ -1,4 +1,4 @@
-@admin @team11 @team11Regression @cucumber
+@admin @team11 @team11Regression @cucumber @goksel
 Feature:US01
   Scenario Outline:US01
 

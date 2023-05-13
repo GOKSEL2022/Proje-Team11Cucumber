@@ -1,4 +1,4 @@
-@admin @team11Regression @sunum
+@admin @team11Regression @sunum @goksel
 Feature:US02_AC0TC02
   Scenario:US02_AC0TC02
 

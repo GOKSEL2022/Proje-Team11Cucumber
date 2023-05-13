@@ -1,4 +1,4 @@
-@admin @team11Regression @team11Smoke
+@admin @team11Regression @team11Smoke @goksel
 Feature:US02_TC01
   Scenario:US02_TC01
 

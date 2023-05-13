@@ -1,4 +1,4 @@
-@admin @team11Regression
+@admin @team11Regression @goksel
 Feature:US02_TC03
 
   Scenario:US02_TC03
