@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: date of birth alanina gecerli bir tarih girilir
   Scenario: TC15_dateofbirth
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -22,3 +23,4 @@ Feature: date of birth alanina gecerli bir tarih girilir
     And Fatih male butonuna tiklar
     And Fatih date of birth alanina gecerli bir tarih girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

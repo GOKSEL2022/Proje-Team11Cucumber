@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: fathername alanina gecerli bir isim girilir
   Scenario: TC18_fathername
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -25,3 +26,4 @@ Feature: fathername alanina gecerli bir isim girilir
     And Fatih ogrenci username girer
     And Fatih fathername alanina bir isim girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

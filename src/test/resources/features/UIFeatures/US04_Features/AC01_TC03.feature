@@ -1,8 +1,8 @@
-@US04_AC01_TC03 @team11
+@US04_AC01_TC03 @team11Regression @team11 @admin
 Feature:Dean ekleyebilme
 
   Scenario Outline: TC01_Name_Alanina_Sembol_Girer
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     When Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -43,7 +43,8 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali Dean Save uyari mesaj alir
-#
+    Then close the application
+
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | karakartal | 987654321 | *-+/% | tarik    | Van         | 29-03-2001    | 090-505-8186  | 555-41-6328  |Team11     | 57916929 |
+      | Admin      | 485424698  | *-+/% | tarik    | Van         | 29-03-2001    | 090-505-8186  | 555-41-6328  |Team11     | 57916929 |

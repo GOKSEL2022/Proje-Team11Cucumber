@@ -8,14 +8,14 @@ public class Vice_Dean_Controller_Root_Pojo {
     public Vice_Dean_Controller_Root_Pojo() {
     }
 
-    public Object getObject() {
-        return object;
-    }
-
     public Vice_Dean_Controller_Root_Pojo(Vice_Dean_Controller_Object_Pojo object, String message, String httpStatus) {
         this.object = object;
         this.message = message;
         this.httpStatus = httpStatus;
+    }
+
+    public Vice_Dean_Controller_Object_Pojo getObject() {
+        return object;
     }
 
     public void setObject(Vice_Dean_Controller_Object_Pojo object) {

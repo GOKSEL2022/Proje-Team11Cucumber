@@ -1,4 +1,4 @@
-@US07_AC00,@team11
+@US07_AC00 @team11 @US07 @US22 @team11Regression @team11Smoke @dean
 Feature: Dean olarak login olma
 
   Scenario: TC01 rabianın dean olarak giriş yapabilmesi durumu
@@ -11,4 +11,5 @@ Feature: Dean olarak login olma
     And rabia password kutusuna dean sifre girer.
     And rabia login butonuna tıklar.
     And rabia sayfayı kapatır.
+
 

@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: phone number alanina gecerli bir numara yazar
   Scenario: TC11_gecerli formatta bir phone number yazar
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -20,3 +21,4 @@ Feature: phone number alanina gecerli bir numara yazar
     And Fatih email alanina gecerli bir adres girer
     And Fatih phone alanina gecerli bir phone numarasi girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

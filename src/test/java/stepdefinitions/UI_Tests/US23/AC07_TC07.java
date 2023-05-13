@@ -8,11 +8,6 @@ import static org.junit.Assert.*;
 
 public class AC07_TC07 {
     AdminViceDeanPage adminViceDeanPage = new AdminViceDeanPage();
-    @And("Nilufer Phone alanina {string} girmeyerek bos birak")
-    public void phone_alanina_girmeyerek_bos_birak(String string) {
-        adminViceDeanPage.Admin_Vice_Dean_PhoneNumber.sendKeys(string);
-        ReusableMethods.waitFor(2);
-    }
     @And("Nilufer Ssn alanina tikla")
     public void ssn_alanina_tikla() {
         adminViceDeanPage.Admin_Vice_Dean_Ssn.click();
@@ -34,4 +29,9 @@ public class AC07_TC07 {
         ReusableMethods.waitFor(2);
     }
 
+    @And("Nilufer Phone alanina Phone girmeyerek bos birak")
+    public void niluferPhoneAlaninaPhoneGirmeyerekBosBirak() {
+        adminViceDeanPage.Admin_Vice_Dean_PhoneNumber.click();
+        ReusableMethods.waitFor(2);
+    }
 }

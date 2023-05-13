@@ -1,4 +1,4 @@
-@final_notu
+@final_notu @team11Regression
 Feature:Midterm_ve_Final_Exam
 
   Scenario: Midterm ve Final Exam notu girebilmelidir.
@@ -16,3 +16,4 @@ Feature:Midterm_ve_Final_Exam
     Then kullanici55 absentee ye devamsizlik girer ve gorur
     And kullanici55 midterm exam a not girer ve gorur
     And kullanici55 final exam a not girer ve gorur
+    Then close the application

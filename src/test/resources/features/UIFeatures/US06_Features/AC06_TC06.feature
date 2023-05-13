@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @sunum
 
 Feature: US06
 
@@ -10,7 +10,7 @@ Feature: US06
     And Nilufer Dean olarak Password'u girer
     And Nilufer Login buttonuna tiklar
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
-    And Nilufer Date Of Birth alanina "<Date Of Birth>" girmeyerek bos birakir
+    And Nilufer Date Of Birth alanina Date Of Birth girmeyerek bos birakir
     And Nilufer Phone alanina tiklar
     And Nilufer Date Of Birth alani altinda Required mesajini gorur
     And Nilufer Date Of Birth alanina valid bir "<Date Of Birth>" girer
@@ -19,6 +19,5 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Date Of Birth |
-      |               |
       | 06.08.1965    |
 

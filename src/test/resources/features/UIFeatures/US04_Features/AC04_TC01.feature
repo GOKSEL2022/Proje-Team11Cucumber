@@ -1,8 +1,8 @@
-@US04_AC04_TC01 @team11
+@US04_AC04_TC01 @team11 @team11Regression
 Feature:Dean ekleyebilme
   
-  Scenario Outline : TC01_Gender_checkbox_secilmediginde_dean_olusmaz
-    Given Ali "https://www.managementonschools.com/" gider.
+  Scenario Outline : TC01_Dean_olustur
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     When Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -43,7 +43,8 @@ Feature:Dean ekleyebilme
     When Ali Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali Dean Kaydi yapilmadigi gorulur
+    Then close the application
 
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth |Phone         | Ssn          | User Name | password |
-      | karakartal | 987654321 | *-+/% | tarik    | Van         | 29-03-2001    |090-505-7310  | 505-51-6328  |Team11     | 57916929 |
+      | Admin      | 485424698 | *-+/% | tarik    | Van         | 29-03-2001    |090-505-7310  | 505-51-6328  |Team11     | 57916929 |

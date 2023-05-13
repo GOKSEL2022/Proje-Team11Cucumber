@@ -12,9 +12,20 @@ public class AdminViceDeanPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//h3[.='Vice Dean Management']")
+    @FindBy(xpath = "(//*[.='Vice Dean Management'])[2]")
     public WebElement Admin_Vice_Dean_Text;
 
+    @FindBy(xpath = "(//*[.='Admin Management'])[2]")
+    public WebElement Admin_Vice_Dean_Admin_Management_Text;
+
+    @FindBy(xpath = "//*[.='Menu']")
+    public WebElement Admin_Vice_Dean_Menu_Button;
+
+    @FindBy(xpath = "(//*[@id='offcanvasNavbarLabel-expand-lg'])[2]")
+    public WebElement Admin_Vice_Dean_Main_Menu_Text;
+
+    @FindBy(xpath = "//*[.='Vice Dean Management']")
+    public WebElement Admin_Vice_Dean_Management_Button;
     @FindBy(xpath = "//input[@id='name']")
     public WebElement Admin_Vice_Dean_Name;
 

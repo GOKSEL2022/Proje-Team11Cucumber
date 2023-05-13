@@ -1,4 +1,4 @@
-@US03_AC04,@team11
+@US03_AC04 @team11 @US03 @US22 @team11Regression @sunum
 Feature: AC04 rabia mesaj yazmalıdır
   Background: ana sayfaya git
     Given rabia ana sayfaya gider.
@@ -16,6 +16,7 @@ Feature: AC04 rabia mesaj yazmalıdır
   And Mesaj gönderim işlemi gerçekleşir.
     And rabia sayfayı kapatır.
 
+
   @US03_AC04_TC02
   Scenario: TC02 Message kutucuğunun boş bırakılması durumu
 
@@ -25,5 +26,5 @@ Feature: AC04 rabia mesaj yazmalıdır
     And rabia message kutusunu bos birakir.
     And rabia send message butonuna tıklar
     And rabia bir saniye bekler
-    And rabia mesajın iletilemediğini doğrular.
+    And bos bırakılan kutunun altında required yazısı oldugunu doğrular.
     And rabia sayfayı kapatır.

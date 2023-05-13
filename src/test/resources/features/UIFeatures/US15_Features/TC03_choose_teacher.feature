@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: danisman secilir
   Scenario: TC03_choose_Teacher
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -14,3 +15,4 @@ Feature: danisman secilir
     And Fatih acilan sayfada choose teacher butonunu tiklar
     And Fatihn acilan drapdowndan ogrencinin danisman ogretmenini secer
     And Fatih danisman ogretmenin secildigini dogrular
+    Then close the application

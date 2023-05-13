@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @sunum
 
 Feature: US06
 
@@ -10,7 +10,7 @@ Feature: US06
     And Nilufer Dean olarak Password'u girer
     And Nilufer Login buttonuna tiklar
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrular
-    And Nilufer Ssn alanina "<Ssn>" girmeyerek bos birakir
+    And Nilufer Ssn alanina Ssn girmeyerek bos birakir
     And Nilufer User Name alanina tiklar
     And Nilufer Ssn alani altinda Required mesajini gorur
     And Nilufer Ssn alanina valid bir "<Ssn>" girer
@@ -19,5 +19,4 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Ssn         |
-      |             |
       | 103-13-1031 |

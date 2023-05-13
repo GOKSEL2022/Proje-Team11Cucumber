@@ -1,4 +1,4 @@
-@US09_AC02,@team11
+@US09_AC02,@team11 @team11Regression
 Feature: US09_TC02
 
   Scenario: US09_TC02
@@ -13,3 +13,4 @@ Feature: US09_TC02
     And MDogan Lessons a tiklar
     And MDogan eklenen Lesson lari gorur
     Then MDogan Ders Listesindeki Sil Butonuna Tiklar
+    Then close the application

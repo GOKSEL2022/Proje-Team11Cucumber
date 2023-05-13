@@ -1,4 +1,4 @@
-@TC01_Login
+@admin @team11Regression @team11Smoke
 Feature: anasayfaya gidilir
 
   Scenario: TC01_Login
@@ -13,4 +13,5 @@ Feature: anasayfaya gidilir
     And Fatih sag kosede Menu butonuna tiklar
     And Fatih Menu butonunun altinda acilan alt munude student management butonunu tiklar
     And Fatih student management sayfasinin acildigini dogrular
+    Then close the application
 

@@ -5,7 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 import static utilities.ManagementonSchoolsAuthentication.generateToken;
-//import static utilities.ManagementonSchoolsAuthentication.generateToken;
+
 
 public class ManagementonSchoolsBaseUrl  {
     public static RequestSpecification specAdmin;
@@ -15,27 +15,25 @@ public class ManagementonSchoolsBaseUrl  {
     public static RequestSpecification specStudent;
 
     public  static void schoolsetupAdmin(){
-        specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("485424698","Admin"))
-                .setBaseUri("http://164.92.252.42:8080").build();
+
+        specAdmin=new RequestSpecBuilder().setContentType(ContentType.JSON).setAccept(ContentType.JSON).
+                addHeader("Authorization",generateToken("12345678","GokselCelik"))
+        .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupTeacher(){
         specTeacher=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("12345678","team11emin"))
+                addHeader("Authorization",generateToken("485424698","team11emin"))
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
     public  static void schoolsetupDean(){
         specDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
                 addHeader("Authorization",generateToken("12345678","gooddean"))
-
-
-
                 .setBaseUri("http://164.92.252.42:8080").build();
 
     }
     public  static void schoolsetupViceDean(){
         specViceDean=new RequestSpecBuilder().setContentType(ContentType.JSON).
-                addHeader("Authorization",generateToken("123456789","Team11Cucumber"))
+                addHeader("Authorization",generateToken("12345678","team11vicedean"))
                 .setBaseUri("http://164.92.252.42:8080").build();
     }
 

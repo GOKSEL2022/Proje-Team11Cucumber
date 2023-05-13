@@ -6,70 +6,63 @@ import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import pages.MainMenuPage;
 import pojos.StudentInfoPojo;
 import pojos.StudentInfoRootPojo;
+import pojos.StudentInfoUpdatePojo;
 import utilities.ObjectMapperUtils;
 
-//import static base_urls.ManagementonSchoolsBaseUrl.spect;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import static base_urls.ManagementonSchoolsBaseUrl.specTeacher;
-
-import static base_urls.ManagementonSchoolsBaseUrl.specAdmin;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-import static stepdefinitions.Api_Test.student_info_controller.S01_Post.student_info_id;
+import static stepdefinitions.Api_Test.student_info_controller.S01_Post.*;
 
 public class S02_Put {
 
-    static int absente_update = Faker.instance().number().numberBetween(4,99);
-    static int educationTermId =  Faker.instance().number().numberBetween(1,2);
-    static double finalExam_update =  Faker.instance().number().randomDouble(1,1,99);
-    static String infoNote_update =  Faker.instance().lorem().sentence(11);
-    static int lessonId =  Faker.instance().number().numberBetween(1,2);
-    static double midtermExam_update =  Faker.instance().number().randomDouble(1,1,99);
-    static int studentId =  Faker.instance().number().numberBetween(4,305);
+     int absenteUpdate = Faker.instance().number().numberBetween(4,99);
+    double finalExamUpdate =  Faker.instance().number().randomDouble(1,1,99);
+    String infoNoteUpdate =  Faker.instance().lorem().sentence(11);
+     double midtermExamUpdate =  Faker.instance().number().randomDouble(1,1,99);
     Response response;
-    StudentInfoPojo expectedData;
+    Map<String,Object> expectedData;
+
     @Given("teacher sends the student info data_PUT")
     public void teacherSendsTheStudentInfoData_PUT() {
 
+        specTeacher.pathParams("first", "studentInfo", "second", "update","third",student_info_id);
 
-        specTeacher.pathParams("first", "studentInfo", "second", "save","third",student_info_id);
-
-        specAdmin.pathParams("first", "studentInfo", "second", "save","third",student_info_id);
-
-        expectedData = new StudentInfoPojo(absente_update,
-                educationTermId,
-                finalExam_update,
-                infoNote_update,
-                lessonId,
-                midtermExam_update,
-                studentId);
+        Map<String,Object> expectedData = new HashMap<>();
+        expectedData.put("midtermExam",5.5);
+        expectedData.put("finalExam",5.5);
+        expectedData.put("infoNote","Please enter extra info");
+        expectedData.put("absentee",5);
+        expectedData.put("lessonId",1);
+        expectedData.put("educationTermId",1);
         System.out.println("expectedData = " + expectedData);
 
-        response = given().spec(specTeacher).when().body(expectedData).put("{first}/{second}/{third}");
 
-        response = given().spec(specAdmin).when().body(expectedData).put("{first}/{second}/{third}");
-
-        response.prettyPrint();
+    response = given().spec(specTeacher).body(expectedData).put("/{first}/{second}/{third}");
+    response.prettyPrint();
 
     }
 
     @Then("teacher gets the student info data and assert_PUT")
     public void teacherGetsTheStudentInfoDataAndAssert_PUT() {
-        StudentInfoRootPojo actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), StudentInfoRootPojo.class);
-        System.out.println("actualData = " + actualData);
+
+        JsonPath jsonPath = response.jsonPath();
 
         assertEquals(200,response.statusCode());
+        assertEquals("Student Info updated Successfully",jsonPath.getString("message"));
+        assertEquals("CREATED",jsonPath.getString("httpStatus"));
 
-        assertEquals(expectedData.getAbsentee(),actualData.getStudentInfoObjectPojo().getAbsentee());
-        assertEquals(expectedData.getEducationTermId(),actualData.getStudentInfoObjectPojo().getEducationTerm());
-        assertEquals(expectedData.getFinalExam(),actualData.getStudentInfoObjectPojo().getFinalExam());
-        assertEquals(expectedData.getInfoNote(),actualData.getStudentInfoObjectPojo().getInfoNote());
-
-
-
-
+        assertEquals(5,jsonPath.getInt("object.absentee"));
+        assertEquals("Please enter extra info",jsonPath.getString("object.infoNote"));
+       assertEquals(5.5,jsonPath.getDouble("object.finalExam"),0);
+       assertEquals(5.5,jsonPath.getDouble("object.midtermExam"),0);
 
 
 

@@ -1,8 +1,8 @@
-@US05_AC03_TC22 @team11
+@US05_AC03_TC22 @team11 @team11Regression
 Feature:Dean ekleyebilme
 
   Scenario Outline:AC03_TC10_Ssn_Alani_Guncelle
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     And Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -23,12 +23,13 @@ Feature:Dean ekleyebilme
     And Ali Gender alaninda female checkboxini tiklar
     And Ali bır sanıye bekler
     And Ali Ssn alanina harf girer.
-    And Ali password "<password>" alanina gecerli sifre girer.
+    And Ali password alanina gecerli sifre girer.
     And Ali bır sanıye bekler
     And Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
     Then Ali hata mesajini gorur.
+    Then close the application
 
     Examples: dean_bilgileri
       | Username   | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | karakartal | 987654321  | hasan | tarik    | " "         | 29-03-2001    | 090-505-8196  | 505-41-6328  |Team11     | 57916929 |
+      | Admin      | 485424698  | hasan | tarik    | " "         | 29-03-2001    | 090-505-8196  | Ssn-ss-ssn   |Team11     | 57916929 |

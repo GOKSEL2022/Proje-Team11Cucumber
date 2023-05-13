@@ -1,4 +1,4 @@
-@team11
+@admin @team11Regression @sunum @goksel
 Feature:US02_AC0TC02
   Scenario:US02_AC0TC02
 
@@ -14,3 +14,4 @@ Feature:US02_AC0TC02
   And Goksel Phone Number altbasligini görüntüler
   When Goksel Ssn altbasligini görüntüler
   Then Goksel User Name altbasligini görüntüler
+    Then close the application

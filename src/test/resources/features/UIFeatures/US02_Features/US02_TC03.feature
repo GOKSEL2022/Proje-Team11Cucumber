@@ -1,5 +1,6 @@
-@team11
+@admin @team11Regression @goksel
 Feature:US02_TC03
+
   Scenario:US02_TC03
     Given Goksel "https://www.managementonschools.com/" gider
     When Goksel login olur
@@ -15,3 +16,4 @@ Feature:US02_TC03
     And Goksel sil butonlarini görüntüler
     And Goksel sil butonlarindan ilkine tiklar
     When Goksel Guest User deleted Successful alertini görüntüler
+    Then close the application

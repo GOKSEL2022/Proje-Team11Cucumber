@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: ssn alanina gecerli bir numara girilir
   Scenario: TC16_ssn
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -23,3 +24,4 @@ Feature: ssn alanina gecerli bir numara girilir
     And Fatih date of birth alanina gecerli bir tarih girer
     And Fatih ssn alanina gecerli formatta bir numara girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

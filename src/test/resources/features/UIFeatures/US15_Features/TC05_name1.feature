@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: name kismina isim yazilir
   Scenario: TC05_name
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -17,6 +17,7 @@ Feature: name kismina isim yazilir
     And Fatih danisman ogretmenin secildigini dogrular
     And Fatih name alanina gecerli bir isim girer
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application
 
 
 

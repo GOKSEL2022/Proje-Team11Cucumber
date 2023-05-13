@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @sunum
 
 Feature: US06
 
@@ -26,4 +26,4 @@ Feature: US06
 
     Examples: Dean_Vice_Dean_Bilgileri
       | Name    | Surname | Birth Place | Date Of Birth | Phone        | Ssn         | User Name | Password |
-      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     |          |
+      | Nilufer | Ozkul   | Izmir       | 06.08.1965    | 552-919-2222 | 103-13-1031 | niloz     | 12345678 |

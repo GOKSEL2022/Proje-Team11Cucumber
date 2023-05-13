@@ -1,4 +1,4 @@
-@team111
+@admin @team11Regression @team11Smoke @goksel
 Feature:US02_TC01
   Scenario:US02_TC01
 
@@ -11,4 +11,5 @@ Feature:US02_TC01
  And Goksel Password "987654321" girer
  When Goksel Login butonuna tiklar
  Then Goksel login isleminin basarili oldugunu dogrular
+   Then close the application
 

@@ -5,93 +5,28 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Vice_Dean_Controller_Object_Pojo {
 
-    private String birthDay;
-    private String birthPlace;
-    private String gender;
-    private String name;
-    private String password;
-    private String phoneNumber;
-    private String ssn;
-    private String surname;
+
     private String username;
+    private String name;
+    private String surname;
+    private String birthDay;
+    private String ssn;
+    private String birthPlace;
+    private String phoneNumber;
+    private String gender;
 
     public Vice_Dean_Controller_Object_Pojo() {
     }
 
-    public Vice_Dean_Controller_Object_Pojo(String birthDay, String birthPlace, String gender, String name, String password, String phoneNumber, String ssn, String surname, String username) {
-        this.birthDay = birthDay;
-        this.birthPlace = birthPlace;
-        this.gender = gender;
-        this.name = name;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.ssn = ssn;
-        this.surname = surname;
+    public Vice_Dean_Controller_Object_Pojo(String username, String name, String surname, String birthDay, String ssn, String birthPlace, String phoneNumber, String gender) {
         this.username = username;
-    }
-
-    public String getBirthDay() {
-        return birthDay;
-    }
-
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
-    }
-
-    public String getBirthPlace() {
-        return birthPlace;
-    }
-
-    public void setBirthPlace(String birthPlace) {
-        this.birthPlace = birthPlace;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getSsn() {
-        return ssn;
-    }
-
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
         this.surname = surname;
+        this.birthDay = birthDay;
+        this.ssn = ssn;
+        this.birthPlace = birthPlace;
+        this.phoneNumber = phoneNumber;
+        this.gender = gender;
     }
 
     public String getUsername() {
@@ -102,18 +37,73 @@ public class Vice_Dean_Controller_Object_Pojo {
         this.username = username;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public String getBirthPlace() {
+        return birthPlace;
+    }
+
+    public void setBirthPlace(String birthPlace) {
+        this.birthPlace = birthPlace;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "Vice_Dean_Controller_Object_Pojo{" +
-                "birthDay='" + birthDay + '\'' +
-                ", birthPlace='" + birthPlace + '\'' +
-                ", gender='" + gender + '\'' +
+                "username='" + username + '\'' +
                 ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", ssn='" + ssn + '\'' +
                 ", surname='" + surname + '\'' +
-                ", username='" + username + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", birthPlace='" + birthPlace + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }

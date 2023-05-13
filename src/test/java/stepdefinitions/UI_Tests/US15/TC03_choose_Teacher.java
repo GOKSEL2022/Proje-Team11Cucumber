@@ -33,7 +33,7 @@ public class TC03_choose_Teacher {
     public void Fatihn_acilan_drapdowndan_ogrencinin_danisman_ogretmenini_secer() {
 
         Select select = new Select(vice_deanPage.chooseTeacher);
-        select.selectByVisibleText("Mehmet Emin team11");
+        select.selectByVisibleText("tevfik ozen");
 
 
     }

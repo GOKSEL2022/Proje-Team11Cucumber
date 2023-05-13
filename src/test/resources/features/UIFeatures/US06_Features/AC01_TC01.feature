@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @team11Smoke @sunum
 Feature: US06
   Scenario:US06
     Given Nilufer "http://139.59.159.36:3000/" url'ine gider

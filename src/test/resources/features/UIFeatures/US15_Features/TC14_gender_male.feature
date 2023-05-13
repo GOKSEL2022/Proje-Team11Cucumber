@@ -1,3 +1,4 @@
+@admin @team11Regression
 Feature: gender alaninda male tiklanir
   Scenario: TC14_male tiklanir
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -21,3 +22,4 @@ Feature: gender alaninda male tiklanir
     And Fatih phone alanina gecerli bir phone numarasi girer
     And Fatih male butonuna tiklar
     And Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

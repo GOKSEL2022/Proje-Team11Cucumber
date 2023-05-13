@@ -1,4 +1,4 @@
-@smoke
+@admin @team11Regression @team11Smoke
 Feature:submit yapilir
   Scenario: TC21_submit
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -28,3 +28,4 @@ Feature:submit yapilir
     And Fatih mothername alanina bir isim girer
     And Fatih student icin password olusturur
     And Fatih submit butonuna tiklar
+    Then close the application

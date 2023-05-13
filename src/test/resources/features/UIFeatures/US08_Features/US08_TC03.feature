@@ -1,4 +1,4 @@
-@US08_AC03,@team11
+@US08_AC03,@team11 @team11Regression
 Feature: US08_TC03
 
   Scenario: US08_TC03
@@ -19,5 +19,6 @@ Feature: US08_TC03
     And MDogan Credit Score Kutusuna tiklar
     And MDogan Credit score "95" girer
     Then Kullanici Submit butonuna tiklar
+    Then close the application
 
 

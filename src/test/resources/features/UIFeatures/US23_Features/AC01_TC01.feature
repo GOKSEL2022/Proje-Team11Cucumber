@@ -1,4 +1,4 @@
-@Nilufer @team11
+@Nilufer @team11Regression @team11Smoke @sunum
 
 Feature: US23
    Scenario: US23
@@ -8,6 +8,10 @@ Feature: US23
     And Nilufer Admin olarak User Name'i gir
     And Nilufer Admin olarak Password'u gir
     And Nilufer Login buttonuna tikla
+    And Nilufer Admin Management sayfasinda oldugunu dogrular
+    And Nilufer Menu buttonuna tikla
+    And Nilufer Main Menu buttonunun acildigini dogrula
+    And Nilufer Vice Dean Management buttonuna tikla
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrula
     And Nilufer Name alanina valid bir deger gir
     And Nilufer Surname alanina valid bir deger gir
@@ -20,5 +24,5 @@ Feature: US23
     And Nilufer Password alanina valid bir deger gir
     And Nilufer Submit butonuna tikla
     And Nilufer Admin olarak Vice Dean olusturdugunu dogrula
-    Then close the application
+    Then close the applications
 

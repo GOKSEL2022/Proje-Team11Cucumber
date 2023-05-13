@@ -1,8 +1,8 @@
-@US22_AC07,@team11
+@US22_AC07 @team11 @US22 @team11Regression
 Feature: Admin_ekleme
 
   Background: Admin olarak login olma durumu
-    Given rabia "https://www.managementonschools.com" gider.
+    Given rabia "http://139.59.159.36:3000/" gider.
     When rabia admin olarak giris yapar.
     When rabia  Add Admin bölümünün oldugunu dogrular.
 
@@ -46,7 +46,7 @@ Feature: Admin_ekleme
     And rabia bir saniye bekler
     And rabia Phone kutusuna "Phone" gırer
     And rabia bir saniye bekler
-    And rabia SSN kutusuna daha önceden kayıtlı "333-33-3333" gırer
+    And rabia SSN kutusuna daha önceden kayıtlı "407-67-9499" gırer
     And rabia bir saniye bekler
     And rabia username kutusuna "username" gırer.
     And rabia bir saniye bekler

@@ -44,6 +44,23 @@ public class ContactPage {
     public WebElement size_alert;
 
 
+    @FindBy(xpath = "//*[text()='Required']")
+    public WebElement required_name;
+
+
+    @FindBy(xpath = "//*[text()='Your name should be at least 4 characters']")
+    public WebElement name_at_least_4;
+
+    @FindBy(xpath = "//*[text()='Your subject should be at least 16 characters']")
+    public WebElement subject_at_least_16;
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-@exDevamsizlik
+@exDevamsizlik @team11Regression
   Feature:valid olmayan bir devamsizlik
     Scenario:valid olmayan bir devamsizlik girer
       Given kullanici55 url e gider
@@ -17,3 +17,4 @@
       And kullanici55 info note a bilgi notu girer ve gorur
       And kullanici55 submit buton a tiklar
       Then kullanici55 student Info saved succesfully popup yazisini gorur(gormez)
+      Then close the application

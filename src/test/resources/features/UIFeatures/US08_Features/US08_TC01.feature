@@ -1,4 +1,4 @@
-@US08_AC01,@team11
+@US08_AC01,@team11 @team11Regression @team11Smoke
 Feature: US08_TC01
 
   Scenario: US08_TC01
@@ -15,3 +15,4 @@ Feature: US08_TC01
     And MDogan Lesson Name kismina tiklar
     And MDogan bir saniye bekler
     Then MDogan Lesson name "string" girer
+    Then close the application

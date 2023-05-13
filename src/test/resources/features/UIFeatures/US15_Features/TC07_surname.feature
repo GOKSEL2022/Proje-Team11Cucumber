@@ -1,4 +1,4 @@
-
+@admin @team11Regression
 Feature: surname kismina gecerli bir surname yazilir
   Scenario: TC07_surname
     Given Fatih anasayfaya belirtilen URL'ye gider
@@ -18,3 +18,4 @@ Feature: surname kismina gecerli bir surname yazilir
     And Fatih name alanina gecerli bir isim girer
     And Fatih surname alanina gecerli bir isim girer
     And  Fatih required yazisinin kayboldugunu dogrular
+    Then close the application

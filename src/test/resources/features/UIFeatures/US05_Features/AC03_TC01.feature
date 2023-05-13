@@ -1,8 +1,8 @@
-@US05_AC03_TC01 @team11
+@US05_AC03_TC01 @team11 @team11Regression @admin
 Feature:Dean guncelleme
 
   Scenario Outline: TC01_Dean_guncelleme
-    Given Ali "https://www.managementonschools.com" sayfasina gider
+    Given Ali "http://139.59.159.36:3000/" sayfasina gider
     And Ali bır sanıye bekler
     And Ali Login butonuna tiklar
     And Ali bır sanıye bekler
@@ -28,8 +28,9 @@ Feature:Dean guncelleme
     And Ali bır sanıye bekler
     Then Ali Edit Dean alanindaki Submit butonuna tiklar
     And Ali bır sanıye bekler
+    Then close the application
 
 #
     Examples: dean_bilgileri
       | Username  | Password   | Name  | Surname  | Birth Place | Date Of Birth | Phone         | Ssn          | User Name | password |
-      | karakartal| 987654321  |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |
+      | Admin      | 485424698  |       | tarik    | Van         | 29-03-2001    | 090-505-7311  | 505-41-6338  |Team11     | 57916929 |

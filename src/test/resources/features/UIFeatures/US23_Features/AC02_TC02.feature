@@ -1,4 +1,4 @@
-@US23_TC02 @team11 @smoke
+@Nilufer @team11Regression @sunum
 
 Feature: US23
 
@@ -9,8 +9,12 @@ Feature: US23
     And Nilufer Admin olarak User Name'i gir
     And Nilufer Admin olarak Password'u gir
     And Nilufer Login buttonuna tikla
+    And Nilufer Admin Management sayfasinda oldugunu dogrular
+    And Nilufer Menu buttonuna tikla
+    And Nilufer Main Menu buttonunun acildigini dogrula
+    And Nilufer Vice Dean Management buttonuna tikla
     And Nilufer Vice Dean Management sayfasinda oldugunu dogrula
-    And Nilufer Name alanina "<Name>" girmeyerek bos birak
+    And Nilufer Name alanina Name girmeyerek bos birak
     And Nilufer Surname alanina tikla
     And Nilufer Name alani altinda Required mesajini gor
     And Nilufer Name alanina valid bir "<Name>" gir
@@ -19,5 +23,4 @@ Feature: US23
 
     Examples: Admin_Vice_Dean_Bilgileri
       | Name    |
-      |         |
       | Nilufer |

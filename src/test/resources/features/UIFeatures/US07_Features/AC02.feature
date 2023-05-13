@@ -1,4 +1,4 @@
-@US07_AC02,@team11
+@US07_AC02 @team11 @US07 @US22 @team11Regression
 Feature: Dean mesajları silebilmelidir.
 
   Background: rabia contact_getAll sayfasına erişir
@@ -8,6 +8,7 @@ Feature: Dean mesajları silebilmelidir.
     And rabia menu butonuna tıklar.
     And rabia açılan sekmede Contact Get All linkine tıklar.
     And rabia contact-getAll sayfasındadır.
+    Then close the application
 
     Scenario: TC01 Dean'in mesajları silebilmesi durumu
 
@@ -15,3 +16,4 @@ Feature: Dean mesajları silebilmelidir.
     Then rabia sayfada delete butonu olduğunu dogrular.
     Then rabia mesajı siler.
     Then rabia mesajın silindiğini doğrular.
+      Then close the application
